@@ -2,22 +2,22 @@
 
 ## Project Name: XXXX
 
-## Group Number: 001
+## Group Number: 023
 
 ### Team members
 
-| Student No. | Full Name | GitHub Username | Contribution (sum to 100%) |
-| ----------- | --------- | --------------- | -------------------------- |
-| s111111     | Full name | xxx             | 33.3% or Equal             |
-| s222222     | Full name | xxx             | 33.3% or Equal             |
-| s333333     | Full name | xxx             | 33.3% or Equal             |
+| Student No. | Full Name             | GitHub Username      | Contribution (sum to 100%) |
+|-------------|-----------------------|----------------------|----------------------------|
+| s5398289    | William-Joseph Simons | William-JosephSimons | 33.3% or Equal             |
+| s5265839    | Ben Lange             | s5265839-Griffith    | 33.3% or Equal             |
+| s333333     | Full name             | xxx                  | 33.3% or Equal             |
 
 ### Brief Description of Contribution
 
 Please Describe what you have accomplished in this group project.
 
--  s111111, Full name
-   -  Accomplishments: Describe what you have completed or achieved
+-  s5398289, William-Joseph Simons
+   -  Project Objectives.
 -  s222222, Full name
    -  Accomplishments: Describe what you have completed or achieved
 -  s333333, full name
@@ -42,13 +42,37 @@ Please Describe what you have accomplished in this group project.
 
 ### 1.1 Project Objectives
 
-- Provide a tool that lets users assess the nutritional value of different foods.  
-- Give the consumers options to search, sort, and filter the nutritional data according to particular categories such as food type, nutritional type, etc.  
-- Provide a graphical user interface to allow for the data to be interacted with and shown visually, with tools such as pie charts and bar graphs.
+- Provide a tool that allows users assess the nutritional value of different foods.  
+- Provide a tool that allows the consumer to search the food by name.
+- Provide a tool that allows users to sort and filter the nutritional data according to particular categories such as nutritional type.  
+- Provide a graphical user interface to allow for the data to be interacted with.
+- Allow for a foods nutritional value to be shown visually, with tools such as pie charts and bar graphs.
 
 ### 1.2 Project Stakeholders
 
-Identify all key stakeholders involved in the project, including internal teams and potential end-users.
+#### Project Manager
+- <h6 style="display: inline;"> Description: </h6> In charge of managing the project in its entirety and acting as the communicator between all stakeholders, making sure its stays within and meets the requirements of the scope.
+- <h6 style="display: inline;"> Role: </h6> Acts as the main point for communication. Coordinates and integrates the processes of: Initiating, Planning, Executing, Monitoring and Controlling, and Closing. And facilitates decisions made within the core knowledge areas such as: Integration, Scope, Time, Cost, Quality, Human Resources, Communication, Risk, and Procurement. This is done through delegation, or personally by the project manager.
+
+#### Data Analysts 
+- <h6 style="display: inline;"> Description: </h6> Professionals in the scope of analysing and interpreting data to gain insights and meaning.
+- <h6 style="display: inline;"> Role: </h6> Create algorithms to evaluate the Nutritional_Food_Database.csv, and identify metrics and trends in the data that allow for different visual representations. While also removing any anomalies from the dataset, ensuring high quality data. They also use their findings to effectively communicate complex insights to other stakeholders.
+
+#### Software Developers
+- <h6 style="display: inline;"> Description: </h6>
+- <h6 style="display: inline;"> Role: </h6> 
+
+#### Nutritionists and Dietitians
+- <h6 style="display: inline;"> Description: </h6>
+- <h6 style="display: inline;"> Role: </h6>
+
+#### Educational Institutions
+- <h6 style="display: inline;"> Description: </h6>
+- <h6 style="display: inline;"> Role: </h6>
+
+#### Health Conscious Individuals
+- <h6 style="display: inline;"> Description: </h6>
+- <h6 style="display: inline;"> Role: </h6>
 
 ### 1.3 Project Scope
 
@@ -65,7 +89,7 @@ Include the Work Breakdown Structure (WBS) for the entire project. WBS should be
 Define the activities required for your project based on the WBS, and assign responsibilities to team members. Each activity should be numbered and correspond with your Gantt chart. Provide estimated durations for each activity to facilitate Gantt chart preparation.
 
 | Activity #No | Activity Name | Brief Description | Duration | Responsible Team Members |
-| ------------ | ------------- | ----------------- | -------- | ------------------------ |
+|--------------|---------------|-------------------|----------|--------------------------|
 | xxx          | xxx           | xxx               | xxx      | xxx \& yyy               |
 | xxxx         | xxx           | xxx               | xxx      | All                      |
 | xxxx         | xxx           | xxx               | xxx      | xxx                      |
