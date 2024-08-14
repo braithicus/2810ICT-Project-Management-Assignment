@@ -76,7 +76,47 @@ Please Describe what you have accomplished in this group project.
 
 ### 1.3 Project Scope
 
-Define and manage what is included or excluded in the project and product.
+#### Inclusions
+
+
+#### Graphical User Interface
+
+#### Food Search Feature
+
+#### Nutrition Breakdown Feature
+
+#### Nutrition Range Filter Feature
+
+#### Nutrition Level Filter Feature
+
+#### Documentation
+
+#### Quality Assurance (Making sure it's good)
+
+
+#### Exclusions
+
+
+#### Real-Time Data Integration
+
+#### Multi-Language Support
+
+#### User Authentication and Security Features
+
+#### Customisation Options
+
+#### Advanced Analytics (Beyond filtering and charts)
+
+
+#### Scope Management
+
+
+#### Change Control (Monitor changes)
+
+#### Regular Reviews
+
+#### Communication
+
 
 ## 2. Work Breakdown Structure
 
