@@ -78,44 +78,63 @@ Please Describe what you have accomplished in this group project.
 
 #### Inclusions
 
+###### Graphical User Interface
+An interface that allows users easily and graphically navigate the Nutritional_Food_Database.csv.  
+It includes: 
+- A food item search feature
+- Tools for visualisation, such as bar graphs and pie charts
+- Filtering and sorting choices based on the amount and range nutrients
 
-#### Graphical User Interface
+###### Food Search Feature
+A search feature that allows users to look for food items by name and see all its available nutritional data.  
+It includes: 
+- A search bar where you can enter the name of a food
+- A display that contains the nutritional information available for that food
+- An autocomplete feature that helps in finding the desired food
 
-#### Food Search Feature
+###### Nutrition Breakdown Feature
+A feature that allows user to see the nutritional breakdown of the food item they selected through pie charts and bar graphs.  
+It includes: 
+- Pie charts and bar graphs
+- An interactive component that allows the user to flip between the bar graphs and pie charts
 
-#### Nutrition Breakdown Feature
+###### Nutrition Range Filter Feature
+Allows users to select a nutrient and gives them the ability to input maximum and minimum values, and displays to them a list of foods that fall within that range.  
+It includes:
+- A menu for choosing between different nutrients
+- Fields to enter the maximum and minimum values
+- A display that contains the list of foods
 
-#### Nutrition Range Filter Feature
+###### Nutrition Level Filter Feature
 
-#### Nutrition Level Filter Feature
 
-#### Documentation
+###### Documentation
 
-#### Quality Assurance (Making sure it's good)
+###### Quality Assurance (Making sure it's good)
 
 
 #### Exclusions
 
 
-#### Real-Time Data Integration
+###### Real-Time Data Integration
 
-#### Multi-Language Support
+###### Multi-Language Support
 
-#### User Authentication and Security Features
+###### User Authentication and Security Features
 
-#### Customisation Options
+###### Customisation Options
 
-#### Advanced Analytics (Beyond filtering and charts)
+###### Advanced Analytics (Beyond filtering and charts)
 
 
 #### Scope Management
 
 
-#### Change Control (Monitor changes)
+###### Change Control (Monitor changes)
 
-#### Regular Reviews
+###### Regular Reviews
 
-#### Communication
+###### Communication
 
 
 ## 2. Work Breakdown Structure
