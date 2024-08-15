@@ -9,7 +9,7 @@
 | Student No. | Full Name             | GitHub Username      | Contribution (sum to 100%) |
 |-------------|-----------------------|----------------------|----------------------------|
 | s5398289    | William-Joseph Simons | William-JosephSimons | 33.3% or Equal             |
-| s222222     | Full name             | xxx                  | 33.3% or Equal             |
+| s5265839    | Ben Lange             | s5265839-Griffith    | 33.3% or Equal             |
 | s333333     | Full name             | xxx                  | 33.3% or Equal             |
 
 ### Brief Description of Contribution
