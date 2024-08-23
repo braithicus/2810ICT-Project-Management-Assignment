@@ -9,8 +9,8 @@
 | Student No. | Full Name             | GitHub Username      | Contribution (sum to 100%) |
 | ----------- | --------------------- | -------------------- | -------------------------- |
 | s5398289    | William-Joseph Simons | William-JosephSimons | 33.3% or Equal             |
-| s222222     | Full name             | xxx                  | 33.3% or Equal             |
-| s333333     | Full name             | xxx                  | 33.3% or Equal             |
+| s5265839    | Ben Lange             | s5265839-Griffith    | 33.3% or Equal             |
+| s5264208    | Braith Lee            | braithicus           | 33.3% or Equal             |
 
 ### Brief Description of Contribution
 
@@ -20,7 +20,7 @@ Please Describe what you have accomplished in this group project.
    -  Project Objectives.
 -  s222222, Full name
    -  Accomplishments: Describe what you have completed or achieved
--  s333333, full name
+-  s5264208, Braith Lee
    -  Accomplishments: Describe what you have completed or achieved
 
 <div style="page-break-after: always;"></div>
