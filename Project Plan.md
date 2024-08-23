@@ -155,13 +155,44 @@ It includes:
 
 ##### Real-Time Data Integration
 
+Using a dynamic data source that is up to date.
+It excludes:
+
+-  Real time data
+-  Data that is dynamic and updates
+
 ##### Multi-Language Support
+
+Support for languages other than english within the program.
+It excludes:
+
+-  A menu for switching languages
+-  A translation tool for the GUI
 
 ##### User Authentication and Security Features
 
+Tools that involve authenticating the user and other security.
+It excludes:
+
+-  Multi-factor authentication
+-  Encryption of the data
+-  A login screen
+
 ##### Customisation Options
 
-##### Advanced Analytics (Beyond filtering and charts)
+A feature that allows the user to customise the appearance of the GUI.
+It excludes:
+
+-  Different themes
+-  Extensions
+
+##### Advanced Analytics
+
+Features that include things such as advanced analytics beyond basic filtering, ranges, and charts.  
+It excludes:
+
+-  Machine learning
+-  Data mining
 
 #### Scope Management
 
