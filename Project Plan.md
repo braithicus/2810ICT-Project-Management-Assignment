@@ -7,7 +7,7 @@
 ### Team members
 
 | Student No. | Full Name             | GitHub Username      | Contribution (sum to 100%) |
-|-------------|-----------------------|----------------------|----------------------------|
+| ----------- | --------------------- | -------------------- | -------------------------- |
 | s5398289    | William-Joseph Simons | William-JosephSimons | 33.3% or Equal             |
 | s222222     | Full name             | xxx                  | 33.3% or Equal             |
 | s333333     | Full name             | xxx                  | 33.3% or Equal             |
@@ -42,100 +42,121 @@ Please Describe what you have accomplished in this group project.
 
 ### 1.1 Project Objectives
 
-- Provide a tool that allows users assess the nutritional value of different foods.  
-- Provide a tool that allows the consumer to search the food by name.
-- Provide a tool that allows users to sort and filter the nutritional data according to particular categories such as nutritional type.  
-- Provide a graphical user interface to allow for the data to be interacted with.
-- Allow for a foods nutritional value to be shown visually, with tools such as pie charts and bar graphs.
+-  Provide a tool that allows users assess the nutritional value of different foods.
+-  Provide a tool that allows the consumer to search the food by name.
+-  Provide a tool that allows users to sort and filter the nutritional data according to particular categories such as nutritional type.
+-  Provide a graphical user interface to allow for the data to be interacted with.
+-  Allow for a foods nutritional value to be shown visually, with tools such as pie charts and bar graphs.
+-  **ADDITIONAL FEATURE NEEDS TO BE ADDED**
 
 ### 1.2 Project Stakeholders
 
 #### Project Manager
-- <h6 style="display: inline;"> Description: </h6> In charge of managing the project in its entirety and acting as the communicator between all stakeholders, making sure its stays within and meets the requirements of the scope.
-- <h6 style="display: inline;"> Role: </h6> Acts as the main point for communication. Coordinates and integrates the processes of: Initiating, Planning, Executing, Monitoring and Controlling, and Closing. And facilitates decisions made within the core knowledge areas such as: Integration, Scope, Time, Cost, Quality, Human Resources, Communication, Risk, and Procurement. This is done through delegation, or personally by the project manager.
 
-#### Data Analysts 
-- <h6 style="display: inline;"> Description: </h6> Professionals in the scope of analysing and interpreting data to gain insights and meaning.
-- <h6 style="display: inline;"> Role: </h6> Create algorithms to evaluate the Nutritional_Food_Database.csv, and identify metrics and trends in the data that allow for different visual representations. While also removing any anomalies from the dataset, ensuring high quality data. They also use their findings to effectively communicate complex insights to other stakeholders.
+-  <h5 style="display: inline;"> Description: </h5> In charge of managing the project in its entirety and acting as the communicator between all stakeholders, making sure its stays within and meets the requirements of the scope.
+-  <h5 style="display: inline;"> Role: </h5> Acts as the main point for communication. Coordinates and integrates the processes of: Initiating, Planning, Executing, Monitoring and Controlling, and Closing. And facilitates decisions made within the core knowledge areas such as: Integration, Scope, Time, Cost, Quality, Human Resources, Communication, Risk, and Procurement. This is done through delegation, or personally by the project manager.
+
+#### Data Analysts
+
+-  <h5 style="display: inline;"> Description: </h5> Professionals in the scope of analysing and interpreting data to gain insights and meaning.
+-  <h5 style="display: inline;"> Role: </h5> Create algorithms to evaluate the Nutritional_Food_Database.csv, and identify metrics and trends in the data that allow for different visual representations. While also removing any anomalies from the dataset, ensuring high quality data. They also use their findings to effectively communicate complex insights to other stakeholders.
 
 #### Software Developers
-- <h6 style="display: inline;"> Description: </h6>
-- <h6 style="display: inline;"> Role: </h6> 
+
+-  <h5 style="display: inline;"> Description: </h5>
+-  <h5 style="display: inline;"> Role: </h5>
 
 #### Nutritionists and Dietitians
-- <h6 style="display: inline;"> Description: </h6>
-- <h6 style="display: inline;"> Role: </h6>
+
+-  <h5 style="display: inline;"> Description: </h5>
+-  <h5 style="display: inline;"> Role: </h5>
 
 #### Educational Institutions
-- <h6 style="display: inline;"> Description: </h6>
-- <h6 style="display: inline;"> Role: </h6>
+
+-  <h5 style="display: inline;"> Description: </h5>
+-  <h5 style="display: inline;"> Role: </h5>
 
 #### Health Conscious Individuals
-- <h6 style="display: inline;"> Description: </h6>
-- <h6 style="display: inline;"> Role: </h6>
+
+-  <h5 style="display: inline;"> Description: </h5>
+-  <h5 style="display: inline;"> Role: </h5>
 
 ### 1.3 Project Scope
 
 #### Inclusions
 
-###### Graphical User Interface
-An interface that allows users easily and graphically navigate the Nutritional_Food_Database.csv.  
-It includes: 
-- A food item search feature
-- Tools for visualisation, such as bar graphs and pie charts
-- Filtering and sorting choices based on the amount and range nutrients
+##### Graphical User Interface
 
-###### Food Search Feature
-A search feature that allows users to look for food items by name and see all its available nutritional data.  
-It includes: 
-- A search bar where you can enter the name of a food
-- A display that contains the nutritional information available for that food
-- An autocomplete feature that helps in finding the desired food
+An interface that allows users to easily and graphically navigate the Nutritional_Food_Database.csv.  
+It includes:
 
-###### Nutrition Breakdown Feature
+-  A food item search feature
+-  Tools for visualisation, such as bar graphs and pie charts
+-  A menu to select different nutrients
+
+##### Food Search Feature
+
+A search feature that allows users to search for food items by name and see all its available nutritional data.  
+It includes:
+
+-  A search bar where you can enter the name of a food
+-  A display that contains the nutritional information available for that food
+-  An autocomplete feature that helps in finding the desired food
+
+##### Nutrition Breakdown Feature
+
 A feature that allows user to see the nutritional breakdown of the food item they selected through pie charts and bar graphs.  
-It includes: 
-- Pie charts and bar graphs
-- An interactive component that allows the user to flip between the bar graphs and pie charts
+It includes:
 
-###### Nutrition Range Filter Feature
+-  Pie charts and bar graphs
+-  An interactive component that allows the user to flip between the bar graphs and pie charts
+
+##### Nutrition Range Filter Feature
+
 Allows users to select a nutrient and gives them the ability to input maximum and minimum values, and displays to them a list of foods that fall within that range.  
 It includes:
-- A menu for choosing between different nutrients
-- Fields to enter the maximum and minimum values
-- A display that contains the list of foods
 
-###### Nutrition Level Filter Feature
+-  A range menu for choosing between different nutrients
+-  Fields to enter the maximum and minimum values
+-  A display afterwards that contains the list of foods
 
+##### Nutrition Level Filter Feature
 
-###### Documentation
+Allows users to filter foods by their nutritional content levels: low, mid, and high. The filter includes: fat, protein, carbohydrates, sugar, and nutritional density.
+It includes:
 
-###### Quality Assurance (Making sure it's good)
+-  Low: Less than 33% of the highest value
+-  Mid: Between 33% and 66% of the highest value
+-  High: Greater than 66% of the highest value
+-  A filter menu for choosing the level of each nutrient
+-  Fields below each nutrient
+-  A display afterwards that will contain the list of foods
 
+##### ADDITIONAL FEATURE
+
+##### Documentation
+
+##### Quality Assurance (Making sure it's good)
 
 #### Exclusions
 
+##### Real-Time Data Integration
 
-###### Real-Time Data Integration
+##### Multi-Language Support
 
-###### Multi-Language Support
+##### User Authentication and Security Features
 
-###### User Authentication and Security Features
+##### Customisation Options
 
-###### Customisation Options
-
-###### Advanced Analytics (Beyond filtering and charts)
-
+##### Advanced Analytics (Beyond filtering and charts)
 
 #### Scope Management
 
+##### Change Control (Monitor changes)
 
-###### Change Control (Monitor changes)
+##### Regular Reviews
 
-###### Regular Reviews
-
-###### Communication
-
+##### Communication
 
 ## 2. Work Breakdown Structure
 
@@ -148,7 +169,7 @@ Include the Work Breakdown Structure (WBS) for the entire project. WBS should be
 Define the activities required for your project based on the WBS, and assign responsibilities to team members. Each activity should be numbered and correspond with your Gantt chart. Provide estimated durations for each activity to facilitate Gantt chart preparation.
 
 | Activity #No | Activity Name | Brief Description | Duration | Responsible Team Members |
-|--------------|---------------|-------------------|----------|--------------------------|
+| ------------ | ------------- | ----------------- | -------- | ------------------------ |
 | xxx          | xxx           | xxx               | xxx      | xxx \& yyy               |
 | xxxx         | xxx           | xxx               | xxx      | All                      |
 | xxxx         | xxx           | xxx               | xxx      | xxx                      |
