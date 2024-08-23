@@ -196,11 +196,14 @@ It excludes:
 
 #### Scope Management
 
-##### Change Control (Monitor changes)
-
 ##### Regular Reviews
 
-##### Communication
+Rounds of regular reviewing of everyone's work to ensure that it stays within the scope.
+It includes:
+
+-  Regular weekly meetings
+-  Reports on progress and changes made
+-  Communication around the necessary future changes to be made to the project
 
 ## 2. Work Breakdown Structure
 
