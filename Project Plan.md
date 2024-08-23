@@ -136,7 +136,20 @@ It includes:
 
 ##### Documentation
 
-##### Quality Assurance (Making sure it's good)
+Documentation of the software that describes how it works, and how its meant to be used.
+It includes:
+
+-  Describes how the code will operate (function definitions, data structures, etc.)
+-  Descriptions of what the system will do
+-  Descriptions on how the user is required to interact with the software
+
+##### Quality Assurance
+
+Testing and validating the software to make sure it fulfils the scope to a high standard and is free of bugs.  
+It includes:
+
+-  Bug tracking and fixing
+-  Thorough testing of the code
 
 #### Exclusions
 
