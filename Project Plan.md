@@ -63,23 +63,23 @@ Please Describe what you have accomplished in this group project.
 
 #### Software Developers
 
--  <h5 style="display: inline;"> Description: </h5>
--  <h5 style="display: inline;"> Role: </h5>
+-  <h5 style="display: inline;"> Description: </h5> People who are skilled in designing, implementing, and testing software applications.
+-  <h5 style="display: inline;"> Role: </h5> Implement and document the tools and analytical insights from the data analysts, while ensuring they are of high quality and thoroughly tested. This means ensuring that these tools meet the necessary requirements while being free of bugs, and documenting the process for other stakeholders.
 
 #### Nutritionists and Dietitians
 
--  <h5 style="display: inline;"> Description: </h5>
--  <h5 style="display: inline;"> Role: </h5>
+-  <h5 style="display: inline;"> Description: </h5> Professionals that are involved with advising people on their health related goals and their nutritional intake.
+-  <h5 style="display: inline;"> Role: </h5> They will use the tool to search for specific nutrients and analyse the data to come to conclusions on what the patient should do.
 
 #### Educational Institutions
 
--  <h5 style="display: inline;"> Description: </h5>
--  <h5 style="display: inline;"> Role: </h5>
+-  <h5 style="display: inline;"> Description: </h5> Institutions that involve educating the population such as schools and universities. Specifically institutions that teach topics involved with vitamins and nutrients such as health science.
+-  <h5 style="display: inline;"> Role: </h5> Institutions will use the application as a resource to teach students about nutrition, and use the visualisation tool as way to better engage the students.
 
 #### Health Conscious Individuals
 
--  <h5 style="display: inline;"> Description: </h5>
--  <h5 style="display: inline;"> Role: </h5>
+-  <h5 style="display: inline;"> Description: </h5> A subset of the general public that is conscious of their health and is interested in maintaining a healthy lifestyle and diet.
+-  <h5 style="display: inline;"> Role: </h5> These people will use the tool to search for nutritional information on the food they are eating to make more informed choices.
 
 ### 1.3 Project Scope
 
