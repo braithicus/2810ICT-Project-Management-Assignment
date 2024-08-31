@@ -69,7 +69,7 @@ Please Describe what you have accomplished in this group project.
 #### Nutritionists and Dietitians
 
 -  <h5 style="display: inline;"> Description: </h5> Professionals that are involved with advising people on their health related goals and their nutritional intake.
--  <h5 style="display: inline;"> Role: </h5> They will use the tool to search for specific nutrients and analyse the data to come to conclusions on what the patient should do.
+-  <h5 style="display: inline;"> Role: </h5> They will use the application to search for specific nutrients and analyse the data to come to conclusions on what the patient should do.
 
 #### Educational Institutions
 
@@ -79,7 +79,17 @@ Please Describe what you have accomplished in this group project.
 #### Health Conscious Individuals
 
 -  <h5 style="display: inline;"> Description: </h5> A subset of the general public that is conscious of their health and is interested in maintaining a healthy lifestyle and diet.
--  <h5 style="display: inline;"> Role: </h5> These people will use the tool to search for nutritional information on the food they are eating to make more informed choices.
+-  <h5 style="display: inline;"> Role: </h5> These people will use the application to search for nutritional information on the food they are eating to make more informed choices.
+
+#### Researchers
+
+-  <h5 style="display: inline;"> Description: </h5> People within academic institutions that study dietary and nutritional information; doing projects and conducting tests, searching for patterns and how different nutrients impact human health.
+-  <h5 style="display: inline;"> Role: </h5> They will use the application for easily searching through nutritional data and for its visualisation tools, to aid research projects.
+
+#### Food Manufacturers
+
+-  <h5 style="display: inline;"> Description: </h5> Companies that are involved in the selling, marketing, or producing food.
+-  <h5 style="display: inline;"> Role: </h5> Companies will use the application to become more aware of the relative sizes of different nutrients in their products and to better market the product to consumers based on its content.
 
 ### 1.3 Project Scope
 
