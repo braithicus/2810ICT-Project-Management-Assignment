@@ -1,6 +1,6 @@
 # Software Design Document
 
-## Project Name: XXXX
+## Project Name: Comprehensive Food GUI
 
 ## Group Number: 023
 
@@ -19,7 +19,7 @@
 <!-- TOC -->
 
 -  [Software Design Document](#software-design-document)
-   -  [Project Name: XXXX](#project-name-xxxx)
+   -  [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
    -  [Group Number: 023](#group-number-023)
    -  [Team members](#team-members)
 -  [Table of Contents](#table-of-contents)

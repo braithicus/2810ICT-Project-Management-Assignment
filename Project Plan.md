@@ -1,6 +1,6 @@
 # Project Plan
 
-## Project Name: XXXX
+## Project Name: Comprehensive Food GUI
 
 ## Group Number: 023
 
@@ -17,7 +17,7 @@
 Please Describe what you have accomplished in this group project.
 
 -  s5398289, William-Joseph Simons
-   -  Project Objectives.
+   -  Project Objectives, Stakeholders, Scope, Problem Background
 -  s222222, Full name
    -  Accomplishments: Describe what you have completed or achieved
 -  s5264208, Braith Lee
