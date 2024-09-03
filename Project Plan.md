@@ -44,7 +44,7 @@ Please Describe what you have accomplished in this group project.
 
 -  Provide a tool that allows users assess the nutritional value of different foods.
 -  Provide a tool that allows the consumer to search the food by name.
--  Provide a tool that allows users to sort and filter the nutritional data according to particular categories such as nutritional type.
+-  Provide a tool that allows users to filter the nutritional data according to particular ranges and levels of nutrients
 -  Provide a graphical user interface to allow for the data to be interacted with.
 -  Allow for a foods nutritional value to be shown visually, with tools such as pie charts and bar graphs.
 -  **ADDITIONAL FEATURE NEEDS TO BE ADDED**
