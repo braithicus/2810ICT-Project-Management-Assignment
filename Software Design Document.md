@@ -42,6 +42,12 @@
             -  [Nutrition Range Filter](#nutrition-range-filter)
             -  [Nutrition Level Filter](#nutrition-level-filter)
       -  [1.3 Benefit Analysis](#13-benefit-analysis)
+         -  [1. Informed Dietary Choices](#1-informed-dietary-choices)
+         -  [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
+         -  [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
+         -  [4. Educational Resource](#4-educational-resource)
+         -  [5. Marketing](#5-marketing)
+         -  [6. Time and Effort Savings](#6-time-and-effort-savings)
    -  [2. Requirements](#2-requirements)
       -  [2.1 User Requirements](#21-user-requirements)
       -  [2.2 Software Requirements](#22-software-requirements)
@@ -165,7 +171,35 @@
 
 ### 1.3 Benefit Analysis
 
-How will this system provide value or benefit?
+##### 1. Informed Dietary Choices
+
+-  Benefit: By having easy and quick access to comprehensive nutritional data, users can make more informed dietary decisions.
+-  Example:
+
+##### 2. Efficient Nutritional Research
+
+-  Benefit: More comprehensive and efficient research can be conducted by researchers.
+-  Example:
+
+##### 3. Enhances Dietitians and Nutritionists
+
+-  Benefit: Dietitians are able to give more individualised, precise, and accurate recommendations.
+-  Example:
+
+##### 4. Educational Resource
+
+-  Benefit: The tool can be used by educational institutions to educate people on nutrition and analysing data.
+-  Example:
+
+##### 5. Marketing
+
+-  Benefit: Manufacturers of food can make more informed choices surrounding the marketing of food.
+-  Example:
+
+##### 6. Time and Effort Savings
+
+-  Benefit: Having a central, user-friendly source of information that contains a plethora of nutritional information saves time and effort compared to searching many sources for the same information.
+-  Example:
 
 ## 2. Requirements
 
