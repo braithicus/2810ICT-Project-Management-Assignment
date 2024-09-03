@@ -4,13 +4,13 @@
 
 ## Group Number: 023
 
-## Team members
+## Team Members
 
 | Student Number | Name                  |
-| -------------- | --------------------- |
+|----------------|-----------------------|
 | s5398289       | William-Joseph Simons |
-| s222222        | Full name             |
-| s333333        | Full name             |
+| s5265839       | Ben Lange             |
+| s5264208       | Braith Lee            |
 
 <div style="page-break-after: always;"></div>
 
@@ -118,7 +118,7 @@
 
 -  Why: To become more aware of the relative sizes of different nutrients in their products and to better market the product to consumers based on its content.
 
-### 1.2 System capabilities/overview
+### 1.2 System Capabilities/Overview
 
 #### System Functionality
 

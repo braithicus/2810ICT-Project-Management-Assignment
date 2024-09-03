@@ -4,7 +4,7 @@
 
 ## Group Number: 023
 
-### Team members
+### Team Members
 
 | Student No. | Full Name             | GitHub Username      | Contribution (sum to 100%) |
 | ----------- | --------------------- | -------------------- | -------------------------- |
@@ -17,8 +17,8 @@
 Please Describe what you have accomplished in this group project.
 
 -  s5398289, William-Joseph Simons
-   -  Project Objectives, Stakeholders, Scope, Problem Background
--  s222222, Full name
+   -  Accomplishments: Project Objectives, Stakeholders, Scope, Problem Background
+-  s5265839, Ben Lange
    -  Accomplishments: Describe what you have completed or achieved
 -  s5264208, Braith Lee
    -  Accomplishments: Describe what you have completed or achieved
