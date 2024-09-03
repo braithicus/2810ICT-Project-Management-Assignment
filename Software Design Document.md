@@ -25,7 +25,22 @@
 -  [Table of Contents](#table-of-contents)
    -  [1. System Vision](#1-system-vision)
       -  [1.1 Problem Background](#11-problem-background)
+         -  [Data Input](#data-input)
+         -  [Data Output](#data-output)
+         -  [Target Users](#target-users)
+            -  [Nutritionists and Dietitians](#nutritionists-and-dietitians)
+            -  [Educational Institutions](#educational-institutions)
+            -  [Health Conscious Individuals](#health-conscious-individuals)
+            -  [Researchers](#researchers)
+            -  [Food Manufacturers](#food-manufacturers)
       -  [1.2 System capabilities/overview](#12-system-capabilitiesoverview)
+         -  [System Functionality](#system-functionality)
+         -  [Features and Functionalities:](#features-and-functionalities)
+            -  [GUI](#gui)
+            -  [Food Search](#food-search)
+            -  [Nutrition Breakdown](#nutrition-breakdown)
+            -  [Nutrition Range Filter](#nutrition-range-filter)
+            -  [Nutrition Level Filter](#nutrition-level-filter)
       -  [1.3 Benefit Analysis](#13-benefit-analysis)
    -  [2. Requirements](#2-requirements)
       -  [2.1 User Requirements](#21-user-requirements)
@@ -48,8 +63,8 @@
 
 ### 1.1 Problem Background
 
--  <h4 style="display: inline;"> Problem Identification: </h4> This application fills the need for an easy to use tool that makes it possible for people to search for, analyse, visualise, and evaluate nutritional data for a variety of foods. This is specifically targeted and most useful for people who want to perform nutritional research and make informed decisions, or potentially give dietary advice. The current issues that aries without the use of this tool is the difficulty in determining the nutritional value of foods. This leads to unnecessary difficulty when trying to make healthy lifestyle choices, and when trying to carry out nutritional related research or education.
--  <h4 style="display: inline;"> Dataset: </h4> The Nutritional_Food_Database.csv is being used. This is a static food dataset that contains information regarding the nutritional information on a variety of foods. Columns in the dataset include:
+-  <h5 style="display: inline;"> Problem Identification: </h5> This application fills the need for an easy to use tool that makes it possible for people to search for, analyse, visualise, and evaluate nutritional data for a variety of foods. This is specifically targeted and most useful for people who want to perform nutritional research and make informed decisions, or potentially give dietary advice. The current issues that aries without the use of this tool is the difficulty in determining the nutritional value of foods. This leads to unnecessary difficulty when trying to make healthy lifestyle choices, and when trying to carry out nutritional related research or education.
+-  <h5 style="display: inline;"> Dataset: </h5> The Nutritional_Food_Database.csv is being used. This is a static food dataset that contains information regarding the nutritional information on a variety of foods. Columns in the dataset include:
 -  -  Food
    -  Caloric Value
    -  Fat
@@ -58,34 +73,95 @@
    -  Protein
    -  Nutritional Density
    -  Many other metrics for nutrition
--  <h4 style="display: inline;"> Data Input: </h4>
--  -  Users will be entering the names of foods to search the dataset.
-   -  Users will be selecting specific foods to see visualisation tools on its nutritional content.
-   -  Users will be inputting minimum and maximum values for a nutrition to display foods that fall within that range.
-   -  Users will be inputting low, mid, and high levels for various nutrients to display a list of filtered food items that fall within those ranges.
-   -  **ADDITIONAL ITEM CONTAINS INPUT**
-   -  The users will be accessing the Nutritional_Food_Database.csv via their inputs above.
--  <h4 style="display: inline;"> Data Output: </h4>
--  -  Visualisation tools such as pie charts and bar graphs when a food item is searched or clicked from a display.
-   -  A list of foods after the user inputs minimum and maximum values from the range menu
-   -  A list of foods after the user inputs low, mid, and high values from the filter menu.
-   -  **ADDITIONAL ITEM CONTAINS OUTPUT**
--  <h4 style="display: inline;"> Target Users: </h4>
--  -  Nutritionists and Dietitians
-      -  Why: To search for specific nutrients and analyse the data to give informed advice.
-   -  Educational Institutions
-      -  Why: As a resource to teach students about nutrition, and use the visualisation tool as way to better engage students.
-   -  Health Conscious Individuals
-      -  Why: To search for nutritional information on the food they are eating to make more informed choices.
-   -  Researchers
-      -  Why: For easily searching through nutritional data and for its visualisation tools, to aid research projects.
-   -  Food Manufacturers
-      -  Why: To become more aware of the relative sizes of different nutrients in their products and to better market the product to consumers based on its content.
+
+##### Data Input
+
+-  Users will be entering the names of foods to search the dataset.
+-  Users will be selecting specific foods to see visualisation tools on its nutritional content.
+-  Users will be inputting minimum and maximum values for a nutrition to display foods that fall within that range.
+-  Users will be inputting low, mid, and high levels for various nutrients to display a list of filtered food items that fall within those ranges.
+-  **ADDITIONAL ITEM CONTAINS INPUT**
+-  The users will be accessing the Nutritional_Food_Database.csv via their inputs above.
+
+##### Data Output
+
+-  Visualisation tools such as pie charts and bar graphs when a food item is searched or clicked from a display.
+-  A list of foods after the user inputs minimum and maximum values from the range menu
+-  A list of foods after the user inputs low, mid, and high values from the filter menu.
+-  **ADDITIONAL ITEM CONTAINS OUTPUT**
+
+##### Target Users
+
+###### Nutritionists and Dietitians
+
+-  Why: To search for specific nutrients and analyse the data to give informed advice.
+
+###### Educational Institutions
+
+-  Why: As a resource to teach students about nutrition, and use the visualisation tool as way to better engage students.
+
+###### Health Conscious Individuals
+
+-  Why: To search for nutritional information on the food they are eating to make more informed choices.
+
+###### Researchers
+
+-  Why: For easily searching through nutritional data and for its visualisation tools, to aid research projects.
+
+###### Food Manufacturers
+
+-  Why: To become more aware of the relative sizes of different nutrients in their products and to better market the product to consumers based on its content.
 
 ### 1.2 System capabilities/overview
 
--  System Functionality: What will the system do?
--  Features and Functionalities: Describe the key features and functionalities of the system.
+#### System Functionality
+
+-  Users of the system will be able to search, filter, and visualise nutritional data from the Nutritional_Food_Database.csv with a user-friendly graphical user interface. The main objective is to allow users to more easily gain access to nutritional data so that they can gain insight into the content of their food.
+
+#### Features and Functionalities:
+
+##### GUI
+
+-  An interface that allows users to easily and graphically navigate the Nutritional_Food_Database.csv.
+   -  Functionality:
+      -  A food item search feature
+      -  Tools for visualisation, such as bar graphs and pie charts
+      -  Menus to perform different actions on the data
+
+##### Food Search
+
+-  A search feature that allows users to search for food items by name and see all its available nutritional data.
+   -  Functionality:
+      -  A search bar where you can enter the name of a food
+      -  A display that contains the nutritional information available for that food, along with visualisations of the data.
+      -  An autocomplete feature that helps in finding the desired food
+
+##### Nutrition Breakdown
+
+-  A feature that allows the user to see the nutritional breakdown of the food item they selected through pie charts and bar graphs.
+   -  Functionality:
+      -  Pie charts and bar graphs
+      -  An interactive component that allows the user to flip between the bar graphs and pie charts
+
+##### Nutrition Range Filter
+
+-  Allows users to select a nutrient and gives them the ability to input maximum and minimum values, and displays to them a list of foods that fall within that range.
+   -  Functionality:
+      -  A range menu for choosing between different nutrients
+      -  Fields to enter the maximum and minimum values
+      -  A display afterwards that contains the list of foods
+
+##### Nutrition Level Filter
+
+-  Allows users to filter foods by their nutritional content levels: low, mid, and high. The filter includes: fat, protein, carbohydrates, sugar, and nutritional density.
+   -  Functionality:
+      -  Low: Less than 33% of the highest value
+      -  Mid: Between 33% and 66% of the highest value
+      -  High: Greater than 66% of the highest value
+      -  A filter menu for choosing the level of each nutrient
+      -  Fields below each nutrient
+      -  A display afterwards that will contain the list of foods
+   -  **ADDITIONAL FEATURE**
 
 ### 1.3 Benefit Analysis
 
