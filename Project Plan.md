@@ -102,7 +102,7 @@ It includes:
 
 -  A food item search feature
 -  Tools for visualisation, such as bar graphs and pie charts
--  A menu to select different nutrients
+-  Menus to perform different actions on the data
 
 ##### Food Search Feature
 
@@ -110,12 +110,12 @@ A search feature that allows users to search for food items by name and see all 
 It includes:
 
 -  A search bar where you can enter the name of a food
--  A display that contains the nutritional information available for that food
+-  A display that contains the nutritional information available for that food, along with visualisations of the data.
 -  An autocomplete feature that helps in finding the desired food
 
 ##### Nutrition Breakdown Feature
 
-A feature that allows user to see the nutritional breakdown of the food item they selected through pie charts and bar graphs.  
+A feature that allows the user to see the nutritional breakdown of the food item they selected through pie charts and bar graphs.  
 It includes:
 
 -  Pie charts and bar graphs
