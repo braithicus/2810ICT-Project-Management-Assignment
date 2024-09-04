@@ -48,6 +48,7 @@
          -  [4. Educational Resource](#4-educational-resource)
          -  [5. Marketing](#5-marketing)
          -  [6. Time and Effort Savings](#6-time-and-effort-savings)
+         -  [7. ADDITIONAL FEATURE BENEFIT](#7-additional-feature-benefit)
    -  [2. Requirements](#2-requirements)
       -  [2.1 User Requirements](#21-user-requirements)
       -  [2.2 Software Requirements](#22-software-requirements)
@@ -174,32 +175,34 @@
 ##### 1. Informed Dietary Choices
 
 -  Benefit: By having easy and quick access to comprehensive nutritional data, users can make more informed dietary decisions.
--  Example:
+-  Example: A health conscious person navigates the Nutritional_Food_Database.csv using the GUI. They enter the food 'avocado' into the search feature, and the auto complete allows them to quickly locate the food. Upon making the selection, the application shows the user a nutritional breakdown of the nutrients in the avocado using pie charts and bar graphs. The person can then use this new knowledge to inform themselves on whether they should include avocados in their diet.
 
 ##### 2. Efficient Nutritional Research
 
 -  Benefit: More comprehensive and efficient research can be conducted by researchers.
--  Example:
+-  Example: In order to conduct research on the impact sugar has on the health of the consumer, a researcher could navigate to the nutrition range feature menu and input sugar. They would then input different minimum and maximum values to display lists of foods with varying levels of sugar. The researcher can then select foods from the list to see a more comprehensive breakdown of the nutrients they contain, utilising the visualisation tools to further analyse the relative content of sugar in the foods.
 
 ##### 3. Enhances Dietitians and Nutritionists
 
 -  Benefit: Dietitians are able to give more individualised, precise, and accurate recommendations.
--  Example:
+-  Example: If a client is required to cut back on fats, but needs to maintain high levels of nutritional density and protein, they can utilise the nutrition level filter. By navigating to the filter menu and choosing low for fat, high for protein, and high for nutritional density, while leaving the rest blank. The dietitian can use the displayed list to provide customised food recommendations.
 
 ##### 4. Educational Resource
 
--  Benefit: The tool can be used by educational institutions to educate people on nutrition and analysing data.
--  Example:
+-  Benefit: The tool can be used by educational institutions to educate people on nutrition and data analysis.
+-  Example: The application can be used in a class by a nutrition professor to teach students how to analyse and visualise nutritional data. The professor can search for different foods using the food search feature, and then they can get a nutritional breakdown of the food with pie charts and bar graphs to increase the engagement and understanding from the students, enhancing their learning experience.
 
 ##### 5. Marketing
 
 -  Benefit: Manufacturers of food can make more informed choices surrounding the marketing of food.
--  Example:
+-  Example: A food manufacturer can examine the nutritional content of their food using the nutrition breakdown feature with the visualisation tools. After the analysing the food, they can pinpoint nutrients that are high within their product such as necessary vitamins and use that as a way to target consumers with their marketing. Manufacturers can also use the nutrition range and filter feature to target specific nutrients to market.
 
 ##### 6. Time and Effort Savings
 
 -  Benefit: Having a central, user-friendly source of information that contains a plethora of nutritional information saves time and effort compared to searching many sources for the same information.
--  Example:
+-  Example: Using the auto complete of the food search feature allows a user to quickly locate the necessary food item. They search for "chicken breast" and analyse its protein content. The user then uses the nutrition range filter to find food with comparable protein content. They can now make more informed dietary decisions quicker and with less effort.
+
+##### 7. ADDITIONAL FEATURE BENEFIT
 
 ## 2. Requirements
 
