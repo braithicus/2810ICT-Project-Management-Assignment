@@ -18,50 +18,51 @@
 
 <!-- TOC -->
 
--  [Software Design Document](#software-design-document)
-   -  [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
-   -  [Group Number: 023](#group-number-023)
-   -  [Team members](#team-members)
--  [Table of Contents](#table-of-contents)
-   -  [1. System Vision](#1-system-vision)
-      -  [1.1 Problem Background](#11-problem-background)
-         -  [Data Input](#data-input)
-         -  [Data Output](#data-output)
-         -  [Target Users](#target-users)
-            -  [Nutritionists and Dietitians](#nutritionists-and-dietitians)
-            -  [Educational Institutions](#educational-institutions)
-            -  [Health Conscious Individuals](#health-conscious-individuals)
-            -  [Researchers](#researchers)
-            -  [Food Manufacturers](#food-manufacturers)
-      -  [1.2 System capabilities/overview](#12-system-capabilitiesoverview)
-         -  [System Functionality](#system-functionality)
-         -  [Features and Functionalities:](#features-and-functionalities)
-            -  [GUI](#gui)
-            -  [Food Search](#food-search)
-            -  [Nutrition Breakdown](#nutrition-breakdown)
-            -  [Nutrition Range Filter](#nutrition-range-filter)
-            -  [Nutrition Level Filter](#nutrition-level-filter)
-      -  [1.3 Benefit Analysis](#13-benefit-analysis)
-         -  [1. Informed Dietary Choices](#1-informed-dietary-choices)
-         -  [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
-         -  [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
-         -  [4. Educational Resource](#4-educational-resource)
-         -  [5. Marketing](#5-marketing)
-         -  [6. Time and Effort Savings](#6-time-and-effort-savings)
-   -  [2. Requirements](#2-requirements)
-      -  [2.1 User Requirements](#21-user-requirements)
-      -  [2.2 Software Requirements](#22-software-requirements)
-      -  [2.3 Use Case Diagram](#23-use-case-diagram)
-      -  [2.4 Use Cases](#24-use-cases)
-   -  [3. Software Design and System Components](#3-software-design-and-system-components)
-      -  [3.1 Software Design](#31-software-design)
-      -  [3.2 System Components](#32-system-components)
-         -  [3.2.1 Functions](#321-functions)
-         -  [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
-         -  [3.2.3 Detailed Design](#323-detailed-design)
-   -  [4. User Interface Design](#4-user-interface-design)
-      -  [4.1 Structural Design](#41-structural-design)
-      -  [4.2 Visual Design](#42-visual-design)
+- [Software Design Document](#software-design-document)
+  - [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
+  - [Group Number: 023](#group-number-023)
+  - [Team members](#team-members)
+- [Table of Contents](#table-of-contents)
+  - [1. System Vision](#1-system-vision)
+    - [1.1 Problem Background](#11-problem-background)
+        - [Data Input](#data-input)
+        - [Data Output](#data-output)
+        - [Target Users](#target-users)
+          - [Nutritionists and Dietitians](#nutritionists-and-dietitians)
+          - [Educational Institutions](#educational-institutions)
+          - [Health Conscious Individuals](#health-conscious-individuals)
+          - [Researchers](#researchers)
+          - [Food Manufacturers](#food-manufacturers)
+    - [1.2 System capabilities/overview](#12-system-capabilitiesoverview)
+      - [System Functionality](#system-functionality)
+      - [Features and Functionalities:](#features-and-functionalities)
+        - [GUI](#gui)
+        - [Food Search](#food-search)
+        - [Nutrition Breakdown](#nutrition-breakdown)
+        - [Nutrition Range Filter](#nutrition-range-filter)
+        - [Nutrition Level Filter](#nutrition-level-filter)
+    - [1.3 Benefit Analysis](#13-benefit-analysis)
+        - [1. Informed Dietary Choices](#1-informed-dietary-choices)
+        - [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
+        - [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
+        - [4. Educational Resource](#4-educational-resource)
+        - [5. Marketing](#5-marketing)
+        - [6. Time and Effort Savings](#6-time-and-effort-savings)
+        - [7. ADDITIONAL FEATURE BENEFIT](#7-additional-feature-benefit)
+  - [2. Requirements](#2-requirements)
+    - [2.1 User Requirements](#21-user-requirements)
+    - [2.2 Software Requirements](#22-software-requirements)
+    - [2.3 Use Case Diagram](#23-use-case-diagram)
+    - [2.4 Use Cases](#24-use-cases)
+  - [3. Software Design and System Components](#3-software-design-and-system-components)
+    - [3.1 Software Design](#31-software-design)
+    - [3.2 System Components](#32-system-components)
+      - [3.2.1 Functions](#321-functions)
+      - [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
+      - [3.2.3 Detailed Design](#323-detailed-design)
+  - [4. User Interface Design](#4-user-interface-design)
+    - [4.1 Structural Design](#41-structural-design)
+    - [4.2 Visual Design](#42-visual-design)
 
 <div style="page-break-after: always;"></div>
 
@@ -174,32 +175,34 @@
 ##### 1. Informed Dietary Choices
 
 -  Benefit: By having easy and quick access to comprehensive nutritional data, users can make more informed dietary decisions.
--  Example:
+-  Example: A health conscious person navigates the Nutritional_Food_Database.csv using the GUI. They enter the food 'avocado' into the search feature, and the auto complete allows them to quickly locate the food. Upon making the selection, the application shows the user a nutritional breakdown of the nutrients in the avocado using pie charts and bar graphs. The person can then use this new knowledge to inform themselves on whether they should include avocados in their diet.
 
 ##### 2. Efficient Nutritional Research
 
 -  Benefit: More comprehensive and efficient research can be conducted by researchers.
--  Example:
+-  Example: In order to conduct research on the impact sugar has on the health of the consumer, a researcher could navigate to the nutrition range feature menu and input sugar. They would then input different minimum and maximum values to display lists of foods with varying levels of sugar. The researcher can then select foods from the list to see a more comprehensive breakdown of the nutrients they contain, utilising the visualisation tools to further analyse the relative content of sugar in the foods.
 
 ##### 3. Enhances Dietitians and Nutritionists
 
 -  Benefit: Dietitians are able to give more individualised, precise, and accurate recommendations.
--  Example:
+-  Example: If a client is required to cut back on fats, but needs to maintain high levels of nutritional density and protein, they can utilise the nutrition level filter. By navigating to the filter menu and choosing low for fat, high for protein, and high for nutritional density, while leaving the rest blank. The dietitian can use the displayed list to provide customised food recommendations.
 
 ##### 4. Educational Resource
 
--  Benefit: The tool can be used by educational institutions to educate people on nutrition and analysing data.
--  Example:
+-  Benefit: The tool can be used by educational institutions to educate people on nutrition and data analysis.
+-  Example: The application can be used in a class by a nutrition professor to teach students how to analyse and visualise nutritional data. The professor can search for different foods using the food search feature, and then they can get a nutritional breakdown of the food with pie charts and bar graphs to increase the engagement and understanding from the students, enhancing their learning experience.
 
 ##### 5. Marketing
 
 -  Benefit: Manufacturers of food can make more informed choices surrounding the marketing of food.
--  Example:
+-  Example: A food manufacturer can examine the nutritional content of their food using the nutrition breakdown feature with the visualisation tools. After the analysing the food, they can pinpoint nutrients that are high within their product such as necessary vitamins and use that as a way to target consumers with their marketing. Manufacturers can also use the nutrition range and filter feature to target specific nutrients to market.
 
 ##### 6. Time and Effort Savings
 
 -  Benefit: Having a central, user-friendly source of information that contains a plethora of nutritional information saves time and effort compared to searching many sources for the same information.
--  Example:
+-  Example: Using the auto complete of the food search feature allows a user to quickly locate the necessary food item. They search for "chicken breast" and analyse its protein content. The user then uses the nutrition range filter to find food with comparable protein content. They can now make more informed dietary decisions quicker and with less effort.
+
+##### 7. ADDITIONAL FEATURE BENEFIT
 
 ## 2. Requirements
 
@@ -254,7 +257,7 @@ Example:
 
 List all key functions within the software. For each function, provide:
 
--  Description: Brief explanation of the function’s purpose.
+-  Description (Brief explanation of the function’s purpose): When creating functions of the software it is neccessary to reflect on the purpose of the software. For this case we would want to create a system that allows the users to analyse all nutritional information for specific foods and breakdown the nutritional information for that specific food in the form of pie and bar graphs, allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges, allow the user to select ranges of low, mid and high for nutriotional information such as fats, protein carbohydrates, sugar and nutritional density and [insert final idea here]
 -  Input Parameters: List parameters, their data types, and their use.
 -  Return Value: Describe what the function returns.
 -  Side Effects: Note any side effects, such as changes to global variables or data passed by reference.
