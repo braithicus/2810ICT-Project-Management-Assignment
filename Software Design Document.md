@@ -168,7 +168,8 @@
       -  A filter menu for choosing the level of each nutrient
       -  Fields below each nutrient
       -  A display afterwards that will contain the list of foods
-   -  **ADDITIONAL FEATURE**
+
+**ADDITIONAL FEATURE**
 
 ### 1.3 Benefit Analysis
 
