@@ -9,7 +9,7 @@
 | Student Number | Name                  |
 | -------------- | --------------------- |
 | s5398289       | William-Joseph Simons |
-| s222222        | Full name             |
+| s5265839       | Benjamin Lange        |
 | s333333        | Full name             |
 
 <div style="page-break-after: always;"></div>
@@ -258,10 +258,22 @@ Example:
 
 List all key functions within the software. For each function, provide:
 
--  Description (Brief explanation of the function’s purpose): When creating functions of the software it is neccessary to reflect on the purpose of the software. For this case we would want to create a system that allows the users to analyse all nutritional information for specific foods and breakdown the nutritional information for that specific food in the form of pie and bar graphs, allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges, allow the user to select ranges of low, mid and high for nutriotional information such as fats, protein carbohydrates, sugar and nutritional density and [insert final idea here]
--  Input Parameters: List parameters, their data types, and their use.
--  Return Value: Describe what the function returns.
--  Side Effects: Note any side effects, such as changes to global variables or data passed by reference.
+-  <h5 style="display: inline;"> Description: </h5> When creating functions of the software it is neccessary to reflect on the purpose of the software. For this case we would want:
+    
+    - to create a system that allows the users to analyse all nutritional information for specific foods
+    - breakdown the nutritional information for that specific food in the form of pie and bar graphs
+    - allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges 
+    - allow the user to select ranges of low, mid and high for nutriotional information such as fats, protein carbohydrates, sugar and nutritional density to compare visually 
+    - allow the user to select 5 chosen foods and compare them aginst each other visually with pie charts and bar graphs based on a one selected nutritonal value 
+-  <h5 style="display: inline;"> Input Parameters: </h5>
+    
+    - string: This would be used to type the name of a food or a nutrition field like pear or protein
+    - float32: This would be used to type the minimum or maximum of a nutrional field like 0.5 or 3.124
+    - boolean: This would be used to allow the user to pick between bar graph and pie graph
+-  <h5 style="display: inline;"> Return Value: </h5> Describe what the function returns.
+   
+    - **I'll be back**
+-  <h5 style="display: inline;"> Side Effects: </h5> Note any side effects, such as changes to global variables or data passed by reference.
 
 #### 3.2.2 Data Structures / Data Sources
 

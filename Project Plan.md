@@ -47,7 +47,7 @@ Please Describe what you have accomplished in this group project.
 -  Provide a tool that allows users to filter the nutritional data according to particular ranges and levels of nutrients
 -  Provide a graphical user interface to allow for the data to be interacted with.
 -  Allow for a foods nutritional value to be shown visually, with tools such as pie charts and bar graphs.
--  **ADDITIONAL FEATURE NEEDS TO BE ADDED**
+-  Allow for a visual comparison between 5 chosen foods with pie charts and bar graphs based on a chosen shared nutritonal value
 
 ### 1.2 Project Stakeholders
 
