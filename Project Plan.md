@@ -223,11 +223,38 @@ It includes:
 
 Define the activities required for your project based on the WBS, and assign responsibilities to team members. Each activity should be numbered and correspond with your Gantt chart. Provide estimated durations for each activity to facilitate Gantt chart preparation.
 
-| Activity #No | Activity Name | Brief Description | Duration | Responsible Team Members |
-| ------------ | ------------- | ----------------- | -------- | ------------------------ |
-| xxx          | xxx           | xxx               | xxx      | xxx \& yyy               |
-| xxxx         | xxx           | xxx               | xxx      | All                      |
-| xxxx         | xxx           | xxx               | xxx      | xxx                      |
+| Activity #No | Activity Name                             | Brief Description | Duration | Responsible Team Members |
+| ------------ | ----------------------------------------- | ----------------- | -------- | ------------------------ |
+| 1.1          | Define Project Objectives                 | xxx               | xxx      | xxx \& yyy               |
+| 1.2          | Identify Project Stakeholders             | xxx               | xxx      | All                      |
+| 2.1          | Define Project Scope                      | xxx               | xxx      | xxx                      |
+| 2.2          | Create WBS                                | xxx               | xxx      | xxx \& yyy               |
+| 2.3.1        | Define and Sequence Activities            | xxx               | xxx      | All                      |
+| 2.3.2        | Estimate Activity Duration                | xxx               | xxx      | xxx                      |
+| 2.4.1        | Define Problem Background                 | xxx               | xxx      | xxx \& yyy               |
+| 2.4.2        | Define System Capabilities / Overview     | xxx               | xxx      | All                      |
+| 2.4.3        | Identify the Benefits                     | xxx               | xxx      | xxx                      |
+| 2.5.1        | Identify User Requirements                | xxx               | xxx      | xxx \& yyy               |
+| 2.5.2        | Identify Software Requirements            | xxx               | xxx      | All                      |
+| 2.5.3        | Identify Use Cases and Construct Diagrams | xxx               | xxx      | xxx                      |
+| 2.6.1        | Design Software                           | xxx               | xxx      | xxx \& yyy               |
+| 2.6.2        | Identify System Components                | xxx               | xxx      | All                      |
+| 2.7.1        | Design the Structure                      | xxx               | xxx      | xxx                      |
+| 2.7.2        | Design the Visuals                        | xxx               | xxx      | xxx \& yyy               |
+| 3.1          | Implement the GUI                         | xxx               | xxx      | All                      |
+| 3.2          | Implement Food Search Feature             | xxx               | xxx      | xxx                      |
+| 3.3          | Implement Nutrition Breakdown Feature     | xxx               | xxx      | xxx \& yyy               |
+| 3.4          | Implement Nutrition Range Filter Feature  | xxx               | xxx      | All                      |
+| 3.5          | Implement Nutrition Level Filter Feature  | xxx               | xxx      | xxx                      |
+| 3.6          | Implement ADDITIONAL FEATURE              | xxx               | xxx      | xxx                      |
+| 3.7          | Conduct Testing                           | xxx               | xxx      | xxx \& yyy               |
+| 4.1          | Track Progress                            | xxx               | xxx      | All                      |
+| 4.2          | Control Scope                             | xxx               | xxx      | xxx                      |
+| 4.3          | Control Quality                           | xxx               | xxx      | xxx \& yyy               |
+| 4.4          | Monitor Bugs                              | xxx               | xxx      | All                      |
+| 5.1          | Review and Complete Work                  | xxx               | xxx      | xxx                      |
+| 5.2          | Performance Review                        | xxx               | xxx      | xxx \& yyy               |
+| 5.3          | Verify Completion of Work                 | xxx               | xxx      | All                      |
 
 ## 4. Gantt Chart
 
