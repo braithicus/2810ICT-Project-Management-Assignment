@@ -221,40 +221,38 @@ It includes:
 
 ## 3. Activity Definition Estimation
 
-Define the activities required for your project based on the WBS, and assign responsibilities to team members. Each activity should be numbered and correspond with your Gantt chart. Provide estimated durations for each activity to facilitate Gantt chart preparation.
-
-| Activity #No | Activity Name                             | Brief Description | Duration | Responsible Team Members |
-| ------------ | ----------------------------------------- | ----------------- | -------- | ------------------------ |
-| 1.1          | Define Project Objectives                 | xxx               | xxx      | xxx \& yyy               |
-| 1.2          | Identify Project Stakeholders             | xxx               | xxx      | All                      |
-| 2.1          | Define Project Scope                      | xxx               | xxx      | xxx                      |
-| 2.2          | Create WBS                                | xxx               | xxx      | xxx \& yyy               |
-| 2.3.1        | Define and Sequence Activities            | xxx               | xxx      | All                      |
-| 2.3.2        | Estimate Activity Duration                | xxx               | xxx      | xxx                      |
-| 2.4.1        | Define Problem Background                 | xxx               | xxx      | xxx \& yyy               |
-| 2.4.2        | Define System Capabilities / Overview     | xxx               | xxx      | All                      |
-| 2.4.3        | Identify the Benefits                     | xxx               | xxx      | xxx                      |
-| 2.5.1        | Identify User Requirements                | xxx               | xxx      | xxx \& yyy               |
-| 2.5.2        | Identify Software Requirements            | xxx               | xxx      | All                      |
-| 2.5.3        | Identify Use Cases and Construct Diagrams | xxx               | xxx      | xxx                      |
-| 2.6.1        | Design Software                           | xxx               | xxx      | xxx \& yyy               |
-| 2.6.2        | Identify System Components                | xxx               | xxx      | All                      |
-| 2.7.1        | Design the Structure                      | xxx               | xxx      | xxx                      |
-| 2.7.2        | Design the Visuals                        | xxx               | xxx      | xxx \& yyy               |
-| 3.1          | Implement the GUI                         | xxx               | xxx      | All                      |
-| 3.2          | Implement Food Search Feature             | xxx               | xxx      | xxx                      |
-| 3.3          | Implement Nutrition Breakdown Feature     | xxx               | xxx      | xxx \& yyy               |
-| 3.4          | Implement Nutrition Range Filter Feature  | xxx               | xxx      | All                      |
-| 3.5          | Implement Nutrition Level Filter Feature  | xxx               | xxx      | xxx                      |
-| 3.6          | Implement ADDITIONAL FEATURE              | xxx               | xxx      | xxx                      |
-| 3.7          | Conduct Testing                           | xxx               | xxx      | xxx \& yyy               |
-| 4.1          | Track Progress                            | xxx               | xxx      | All                      |
-| 4.2          | Control Scope                             | xxx               | xxx      | xxx                      |
-| 4.3          | Control Quality                           | xxx               | xxx      | xxx \& yyy               |
-| 4.4          | Monitor Bugs                              | xxx               | xxx      | All                      |
-| 5.1          | Review and Complete Work                  | xxx               | xxx      | xxx                      |
-| 5.2          | Performance Review                        | xxx               | xxx      | xxx \& yyy               |
-| 5.3          | Verify Completion of Work                 | xxx               | xxx      | All                      |
+| Activity #No | Activity Name                             | Brief Description                                                                                                                                                                                        | Duration | Responsible Team Members |
+| ------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------ |
+| 1.1          | Define Project Objectives                 | Establish objectives or goals that the project aims to achieve.                                                                                                                                          | xxx      | xxx \& yyy               |
+| 1.2          | Identify Project Stakeholders             | Identify all key stakeholders involved in the project, including internal teams and potential end-users.                                                                                                 | xxx      | All                      |
+| 2.1          | Define Project Scope                      | Define and manage what is included or excluded in the project and product.                                                                                                                               | xxx      | xxx                      |
+| 2.2          | Create WBS                                | A Work Breakdown Structure for the entire project. The WBS should be presented as a hierarchical diagram. All project activities are considered and included in the WBS.                                 | xxx      | xxx \& yyy               |
+| 2.3.1        | Define and Sequence Activities            | Define the activities required for the project based on the WBS, and assign responsibilities to team members. Each activity should be numbered.                                                          | xxx      | All                      |
+| 2.3.2        | Estimate Activity Duration                | Provide estimated durations for each activity and use that to create a Gantt chart.                                                                                                                      | xxx      | xxx                      |
+| 2.4.1        | Define Problem Background                 | Identify the problem, dataset, data input/output, and the target users                                                                                                                                   | xxx      | xxx \& yyy               |
+| 2.4.2        | Define System Capabilities / Overview     | Define what the system will do and describe the key features and functionalities of the system.                                                                                                          | xxx      | All                      |
+| 2.4.3        | Identify the Benefits                     | Identify how the system will provide value and benefit the stakeholders.                                                                                                                                 | xxx      | xxx                      |
+| 2.5.1        | Identify User Requirements                | Detail how users are expected to interact with or use the program. What functionalities must the system provide from the end-user perspective?                                                           | xxx      | xxx \& yyy               |
+| 2.5.2        | Identify Software Requirements            | Define the functionality the software will provide. This section should list requirements formally.                                                                                                      | xxx      | All                      |
+| 2.5.3        | Identify Use Cases and Construct Diagrams | Include at least 5 use cases, each corresponding to a specific function. Provide a system-level Use Case Diagram illustrating all required features.                                                     | xxx      | xxx                      |
+| 2.6.1        | Design Software                           | Include a flowchart that illustrates how the software will operate.                                                                                                                                      | xxx      | xxx \& yyy               |
+| 2.6.2        | Identify System Components                | List all key functions within the software. List all data structures or sources used in the software. Provide pseudocode or flowcharts for all the functions listed that operate on the data structures. | xxx      | All                      |
+| 2.7.1        | Design the Structure                      | Present a structural design, a hierarchy chart, showing the overall interface’s structure.                                                                                                               | xxx      | xxx                      |
+| 2.7.2        | Design the Visuals                        | Include all wireframes or mock-ups of the interface. Provide a discussion, explanation, and justification for the design choices.                                                                        | xxx      | xxx \& yyy               |
+| 3.1          | Implement the GUI                         | Implement the graphical user interface. This includes using wxFormBuilder to develop the layout.                                                                                                         | xxx      | All                      |
+| 3.2          | Implement Food Search Feature             | Code all the functions that enable the user to search for foods by name. Including the event that calls the nutrition breakdown feature.                                                                 | xxx      | xxx                      |
+| 3.3          | Implement Nutrition Breakdown Feature     | Code all the functions that enable the user to see pie charts and bar graphs that display the nutritional breakdown of the selected food.                                                                | xxx      | xxx \& yyy               |
+| 3.4          | Implement Nutrition Range Filter Feature  | Code all the functions that enable the user to see a list of food filtered by a minimum and maximum range of a specific nutrient.                                                                        | xxx      | All                      |
+| 3.5          | Implement Nutrition Level Filter Feature  | Code all the functions that enable the user to see a list of foods filtered by low, mid, high levels of multiple nutrients.                                                                              | xxx      | xxx                      |
+| 3.6          | Implement **ADDITIONAL FEATURE**          | Code all functions for additional feature.                                                                                                                                                               | xxx      | xxx                      |
+| 3.7          | Conduct Testing                           | Perform testing on the code to ensure there are no bugs and that the code meets the scope.                                                                                                               | xxx      | xxx \& yyy               |
+| 4.1          | Track Progress                            | Monitor the progress of the project to ensure it keeps pace with timelines and milestones.                                                                                                               | xxx      | All                      |
+| 4.2          | Control Scope                             | Ensure the progress stays within the scope by managing changes made.                                                                                                                                     | xxx      | xxx                      |
+| 4.3          | Control Quality                           | Ensure the application meets high standards by conducting reviews against the rubric.                                                                                                                    | xxx      | xxx \& yyy               |
+| 4.4          | Monitor Bugs                              | Track known bugs that are found during testing. Manage the bugs to ensure stability of the application.                                                                                                  | xxx      | All                      |
+| 5.1          | Review and Complete Work                  | Review the completed work to ensure it meets the objectives that were set.                                                                                                                               | xxx      | xxx                      |
+| 5.2          | Performance Review                        | Ensure that the completed work meets the required standards for the rubric.                                                                                                                              | xxx      | xxx \& yyy               |
+| 5.3          | Verify Completion of Work                 | Final review with the entire team to ensure everyone agrees on the application standard, and that it is ready to send.                                                                                   | xxx      | All                      |
 
 ## 4. Gantt Chart
 
