@@ -4,7 +4,7 @@
 
 ## Group Number: 023
 
-### Team Members
+### Team members
 
 | Student No. | Full Name             | GitHub Username      | Contribution (sum to 100%) |
 | ----------- | --------------------- | -------------------- | -------------------------- |
@@ -17,9 +17,9 @@
 Please Describe what you have accomplished in this group project.
 
 -  s5398289, William-Joseph Simons
-   -  Accomplishments: Project Objectives, Stakeholders, Scope, Problem Background
--  s5265839, Ben Lange
-   -  Accomplishments: Describe what you have completed or achieved
+   -  Project Plan Document, System Vision.
+-  s222222, Full name
+   -  Additional feature creator, Software Design Document
 -  s5264208, Braith Lee
    -  Accomplishments: Describe what you have completed or achieved
 
@@ -47,7 +47,7 @@ Please Describe what you have accomplished in this group project.
 -  Provide a tool that allows users to filter the nutritional data according to particular ranges and levels of nutrients
 -  Provide a graphical user interface to allow for the data to be interacted with.
 -  Allow for a foods nutritional value to be shown visually, with tools such as pie charts and bar graphs.
--  **ADDITIONAL FEATURE NEEDS TO BE ADDED**
+-  Allow for a visual comparison between 5 chosen foods with pie charts and bar graphs based on a chosen shared nutritional value
 
 ### 1.2 Project Stakeholders
 
@@ -138,11 +138,18 @@ It includes:
 -  Low: Less than 33% of the highest value
 -  Mid: Between 33% and 66% of the highest value
 -  High: Greater than 66% of the highest value
--  A filter menu for choosing the level of each nutrient
--  Fields below each nutrient
+-  A filter menu for choosing the nutrient
+-  A field for choosing low, mid, or high
 -  A display afterwards that will contain the list of foods
 
-##### ADDITIONAL FEATURE
+##### Food Wars
+
+Allow users to compare up to 5 different foods against a chosen nutrient and allow them to visually compare the different foods in a bar and pie graph.
+It Includes:
+
+-  A button to access the feature
+-  Search bars for the foods and for the nutrient
+-  Pie charts and bar graphs
 
 ##### Documentation
 
@@ -217,25 +224,43 @@ It includes:
 
 ## 2. Work Breakdown Structure
 
-Include the Work Breakdown Structure (WBS) for the entire project. WBS should be presented as a hierarchical diagram. Use the elements from the WBS to define activities in Section 3, and schedule these activities in the Gantt Chart in Section 4. Ensure all project activities are considered and included in the WBS.
-
-![WBS](./WBS.jpg)
+![WBS](./WBS.png)
 
 ## 3. Activity Definition Estimation
 
-Define the activities required for your project based on the WBS, and assign responsibilities to team members. Each activity should be numbered and correspond with your Gantt chart. Provide estimated durations for each activity to facilitate Gantt chart preparation.
-
-| Activity #No | Activity Name | Brief Description | Duration | Responsible Team Members |
-| ------------ | ------------- | ----------------- | -------- | ------------------------ |
-| xxx          | xxx           | xxx               | xxx      | xxx \& yyy               |
-| xxxx         | xxx           | xxx               | xxx      | All                      |
-| xxxx         | xxx           | xxx               | xxx      | xxx                      |
+| Activity #No | Activity Name                             | Brief Description                                                                                                                                                                                        | Duration (Days) | Responsible Team Members |
+| ------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------ |
+| 1.1          | Define Project Objectives                 | Establish objectives or goals that the project aims to achieve.                                                                                                                                          | 1               | William-Joseph           |
+| 1.2          | Identify Project Stakeholders             | Identify all key stakeholders involved in the project, including internal teams and potential end-users.                                                                                                 | 2               | William-Joseph           |
+| 2.1          | Define Project Scope                      | Define and manage what is included or excluded in the project and product.                                                                                                                               | 3               | William-Joseph           |
+| 2.2          | Create WBS                                | A Work Breakdown Structure for the entire project. The WBS should be presented as a hierarchical diagram. All project activities are considered and included in the WBS.                                 | 2               | William-Joseph           |
+| 2.3.1        | Define and Sequence Activities            | Define the activities required for the project based on the WBS, and assign responsibilities to team members. Each activity should be numbered.                                                          | 2               | William-Joseph           |
+| 2.3.2        | Estimate Activity Duration                | Provide estimated durations for each activity and use that to create a Gantt chart.                                                                                                                      | 1               | William-Joseph           |
+| 2.4.1        | Define Problem Background                 | Identify the problem, dataset, data input/output, and the target users                                                                                                                                   | 1               | William-Joseph           |
+| 2.4.2        | Define System Capabilities / Overview     | Define what the system will do and describe the key features and functionalities of the system.                                                                                                          | 2               | William-Joseph           |
+| 2.4.3        | Identify the Benefits                     | Identify how the system will provide value and benefit the stakeholders.                                                                                                                                 | 1               | William-Joseph           |
+| 2.5.1        | Identify User Requirements                | Detail how users are expected to interact with or use the program. What functionalities must the system provide from the end-user perspective?                                                           | 1               | ???                      |
+| 2.5.2        | Identify Software Requirements            | Define the functionality the software will provide. This section should list requirements formally.                                                                                                      | 2               | ???                      |
+| 2.5.3        | Identify Use Cases and Construct Diagrams | Include at least 5 use cases, each corresponding to a specific function. Provide a system-level Use Case Diagram illustrating all required features.                                                     | 2               | ???                      |
+| 2.6.1        | Design Software                           | Include a flowchart that illustrates how the software will operate.                                                                                                                                      | 2               | ???                      |
+| 2.6.2        | Identify System Components                | List all key functions within the software. List all data structures or sources used in the software. Provide pseudocode or flowcharts for all the functions listed that operate on the data structures. | 3               | ???                      |
+| 2.7.1        | Design the Structure                      | Present a structural design, a hierarchy chart, showing the overall interface’s structure.                                                                                                               | 2               | ???                      |
+| 2.7.2        | Design the Visuals                        | Include all wireframes or mock-ups of the interface. Provide a discussion, explanation, and justification for the design choices.                                                                        | 2               | ???                      |
+| 3.1          | Implement the GUI                         | Implement the graphical user interface. This includes using wxFormBuilder to develop the layout.                                                                                                         | 3               | ???                      |
+| 3.2          | Implement Food Search Feature             | Code all the functions that enable the user to search for foods by name. Including the event that calls the nutrition breakdown feature.                                                                 | 3               | ???                      |
+| 3.3          | Implement Nutrition Breakdown Feature     | Code all the functions that enable the user to see pie charts and bar graphs that display the nutritional breakdown of the selected food.                                                                | 3               | ???                      |
+| 3.4          | Implement Nutrition Range Filter Feature  | Code all the functions that enable the user to see a list of food filtered by a minimum and maximum range of a specific nutrient.                                                                        | 3               | ???                      |
+| 3.5          | Implement Nutrition Level Filter Feature  | Code all the functions that enable the user to see a list of foods filtered by low, mid, or high levels of a selected nutrient.                                                                          | 3               | ???                      |
+| 3.6          | Implement Food Wars Feature               | Code all the functions that allow the user to compare up to 5 different foods against a chosen nutrient and the charts to compare the different foods.                                                   | 3               | ???                      |
+| 3.7          | Conduct Testing                           | Perform testing on the code to ensure there are no bugs and that the code meets the scope.                                                                                                               | 5               | ???                      |
+| 4.1          | Track Progress                            | Monitor the progress of the project to ensure it keeps pace with timelines and milestones.                                                                                                               | Ongoing         | ???                      |
+| 4.2          | Control Scope                             | Ensure the progress stays within the scope by managing changes made.                                                                                                                                     | Ongoing         | ???                      |
+| 4.3          | Control Quality                           | Ensure the application meets high standards by conducting reviews against the rubric.                                                                                                                    | Ongoing         | ???                      |
+| 4.4          | Monitor Bugs                              | Track known bugs that are found during testing. Manage the bugs to ensure stability of the application.                                                                                                  | Ongoing         | ???                      |
+| 5.1          | Review and Complete Work                  | Review the completed work to ensure it meets the objectives that were set.                                                                                                                               | 1               | All                      |
+| 5.2          | Performance Review                        | Ensure that the completed work meets the required standards for the rubric.                                                                                                                              | 1               | All                      |
+| 5.3          | Verify Completion of Work                 | Final review with the entire team to ensure everyone agrees on the application standard, and that it is ready to send.                                                                                   | 1               | All                      |
 
 ## 4. Gantt Chart
 
-You have to use the provided Gantt chart template.
-
-Use the provided Gantt chart template to list all items from the Activity Definition along with relevant estimates
-and scheduling. Ensure that the Gantt chart reflects the activity definitions from Section 3. Track actual start
-times and durations. Besides including Gantt chart here, you should also submit your Gantt chart file separately.
 ![Gantt Chart](./Gantt_chart.png)

@@ -4,13 +4,13 @@
 
 ## Group Number: 023
 
-## Team Members
+## Team members
 
 | Student Number | Name                  |
-|----------------|-----------------------|
+| -------------- | --------------------- |
 | s5398289       | William-Joseph Simons |
-| s5265839       | Ben Lange             |
-| s5264208       | Braith Lee            |
+| s5265839       | Benjamin Lange        |
+| s333333        | Full name             |
 
 <div style="page-break-after: always;"></div>
 
@@ -18,51 +18,52 @@
 
 <!-- TOC -->
 
-- [Software Design Document](#software-design-document)
-  - [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
-  - [Group Number: 023](#group-number-023)
-  - [Team members](#team-members)
-- [Table of Contents](#table-of-contents)
-  - [1. System Vision](#1-system-vision)
-    - [1.1 Problem Background](#11-problem-background)
-        - [Data Input](#data-input)
-        - [Data Output](#data-output)
-        - [Target Users](#target-users)
-          - [Nutritionists and Dietitians](#nutritionists-and-dietitians)
-          - [Educational Institutions](#educational-institutions)
-          - [Health Conscious Individuals](#health-conscious-individuals)
-          - [Researchers](#researchers)
-          - [Food Manufacturers](#food-manufacturers)
-    - [1.2 System capabilities/overview](#12-system-capabilitiesoverview)
-      - [System Functionality](#system-functionality)
-      - [Features and Functionalities:](#features-and-functionalities)
-        - [GUI](#gui)
-        - [Food Search](#food-search)
-        - [Nutrition Breakdown](#nutrition-breakdown)
-        - [Nutrition Range Filter](#nutrition-range-filter)
-        - [Nutrition Level Filter](#nutrition-level-filter)
-    - [1.3 Benefit Analysis](#13-benefit-analysis)
-        - [1. Informed Dietary Choices](#1-informed-dietary-choices)
-        - [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
-        - [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
-        - [4. Educational Resource](#4-educational-resource)
-        - [5. Marketing](#5-marketing)
-        - [6. Time and Effort Savings](#6-time-and-effort-savings)
-        - [7. ADDITIONAL FEATURE BENEFIT](#7-additional-feature-benefit)
-  - [2. Requirements](#2-requirements)
-    - [2.1 User Requirements](#21-user-requirements)
-    - [2.2 Software Requirements](#22-software-requirements)
-    - [2.3 Use Case Diagram](#23-use-case-diagram)
-    - [2.4 Use Cases](#24-use-cases)
-  - [3. Software Design and System Components](#3-software-design-and-system-components)
-    - [3.1 Software Design](#31-software-design)
-    - [3.2 System Components](#32-system-components)
-      - [3.2.1 Functions](#321-functions)
-      - [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
-      - [3.2.3 Detailed Design](#323-detailed-design)
-  - [4. User Interface Design](#4-user-interface-design)
-    - [4.1 Structural Design](#41-structural-design)
-    - [4.2 Visual Design](#42-visual-design)
+-  [Software Design Document](#software-design-document)
+   -  [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
+   -  [Group Number: 023](#group-number-023)
+   -  [Team members](#team-members)
+-  [Table of Contents](#table-of-contents)
+   -  [1. System Vision](#1-system-vision)
+      -  [1.1 Problem Background](#11-problem-background)
+         -  [Data Input](#data-input)
+         -  [Data Output](#data-output)
+         -  [Target Users](#target-users)
+            -  [Nutritionists and Dietitians](#nutritionists-and-dietitians)
+            -  [Educational Institutions](#educational-institutions)
+            -  [Health Conscious Individuals](#health-conscious-individuals)
+            -  [Researchers](#researchers)
+            -  [Food Manufacturers](#food-manufacturers)
+      -  [1.2 System capabilities/overview](#12-system-capabilitiesoverview)
+         -  [System Functionality](#system-functionality)
+         -  [Features and Functionalities:](#features-and-functionalities)
+            -  [GUI](#gui)
+            -  [Food Search](#food-search)
+            -  [Nutrition Breakdown](#nutrition-breakdown)
+            -  [Nutrition Range Filter](#nutrition-range-filter)
+            -  [Nutrition Level Filter](#nutrition-level-filter)
+            -  [Food Wars](#food-wars)
+      -  [1.3 Benefit Analysis](#13-benefit-analysis)
+         -  [1. Informed Dietary Choices](#1-informed-dietary-choices)
+         -  [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
+         -  [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
+         -  [4. Educational Resource](#4-educational-resource)
+         -  [5. Marketing](#5-marketing)
+         -  [6. Time and Effort Savings](#6-time-and-effort-savings)
+         -  [7. ADDITIONAL FEATURE BENEFIT](#7-additional-feature-benefit)
+   -  [2. Requirements](#2-requirements)
+      -  [2.1 User Requirements](#21-user-requirements)
+      -  [2.2 Software Requirements](#22-software-requirements)
+      -  [2.3 Use Case Diagram](#23-use-case-diagram)
+      -  [2.4 Use Cases](#24-use-cases)
+   -  [3. Software Design and System Components](#3-software-design-and-system-components)
+      -  [3.1 Software Design](#31-software-design)
+      -  [3.2 System Components](#32-system-components)
+         -  [3.2.1 Functions](#321-functions)
+         -  [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
+         -  [3.2.3 Detailed Design](#323-detailed-design)
+   -  [4. User Interface Design](#4-user-interface-design)
+      -  [4.1 Structural Design](#41-structural-design)
+      -  [4.2 Visual Design](#42-visual-design)
 
 <div style="page-break-after: always;"></div>
 
@@ -86,7 +87,7 @@
 -  Users will be entering the names of foods to search the dataset.
 -  Users will be selecting specific foods to see visualisation tools on its nutritional content.
 -  Users will be inputting minimum and maximum values for a nutrition to display foods that fall within that range.
--  Users will be inputting low, mid, and high levels for various nutrients to display a list of filtered food items that fall within those ranges.
+-  Users will be inputting a low, mid, or high level for a specific nutrient to display a list of filtered food items that fall within that range.
 -  **ADDITIONAL ITEM CONTAINS INPUT**
 -  The users will be accessing the Nutritional_Food_Database.csv via their inputs above.
 
@@ -94,7 +95,7 @@
 
 -  Visualisation tools such as pie charts and bar graphs when a food item is searched or clicked from a display.
 -  A list of foods after the user inputs minimum and maximum values from the range menu
--  A list of foods after the user inputs low, mid, and high values from the filter menu.
+-  A list of foods after the user inputs a low, mid, or high value from the filter menu.
 -  **ADDITIONAL ITEM CONTAINS OUTPUT**
 
 ##### Target Users
@@ -119,7 +120,7 @@
 
 -  Why: To become more aware of the relative sizes of different nutrients in their products and to better market the product to consumers based on its content.
 
-### 1.2 System Capabilities/Overview
+### 1.2 System capabilities/overview
 
 #### System Functionality
 
@@ -160,15 +161,20 @@
 
 ##### Nutrition Level Filter
 
--  Allows users to filter foods by their nutritional content levels: low, mid, and high. The filter includes: fat, protein, carbohydrates, sugar, and nutritional density.
+-  Allows users to filter foods by the size of a nutrient content level: low, mid, and high. The filter includes: fat, protein, carbohydrates, sugar, and nutritional density.
    -  Functionality:
       -  Low: Less than 33% of the highest value
       -  Mid: Between 33% and 66% of the highest value
       -  High: Greater than 66% of the highest value
-      -  A filter menu for choosing the level of each nutrient
-      -  Fields below each nutrient
+      -  A filter menu for choosing the nutrient
+      -  A field for choosing low, mid, or high
       -  A display afterwards that will contain the list of foods
-   -  **ADDITIONAL FEATURE**
+
+##### Food Wars
+
+-  **Description**
+   -  Functionality:
+      -  **Functions**
 
 ### 1.3 Benefit Analysis
 
@@ -185,7 +191,7 @@
 ##### 3. Enhances Dietitians and Nutritionists
 
 -  Benefit: Dietitians are able to give more individualised, precise, and accurate recommendations.
--  Example: If a client is required to cut back on fats, but needs to maintain high levels of nutritional density and protein, they can utilise the nutrition level filter. By navigating to the filter menu and choosing low for fat, high for protein, and high for nutritional density, while leaving the rest blank. The dietitian can use the displayed list to provide customised food recommendations.
+-  Example: If a client is required to cut back on fats, the dietician can utilise the nutrition level filter. By navigating to the filter menu and choosing low for fat. They can use the displayed list to provide customised food recommendations. Or if they want more precise recommendations they can use the range feature for specific amounts.
 
 ##### 4. Educational Resource
 
@@ -257,16 +263,44 @@ Example:
 
 List all key functions within the software. For each function, provide:
 
--  Description (Brief explanation of the function’s purpose): When creating functions of the software it is neccessary to reflect on the purpose of the software. For this case we would want to create a system that allows the users to analyse all nutritional information for specific foods and breakdown the nutritional information for that specific food in the form of pie and bar graphs, allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges, allow the user to select ranges of low, mid and high for nutriotional information such as fats, protein carbohydrates, sugar and nutritional density and [insert final idea here]
--  Input Parameters: List parameters, their data types, and their use.
--  Return Value: Describe what the function returns.
--  Side Effects: Note any side effects, such as changes to global variables or data passed by reference.
+-  <h5 style="display: inline;"> Description: </h5> When creating functions of the software it is necessary to reflect on the purpose of the software. For this case we would want:
+    
+    - <h6 style="display: inline;"> Food Search Function: </h6> to create a system that allows the users to analyse all nutritional information for specific foods
+    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> breakdown the nutritional information for that specific food in the form of pie and bar graphs
+    - <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6> allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges 
+    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> allow the user to select ranges of low, medium and high for nutritional information such as fats, protein carbohydrates, sugar and nutritional density to compare the foods that fall within the ranges visually 
+    - <h6 style="display: inline;"> Food Wars Function: </h6> allow the user to select 5 chosen foods and compare them against each other visually with pie charts or bar graphs based on a one selected nutritional information
+
+-  <h5 style="display: inline;"> Input Parameters: </h5>
+    
+    - <h6 style="display: inline;"> Food Search Function: </h6> The input type would be string and be used to input the foods the user is wanting to look up such as "pear"
+    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> The input type would be boolean as to allow the user to pick between bar chart or pie graph "Graph: 'bar' "
+    - <h6 style="display: inline;"> Nutrition Range Filter Function: </h6> The input would be a combination input of a string and float32 to allow the user to first input the nutritional information and then input the minimum and maximum values for that nutritional information such as "fats, minimum: 0.5000, maximum: 3.1240"
+    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> The input would be a string that allows the users to select the nutritional information to filter using such as "protein" then another string that only accepts three options of "low", "medium", "high"
+    - <h6 style="display: inline;"> Food Wars Function: </h6> The input would be a combination of a set 5 strings that allow the user to select 5 foods such as "cheese sticks" "pear" "apple" "hummus" "fried rice" then another string for the nutritional information such as "sugar" and finally a boolean which would allow the user to select either pie or bar graph such as "Graph: 'pie' "
+
+-  <h5 style="display: inline;"> Return Value: </h5> Describe what the function returns.
+
+   -  <h6 style="display: inline;"> Food Search Function: </h6> Would display all the information returned for the selected food such as in a dictionary for the user to view.
+   -  <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> Would display all the information for the selected food's nutritional information as a bar or pie graph.
+   -  <h6 style="display: inline;"> Nutrition Range Filter Function: </h6> Would display all the foods between the selected minimum and maximum of the selected nutrition as a dictionary going from the food closest to the maximum with its value to the food closest to the minimum.
+   -  <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> Have the foods that fall within the chosen parameters of low, medium or high for the selected nutritional value as a dictionary which will display the foods from the highest nutritional values to the lowest with the names of the foods
+   -  <h6 style="display: inline;"> Food Wars Function: </h6> It would have the function return the 5 selected foods compared against the nutritional value selected in the form of a bar or pie chart
+
+-  <h5 style="display: inline;"> Side Effects: </h5> Note any side effects, such as changes to global variables or data passed by reference.
+
+   -  **I Have No Idea For This SEction Delete IF Nothing Put Down**
+   -  <h6 style="display: inline;"> Food Search Function: </h6>
+   -  <h6 style="display: inline;"> Nutrition Breakdown Function: </h6>
+   -  <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6>
+   -  <h6 style="display: inline;"> Nutrition Level Filter Function: </h6>
+   -  <h6 style="display: inline;"> Food Wars Function: </h6>
 
 #### 3.2.2 Data Structures / Data Sources
 
 List all data structures or sources used in the software. For each, provide:
 
--  Type: Type of data structure (e.g., list, set, dictionary).
+-  Type: Type of data structure (e.g., list, set, dictionary). Dictionaries, Arrays **COME UP WITH MORE IDEAS**
 -  Usage: Describe where and how it is used.
 -  Functions: List functions that utilize this structure.
 
