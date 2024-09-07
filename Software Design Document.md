@@ -263,26 +263,26 @@ Example:
 
 List all key functions within the software. For each function, provide:
 
--  <h5 style="display: inline;"> Description: </h5> When creating functions of the software it is neccessary to reflect on the purpose of the software. For this case we would want:
+-  <h5 style="display: inline;"> Description: </h5> When creating functions of the software it is necessary to reflect on the purpose of the software. For this case we would want:
     
     - <h6 style="display: inline;"> Food Search Function: </h6> to create a system that allows the users to analyse all nutritional information for specific foods
     - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> breakdown the nutritional information for that specific food in the form of pie and bar graphs
     - <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6> allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges 
     - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> allow the user to select ranges of low, medium and high for nutritional information such as fats, protein carbohydrates, sugar and nutritional density to compare the foods that fall within the ranges visually 
-    - <h6 style="display: inline;"> Food Wars Function: </h6> allow the user to select 5 chosen foods and compare them aginst each other visually with pie charts or bar graphs based on a one selected nutritonal information
+    - <h6 style="display: inline;"> Food Wars Function: </h6> allow the user to select 5 chosen foods and compare them against each other visually with pie charts or bar graphs based on a one selected nutritional information
 
 -  <h5 style="display: inline;"> Input Parameters: </h5>
     
     - <h6 style="display: inline;"> Food Search Function: </h6> The input type would be string and be used to input the foods the user is wanting to look up such as "pear"
     - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> The input type would be boolean as to allow the user to pick between bar chart or pie graph "Graph: 'bar' "
-    - <h6 style="display: inline;"> Nutrition Range Filter Function: </h6> The input would be a combination input of a string and float32 to allow the user to first input the nutritional information and then input the minimum and maximum values for that nutrtional information such as "fats, minimum: 0.5000, maximum: 3.1240"
-    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> The input would be a string that allows the users to select the nutrional information to filter using such as "protein" then another string that only accepts three options of "low", "medium", "high"
-    - <h6 style="display: inline;"> Food Wars Function: </h6> The input would be a combination of a set 5 strings that allow the user to select 5 foods such as "cheese sticks" "pear" "apple" "hummus" "fried rice" then another string for the nutrional information such as "sugar" and finally a boolean which would allow the user to select either pie or bar graph such as "Graph: 'pie' "
+    - <h6 style="display: inline;"> Nutrition Range Filter Function: </h6> The input would be a combination input of a string and float32 to allow the user to first input the nutritional information and then input the minimum and maximum values for that nutritional information such as "fats, minimum: 0.5000, maximum: 3.1240"
+    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> The input would be a string that allows the users to select the nutritional information to filter using such as "protein" then another string that only accepts three options of "low", "medium", "high"
+    - <h6 style="display: inline;"> Food Wars Function: </h6> The input would be a combination of a set 5 strings that allow the user to select 5 foods such as "cheese sticks" "pear" "apple" "hummus" "fried rice" then another string for the nutritional information such as "sugar" and finally a boolean which would allow the user to select either pie or bar graph such as "Graph: 'pie' "
 
 -  <h5 style="display: inline;"> Return Value: </h5> Describe what the function returns.
 
    -  <h6 style="display: inline;"> Food Search Function: </h6> Would display all the information returned for the selected food such as in a dictionary for the user to view.
-   -  <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> Would display all the information for the selected food's nurtitional information as a bar or pie graph.
+   -  <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> Would display all the information for the selected food's nutritional information as a bar or pie graph.
    -  <h6 style="display: inline;"> Nutrition Range Filter Function: </h6> Would display all the foods between the selected minimum and maximum of the selected nutrition as a dictionary going from the food closest to the maximum with its value to the food closest to the minimum.
    -  <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> Have the foods that fall within the chosen parameters of low, medium or high for the selected nutritional value as a dictionary which will display the foods from the highest nutritional values to the lowest with the names of the foods
    -  <h6 style="display: inline;"> Food Wars Function: </h6> It would have the function return the 5 selected foods compared against the nutritional value selected in the form of a bar or pie chart
