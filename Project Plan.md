@@ -4,7 +4,7 @@
 
 ## Group Number: 023
 
-### Team members
+### Team Members
 
 | Student No. | Full Name             | GitHub Username      | Contribution (sum to 100%) |
 | ----------- | --------------------- | -------------------- | -------------------------- |
@@ -108,56 +108,56 @@ Please Describe what you have accomplished in this group project.
 An interface that allows users to easily and graphically navigate the Nutritional_Food_Database.csv.  
 It includes:
 
--  A food item search feature
--  Tools for visualisation, such as bar graphs and pie charts
--  Menus to perform different actions on the data
+-  A food item search feature.
+-  Tools for visualisation, such as bar graphs and pie charts.
+-  Menus to perform different actions on the data.
 
 ##### Food Search Feature
 
 A search feature that allows users to search for food items by name and see all its available nutritional data.  
 It includes:
 
--  A search bar where you can enter the name of a food
+-  A search bar where you can enter the name of a food.
 -  A display that contains the nutritional information available for that food, along with visualisations of the data.
--  An autocomplete feature that helps in finding the desired food
+-  An autocomplete feature that helps in finding the desired food.
 
 ##### Nutrition Breakdown Feature
 
 A feature that allows the user to see the nutritional breakdown of the food item they selected through pie charts and bar graphs.  
 It includes:
 
--  Pie charts and bar graphs
--  An interactive component that allows the user to flip between the bar graphs and pie charts
+-  Pie charts and bar graphs.
+-  An interactive component that allows the user to flip between the bar graphs and pie charts.
 
 ##### Nutrition Range Filter Feature
 
 Allows users to select a nutrient and gives them the ability to input maximum and minimum values, and displays to them a list of foods that fall within that range.  
 It includes:
 
--  A range menu for choosing between different nutrients
--  Fields to enter the maximum and minimum values
--  A display afterwards that contains the list of foods
+-  A range menu for choosing between different nutrients.
+-  Fields to enter the maximum and minimum values.
+-  A display afterwards that contains the list of foods.
 
 ##### Nutrition Level Filter Feature
 
 Allows users to filter foods by their nutritional content levels: low, mid, and high. The filter includes: fat, protein, carbohydrates, sugar, and nutritional density.
 It includes:
 
--  Low: Less than 33% of the highest value
--  Mid: Between 33% and 66% of the highest value
--  High: Greater than 66% of the highest value
--  A filter menu for choosing the nutrient
--  A field for choosing low, mid, or high
--  A display afterwards that will contain the list of foods
+-  Low: Less than 33% of the highest value.
+-  Mid: Between 33% and 66% of the highest value.
+-  High: Greater than 66% of the highest value.
+-  A filter menu for choosing the nutrient.
+-  A field for choosing low, mid, or high.
+-  A display afterwards that will contain the list of foods.
 
 ##### Food Wars
 
 Allow users to compare up to 5 different foods against a chosen nutrient and allow them to visually compare the different foods in a bar and pie graph.
 It Includes:
 
--  A button to access the feature
--  Search bars for the foods and for the nutrient
--  Pie charts and bar graphs
+-  A button to access the feature.
+-  Search bars for the foods and for the nutrient.
+-  Pie charts and bar graphs.
 
 ##### Documentation
 
@@ -165,16 +165,16 @@ Documentation of the software that describes how it works, and how its meant to 
 It includes:
 
 -  Describes how the code will operate (function definitions, data structures, etc.)
--  Descriptions of what the system will do
--  Descriptions on how the user is required to interact with the software
+-  Descriptions of what the system will do.
+-  Descriptions on how the user is required to interact with the software.
 
 ##### Quality Assurance
 
 Testing and validating the software to make sure it fulfils the scope to a high standard and is free of bugs.  
 It includes:
 
--  Bug tracking and fixing
--  Thorough testing of the code
+-  Bug tracking and fixing.
+-  Thorough testing of the code.
 
 #### Exclusions
 
@@ -183,41 +183,41 @@ It includes:
 Using a dynamic data source that is up to date.
 It excludes:
 
--  Real time data
--  Data that is dynamic and updates
+-  Real time data.
+-  Data that is dynamic and updates.
 
 ##### Multi-Language Support
 
 Support for languages other than english within the program.
 It excludes:
 
--  A menu for switching languages
--  A translation tool for the GUI
+-  A menu for switching languages.
+-  A translation tool for the GUI.
 
 ##### User Authentication and Security Features
 
 Tools that involve authenticating the user and other security.
 It excludes:
 
--  Multi-factor authentication
--  Encryption of the data
--  A login screen
+-  Multi-factor authentication.
+-  Encryption of the data.
+-  A login screen.
 
 ##### Customisation Options
 
 A feature that allows the user to customise the appearance of the GUI.
 It excludes:
 
--  Different themes
--  Extensions
+-  Different themes.
+-  Extensions.
 
 ##### Advanced Analytics
 
 Features that include things such as advanced analytics beyond basic filtering, ranges, and charts.  
 It excludes:
 
--  Machine learning
--  Data mining
+-  Machine learning.
+-  Data mining.
 
 #### Scope Management
 
@@ -226,9 +226,9 @@ It excludes:
 Rounds of regular reviewing of everyone's work to ensure that it stays within the scope.
 It includes:
 
--  Regular weekly meetings
--  Reports on progress and changes made
--  Communication around the necessary future changes to be made to the project
+-  Regular weekly meetings.
+-  Reports on progress and changes made.
+-  Communication around the necessary future changes to be made to the project.
 
 ## 2. Work Breakdown Structure
 
@@ -237,7 +237,7 @@ It includes:
 ## 3. Activity Definition Estimation
 
 | Activity #No | Activity Name                             | Brief Description                                                                                                                                                                                        | Duration (Days) | Responsible Team Members |
-| ------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------ |
+| ------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |--------------------------|
 | 1.1          | Define Project Objectives                 | Establish objectives or goals that the project aims to achieve.                                                                                                                                          | 1               | William-Joseph           |
 | 1.2          | Identify Project Stakeholders             | Identify all key stakeholders involved in the project, including internal teams and potential end-users.                                                                                                 | 2               | William-Joseph           |
 | 2.1          | Define Project Scope                      | Define and manage what is included or excluded in the project and product.                                                                                                                               | 3               | William-Joseph           |
@@ -247,13 +247,13 @@ It includes:
 | 2.4.1        | Define Problem Background                 | Identify the problem, dataset, data input/output, and the target users                                                                                                                                   | 1               | William-Joseph           |
 | 2.4.2        | Define System Capabilities / Overview     | Define what the system will do and describe the key features and functionalities of the system.                                                                                                          | 2               | William-Joseph           |
 | 2.4.3        | Identify the Benefits                     | Identify how the system will provide value and benefit the stakeholders.                                                                                                                                 | 1               | William-Joseph           |
-| 2.5.1        | Identify User Requirements                | Detail how users are expected to interact with or use the program. What functionalities must the system provide from the end-user perspective?                                                           | 1               | ???                      |
-| 2.5.2        | Identify Software Requirements            | Define the functionality the software will provide. This section should list requirements formally.                                                                                                      | 2               | ???                      |
-| 2.5.3        | Identify Use Cases and Construct Diagrams | Include at least 5 use cases, each corresponding to a specific function. Provide a system-level Use Case Diagram illustrating all required features.                                                     | 2               | ???                      |
-| 2.6.1        | Design Software                           | Include a flowchart that illustrates how the software will operate.                                                                                                                                      | 2               | ???                      |
-| 2.6.2        | Identify System Components                | List all key functions within the software. List all data structures or sources used in the software. Provide pseudocode or flowcharts for all the functions listed that operate on the data structures. | 3               | ???                      |
-| 2.7.1        | Design the Structure                      | Present a structural design, a hierarchy chart, showing the overall interface’s structure.                                                                                                               | 2               | ???                      |
-| 2.7.2        | Design the Visuals                        | Include all wireframes or mock-ups of the interface. Provide a discussion, explanation, and justification for the design choices.                                                                        | 2               | ???                      |
+| 2.5.1        | Identify User Requirements                | Detail how users are expected to interact with or use the program. What functionalities must the system provide from the end-user perspective?                                                           | 1               | Braith Lee               |
+| 2.5.2        | Identify Software Requirements            | Define the functionality the software will provide. This section should list requirements formally.                                                                                                      | 2               | Braith Lee                      |
+| 2.5.3        | Identify Use Cases and Construct Diagrams | Include at least 5 use cases, each corresponding to a specific function. Provide a system-level Use Case Diagram illustrating all required features.                                                     | 2               | Braith Lee                      |
+| 2.6.1        | Design Software                           | Include a flowchart that illustrates how the software will operate.                                                                                                                                      | 2               | Ben Lange                      |
+| 2.6.2        | Identify System Components                | List all key functions within the software. List all data structures or sources used in the software. Provide pseudocode or flowcharts for all the functions listed that operate on the data structures. | 3               | Ben Lange                |
+| 2.7.1        | Design the Structure                      | Present a structural design, a hierarchy chart, showing the overall interface’s structure.                                                                                                               | 2               | Ben Lange                      |
+| 2.7.2        | Design the Visuals                        | Include all wireframes or mock-ups of the interface. Provide a discussion, explanation, and justification for the design choices.                                                                        | 2               | Braith Lee                      |
 | 3.1          | Implement the GUI                         | Implement the graphical user interface. This includes using wxFormBuilder to develop the layout.                                                                                                         | 3               | ???                      |
 | 3.2          | Implement Food Search Feature             | Code all the functions that enable the user to search for foods by name. Including the event that calls the nutrition breakdown feature.                                                                 | 3               | ???                      |
 | 3.3          | Implement Nutrition Breakdown Feature     | Code all the functions that enable the user to see pie charts and bar graphs that display the nutritional breakdown of the selected food.                                                                | 3               | ???                      |

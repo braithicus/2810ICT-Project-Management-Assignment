@@ -4,7 +4,7 @@
 
 ## Group Number: 023
 
-## Team members
+## Team Members
 
 | Student Number | Name                  |
 |----------------|-----------------------|
@@ -240,13 +240,13 @@ Example:
 
 Include at least 5 use cases, each corresponding to a specific function.
 
-| Use Case ID    | xxx  |
-| -------------- | ---- |
-| Use Case Name  | xxxx |
-| Actors         | xxxx |
-| Description    | xxxx |
-| Flow of Events | xxxx |
-| Alternate Flow | xxxx |
+| Use Case ID    | 001 | xxx |
+| -------------- |---| --- |
+| Use Case Name  | x | xxxx |
+| Actors         | x | xxxx |
+| Description    | x | xxxx |
+| Flow of Events | x | xxxx |
+| Alternate Flow | x | xxxx |
 
 ## 3. Software Design and System Components
 
