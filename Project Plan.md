@@ -47,7 +47,7 @@ Please Describe what you have accomplished in this group project.
 -  Provide a tool that allows users to filter the nutritional data according to particular ranges and levels of nutrients
 -  Provide a graphical user interface to allow for the data to be interacted with.
 -  Allow for a foods nutritional value to be shown visually, with tools such as pie charts and bar graphs.
--  Allow for a visual comparison between 5 chosen foods with pie charts and bar graphs based on a chosen shared nutritonal value
+-  Allow for a visual comparison between 5 chosen foods with pie charts and bar graphs based on a chosen shared nutritional value
 
 ### 1.2 Project Stakeholders
 
@@ -138,18 +138,18 @@ It includes:
 -  Low: Less than 33% of the highest value
 -  Mid: Between 33% and 66% of the highest value
 -  High: Greater than 66% of the highest value
--  A filter menu for choosing the level of each nutrient
--  Fields below each nutrient
+-  A filter menu for choosing the nutrient
+-  A field for choosing low, mid, or high
 -  A display afterwards that will contain the list of foods
 
-##### Food Wars 
+##### Food Wars
 
-Allow users to compare up to 5 different foods against a chosen nutritient and allow them to visually compare the differents foods in a bar and pir graph
+Allow users to compare up to 5 different foods against a chosen nutrient and allow them to visually compare the different foods in a bar and pie graph.
 It Includes:
 
-- A button to access the feature
-- Search bars for the foods and for the nutrient
-- Pie charts and bar graphs
+-  A button to access the feature
+-  Search bars for the foods and for the nutrient
+-  Pie charts and bar graphs
 
 ##### Documentation
 
@@ -224,7 +224,7 @@ It includes:
 
 ## 2. Work Breakdown Structure
 
-![WBS](/WBS.png)
+![WBS](./WBS.png)
 
 ## 3. Activity Definition Estimation
 
@@ -250,8 +250,8 @@ It includes:
 | 3.2          | Implement Food Search Feature             | Code all the functions that enable the user to search for foods by name. Including the event that calls the nutrition breakdown feature.                                                                 | 3               | ???                      |
 | 3.3          | Implement Nutrition Breakdown Feature     | Code all the functions that enable the user to see pie charts and bar graphs that display the nutritional breakdown of the selected food.                                                                | 3               | ???                      |
 | 3.4          | Implement Nutrition Range Filter Feature  | Code all the functions that enable the user to see a list of food filtered by a minimum and maximum range of a specific nutrient.                                                                        | 3               | ???                      |
-| 3.5          | Implement Nutrition Level Filter Feature  | Code all the functions that enable the user to see a list of foods filtered by low, mid, high levels of multiple nutrients.                                                                              | 3               | ???                      |
-| 3.6          | Implement **ADDITIONAL FEATURE**          | Code all functions for additional feature.                                                                                                                                                               | 3               | ???                      |
+| 3.5          | Implement Nutrition Level Filter Feature  | Code all the functions that enable the user to see a list of foods filtered by low, mid, or high levels of a selected nutrient.                                                                          | 3               | ???                      |
+| 3.6          | Implement Food Wars Feature               | Code all the functions that allow the user to compare up to 5 different foods against a chosen nutrient and the charts to compare the different foods.                                                   | 3               | ???                      |
 | 3.7          | Conduct Testing                           | Perform testing on the code to ensure there are no bugs and that the code meets the scope.                                                                                                               | 5               | ???                      |
 | 4.1          | Track Progress                            | Monitor the progress of the project to ensure it keeps pace with timelines and milestones.                                                                                                               | Ongoing         | ???                      |
 | 4.2          | Control Scope                             | Ensure the progress stays within the scope by managing changes made.                                                                                                                                     | Ongoing         | ???                      |
