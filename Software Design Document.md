@@ -41,6 +41,7 @@
         - [Nutrition Breakdown](#nutrition-breakdown)
         - [Nutrition Range Filter](#nutrition-range-filter)
         - [Nutrition Level Filter](#nutrition-level-filter)
+        - [Food Wars](#food-wars)
     - [1.3 Benefit Analysis](#13-benefit-analysis)
         - [1. Informed Dietary Choices](#1-informed-dietary-choices)
         - [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
@@ -169,7 +170,11 @@
       -  Fields below each nutrient
       -  A display afterwards that will contain the list of foods
 
-**ADDITIONAL FEATURE**
+##### Food Wars
+- **Description** 
+  - Functionality:
+    - **Functions**
+
 
 ### 1.3 Benefit Analysis
 
@@ -295,7 +300,7 @@ List all key functions within the software. For each function, provide:
 
 List all data structures or sources used in the software. For each, provide:
 
--  Type: Type of data structure (e.g., list, set, dictionary).
+-  Type: Type of data structure (e.g., list, set, dictionary). Dictionaries, Arrays **COME UP WITH MORE IDEAS**
 -  Usage: Describe where and how it is used.
 -  Functions: List functions that utilize this structure.
 
