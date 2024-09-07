@@ -19,7 +19,7 @@ Please Describe what you have accomplished in this group project.
 -  s5398289, William-Joseph Simons
    -  Project Plan Document, Problem Background.
 -  s222222, Full name
-   -  Accomplishments: Describe what you have completed or achieved
+   -  Additional feature creator, Software Design Document
 -  s5264208, Braith Lee
    -  Accomplishments: Describe what you have completed or achieved
 
