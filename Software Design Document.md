@@ -263,8 +263,9 @@ List all key functions within the software. For each function, provide:
     - <h6 style="display: inline;"> Food Search Function: </h6> to create a system that allows the users to analyse all nutritional information for specific foods
     - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> breakdown the nutritional information for that specific food in the form of pie and bar graphs
     - <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6> allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges 
-    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> allow the user to select ranges of low, mid and high for nutritional information such as fats, protein carbohydrates, sugar and nutritional density to compare visually 
-    - <h6 style="display: inline;"> Food Wars Function: </h6> allow the user to select 5 chosen foods and compare them aginst each other visually with pie charts and bar graphs based on a one selected nutritonal information 
+    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> allow the user to select ranges of low, medium and high for nutritional information such as fats, protein carbohydrates, sugar and nutritional density to compare the foods that fall within the ranges visually 
+    - <h6 style="display: inline;"> Food Wars Function: </h6> allow the user to select 5 chosen foods and compare them aginst each other visually with pie charts or bar graphs based on a one selected nutritonal information 
+  
 -  <h5 style="display: inline;"> Input Parameters: </h5>
     
     - <h6 style="display: inline;"> Food Search Function: </h6> The input type would be string and be used to input the foods the user is wanting to look up such as "pear"
@@ -275,18 +276,17 @@ List all key functions within the software. For each function, provide:
 
 -  <h5 style="display: inline;"> Return Value: </h5> Describe what the function returns.
    
-    - **I'm back**
-    - <h6 style="display: inline;"> Food Search Function: </h6> Would display all the information returned for the selected food such as in a dictionary for the user to view 
-    - <h6 style="display: inline;"> Food Search Function: </h6>
-    - <h6 style="display: inline;"> Nutritioh6>n Breakdown Function: </h6> 
-    - <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6>
-    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6>
-    - <h6 style="display: inline;"> Food Wars Function: </h6>
+    - <h6 style="display: inline;"> Food Search Function: </h6> Would display all the information returned for the selected food such as in a dictionary for the user to view. 
+    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> Would display all the information for the selected food's nurtitional information as a bar or pie graph.
+    - <h6 style="display: inline;"> Nutrition Range Filter Function: </h6> Would display all the foods between the selected minimum and maximum of the selected nutrition as a dictionary going from the food closest to the maximum with its value to the food closest to the minimum.
+    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> Have the foods that fall within the chosen parameters of low, medium or high for the selected nutritional value as a dictionary which will display the foods from the highest nutritional values to the lowest with the names of the foods
+    - <h6 style="display: inline;"> Food Wars Function: </h6> It would have the function return the 5 selected foods compared against the nutritional value selected in the form of a bar or pie chart
+
 -  <h5 style="display: inline;"> Side Effects: </h5> Note any side effects, such as changes to global variables or data passed by reference.
   
     - **I Have No Idea For This SEction Delete IF Nothing Put Down**
     - <h6 style="display: inline;"> Food Search Function: </h6>
-    - <h6 style="display: inline;"> Nutritioh6>n Breakdown Function: </h6> 
+    - <h6 style="display: inline;"> Nutritiohn Breakdown Function: </h6> 
     - <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6>
     - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6>
     - <h6 style="display: inline;"> Food Wars Function: </h6>
