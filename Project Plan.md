@@ -21,7 +21,7 @@ Please Describe what you have accomplished in this group project.
 -  s222222, Full name
    -  Additional feature creator, Software Design Document
 -  s5264208, Braith Lee
-   -  Accomplishments: Describe what you have completed or achieved
+   -  Additional stakeholders, 
 
 <div style="page-break-after: always;"></div>
 
@@ -42,8 +42,8 @@ Please Describe what you have accomplished in this group project.
 
 ### 1.1 Project Objectives
 
--  Provide a tool that allows users assess the nutritional value of different foods.
--  Provide a tool that allows the consumer to search the food by name.
+-  Provide a tool that allows users to assess the nutritional value of different foods.
+-  Provide a tool that allows the consumer to search foods by their name.
 -  Provide a tool that allows users to filter the nutritional data according to particular ranges and levels of nutrients
 -  Provide a graphical user interface to allow for the data to be interacted with.
 -  Allow for a foods nutritional value to be shown visually, with tools such as pie charts and bar graphs.
@@ -51,45 +51,53 @@ Please Describe what you have accomplished in this group project.
 
 ### 1.2 Project Stakeholders
 
-#### Project Manager
+#### Project Manager (Internal Executive)
 
 -  <h5 style="display: inline;"> Description: </h5> In charge of managing the project in its entirety and acting as the communicator between all stakeholders, making sure its stays within and meets the requirements of the scope.
 -  <h5 style="display: inline;"> Role: </h5> Acts as the main point for communication. Coordinates and integrates the processes of: Initiating, Planning, Executing, Monitoring and Controlling, and Closing. And facilitates decisions made within the core knowledge areas such as: Integration, Scope, Time, Cost, Quality, Human Resources, Communication, Risk, and Procurement. This is done through delegation, or personally by the project manager.
 
-#### Data Analysts
+#### Data Analysts (Internal Operational)
 
 -  <h5 style="display: inline;"> Description: </h5> Professionals in the scope of analysing and interpreting data to gain insights and meaning.
 -  <h5 style="display: inline;"> Role: </h5> Create algorithms to evaluate the Nutritional_Food_Database.csv, and identify metrics and trends in the data that allow for different visual representations. While also removing any anomalies from the dataset, ensuring high quality data. They also use their findings to effectively communicate complex insights to other stakeholders.
 
-#### Software Developers
+#### Software Developers (Internal Operational)
 
 -  <h5 style="display: inline;"> Description: </h5> People who are skilled in designing, implementing, and testing software applications.
 -  <h5 style="display: inline;"> Role: </h5> Implement and document the tools and analytical insights from the data analysts, while ensuring they are of high quality and thoroughly tested. This means ensuring that these tools meet the necessary requirements while being free of bugs, and documenting the process for other stakeholders.
 
-#### Nutritionists and Dietitians
+#### Nutritionists and Dietitians (External Operational)
 
 -  <h5 style="display: inline;"> Description: </h5> Professionals that are involved with advising people on their health related goals and their nutritional intake.
 -  <h5 style="display: inline;"> Role: </h5> They will use the application to search for specific nutrients and analyse the data to come to conclusions on what the patient should do.
 
-#### Educational Institutions
+#### Educational Institutions (External Operational)
 
 -  <h5 style="display: inline;"> Description: </h5> Institutions that involve educating the population such as schools and universities. Specifically institutions that teach topics involved with vitamins and nutrients such as health science.
 -  <h5 style="display: inline;"> Role: </h5> Institutions will use the application as a resource to teach students about nutrition, and use the visualisation tool as way to better engage the students.
 
-#### Health Conscious Individuals
+#### Health Conscious Individuals (External Operational)
 
 -  <h5 style="display: inline;"> Description: </h5> A subset of the general public that is conscious of their health and is interested in maintaining a healthy lifestyle and diet.
 -  <h5 style="display: inline;"> Role: </h5> These people will use the application to search for nutritional information on the food they are eating to make more informed choices.
 
-#### Researchers
+#### Researchers (External Operational)
 
 -  <h5 style="display: inline;"> Description: </h5> People within academic institutions that study dietary and nutritional information; doing projects and conducting tests, searching for patterns and how different nutrients impact human health.
 -  <h5 style="display: inline;"> Role: </h5> They will use the application for easily searching through nutritional data and for its visualisation tools, to aid research projects.
 
-#### Food Manufacturers
+#### Food Manufacturers (External Operational)
 
 -  <h5 style="display: inline;"> Description: </h5> Companies that are involved in the selling, marketing, or producing food.
 -  <h5 style="display: inline;"> Role: </h5> Companies will use the application to become more aware of the relative sizes of different nutrients in their products and to better market the product to consumers based on its content.
+
+#### Regulatory Bodies (External Executive)
+-  <h5 style="display: inline;"> Description: </h5> Agencies that ensure compliance with legal and regulatory standards.
+-  <h5 style="display: inline;"> Role: </h5> They ensure that the software adheres to national law in terms of nutrition by enforcing regulations and guidelines.
+
+#### Institutional Oversight Committees (External Executive)
+-  <h5 style="display: inline;"> Description: </h5> Universities and institutions that ensure the project meets ethical standards, and provide oversight.
+-  <h5 style="display: inline;"> Role: </h5> They determine what aspects of the project are approved, the project's funding allocation, and enforce adherence to policies.
 
 ### 1.3 Project Scope
 

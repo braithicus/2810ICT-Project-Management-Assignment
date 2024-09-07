@@ -7,10 +7,10 @@
 ## Team members
 
 | Student Number | Name                  |
-| -------------- | --------------------- |
+|----------------|-----------------------|
 | s5398289       | William-Joseph Simons |
 | s5265839       | Benjamin Lange        |
-| s333333        | Full name             |
+| s5264208       | Braith Lee            |
 
 <div style="page-break-after: always;"></div>
 
@@ -120,7 +120,7 @@
 
 -  Why: To become more aware of the relative sizes of different nutrients in their products and to better market the product to consumers based on its content.
 
-### 1.2 System capabilities/overview
+### 1.2 System Capabilities/Overview
 
 #### System Functionality
 
