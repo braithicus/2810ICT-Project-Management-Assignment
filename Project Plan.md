@@ -18,7 +18,7 @@ Please Describe what you have accomplished in this group project.
 
 -  s5398289, William-Joseph Simons
    -  Project Plan Document, System Vision.
--  s222222, Full name
+-  s5265839, Ben Lange
    -  Additional feature creator, Software Design Document
 -  s5264208, Braith Lee
    -  Additional stakeholders, 
