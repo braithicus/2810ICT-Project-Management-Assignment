@@ -142,7 +142,14 @@ It includes:
 -  Fields below each nutrient
 -  A display afterwards that will contain the list of foods
 
-##### ADDITIONAL FEATURE
+##### Food Wars 
+
+Allow users to compare up to 5 different foods against a chosen nutritient and allow them to visually compare the differents foods in a bar and pir graph
+It Includes:
+
+- A button to access the feature
+- Search bars for the foods and for the nutrient
+- Pie charts and bar graphs
 
 ##### Documentation
 

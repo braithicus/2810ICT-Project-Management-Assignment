@@ -286,10 +286,11 @@ List all key functions within the software. For each function, provide:
   
     - **I Have No Idea For This SEction Delete IF Nothing Put Down**
     - <h6 style="display: inline;"> Food Search Function: </h6>
-    - <h6 style="display: inline;"> Nutritiohn Breakdown Function: </h6> 
+    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> 
     - <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6>
     - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6>
     - <h6 style="display: inline;"> Food Wars Function: </h6>
+
 #### 3.2.2 Data Structures / Data Sources
 
 List all data structures or sources used in the software. For each, provide:
