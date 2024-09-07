@@ -210,13 +210,19 @@
 
 ##### 7. ADDITIONAL FEATURE BENEFIT
 
-## 2. Requirements
+## 2. Requirements (FURPS+)
+
+The following project requirements are defined using the FURPS+ Framework, which includes the attributes of Functionality, Usability, Reliability, Performance, Supportability, and others.
 
 ### 2.1 User Requirements
 
 Detail how users are expected to interact with or use the program. What functionalities must the system provide from the end-user perspective? This can include both narrative descriptions and a listing of user needs.
 
-Note: Since no specific client or user is assigned, you may create a fictional user. Who do you envision using your software?
+Note: Since no specific client or user is assigned, you may create a fictional user. Who do you envision using your software? **EXTERNAL OPERATIONAL**
+
+**FROM RUBRIC: Provides a detailed narrative and list of user needs, considering a realistic fictional user. LOOK AT SLIDES AGAIN; WHAT NARRATIVE?**
+
+The intended users of this project's software lie within the categorisation of external operational stakeholders, such as Nutritionists, Dietitians, Educational Institutions, Health Conscious Individuals, etc.
 
 ### 2.2 Software Requirements
 
@@ -229,12 +235,43 @@ Example Functional Requirements:
 
 -  etc …
 
+**FROM RUBRIC: Formally and clearly lists all necessary software functionalities using "shall" statements.**
+
+#### Functionality:
+- Food Search:
+- Nutrition Breakdown:
+- Nutrition Range Filter:
+- Nutrition Level Filter:
+- Food Wars:
+
+#### Usability:
+- Ease of Navigation:
+- Interactive Figures: (interactive charts/diagrams)
+- Autocomplete Search
+
+#### Reliability:
+- Error Handling: 
+
+#### Performance:
+- Response Time:
+- Scalability:
+
+#### Supportability:
+- Documentation:
+- Help System: or FAQs
+
+#### + Additional:
+- Security: Ensure interactions are secure.
+- Accessibility: 
+
 ### 2.3 Use Case Diagram
 
 Provide a system-level Use Case Diagram illustrating all required features.
 
 Example:  
 ![Use Case Diagram](./UCD.png)
+
+**FROM RUBRIC: Includes a complete and accurate system-level use case diagram that is well integrated with the text. MAKE SURE THIS IS SYSTEM LEVEL AND NOT SPRECIFIC**
 
 ### 2.4 Use Cases
 
@@ -247,6 +284,8 @@ Include at least 5 use cases, each corresponding to a specific function.
 | Description    | x | xxxx |
 | Flow of Events | x | xxxx |
 | Alternate Flow | x | xxxx |
+
+**FROM RUBRIC: Includes at least 5 detailed use cases, each with comprehensive descriptions and flows.**
 
 ## 3. Software Design and System Components
 
