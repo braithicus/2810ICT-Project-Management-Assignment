@@ -7,7 +7,7 @@
 ### Team Members
 
 | Student No. | Full Name             | GitHub Username      | Contribution (sum to 100%) |
-| ----------- | --------------------- | -------------------- | -------------------------- |
+|-------------|-----------------------|----------------------|----------------------------|
 | s5398289    | William-Joseph Simons | William-JosephSimons | Equal                      |
 | s5265839    | Ben Lange             | s5265839-Griffith    | Equal                      |
 | s5264208    | Braith Lee            | braithicus           | Equal                      |
