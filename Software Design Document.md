@@ -258,45 +258,55 @@ By outlining the fictional users' tasks and their contexts, we gain the necessar
 
 ### 2.2 Software Requirements
 
-Define the functionality the software will provide. This section should list requirements formally, often using the word "shall" to describe functionalities.
-
-Example Functional Requirements:
-
--  R1.1 The program shall accept multiple file names as arguments from the command line.
--  R1.2 Each file name can be a simple file name or include the full path of the file with one or more levels.
-
--  etc …
-
 **FROM RUBRIC: Formally and clearly lists all necessary software functionalities using "shall" statements. /0.8**
 
-The following project requirements are defined using the FURPS+ Framework, which includes the attributes of Functionality, Usability, Reliability, Performance, Supportability, and others.
+The following project requirements are defined using the FURPS+ Framework and expands upon the user requirements .
 
 #### Functionality:
-- Food Search:
-- Nutrition Breakdown:
-- Nutrition Range Filter:
-- Nutrition Level Filter:
-- Food Wars:
+1. Food Search:
+  - R1.1: The program shall provide food options based on the closest matches to the searched string.
+  - R1.2: The program shall display the complete nutritional information/record for the selected food item(s).
+2. Nutrition Breakdown:
+  - R2.1: The program shall provide visual representations (pie charts and bar graphs) of the nutritional content for selected food item(s).
+  - R2.2: The program shall allow users to toggle between different visualisation formats (pie charts and bar graphs).
+3. Nutrition Range Filter:
+  - R3.1: The program shall allow users to select a nutrient and input minimum and maximum values.
+  - R3.2: The program shall return a list of food items that fall within the specified nutrient range.
+4. Nutrition Level Filter:
+  - R4.1: The program shall categorize food items by their nutrient content (e.g., fat, protein, sugar) into low, mid, or high ranges.
+  - R4.2: The program shall allow users to filter food items based on these predefined nutrient levels.
+5. Food Wars:
+  - R5.1: The program shall allow users to compare the nutritional content of up to five different food items side by side.
+  - R5.2: The program shall visualize the comparison data in bar graph format, showing the differences across selected nutrients.
 
 #### Usability:
-- Ease of Navigation:
-- Interactive Figures: (interactive charts/diagrams)
-- Autocomplete Search
+1. Ease of Navigation:
+- R1.1: The program shall provide a clear and intuitive graphical user interface (GUI) that allows users to navigate the food database easily.
+- R1.2: The program shall ensure that all primary features are accessible within three clicks from the main screen.
+2. Interactive Figures:
+- R2.1: The program shall provide tooltips and labels in figures for better understanding of the data.
+- R2.2: The program shall support dynamic features in charts and graphs, allowing users to remove and add elements for enhanced data analysis.
+3. Autocomplete Search: 
+- R3.1: The search field shall provide an optional autocomplete feature, allowing users to quickly locate food items based on partial inputs.
+- R3.2: The program shall prioritize suggestions based on relevance and previous searches.
 
 #### Reliability:
-- Error Handling: 
+1. Error Handling: 
+- R1.1: The program shall produce error messages when users enter invalid inputs or when the program encounters an error while retrieving data.
+- R1.2: The program shall inform the user if there is data missing from the database. 
 
 #### Performance:
-- Response Time:
-- Scalability:
+1. Response Time:
+- R1.1: The program shall return search results and filter data within 3 seconds.
+- R1.2: The program shall load and render visualizations (pie charts and bar graphs) within 2 seconds of a user selecting a food item.
 
 #### Supportability:
-- Documentation:
-- Help System: or FAQs
+1. Documentation:
+2. Help System: or FAQs
 
 #### + Additional:
-- Security: Ensure interactions are secure.
-- Accessibility: 
+1. Security: Ensure interactions are secure.
+2. Accessibility: 
 
 ### 2.3 Use Case Diagram
 
