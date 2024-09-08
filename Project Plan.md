@@ -152,12 +152,12 @@ It includes:
 
 ##### Food Wars
 
-Allow users to compare up to 5 different foods against a chosen nutrient and allow them to visually compare the different foods in a bar and pie graph.
+Allow users to compare up to 5 different foods against a chosen nutrient and allow them to visually compare the different foods in a bar graph.
 It Includes:
 
 -  A button to access the feature.
 -  Search bars for the foods and for the nutrient.
--  Pie charts and bar graphs.
+-  Bar graphs.
 
 ##### Documentation
 
@@ -259,7 +259,7 @@ It includes:
 | 3.3          | Implement Nutrition Breakdown Feature     | Code all the functions that enable the user to see pie charts and bar graphs that display the nutritional breakdown of the selected food.                                                                | 3               | ???                      |
 | 3.4          | Implement Nutrition Range Filter Feature  | Code all the functions that enable the user to see a list of food filtered by a minimum and maximum range of a specific nutrient.                                                                        | 3               | ???                      |
 | 3.5          | Implement Nutrition Level Filter Feature  | Code all the functions that enable the user to see a list of foods filtered by low, mid, or high levels of a selected nutrient.                                                                          | 3               | ???                      |
-| 3.6          | Implement Food Wars Feature               | Code all the functions that allow the user to compare up to 5 different foods against a chosen nutrient and the charts to compare the different foods.                                                   | 3               | ???                      |
+| 3.6          | Implement Food Wars Feature               | Code all the functions that allow the user to compare up to 5 different foods against a chosen nutrient and the chart to compare the different foods.                                                   | 3               | ???                      |
 | 3.7          | Conduct Testing                           | Perform testing on the code to ensure there are no bugs and that the code meets the scope.                                                                                                               | 5               | ???                      |
 | 4.1          | Track Progress                            | Monitor the progress of the project to ensure it keeps pace with timelines and milestones.                                                                                                               | Ongoing         | ???                      |
 | 4.2          | Control Scope                             | Ensure the progress stays within the scope by managing changes made.                                                                                                                                     | Ongoing         | ???                      |
