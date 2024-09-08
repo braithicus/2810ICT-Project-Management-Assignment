@@ -7,10 +7,10 @@
 ### Team Members
 
 | Student No. | Full Name             | GitHub Username      | Contribution (sum to 100%) |
-|-------------|-----------------------|----------------------|----------------------------|
-| s5398289    | William-Joseph Simons | William-JosephSimons | 33.3% or Equal             |
-| s5265839    | Ben Lange             | s5265839-Griffith    | 33.3% or Equal             |
-| s5264208    | Braith Lee            | braithicus           | 33.3% or Equal             |
+| ----------- | --------------------- | -------------------- | -------------------------- |
+| s5398289    | William-Joseph Simons | William-JosephSimons | Equal                      |
+| s5265839    | Ben Lange             | s5265839-Griffith    | Equal                      |
+| s5264208    | Braith Lee            | braithicus           | Equal                      |
 
 ### Brief Description of Contribution
 
@@ -239,7 +239,7 @@ It includes:
 ## 3. Activity Definition Estimation
 
 | Activity #No | Activity Name                             | Brief Description                                                                                                                                                                                        | Duration (Days) | Responsible Team Members |
-|--------------|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|--------------------------|
+| ------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------ |
 | 1.1          | Define Project Objectives                 | Establish objectives or goals that the project aims to achieve.                                                                                                                                          | 1               | William-Joseph           |
 | 1.2          | Identify Project Stakeholders             | Identify all key stakeholders involved in the project, including internal teams and potential end-users.                                                                                                 | 2               | William-Joseph           |
 | 2.1          | Define Project Scope                      | Define and manage what is included or excluded in the project and product.                                                                                                                               | 3               | William-Joseph           |
