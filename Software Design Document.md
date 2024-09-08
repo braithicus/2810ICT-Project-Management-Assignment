@@ -221,17 +221,40 @@
 
 ## 2. Requirements (FURPS+)
 
-The following project requirements are defined using the FURPS+ Framework, which includes the attributes of Functionality, Usability, Reliability, Performance, Supportability, and others.
-
 ### 2.1 User Requirements
 
-Detail how users are expected to interact with or use the program. What functionalities must the system provide from the end-user perspective? This can include both narrative descriptions and a listing of user needs.
+The Comprehensive Food GUI software should be designed with its intended users in mind. They can be generalised as external operational stakeholders, or more specifically as Nutritionists, Dietitians, Educational Institutions, Health Conscious Individuals, etc.
 
-Note: Since no specific client or user is assigned, you may create a fictional user. Who do you envision using your software? **EXTERNAL OPERATIONAL**
+#### Fictional Users
+We can create three personalities that represent the intended user groups so that their user needs can be more easily derived:
+1. Rebecca is a nutritionist with years of experience. She needs a fast and reliable way to access the detailed dietary compositions of various foods so that she can provide dietary advice for her clients.
+2. Michael is a biology teacher who conducts lessons about nutrition and requires an educational tool that visually demonstrates the nutrient content of various foods for his class.
+3. Amber is a health-conscious individual who tracks her nutrient consumption daily and wants a simple search engine for food's nutritional values to make sure she stays on target.
 
-**FROM RUBRIC: Provides a detailed narrative and list of user needs, considering a realistic fictional user. LOOK AT SLIDES AGAIN; WHAT NARRATIVE?**
+#### User Narratives
+Rebecca uses the GUI to quickly search for specific foods, visualise their content, and compare different foods to advise her clients on their eating habits. She likes the software's simple interface and how it quickly provides figures, such as pie charts and bar graphs, allowing her to more easily communicate complex nutritional data to clients.
 
-The intended users of this project's software lie within the categorisation of external operational stakeholders, such as Nutritionists, Dietitians, Educational Institutions, Health Conscious Individuals, etc.
+Michael incorporates the GUI into his biology lessons to keep his students visually engaged. The search and filtering features help him show the diversity of foods nutritional content, with the diagrams making the data more digestible for his young students. This allows him to easily show how food impacts the human body.
+
+Amber opens the software daily to make sure she stays on top of her health goals. She relies on the auto-complete feature to quickly find food items and uses the nutritional breakdown tool to double-check that her diet is balanced in terms of protein, carbohydrates, and fats.
+
+#### User Needs
+Nutritionists and Dietitians like Rebecca need to be able to:
+- Easily search for foods and their nutritional information.
+- Compare foods based on specific nutrients.
+- Present data in a clear and concise way to clients.
+
+Educators like Michael need to be able to:
+- Access food data quickly to demonstrate concepts in the classroom.
+- Use charts and figures to help students visualise nutrition content.
+- Customise examples to meet the criteria of each lesson.
+
+Health-conscious people like Amber need to be able to:
+- Track and compare the macronutrients of different foods.
+- Receive quick and digestible information on whether their chosen foods meet their nutritional goals.
+- Have access to filtering and comparison tools for easy decision-making.
+
+By outlining the fictional users' tasks and their contexts, we gain the necessary knowledge to define our software's requirements.
 
 ### 2.2 Software Requirements
 
@@ -244,7 +267,9 @@ Example Functional Requirements:
 
 -  etc …
 
-**FROM RUBRIC: Formally and clearly lists all necessary software functionalities using "shall" statements.**
+**FROM RUBRIC: Formally and clearly lists all necessary software functionalities using "shall" statements. /0.8**
+
+The following project requirements are defined using the FURPS+ Framework, which includes the attributes of Functionality, Usability, Reliability, Performance, Supportability, and others.
 
 #### Functionality:
 - Food Search:
@@ -280,7 +305,7 @@ Provide a system-level Use Case Diagram illustrating all required features.
 Example:  
 ![Use Case Diagram](./UCD.png)
 
-**FROM RUBRIC: Includes a complete and accurate system-level use case diagram that is well integrated with the text. MAKE SURE THIS IS SYSTEM LEVEL AND NOT SPRECIFIC**
+**FROM RUBRIC: Includes a complete and accurate system-level use case diagram that is well integrated with the text. MAKE SURE THIS IS SYSTEM LEVEL AND NOT SPRECIFIC /1.0**
 
 ### 2.4 Use Cases
 
@@ -294,7 +319,7 @@ Include at least 5 use cases, each corresponding to a specific function.
 | Flow of Events | x | xxxx |
 | Alternate Flow | x | xxxx |
 
-**FROM RUBRIC: Includes at least 5 detailed use cases, each with comprehensive descriptions and flows.**
+**FROM RUBRIC: Includes at least 5 detailed use cases, each with comprehensive descriptions and flows. /1.0**
 
 ## 3. Software Design and System Components
 
