@@ -49,7 +49,7 @@
         - [4. Educational Resource](#4-educational-resource)
         - [5. Marketing](#5-marketing)
         - [6. Time and Effort Savings](#6-time-and-effort-savings)
-        - [7. Weighing pros and cons of different foods based on nutrional criteria](#7-weighing-pros-and-cons-of-different-foods-based-on-nutrional-criteria)
+        - [7. Weighing pros and cons of different foods based on nutritional criteria](#7-weighing-pros-and-cons-of-different-foods-based-on-nutritional-criteria)
   - [2. Requirements (FURPS+)](#2-requirements-furps)
     - [2.1 User Requirements](#21-user-requirements)
       - [Fictional Users](#fictional-users)
@@ -220,10 +220,10 @@
 -  Benefit: Having a central, user-friendly source of information that contains a plethora of nutritional information saves time and effort compared to searching many sources for the same information.
 -  Example: Using the auto complete of the food search feature allows a user to quickly locate the necessary food item. They search for "chicken breast" and analyse its protein content. The user then uses the nutrition range filter to find food with comparable protein content. They can now make more informed dietary decisions quicker and with less effort.
 
-##### 7. Weighing pros and cons of different foods based on nutrional criteria
+##### 7. Weighing pros and cons of different foods based on nutritional criteria
 
--  Benefit: The tool allows the users to compare up to 5 foods based on one nutrient value. This provides the user a unique way of coordinating their foods and making substitutions in their daily lives based off doctor's reccommendation
--  Example: If the doctor says the users has a high colesterol and should cut out steaks for an alternative but the user would like something that would provide the same or similar protien from foods they already have such as chicken breast as an alternative to steak.
+-  Benefit: The tool allows the users to compare up to 5 foods based on one nutrient value. This provides the user a unique way of coordinating their foods and making substitutions in their daily lives based off doctor's recommendation
+-  Example: If the doctor says the users has a high cholesterol and should cut out steaks for an alternative but the user would like something that would provide the same or similar protein from foods they already have such as chicken breast as an alternative to steak.
 
 ## 2. Requirements (FURPS+)
 
@@ -319,7 +319,7 @@ The following project requirements are defined using the FURPS+ Framework and ex
 
 4. Figure Exportation:
 
--  R4.1: The program shall offer an export option for visualizations, including clearly labeled export buttons and straightforward file format selection.
+-  R4.1: The program shall offer an export option for visualizations, including clearly labelled export buttons and straightforward file format selection.
 -  R4.2: The program shall show a confirmation or error message after an exportation attempt.
 
 #### Reliability:
@@ -426,20 +426,20 @@ List all key functions within the software. For each function, provide:
 List all data structures or sources used in the software. For each, provide:
 
 -  **Type**: Dictionary
--  **Usage**: Dictionaries are used in the system to help display and organise the data in a presentable and usuable format for the system and user. It is used to display the outputs of nutritional values of selected foods for the user or the foods that fall within specified ranges based on selected nutrition and nutritional values for the user. It is also used by the system to keep order of the values associated with the food or nutrition
+-  **Usage**: Dictionaries are used in the system to help display and organise the data in a presentable and usable format for the system and user. It is used to display the outputs of nutritional values of selected foods for the user or the foods that fall within specified ranges based on selected nutrition and nutritional values for the user. It is also used by the system to keep order of the values associated with the food or nutrition
 -  **Functions**: List functions that utilize this structure. All of the functions use dictionaries in some way or another
 -  **Type**: List
--  **Usage**: Lists are background to help organise the data in a more presentable format because of how dictionaries work. Since by taking the values straight from the csv will leave the dictionary unsorted, we can sort this in python by using the sorted function, when this happens the sorted funtion outputs a sorted list of the keys from the dictionaries by altering how the sorted function sorts we can sort the dictionary by values in a list which convert back to a dictionary
--  **Functions**: List functions that utilize this structure. The functions that the use lists are the Nutriton Range Filter Function and the Nutrition Level Filter Function as both benefit from a sorted dictionary
+-  **Usage**: Lists are background to help organise the data in a more presentable format because of how dictionaries work. Since by taking the values straight from the csv will leave the dictionary unsorted, we can sort this in python by using the sorted function, when this happens the sorted function outputs a sorted list of the keys from the dictionaries by altering how the sorted function sorts we can sort the dictionary by values in a list which convert back to a dictionary
+-  **Functions**: List functions that utilize this structure. The functions that the use lists are the Nutrition Range Filter Function and the Nutrition Level Filter Function as both benefit from a sorted dictionary
 
 #### 3.2.3 Detailed Design
 
 Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that operate on data structures. For instance, include pseudocode or a flowchart for a custom searching function.
 
--  <h5 style="display: inline;"> Assumptions: </h5> Assumtptions for all pseudocode.
+-  <h5 style="display: inline;"> Assumptions: </h5> Assumptions for all pseudocode.
 
    -  csv is converted into dictionaries
-   -  Dictionaries are structred like this:
+   -  Dictionaries are structured like this:
       -  <Strong>{Food: Food name, Nutrient 1: Nutrient 1 value, Nutrient 2: Nutrient 2 value, Nutrient 3: Nutrient 3 value}</strong>
    -  Dictionaries are stored in "list_food_dicts"
    -  No GUI calling to and just does the graph in it
@@ -675,7 +675,7 @@ Include all wireframes or mock-ups of the interface. Provide a discussion, expla
 -  Explanation/justification:
    -  In all seriousness being able to select the 5 foods and compare them on a nutritional level against each other is very helpful in this cost of living crisis as by selecting 5 of your families staple food you can see what is really good for you as a common misconception in this cost of living crisis is that healthy food is expensive but knowing is half the battle which is having the quick access to the nutrient changer allows the users visually see changes between zinc levels in their food compared to the salt levels in the same foods.
 
-<strong>Nutrient Breakown:</strong>
+<strong>Nutrient Breakdown:</strong>
 
 -  Design choice 1:
 
