@@ -18,61 +18,61 @@
 
 <!-- TOC -->
 
--  [Software Design Document](#software-design-document)
-   -  [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
-   -  [Group Number: 023](#group-number-023)
-   -  [Team Members](#team-members)
--  [Table of Contents](#table-of-contents)
-   -  [1. System Vision](#1-system-vision)
-      -  [1.1 Problem Background](#11-problem-background)
-         -  [Data Input](#data-input)
-         -  [Data Output](#data-output)
-         -  [Target Users](#target-users)
-            -  [Nutritionists and Dietitians](#nutritionists-and-dietitians)
-            -  [Educational Institutions](#educational-institutions)
-            -  [Health Conscious Individuals](#health-conscious-individuals)
-            -  [Researchers](#researchers)
-            -  [Food Manufacturers](#food-manufacturers)
-      -  [1.2 System Capabilities/Overview](#12-system-capabilitiesoverview)
-         -  [System Functionality](#system-functionality)
-         -  [Features and Functionalities:](#features-and-functionalities)
-            -  [GUI](#gui)
-            -  [Food Search](#food-search)
-            -  [Nutrition Breakdown](#nutrition-breakdown)
-            -  [Nutrition Range Filter](#nutrition-range-filter)
-            -  [Nutrition Level Filter](#nutrition-level-filter)
-            -  [Food Wars](#food-wars)
-      -  [1.3 Benefit Analysis](#13-benefit-analysis)
-         -  [1. Informed Dietary Choices](#1-informed-dietary-choices)
-         -  [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
-         -  [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
-         -  [4. Educational Resource](#4-educational-resource)
-         -  [5. Marketing](#5-marketing)
-         -  [6. Time and Effort Savings](#6-time-and-effort-savings)
-         -  [7. Weighing pros and cons of different foods based on nutrional criteria](#7-weighing-pros-and-cons-of-different-foods-based-on-nutrional-criteria)
-   -  [2. Requirements (FURPS+)](#2-requirements-furps)
-      -  [2.1 User Requirements](#21-user-requirements)
-         -  [Fictional Users](#fictional-users)
-         -  [User Narratives](#user-narratives)
-         -  [User Needs](#user-needs)
-      -  [2.2 Software Requirements](#22-software-requirements)
-         -  [Functionality:](#functionality)
-         -  [Usability:](#usability)
-         -  [Reliability:](#reliability)
-         -  [Performance:](#performance)
-         -  [Supportability:](#supportability)
-         -  [+ Additional:](#-additional)
-      -  [2.3 Use Case Diagram](#23-use-case-diagram)
-      -  [2.4 Use Cases](#24-use-cases)
-   -  [3. Software Design and System Components](#3-software-design-and-system-components)
-      -  [3.1 Software Design](#31-software-design)
-      -  [3.2 System Components](#32-system-components)
-         -  [3.2.1 Functions](#321-functions)
-         -  [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
-         -  [3.2.3 Detailed Design](#323-detailed-design)
-   -  [4. User Interface Design](#4-user-interface-design)
-      -  [4.1 Structural Design](#41-structural-design)
-      -  [4.2 Visual Design](#42-visual-design)
+- [Software Design Document](#software-design-document)
+  - [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
+  - [Group Number: 023](#group-number-023)
+  - [Team Members](#team-members)
+- [Table of Contents](#table-of-contents)
+  - [1. System Vision](#1-system-vision)
+    - [1.1 Problem Background](#11-problem-background)
+        - [Data Input](#data-input)
+        - [Data Output](#data-output)
+        - [Target Users](#target-users)
+          - [Nutritionists and Dietitians](#nutritionists-and-dietitians)
+          - [Educational Institutions](#educational-institutions)
+          - [Health Conscious Individuals](#health-conscious-individuals)
+          - [Researchers](#researchers)
+          - [Food Manufacturers](#food-manufacturers)
+    - [1.2 System Capabilities/Overview](#12-system-capabilitiesoverview)
+      - [System Functionality](#system-functionality)
+      - [Features and Functionalities:](#features-and-functionalities)
+        - [GUI](#gui)
+        - [Food Search](#food-search)
+        - [Nutrition Breakdown](#nutrition-breakdown)
+        - [Nutrition Range Filter](#nutrition-range-filter)
+        - [Nutrition Level Filter](#nutrition-level-filter)
+        - [Food Wars](#food-wars)
+    - [1.3 Benefit Analysis](#13-benefit-analysis)
+        - [1. Informed Dietary Choices](#1-informed-dietary-choices)
+        - [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
+        - [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
+        - [4. Educational Resource](#4-educational-resource)
+        - [5. Marketing](#5-marketing)
+        - [6. Time and Effort Savings](#6-time-and-effort-savings)
+        - [7. Weighing pros and cons of different foods based on nutrional criteria](#7-weighing-pros-and-cons-of-different-foods-based-on-nutrional-criteria)
+  - [2. Requirements (FURPS+)](#2-requirements-furps)
+    - [2.1 User Requirements](#21-user-requirements)
+      - [Fictional Users](#fictional-users)
+      - [User Narratives](#user-narratives)
+      - [User Needs](#user-needs)
+    - [2.2 Software Requirements](#22-software-requirements)
+      - [Functionality:](#functionality)
+      - [Usability:](#usability)
+      - [Reliability:](#reliability)
+      - [Performance:](#performance)
+      - [Supportability:](#supportability)
+      - [+ Additional:](#-additional)
+    - [2.3 Use Case Diagram](#23-use-case-diagram)
+    - [2.4 Use Cases](#24-use-cases)
+  - [3. Software Design and System Components](#3-software-design-and-system-components)
+    - [3.1 Software Design](#31-software-design)
+    - [3.2 System Components](#32-system-components)
+      - [3.2.1 Functions](#321-functions)
+      - [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
+      - [3.2.3 Detailed Design](#323-detailed-design)
+  - [4. User Interface Design](#4-user-interface-design)
+    - [4.1 Structural Design](#41-structural-design)
+    - [4.2 Visual Design](#42-visual-design)
 
 <div style="page-break-after: always;"></div>
 
@@ -659,10 +659,49 @@ Include all wireframes or mock-ups of the interface. Provide a discussion, expla
 -  Screens/Menus: Provide wireframes for different screens, menus, and options.
 -  Design Details: Focus on the layout and size of components; color and graphics are not required.
 
-**FROM RUBRIC: Includes all well-labeled wireframes or mock-ups of the interface, with comprehensive discussions and justifications. /2.5pts**
+<strong>Food comparison main:</strong>
 
-Example:  
-![Visual Design](./visual_design.png)
+- Design choice 1: 
+
+- Explanation/justification:
+
+- Design choice 2: 
+
+- Explanation/justification:
+
+- Design choice 3: 
+
+- Explanation/justification:
+  
+<strong>Food Wars:</strong>
+
+- Design choice 1: 
+
+- Explanation/justification:
+
+- Design choice 2: 
+
+- Explanation/justification:
+
+- Design choice 3: 
+
+- Explanation/justification:
+
+<strong>Nutrient Breakown:</strong>
+
+- Design choice 1: 
+
+- Explanation/justification:
+
+- Design choice 2: 
+
+- Explanation/justification:
+
+- Design choice 3: 
+
+- Explanation/justification:
+
+**FROM RUBRIC: Includes all well-labeled wireframes or mock-ups of the interface, with comprehensive discussions and justifications. /2.5pts**
 
 ![Food Comparison GUI Main.jpg](Food%20Comparison%20GUI%20Main.jpg)
 
