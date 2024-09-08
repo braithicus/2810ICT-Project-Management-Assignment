@@ -66,7 +66,7 @@
     - [3.2 System Components](#32-system-components)
       - [3.2.1 Functions](#321-functions)
       - [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
-      - [3.2.3 Detailed Design](#323-detailed-design)
+      - [3.2.3 Detailed Design **DO NOT FORGET**](#323-detailed-design-do-not-forget)
   - [4. User Interface Design](#4-user-interface-design)
     - [4.1 Structural Design](#41-structural-design)
     - [4.2 Visual Design](#42-visual-design)
@@ -334,24 +334,26 @@ List all key functions within the software. For each function, provide:
 
 -  <h5 style="display: inline;"> Side Effects: </h5> Note any side effects, such as changes to global variables or data passed by reference.
 
-   -  **I Have No Idea For This SEction Delete IF Nothing Put Down**
-   -  <h6 style="display: inline;"> Food Search Function: </h6>
-   -  <h6 style="display: inline;"> Nutrition Breakdown Function: </h6>
-   -  <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6>
-   -  <h6 style="display: inline;"> Nutrition Level Filter Function: </h6>
-   -  <h6 style="display: inline;"> Food Wars Function: </h6>
+   -  <h6 style="display: inline;"> Food Search Function: </h6> <strong>please delete before upload unless changed</strong>
+   -  <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> <strong>please delete before upload unless changed</strong>
+   -  <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6>  When using the sorted function on the dictionary to turn it into a sorted list then to turn the list back into a sorted dictionary, we would not be usin the dictionary creates a new dictionary based on the sorted list while the original dictionary still exists. This creates the unawanted side effect of not sorting original dictionary but having a sorted dictionary created a sorted list of the original dictionary created using the sorted function.  
+   -  <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> When using the sorted function on the dictionary to turn it into a sorted list then to turn the list back into a sorted dictionary, we would not be usin the dictionary creates a new dictionary based on the sorted list while the original dictionary still exists. This creates the unawanted side effect of not sorting original dictionary but having a sorted dictionary created a sorted list of the original dictionary created using the sorted function. 
+   -  <h6 style="display: inline;"> Food Wars Function: </h6> <strong>please delete before upload unless changed</strong>
 
 #### 3.2.2 Data Structures / Data Sources
 
 List all data structures or sources used in the software. For each, provide:
 
--  Type: Type of data structure (e.g., list, set, dictionary). Dictionaries, Arrays **COME UP WITH MORE IDEAS**
--  Usage: Describe where and how it is used.
--  Functions: List functions that utilize this structure.
+-  **Type**: Dictionary
+-  **Usage**: Dictionaries are used in the system to help display and organise the data in a presentable and usuable format for the system and user. It is used to display the outputs of nutrtional values of selected foods for the user or the foods that fall within specified ranges based on selected nutrition and nutritional values for the user. It is also used by the system to keep order of the values associated with the food or nutrition
+-  **Functions**: List functions that utilize this structure. all of the functionsuse dictionaries in some way or another
+-  **Type**: List
+-  **Usage**: Lists are background to help organise the data in a more presentable format because of how dictionaries work. Since by taking the values straight from the csv will leave the dictionary unsorted, we can sort this in python by using the sorted function, when this happens the sorted funtion outputs a sorted list of the keys from the dictionaries by altering how the sorted function sorts we can sort the dictionary by values in a list which convert back to a dictionary
+-  **Functions**: List functions that utilize this structure. The functions that the use lists are the Nutriton Range Filter Function and the Nutrition Level Filter Function as both benefit from a sorted dictionary
 
-#### 3.2.3 Detailed Design
+#### 3.2.3 Detailed Design **DO NOT FORGET**
 
-Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that operate on data structures. For instance, include pseudocode or a flowchart for a custom searching function.
+Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that operate on data structures. For instance, include pseudocode or a flowchart for a custom searching function. 
 
 ## 4. User Interface Design
 
