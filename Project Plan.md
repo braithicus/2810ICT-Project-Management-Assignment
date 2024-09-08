@@ -21,7 +21,7 @@ Please Describe what you have accomplished in this group project.
 -  s5265839, Ben Lange
    -  Additional feature creator, Software Design Document
 -  s5264208, Braith Lee
-   -  Additional stakeholders, 
+   -  Additional stakeholders,
 
 <div style="page-break-after: always;"></div>
 
@@ -92,10 +92,12 @@ Please Describe what you have accomplished in this group project.
 -  <h5 style="display: inline;"> Role: </h5> Companies will use the application to become more aware of the relative sizes of different nutrients in their products and to better market the product to consumers based on its content.
 
 #### Regulatory Bodies (External Executive)
+
 -  <h5 style="display: inline;"> Description: </h5> Agencies that ensure compliance with legal and regulatory standards.
 -  <h5 style="display: inline;"> Role: </h5> They ensure that the software adheres to national law in terms of nutrition by enforcing regulations and guidelines.
 
 #### Institutional Oversight Committees (External Executive)
+
 -  <h5 style="display: inline;"> Description: </h5> Universities and institutions that ensure the project meets ethical standards, and provide oversight.
 -  <h5 style="display: inline;"> Role: </h5> They determine what aspects of the project are approved, the project's funding allocation, and enforce adherence to policies.
 
@@ -140,7 +142,7 @@ It includes:
 
 ##### Nutrition Level Filter Feature
 
-Allows users to filter foods by their nutritional content levels: low, mid, and high. The filter includes: fat, protein, carbohydrates, sugar, and nutritional density.
+Allows users to filter foods by their nutritional content levels: low, mid, and high.
 It includes:
 
 -  Low: Less than 33% of the highest value.
@@ -237,7 +239,7 @@ It includes:
 ## 3. Activity Definition Estimation
 
 | Activity #No | Activity Name                             | Brief Description                                                                                                                                                                                        | Duration (Days) | Responsible Team Members |
-| ------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |--------------------------|
+| ------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------ |
 | 1.1          | Define Project Objectives                 | Establish objectives or goals that the project aims to achieve.                                                                                                                                          | 1               | William-Joseph           |
 | 1.2          | Identify Project Stakeholders             | Identify all key stakeholders involved in the project, including internal teams and potential end-users.                                                                                                 | 2               | William-Joseph           |
 | 2.1          | Define Project Scope                      | Define and manage what is included or excluded in the project and product.                                                                                                                               | 3               | William-Joseph           |
@@ -248,18 +250,18 @@ It includes:
 | 2.4.2        | Define System Capabilities / Overview     | Define what the system will do and describe the key features and functionalities of the system.                                                                                                          | 2               | William-Joseph           |
 | 2.4.3        | Identify the Benefits                     | Identify how the system will provide value and benefit the stakeholders.                                                                                                                                 | 1               | William-Joseph           |
 | 2.5.1        | Identify User Requirements                | Detail how users are expected to interact with or use the program. What functionalities must the system provide from the end-user perspective?                                                           | 1               | Braith Lee               |
-| 2.5.2        | Identify Software Requirements            | Define the functionality the software will provide. This section should list requirements formally.                                                                                                      | 2               | Braith Lee                      |
-| 2.5.3        | Identify Use Cases and Construct Diagrams | Include at least 5 use cases, each corresponding to a specific function. Provide a system-level Use Case Diagram illustrating all required features.                                                     | 2               | Braith Lee                      |
-| 2.6.1        | Design Software                           | Include a flowchart that illustrates how the software will operate.                                                                                                                                      | 2               | Ben Lange                      |
+| 2.5.2        | Identify Software Requirements            | Define the functionality the software will provide. This section should list requirements formally.                                                                                                      | 2               | Braith Lee               |
+| 2.5.3        | Identify Use Cases and Construct Diagrams | Include at least 5 use cases, each corresponding to a specific function. Provide a system-level Use Case Diagram illustrating all required features.                                                     | 2               | Braith Lee               |
+| 2.6.1        | Design Software                           | Include a flowchart that illustrates how the software will operate.                                                                                                                                      | 2               | Ben Lange                |
 | 2.6.2        | Identify System Components                | List all key functions within the software. List all data structures or sources used in the software. Provide pseudocode or flowcharts for all the functions listed that operate on the data structures. | 3               | Ben Lange                |
-| 2.7.1        | Design the Structure                      | Present a structural design, a hierarchy chart, showing the overall interface’s structure.                                                                                                               | 2               | Ben Lange                      |
-| 2.7.2        | Design the Visuals                        | Include all wireframes or mock-ups of the interface. Provide a discussion, explanation, and justification for the design choices.                                                                        | 2               | Braith Lee                      |
+| 2.7.1        | Design the Structure                      | Present a structural design, a hierarchy chart, showing the overall interface’s structure.                                                                                                               | 2               | Ben Lange                |
+| 2.7.2        | Design the Visuals                        | Include all wireframes or mock-ups of the interface. Provide a discussion, explanation, and justification for the design choices.                                                                        | 2               | Braith Lee               |
 | 3.1          | Implement the GUI                         | Implement the graphical user interface. This includes using wxFormBuilder to develop the layout.                                                                                                         | 3               | ???                      |
 | 3.2          | Implement Food Search Feature             | Code all the functions that enable the user to search for foods by name. Including the event that calls the nutrition breakdown feature.                                                                 | 3               | ???                      |
 | 3.3          | Implement Nutrition Breakdown Feature     | Code all the functions that enable the user to see pie charts and bar graphs that display the nutritional breakdown of the selected food.                                                                | 3               | ???                      |
 | 3.4          | Implement Nutrition Range Filter Feature  | Code all the functions that enable the user to see a list of food filtered by a minimum and maximum range of a specific nutrient.                                                                        | 3               | ???                      |
 | 3.5          | Implement Nutrition Level Filter Feature  | Code all the functions that enable the user to see a list of foods filtered by low, mid, or high levels of a selected nutrient.                                                                          | 3               | ???                      |
-| 3.6          | Implement Food Wars Feature               | Code all the functions that allow the user to compare up to 5 different foods against a chosen nutrient and the chart to compare the different foods.                                                   | 3               | ???                      |
+| 3.6          | Implement Food Wars Feature               | Code all the functions that allow the user to compare up to 5 different foods against a chosen nutrient and the chart to compare the different foods.                                                    | 3               | ???                      |
 | 3.7          | Conduct Testing                           | Perform testing on the code to ensure there are no bugs and that the code meets the scope.                                                                                                               | 5               | ???                      |
 | 4.1          | Track Progress                            | Monitor the progress of the project to ensure it keeps pace with timelines and milestones.                                                                                                               | Ongoing         | ???                      |
 | 4.2          | Control Scope                             | Ensure the progress stays within the scope by managing changes made.                                                                                                                                     | Ongoing         | ???                      |
