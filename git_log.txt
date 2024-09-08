@@ -1,0 +1,143 @@
+* 15f195f 2024-09-08 by [braithicus] | md -> pdf for both attempt 2 (HEAD -> main, origin/main, origin/HEAD)
+*   8544b14 2024-09-08 by [braithicus] | Merge remote-tracking branch 'origin/main'
+|\  
+| * ad11990 2024-09-08 by [William-JosephSimons] | Equality forever
+* | 600dc37 2024-09-08 by [braithicus] | md -> pdf for both
+|/  
+* e76b362 2024-09-08 by [Billy-Joe Simons] | Delete git_log.txt
+* a5ed8ea 2024-09-08 by [braithicus] | Final touches, contributions, some activity estimation stuff
+*   96d60f3 2024-09-08 by [Ben] | Merge branch 'main' of https://github.com/braithicus/2810ICT-Project-Management-Assignment
+|\  
+| * b342360 2024-09-08 by [William-JosephSimons] | Added responsibilities to activity est
+* | cc95f11 2024-09-08 by [Ben] | Merge branch 'main' of https://github.com/braithicus/2810ICT-Project-Management-Assignment
+|\| 
+| * 55901ee 2024-09-08 by [William-JosephSimons] | spelling fixes
+* | 63fbe8f 2024-09-08 by [Ben] | Merge remote-tracking branch 'origin/HEAD'
+|\| 
+| *   3082bef 2024-09-08 by [William-JosephSimons] | Merge branch 'main' of https://github.com/braithicus/2810ICT-Project-Management-Assignment
+| |\  
+| | *   d90b7e9 2024-09-08 by [braithicus] | Merge remote-tracking branch 'origin/main'
+| | |\  
+| | * | 72feaa7 2024-09-08 by [braithicus] | Software Design Doc: 2.3 Uses Case diagram added.
+| * | | fe39eb9 2024-09-08 by [William-JosephSimons] | draft of structural design
+| |/ /  
+* | / e0e1f69 2024-09-08 by [Ben] | hopefully last my last commit and my last forsaken merge
+| |/  
+|/|   
+* | f6483af 2024-09-08 by [Ben] | Commiting to the merge
+|\| 
+| * b1cef6f 2024-09-08 by [William-JosephSimons] | structure design navigation
+| * 649a8b8 2024-09-08 by [William-JosephSimons] | Spelling Fixes
+* | 9cc9b92 2024-09-08 by [Ben] | Commiting to merge
+* | 6d5512a 2024-09-08 by [Ben] | Lets hope this works again
+* | 019d37a 2024-09-08 by [Ben] | This is my last straw trying to merge
+|\| 
+| *   a68e020 2024-09-08 by [William-JosephSimons] | Merge branch 'main' of https://github.com/braithicus/2810ICT-Project-Management-Assignment
+| |\  
+| | * 0d22f7f 2024-09-08 by [braithicus] | Software Design Doc: 2.2 Uses Cases table completed.
+| * | 83cd8bc 2024-09-08 by [William-JosephSimons] | started structural design description
+| |/  
+* / 715d3bf 2024-09-08 by [Ben] | This is my last straw trying to goddamn merge I swear it must hate Well, Good because I hate it
+|/  
+* e29228f 2024-09-08 by [braithicus] | Software Design Doc: 2.2 Uses Cases half done.
+* ad7b015 2024-09-08 by [William-JosephSimons] | changes to structural design
+* 4c3a9f9 2024-09-08 by [William-JosephSimons] | changes filter description
+* 8bf163e 2024-09-08 by [Ben] | Rolling out the carpets for the final stretch baby! Time to kick and Rip it
+* 489282e 2024-09-08 by [braithicus] | Software Design Doc: wireframes added
+* 11516ab 2024-09-08 by [William-JosephSimons] | Food Wars structure modified
+* 4e1919d 2024-09-08 by [Ben] | Small mistake that slipped past We can't graph 5 graphs, or can we?
+* c7b852c 2024-09-08 by [William-JosephSimons] | Added structural design hierarchy chart
+* 13dc784 2024-09-08 by [Ben] | Input and output for addition feature finished
+* da46a50 2024-09-08 by [Ben] | Fine touching up on a few things in section 3
+* 9823568 2024-09-08 by [Ben] | Finished Section 3 finally finished. I did use pseudocode, absolutely regretting it
+* 074da51 2024-09-08 by [Ben] | Commiting to secure my work. It is updated with previous commit Merging sucks
+*   32975d7 2024-09-08 by [Ben] | Finally a successful merge
+|\  
+| * 932390a 2024-09-08 by [braithicus] | Software Design Doc: 2.2 Software Requirements finished
+| * 682e747 2024-09-08 by [William-JosephSimons] | Fixing spelling
+| * 1e04b0f 2024-09-08 by [braithicus] | Software Design Doc: most of 2.2 Software Requirements
+| * 00eeac3 2024-09-08 by [William-JosephSimons] | finalised gantt chart
+| * e3b5b06 2024-09-08 by [braithicus] | Software Design Doc 2.1 User Requirements completed
+* | f768a82 2024-09-08 by [Ben] | Tidied up alot of 3 and half of pseudo code is done I've never successfully merged before so god save us all
+|/  
+* ec12bd3 2024-09-08 by [Ben] | Fixed a mistake throughout the whole project I just remebered that i noticed it last night
+* 13fbced 2024-09-08 by [Ben] | Software Design and System components Done* dont forget the stuff in side effects and pseudocode
+* 349405e 2024-09-07 by [Ben] | Edited the flowchart to make the functions clearer Purple power baby
+* fcf7081 2024-09-07 by [Ben] | Software design flowchart is complete Hooray It looks like a maze lol
+* 08017d9 2024-09-07 by [braithicus] | Software Design Doc requirements started.
+* 8674b3d 2024-09-07 by [Ben] | Fixed an error from a previous commit
+* 8ae3b24 2024-09-07 by [braithicus] | Grammatic adjustments, activity definition estimation table name additions.
+* 101d587 2024-09-07 by [braithicus] | Name, sNumber, stakeholder title adjustments plus additional stakeholders.
+*   d662a95 2024-09-07 by [braithicus] | Merge remote-tracking branch 'origin/main'
+|\  
+| * cdde0b1 2024-09-07 by [William-JosephSimons] | Contribution updated
+| * 2a712f5 2024-09-07 by [William-JosephSimons] | fixed spelling to eliminate squiggly lines
+| * 1a6199b 2024-09-07 by [William-JosephSimons] | filter feature fix and new feature
+| * 5018a45 2024-09-07 by [Ben] | This was supposed to be in the last commit *Face palm*
+| * d127711 2024-09-07 by [Ben] | Some editing and corrections
+| * 4c43014 2024-09-07 by [Ben] | Finished  1.3 Project Plan and spelling errors
+| * 9079efd 2024-09-07 by [Ben] | Finished functions except the side effects Have no clue what to put for side effects maybe slower computation speed due to having the code reorganise the dictionaries in ascending or descending order
+| * 213d19e 2024-09-07 by [Ben] | Updated from previous commit and finalised input parameters
+| * 94e4ef8 2024-09-07 by [Ben] | Added final feature and input paramaeters just updating to store progress
+| * 15a015f 2024-09-06 by [William-JosephSimons] | changes to gantt chart apparently
+| * 537d12b 2024-09-06 by [William-JosephSimons] | unfinished gantt chant in Project Doc
+| * 8987304 2024-09-06 by [William-JosephSimons] | Filled out all I can
+| * 96453bc 2024-09-06 by [William-JosephSimons] | changed title
+| *   75f9471 2024-09-06 by [William-JosephSimons] | merging activity def changes
+| |\  
+| | * 39b0fd8 2024-09-06 by [William-JosephSimons] | changed contribution
+| | * c9dd289 2024-09-06 by [William-JosephSimons] | Finished activity definition
+| * | a8171db 2024-09-06 by [William-JosephSimons] | Merging my activity definitions
+| |\| 
+| | * 98011b2 2024-09-06 by [William-JosephSimons] | finished activity definitions
+| * |   87a5028 2024-09-06 by [William-JosephSimons] | merging my file deletion
+| |\ \  
+| | |/  
+| |/|   
+| | * f2e5050 2024-09-06 by [Billy-Joe Simons] | Delete WBS.png
+| * | b03becf 2024-09-06 by [William-JosephSimons] | started activity definition
+| * | 9261e0f 2024-09-06 by [William-JosephSimons] | Added updated WBS photo
+| |/  
+| *   f13e442 2024-09-06 by [William-JosephSimons] | merging Braith's changes
+| |\  
+| * | cfb19d7 2024-09-06 by [William-JosephSimons] | Small format change
+| * | 660616d 2024-09-06 by [William-JosephSimons] | Added WBS
+* | |   a8dd1de 2024-09-05 by [braithicus] | Merge remote-tracking branch 'origin/main'
+|\ \ \  
+| | |/  
+| |/|   
+| * | 8f466ba 2024-09-05 by [Ben] | Started on system components, still need to come up with unique Idea
+| |/  
+| * 22ffe5d 2024-09-04 by [William-JosephSimons] | Finished benefit examples
+* | 935487d 2024-09-03 by [braithicus] | Software Design Document's Team Member's table updated and some minor title adjustments
+|/  
+* 518f9b5 2024-09-03 by [William-JosephSimons] | Added benefits but no examples yet
+* d455011 2024-09-03 by [William-JosephSimons] | very small edit to project objectives
+* f84e27c 2024-09-03 by [William-JosephSimons] | tidied some things up
+* 61384c3 2024-09-03 by [William-JosephSimons] | Completed system capabilities/overview
+* 1070bb2 2024-09-03 by [William-JosephSimons] | updated titles and contribution
+* 42cce63 2024-09-03 by [William-JosephSimons] | Completed problem background
+* 1ece80b 2024-08-31 by [William-JosephSimons] | Added and completed 2 new stakeholders
+* d0e4e0f 2024-08-31 by [William-JosephSimons] | Finished stakeholders
+* cdda5c8 2024-08-23 by [William-JosephSimons] | Finished scope, additional feature needed
+* d30ddba 2024-08-23 by [William-JosephSimons] | added scope exclusions
+* 3d6181d 2024-08-23 by [William-JosephSimons] | Finished scope inclusions
+*   d32ecbd 2024-08-23 by [William-JosephSimons] | Added names to my scope branch
+|\  
+| * 9db21d2 2024-08-22 by [braithicus] | Added Braith's Student Details
+| *   f324c2f 2024-08-15 by [William-JosephSimons] | started adding details to scope
+| |\  
+| | *   68ccf8c 2024-08-14 by [Ben] | Merge branch 'main' of https://github.com/braithicus/2810ICT-Project-Management-Assignment
+| | |\  
+| | * | bfbf750 2024-08-14 by [Ben] | Added name and S-number
+* | | | 150f099 2024-08-23 by [William-JosephSimons] | added to scope, additional feature needed
+|/ / /  
+* | / 1360a80 2024-08-15 by [William-JosephSimons] | Started details on the scope
+| |/  
+|/|   
+* | f18a5cc 2024-08-14 by [William-JosephSimons] | Titles for scope
+* | 75f0188 2024-08-13 by [William-JosephSimons] | Cleaned up objectives, and started stakeholders
+|/  
+* 46ee3c1 2024-08-13 by [William-JosephSimons] | Added project objectives to project plan
+* 5fb7ed9 2024-08-12 by [William-JosephSimons] | Adding the necessary files to the Repo
+* a36c9aa 2024-07-25 by [braithicus] | Initial commit
