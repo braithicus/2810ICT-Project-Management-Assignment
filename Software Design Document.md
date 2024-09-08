@@ -18,61 +18,61 @@
 
 <!-- TOC -->
 
-- [Software Design Document](#software-design-document)
-  - [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
-  - [Group Number: 023](#group-number-023)
-  - [Team Members](#team-members)
-- [Table of Contents](#table-of-contents)
-  - [1. System Vision](#1-system-vision)
-    - [1.1 Problem Background](#11-problem-background)
-        - [Data Input](#data-input)
-        - [Data Output](#data-output)
-        - [Target Users](#target-users)
-          - [Nutritionists and Dietitians](#nutritionists-and-dietitians)
-          - [Educational Institutions](#educational-institutions)
-          - [Health Conscious Individuals](#health-conscious-individuals)
-          - [Researchers](#researchers)
-          - [Food Manufacturers](#food-manufacturers)
-    - [1.2 System Capabilities/Overview](#12-system-capabilitiesoverview)
-      - [System Functionality](#system-functionality)
-      - [Features and Functionalities:](#features-and-functionalities)
-        - [GUI](#gui)
-        - [Food Search](#food-search)
-        - [Nutrition Breakdown](#nutrition-breakdown)
-        - [Nutrition Range Filter](#nutrition-range-filter)
-        - [Nutrition Level Filter](#nutrition-level-filter)
-        - [Food Wars](#food-wars)
-    - [1.3 Benefit Analysis](#13-benefit-analysis)
-        - [1. Informed Dietary Choices](#1-informed-dietary-choices)
-        - [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
-        - [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
-        - [4. Educational Resource](#4-educational-resource)
-        - [5. Marketing](#5-marketing)
-        - [6. Time and Effort Savings](#6-time-and-effort-savings)
-        - [7. Weighing pros and cons of different foods based on nutrional criteria](#7-weighing-pros-and-cons-of-different-foods-based-on-nutrional-criteria)
-  - [2. Requirements (FURPS+)](#2-requirements-furps)
-    - [2.1 User Requirements](#21-user-requirements)
-      - [Fictional Users](#fictional-users)
-      - [User Narratives](#user-narratives)
-      - [User Needs](#user-needs)
-    - [2.2 Software Requirements](#22-software-requirements)
-      - [Functionality:](#functionality)
-      - [Usability:](#usability)
-      - [Reliability:](#reliability)
-      - [Performance:](#performance)
-      - [Supportability:](#supportability)
-      - [+ Additional:](#-additional)
-    - [2.3 Use Case Diagram](#23-use-case-diagram)
-    - [2.4 Use Cases](#24-use-cases)
-  - [3. Software Design and System Components](#3-software-design-and-system-components)
-    - [3.1 Software Design](#31-software-design)
-    - [3.2 System Components](#32-system-components)
-      - [3.2.1 Functions](#321-functions)
-      - [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
-      - [3.2.3 Detailed Design](#323-detailed-design)
-  - [4. User Interface Design](#4-user-interface-design)
-    - [4.1 Structural Design](#41-structural-design)
-    - [4.2 Visual Design](#42-visual-design)
+-  [Software Design Document](#software-design-document)
+   -  [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
+   -  [Group Number: 023](#group-number-023)
+   -  [Team Members](#team-members)
+-  [Table of Contents](#table-of-contents)
+   -  [1. System Vision](#1-system-vision)
+      -  [1.1 Problem Background](#11-problem-background)
+         -  [Data Input](#data-input)
+         -  [Data Output](#data-output)
+         -  [Target Users](#target-users)
+            -  [Nutritionists and Dietitians](#nutritionists-and-dietitians)
+            -  [Educational Institutions](#educational-institutions)
+            -  [Health Conscious Individuals](#health-conscious-individuals)
+            -  [Researchers](#researchers)
+            -  [Food Manufacturers](#food-manufacturers)
+      -  [1.2 System Capabilities/Overview](#12-system-capabilitiesoverview)
+         -  [System Functionality](#system-functionality)
+         -  [Features and Functionalities:](#features-and-functionalities)
+            -  [GUI](#gui)
+            -  [Food Search](#food-search)
+            -  [Nutrition Breakdown](#nutrition-breakdown)
+            -  [Nutrition Range Filter](#nutrition-range-filter)
+            -  [Nutrition Level Filter](#nutrition-level-filter)
+            -  [Food Wars](#food-wars)
+      -  [1.3 Benefit Analysis](#13-benefit-analysis)
+         -  [1. Informed Dietary Choices](#1-informed-dietary-choices)
+         -  [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
+         -  [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
+         -  [4. Educational Resource](#4-educational-resource)
+         -  [5. Marketing](#5-marketing)
+         -  [6. Time and Effort Savings](#6-time-and-effort-savings)
+         -  [7. Weighing pros and cons of different foods based on nutrional criteria](#7-weighing-pros-and-cons-of-different-foods-based-on-nutrional-criteria)
+   -  [2. Requirements (FURPS+)](#2-requirements-furps)
+      -  [2.1 User Requirements](#21-user-requirements)
+         -  [Fictional Users](#fictional-users)
+         -  [User Narratives](#user-narratives)
+         -  [User Needs](#user-needs)
+      -  [2.2 Software Requirements](#22-software-requirements)
+         -  [Functionality:](#functionality)
+         -  [Usability:](#usability)
+         -  [Reliability:](#reliability)
+         -  [Performance:](#performance)
+         -  [Supportability:](#supportability)
+         -  [+ Additional:](#-additional)
+      -  [2.3 Use Case Diagram](#23-use-case-diagram)
+      -  [2.4 Use Cases](#24-use-cases)
+   -  [3. Software Design and System Components](#3-software-design-and-system-components)
+      -  [3.1 Software Design](#31-software-design)
+      -  [3.2 System Components](#32-system-components)
+         -  [3.2.1 Functions](#321-functions)
+         -  [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
+         -  [3.2.3 Detailed Design](#323-detailed-design)
+   -  [4. User Interface Design](#4-user-interface-design)
+      -  [4.1 Structural Design](#41-structural-design)
+      -  [4.2 Visual Design](#42-visual-design)
 
 <div style="page-break-after: always;"></div>
 
@@ -101,10 +101,11 @@
 -  The users will be accessing the Nutritional_Food_Database.csv via their inputs above.
 
 ##### Data Output
+
 -  Visualisation tools such as pie charts and bar graphs when a food item is searched or clicked from a display.
 -  A list of foods after the user inputs minimum and maximum values from the range menu
 -  A list of foods after the user inputs a low, mid, or high value from the filter menu.
--  A bar graph of up to 5 graphs based on a specific nutritional value that user had inputted 
+-  A bar graph of up to 5 graphs based on a specific nutritional value that user had inputted
 
 ##### Target Users
 
@@ -220,8 +221,9 @@
 -  Example: Using the auto complete of the food search feature allows a user to quickly locate the necessary food item. They search for "chicken breast" and analyse its protein content. The user then uses the nutrition range filter to find food with comparable protein content. They can now make more informed dietary decisions quicker and with less effort.
 
 ##### 7. Weighing pros and cons of different foods based on nutrional criteria
-- Benefit: The tool allows the users to compare up to 5 foods based on one nutrient value. This provides the user a unique way of coordinating their foods and making substitutions in their daily lives based off doctor's reccommendation
-- Example: If the doctor says the users has a high colesterol and should cut out steaks for an alternative but the user would like something that would provide the same or similar protien from foods they already have such as chicken breast as an alternative to steak.
+
+-  Benefit: The tool allows the users to compare up to 5 foods based on one nutrient value. This provides the user a unique way of coordinating their foods and making substitutions in their daily lives based off doctor's reccommendation
+-  Example: If the doctor says the users has a high colesterol and should cut out steaks for an alternative but the user would like something that would provide the same or similar protien from foods they already have such as chicken breast as an alternative to steak.
 
 ## 2. Requirements (FURPS+)
 
@@ -317,15 +319,16 @@ The following project requirements are defined using the FURPS+ Framework and ex
 
 4. Figure Exportation:
 
-- R4.1: The program shall offer an export option for visualizations, including clearly labeled export buttons and straightforward file format selection.
-- R4.2: The program shall show a confirmation or error message after an exportation attempt.
+-  R4.1: The program shall offer an export option for visualizations, including clearly labeled export buttons and straightforward file format selection.
+-  R4.2: The program shall show a confirmation or error message after an exportation attempt.
 
 #### Reliability:
 
-1. Error Handling: 
-- R1.1: The program shall produce error messages when users enter invalid inputs or when the program encounters an error while retrieving data.
-- R1.2: The program shall inform the user if there is data missing from the database. 
-- R1.3: The program shall ensure that all interactions with the Nutritional_Food_Database.csv are read-only operations, preventing any modifications to the database.
+1. Error Handling:
+
+-  R1.1: The program shall produce error messages when users enter invalid inputs or when the program encounters an error while retrieving data.
+-  R1.2: The program shall inform the user if there is data missing from the database.
+-  R1.3: The program shall ensure that all interactions with the Nutritional_Food_Database.csv are read-only operations, preventing any modifications to the database.
 
 #### Performance:
 
@@ -338,21 +341,21 @@ The following project requirements are defined using the FURPS+ Framework and ex
 
 1. Documentation:
 
-- R1.1: The program shall include user documentation that details how to perform searches, use filters, and access visualizations.
+-  R1.1: The program shall include user documentation that details how to perform searches, use filters, and access visualizations.
 
 2. Help System:
 
-- R2.1: The program shall provide a help menu or FAQ section within the application that explains the common steps of use.
+-  R2.1: The program shall provide a help menu or FAQ section within the application that explains the common steps of use.
 
 #### + Additional:
 
 1. User Personalisation:
 
-- R1.1: The program shall allow users to customize their interface settings, such as graph or theme colors.
+-  R1.1: The program shall allow users to customize their interface settings, such as graph or theme colors.
 
 2. Accessibility:
 
-- R2.1: The program shall be designed to be accessible for users with disabilities
+-  R2.1: The program shall be designed to be accessible for users with disabilities
 
 ### 2.3 Use Case Diagram
 
@@ -432,21 +435,19 @@ List all data structures or sources used in the software. For each, provide:
 -  **Usage**: Lists are background to help organise the data in a more presentable format because of how dictionaries work. Since by taking the values straight from the csv will leave the dictionary unsorted, we can sort this in python by using the sorted function, when this happens the sorted funtion outputs a sorted list of the keys from the dictionaries by altering how the sorted function sorts we can sort the dictionary by values in a list which convert back to a dictionary
 -  **Functions**: List functions that utilize this structure. The functions that the use lists are the Nutriton Range Filter Function and the Nutrition Level Filter Function as both benefit from a sorted dictionary
 
-#### 3.2.3 Detailed Design 
+#### 3.2.3 Detailed Design
 
 Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that operate on data structures. For instance, include pseudocode or a flowchart for a custom searching function.
 
+-  <h5 style="display: inline;"> Assumptions: </h5> Assumtptions for all pseudocode.
 
-- <h5 style="display: inline;"> Assumptions: </h5> Assumtptions for all pseudocode.
+   -  csv is converted into dictionaries
+   -  Dictionaries are structred like this:
+      -  <Strong>{Food: Food name, Nutrient 1: Nutrient 1 value, Nutrient 2: Nutrient 2 value, Nutrient 3: Nutrient 3 value}</strong>
+   -  Dictionaries are stored in "list_food_dicts"
+   -  No GUI calling to and just does the graph in it
 
-  -  csv is converted into dictionaries
-  -  Dictionaries are structred like this:
-     -  <Strong>{Food: Food name, Nutrient 1: Nutrient 1 value, Nutrient 2: Nutrient 2 value, Nutrient 3: Nutrient 3 value}</strong>
-  - Dictionaries are stored in "list_food_dicts"
-  - No GUI calling to and just does the graph in it
-
-
-- <h5 style="display: inline;"> Food Search Function pseudocode: </h5>
+-  <h5 style="display: inline;"> Food Search Function pseudocode: </h5>
 
 function food_search(list_food_dicts): #Asking for user input
 food_name = input('Enter the name of a Food: ')
@@ -460,11 +461,11 @@ food_name = input('Enter the name of a Food: ')
 result = food_search(list_food_dicts)
 print(result)
 
-- <h5 style="display: inline;"> Nutrition Breakdown Function pseudocode: </h5>
+-  <h5 style="display: inline;"> Nutrition Breakdown Function pseudocode: </h5>
 
-function nutrient_breakdown(list_food_dicts): 
-    food_name = food_search(list_food_dicts)
-    
+function nutrient_breakdown(list_food_dicts):
+food_name = food_search(list_food_dicts)
+
     if food_name is None:
         print("Food not found in the list.")
         return
@@ -473,38 +474,37 @@ function nutrient_breakdown(list_food_dicts):
     values = [food_name[nutrient] for nutrient in nutrients]
 
     app = wx.App(False)
-    
+
     frame = wx.Frame(None, title="Nutrient Breakdown", size=(800, 600))
-    
+
     panel = wx.Panel(frame)
-    
+
     figure = Figure()
     canvas = FigureCanvas(panel, -1, figure)
-    
+
     axes_bar = figure.add_subplot(121)
     axes_bar.bar(nutrients, values)
     axes_bar.set_title("Nutrient Bar Chart")
-    
+
     axes_pie = figure.add_subplot(122)
     axes_pie.pie(values, labels=nutrients, autopct='%1.1f%%')
     axes_pie.set_title("Nutrient Pie Chart")
-    
+
     sizer = wx.BoxSizer(wx.VERTICAL)
     sizer.Add(canvas, 1, wx.EXPAND)
     panel.SetSizer(sizer)
-    
+
     frame.Show()
-    
+
     app.MainLoop()
 
- nutrient_breakdown(list_food_dicts)
+nutrient_breakdown(list_food_dicts)
 
-
-- <h5 style="display: inline;"> Nutrition Range Filter Function pseudocode:  </h5>
+-  <h5 style="display: inline;"> Nutrition Range Filter Function pseudocode:  </h5>
 
 function Nutri_Ran_Fil(list_food_dicts):
-    while True:
-        Nutri_x = input("Enter the nutrient name (e.g., Nutri_x): ")
+while True:
+Nutri_x = input("Enter the nutrient name (e.g., Nutri_x): ")
 
         nutrient_exists = False
         for food_dict in list_food_dicts:
@@ -538,10 +538,10 @@ function Nutri_Ran_Fil(list_food_dicts):
 
 Nutri_Ran_Fil(list_food_dicts)
 
-- <h5 style="display: inline;"> Nutrition Level Filter Function pseudocode: </h5>
+-  <h5 style="display: inline;"> Nutrition Level Filter Function pseudocode: </h5>
 
 function Nutri_Lev_Fil(list_food_dicts):
-    lev_choice =["low","mid","high"]
+lev_choice =["low","mid","high"]
 
     while True:
         Nutri_x = input("Enter the nutrient name (e.g., Nutri_x): ")
@@ -589,17 +589,16 @@ function Nutri_Lev_Fil(list_food_dicts):
 
 Nutri_Lev_Fil(list_food_dicts)
 
-
-- <h5 style="display: inline;"> Food Wars Function pseudocode: </h5>
+-  <h5 style="display: inline;"> Food Wars Function pseudocode: </h5>
 
 function Food_Wars(list_food_dicts):
-    foods = []
-    while len(foods) < 5:
-        food_name = input("Enter a food name (or type 'done' to finish): ")
-        if food.lower() == 'done':
-            break
-        foods.append(food)
-    
+foods = []
+while len(foods) < 5:
+food_name = input("Enter a food name (or type 'done' to finish): ")
+if food.lower() == 'done':
+break
+foods.append(food)
+
     if len(foods) < 2:
         print("You must enter at least 2 foods.")
         return
@@ -650,7 +649,6 @@ Present a structural design, a hierarchy chart, showing the overall interface’
 -  Navigation: How will users navigate through the software?
 -  Design Choices: Explain why these design choices were made.
 
-Example:  
 ![Structural Design](./Structural_Design.png)
 
 ### 4.2 Visual Design
