@@ -639,13 +639,11 @@ Food_Wars(list_food_dicts)
 
 ### 4.1 Structural Design
 
-Present a structural design, a hierarchy chart, showing the overall interface’s structure. Address:
-
 -  Structure: The software will be structured so that all the features necessary to inform the user about nutrition is on the one page.
 -  Information Grouping: You will have the search bar in the top left. The range and filter features that display you a new list will be on the right side of the page. The features that produce your graphs and charts will have buttons on the bottom of the page. These buttons will be above a table that show the foods you've added to potentially breakdown their nutrients, or compare them against each other. Beside the selected food will be a horizontal list of nutrients that it contains. You will be able to toggle the nutrients you wish to see in the right side of the page.
 -  Navigation: To search for a food, the user types the name of the food into the search bar. They will click the Add button to display it in the table. To see the nutritional breakdown of the food, the user selects a food from the bottom table, and clicks the breakdown button. A new frame will appear with both graphs inside. To use the nutrition range feature, the user selects the desired nutrient from the right hand menu. They input min and/or max values using the boxes besides the nutrient, then the user clicks the search button. Results are then output to the search space. To use the nutrition level feature, the user selects a nutrient on the right-hand-side and selects the level drop down menu. They choose low, mid, or high, and then click the search button. Results are then output to the search space. To use the food wars feature, the user selects five food items or less, using the tick boxes in the bottom table. They click on the Food Wars button. A new window is generated, listing the five items and a drop-down selection. The user selects a nutrient in the drop-down. The user then clicks Produce Graph. A bar graph is generated and presented in the bottom of the window.
 
--  Design Choices: Explain why these design choices were made.
+-  Design Choices: These design choices were made to keep the GUI compact and to allow users to have quick access to all the features they need, while still allowing them to have a good overview of the database.
 
 ![Structural Design](./Structural_Design.png)
 
