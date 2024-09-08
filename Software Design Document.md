@@ -657,40 +657,23 @@ Include all wireframes or mock-ups of the interface. Provide a discussion, expla
 -  Screens/Menus: Provide wireframes for different screens, menus, and options.
 -  Design Details: Focus on the layout and size of components; color and graphics are not required.
 
-<strong>Food comparison main:</strong>
-
 -  Design choice 1:
     - We have designed the main screen in mind with what we originally visioned which is why we have done this layout where we have it broken into thirds with the food on the left, the nutrients on the right and a preview screen below.
+
 -  Explanation/justification:
     - When working with the csv file it came to our attention that with nearly 2400 food items and 35 nutrtients that the expectation for someone to know exactly information in that table is near impossible and instead of waiting to see if it information you required came out correctly, the ability to see a small preview is great feature when combined with the ease of access to adjust the settings by accessing the food and nutrients. 
+
 -  Design choice 2:
     - We wanted to have adesign that is fast, reactive and responsive and by channeling that and some clever thinkin we have been able to maximise the usage of the main page by having the option to slect minimum and maximum values or the level of a nutrient you want food to have to be displayed. 
+
 -  Explanation/justification:
     - By Having everything out right infront of you it is harder for people to miss it, instead trying to remeber which of the 17 drop downs your favourite tool was in, with this it s right in front of you. This mentality had brought many hardships like finding space for the functions of the program that use graphs which we decided get their own page but the ability to have instant access to the raw information is priceless
 
-<strong>Food Wars:</strong>
-
--  Design choice 1:
+-  Design choice 3:
    -  The Food Wars page is a fun that has been created inspired by games like top trumps and who would win in a fight between x and y. Food Wars answers the questions people really want to know. Which food is a super food?
 
 -  Explanation/justification:
    -  In all seriousness being able to select the 5 foods and compare them on a nutritional level against each other is very helpful in this cost of living crisis as by selecting 5 of your families staple food you can see what is really good for you as a common misconception in this cost of living crisis is that healthy food is expensive but knowing is half the battle which is having the quick access to the nutrient changer allows the users visually see changes between zinc levels in their food compared to the salt levels in the same foods.
-
-<strong>Nutrient Breakdown:</strong>
-
--  Design choice 1:
-
--  Explanation/justification:
-
--  Design choice 2:
-
--  Explanation/justification:
-
--  Design choice 3:
-
--  Explanation/justification:
-
-**FROM RUBRIC: comprehensive discussions and justifications. /2.5pts**
 
 Main GUI
 ![Food Comparison GUI Main.jpg](Food%20Comparison%20GUI%20Main.jpg)
