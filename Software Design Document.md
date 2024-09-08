@@ -419,11 +419,8 @@ List all key functions within the software. For each function, provide:
 
 -  <h5 style="display: inline;"> Side Effects: </h5> Note any side effects, such as changes to global variables or data passed by reference.
 
-   -  <h6 style="display: inline;"> Food Search Function: </h6> <strong>please delete before upload unless changed</strong>
-   -  <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> <strong>please delete before upload unless changed</strong>
    -  <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6>  When using the sorted function on the dictionary to turn it into a sorted list then to turn the list back into a sorted dictionary, we would not be using the dictionary creates a new dictionary based on the sorted list while the original dictionary still exists. This creates the unwanted side effect of not sorting original dictionary but having a sorted dictionary created a sorted list of the original dictionary created using the sorted function.
    -  <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> When using the sorted function on the dictionary to turn it into a sorted list then to turn the list back into a sorted dictionary, we would not be using the dictionary creates a new dictionary based on the sorted list while the original dictionary still exists. This creates the unwanted side effect of not sorting original dictionary but having a sorted dictionary created a sorted list of the original dictionary created using the sorted function.
-   -  <h6 style="display: inline;"> Food Wars Function: </h6> <strong>please delete before upload unless changed</strong>
 
 #### 3.2.2 Data Structures / Data Sources
 
@@ -440,7 +437,6 @@ List all data structures or sources used in the software. For each, provide:
 
 Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that operate on data structures. For instance, include pseudocode or a flowchart for a custom searching function.
 
-Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that operate on data structures. For instance, include pseudocode or a flowchart for a custom searching function. 
 
 - <h5 style="display: inline;"> Assumptions: </h5> Assumtptions for all pseudocode.
 
@@ -452,61 +448,41 @@ Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that 
 
 
 - <h5 style="display: inline;"> Food Search Function: </h5>
+
 function food_search(list_food_dicts): #Asking for user input
-food = input('Enter the name of a Food: ')
+food_name = input('Enter the name of a Food: ')
 
 
     for food_dict in list_food_dicts:
-        if food_dict["Food"] == food:
+        if food_dict["Food"] == food_name:
             return food_dict
-
+        else:
     return "Food not found in the list."
 
 result = food_search(list_food_dicts)
 print(result)
 
 - <h5 style="display: inline;"> Nutrition Breakdown Function: </h5>
-function food_search(list_food_dicts): 
-    food_name = input("Enter the food name: ")
-
-    # Iterate through each dictionary in the list
-    for food_dict in list_food_dicts:
-        # Check if the food name matches the 'Food' key in the dictionary
-        if food_dict["Food"] == food_name:
-            # If a match is found, return the dictionary
-            return food_dict
-
-    # If no match is found, return None
-    return None
-
 
 function nutrient_breakdown(list_food_dicts): 
-    # Run the food_search function to get the chosen food dictionary
-    chosen_food = food_search(list_food_dicts)
+    food_name = food_search(list_food_dicts)
     
-    # Check if the chosen food was found
-    if chosen_food is None:
+    if food_name is None:
         print("Food not found in the list.")
         return
 
-    # Extract nutrient values
     nutrients = ["Nutrient 1", "Nutrient 2", "Nutrient 3"]
-    values = [chosen_food[nutrient] for nutrient in nutrients]
+    values = [food_name[nutrient] for nutrient in nutrients]
 
-    # Create a wxPython application
     app = wx.App(False)
     
-    # Create the main frame
     frame = wx.Frame(None, title="Nutrient Breakdown", size=(800, 600))
     
-    # Create a panel
     panel = wx.Panel(frame)
     
-    # Create a figure and canvas for matplotlib
     figure = Figure()
     canvas = FigureCanvas(panel, -1, figure)
     
-    # Create bar chart
     axes_bar = figure.add_subplot(121)
     axes_bar.bar(nutrients, values)
     axes_bar.set_title("Nutrient Bar Chart")
@@ -527,6 +503,7 @@ function nutrient_breakdown(list_food_dicts):
 
 
 - <h5 style="display: inline;"> Nutrition Range Filter Function:  </h5>
+
 function Nutri_Ran_Fil(list_food_dicts):
     while True:
         Nutri_x = input("Enter the nutrient name (e.g., Nutri_x): ")
@@ -544,7 +521,6 @@ function Nutri_Ran_Fil(list_food_dicts):
         Nutri_x_mini = float(input(f"Enter the minimum value for {Nutri_x}: "))
         Nutri_x_max = float(input(f"Enter the maximum value for {Nutri_x}: "))
 
-        # Initialize a list to store the dictionaries that meet the requirements
         matching_foods = []
 
         for food_dict in list_food_dicts:
@@ -567,6 +543,8 @@ Nutri_Ran_Fil(list_food_dicts)
 - <h5 style="display: inline;"> Nutrition Level Filter Function: </h5>
 
 function Nutri_Lev_Fil(list_food_dicts):
+    lev_choice =["low","mid","high"]
+
     while True:
         Nutri_x = input("Enter the nutrient name (e.g., Nutri_x): ")
 
@@ -580,8 +558,11 @@ function Nutri_Lev_Fil(list_food_dicts):
             print("Please try again.")
             continue
 
-        level = int(input("Enter the level (low, mid, high): ")
-        lev_dict
+        level = input("Enter the level (low, mid, high): ").lower()
+
+        if level not in lev_choice:
+            print("Invalid level. Please enter 'low', 'mid', or 'high'.")
+            continue
 
         max_value = max(food_dict[Nutri_x] for food_dict in list_food_dicts if Nutri_x in food_dict)
 
@@ -612,6 +593,53 @@ Nutri_Lev_Fil(list_food_dicts)
 
 
 - <h5 style="display: inline;"> Food Wars Function: </h5>
+
+function Food_Wars(list_food_dicts):
+    foods = []
+    while len(foods) < 5:
+        food_name = input("Enter a food name (or type 'done' to finish): ")
+        if food.lower() == 'done':
+            break
+        foods.append(food)
+    
+    if len(foods) < 2:
+        print("You must enter at least 2 foods.")
+        return
+
+    Nutri_x = input("Enter the nutrient name (e.g., Nutri_x): ")
+
+    nutrient_exists = False
+    for food_dict in list_food_dicts:
+        if Nutri_x in food_dict:
+            nutrient_exists = True
+            break
+
+    if not nutrient_exists:
+        print("Please try again.")
+        return
+
+    nutrient_values = []
+
+    for food in foods:
+        food_found = False
+        for food_dict in list_food_dicts:
+            if food_dict["Food"] == food:
+                if Nutri_x in food_dict:
+                    nutrient_values.append(food_dict[Nutri_x])
+                    food_found = True
+                    break
+        if not food_found:
+            print(f"Food '{food}' not found or does not contain the nutrient '{Nutri_x}'. Please try again.")
+            return
+
+    plt.figure(figsize=(10, 6))
+    plt.bar(foods, nutrient_values, color='skyblue')
+    plt.xlabel('Foods')
+    plt.ylabel(Nutri_x)
+    plt.title(f'Comparison of {Nutri_x} in Selected Foods')
+    plt.show()
+
+Food_Wars(list_food_dicts)
 
 ## 4. User Interface Design
 
