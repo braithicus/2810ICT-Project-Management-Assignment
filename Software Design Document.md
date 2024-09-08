@@ -97,15 +97,14 @@
 -  Users will be selecting specific foods to see visualisation tools on its nutritional content.
 -  Users will be inputting minimum and maximum values for a nutrition to display foods that fall within that range.
 -  Users will be inputting a low, mid, or high level for a specific nutrient to display a list of filtered food items that fall within that range.
--  **ADDITIONAL ITEM CONTAINS INPUT**
+-  Users will be inputting up to 5 different foods along with a specific nutrient to be used to display a visual comparison between the foods based on the nutritonal value
 -  The users will be accessing the Nutritional_Food_Database.csv via their inputs above.
 
 ##### Data Output
-
 -  Visualisation tools such as pie charts and bar graphs when a food item is searched or clicked from a display.
 -  A list of foods after the user inputs minimum and maximum values from the range menu
 -  A list of foods after the user inputs a low, mid, or high value from the filter menu.
--  **ADDITIONAL ITEM CONTAINS OUTPUT**
+-  A bar graph of up to 5 graphs based on a specific nutritional value that user had inputted 
 
 ##### Target Users
 
