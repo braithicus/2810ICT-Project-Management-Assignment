@@ -69,7 +69,7 @@
     - [3.2 System Components](#32-system-components)
       - [3.2.1 Functions](#321-functions)
       - [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
-      - [3.2.3 Detailed Design **DO NOT FORGET**](#323-detailed-design-do-not-forget)
+      - [3.2.3 Detailed Design](#323-detailed-design)
   - [4. User Interface Design](#4-user-interface-design)
     - [4.1 Structural Design](#41-structural-design)
     - [4.2 Visual Design](#42-visual-design)
@@ -433,7 +433,7 @@ List all data structures or sources used in the software. For each, provide:
 -  **Usage**: Lists are background to help organise the data in a more presentable format because of how dictionaries work. Since by taking the values straight from the csv will leave the dictionary unsorted, we can sort this in python by using the sorted function, when this happens the sorted funtion outputs a sorted list of the keys from the dictionaries by altering how the sorted function sorts we can sort the dictionary by values in a list which convert back to a dictionary
 -  **Functions**: List functions that utilize this structure. The functions that the use lists are the Nutriton Range Filter Function and the Nutrition Level Filter Function as both benefit from a sorted dictionary
 
-#### 3.2.3 Detailed Design **DO NOT FORGET**
+#### 3.2.3 Detailed Design 
 
 Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that operate on data structures. For instance, include pseudocode or a flowchart for a custom searching function.
 
@@ -447,13 +447,12 @@ Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that 
   - No GUI calling to and just does the graph in it
 
 
-- <h5 style="display: inline;"> Food Search Function: </h5>
+- <h5 style="display: inline;"> Food Search Function pseudocode: </h5>
 
 function food_search(list_food_dicts): #Asking for user input
 food_name = input('Enter the name of a Food: ')
 
-
-    for food_dict in list_food_dicts:
+        for food_dict in list_food_dicts:
         if food_dict["Food"] == food_name:
             return food_dict
         else:
@@ -462,7 +461,7 @@ food_name = input('Enter the name of a Food: ')
 result = food_search(list_food_dicts)
 print(result)
 
-- <h5 style="display: inline;"> Nutrition Breakdown Function: </h5>
+- <h5 style="display: inline;"> Nutrition Breakdown Function pseudocode: </h5>
 
 function nutrient_breakdown(list_food_dicts): 
     food_name = food_search(list_food_dicts)
@@ -502,7 +501,7 @@ function nutrient_breakdown(list_food_dicts):
  nutrient_breakdown(list_food_dicts)
 
 
-- <h5 style="display: inline;"> Nutrition Range Filter Function:  </h5>
+- <h5 style="display: inline;"> Nutrition Range Filter Function pseudocode:  </h5>
 
 function Nutri_Ran_Fil(list_food_dicts):
     while True:
@@ -540,7 +539,7 @@ function Nutri_Ran_Fil(list_food_dicts):
 
 Nutri_Ran_Fil(list_food_dicts)
 
-- <h5 style="display: inline;"> Nutrition Level Filter Function: </h5>
+- <h5 style="display: inline;"> Nutrition Level Filter Function pseudocode: </h5>
 
 function Nutri_Lev_Fil(list_food_dicts):
     lev_choice =["low","mid","high"]
@@ -592,7 +591,7 @@ function Nutri_Lev_Fil(list_food_dicts):
 Nutri_Lev_Fil(list_food_dicts)
 
 
-- <h5 style="display: inline;"> Food Wars Function: </h5>
+- <h5 style="display: inline;"> Food Wars Function pseudocode: </h5>
 
 function Food_Wars(list_food_dicts):
     foods = []
