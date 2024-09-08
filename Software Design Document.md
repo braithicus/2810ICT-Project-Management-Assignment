@@ -18,61 +18,61 @@
 
 <!-- TOC -->
 
--  [Software Design Document](#software-design-document)
-   -  [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
-   -  [Group Number: 023](#group-number-023)
-   -  [Team Members](#team-members)
--  [Table of Contents](#table-of-contents)
-   -  [1. System Vision](#1-system-vision)
-      -  [1.1 Problem Background](#11-problem-background)
-         -  [Data Input](#data-input)
-         -  [Data Output](#data-output)
-         -  [Target Users](#target-users)
-            -  [Nutritionists and Dietitians](#nutritionists-and-dietitians)
-            -  [Educational Institutions](#educational-institutions)
-            -  [Health Conscious Individuals](#health-conscious-individuals)
-            -  [Researchers](#researchers)
-            -  [Food Manufacturers](#food-manufacturers)
-      -  [1.2 System Capabilities/Overview](#12-system-capabilitiesoverview)
-         -  [System Functionality](#system-functionality)
-         -  [Features and Functionalities:](#features-and-functionalities)
-            -  [GUI](#gui)
-            -  [Food Search](#food-search)
-            -  [Nutrition Breakdown](#nutrition-breakdown)
-            -  [Nutrition Range Filter](#nutrition-range-filter)
-            -  [Nutrition Level Filter](#nutrition-level-filter)
-            -  [Food Wars](#food-wars)
-      -  [1.3 Benefit Analysis](#13-benefit-analysis)
-         -  [1. Informed Dietary Choices](#1-informed-dietary-choices)
-         -  [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
-         -  [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
-         -  [4. Educational Resource](#4-educational-resource)
-         -  [5. Marketing](#5-marketing)
-         -  [6. Time and Effort Savings](#6-time-and-effort-savings)
-         -  [7. Weighing pros and cons of different foods based on nutritional criteria](#7-weighing-pros-and-cons-of-different-foods-based-on-nutritional-criteria)
-   -  [2. Requirements (FURPS+)](#2-requirements-furps)
-      -  [2.1 User Requirements](#21-user-requirements)
-         -  [Fictional Users](#fictional-users)
-         -  [User Narratives](#user-narratives)
-         -  [User Needs](#user-needs)
-      -  [2.2 Software Requirements](#22-software-requirements)
-         -  [Functionality:](#functionality)
-         -  [Usability:](#usability)
-         -  [Reliability:](#reliability)
-         -  [Performance:](#performance)
-         -  [Supportability:](#supportability)
-         -  [+ Additional:](#-additional)
-      -  [2.3 Use Case Diagram](#23-use-case-diagram)
-      -  [2.4 Use Cases](#24-use-cases)
-   -  [3. Software Design and System Components](#3-software-design-and-system-components)
-      -  [3.1 Software Design](#31-software-design)
-      -  [3.2 System Components](#32-system-components)
-         -  [3.2.1 Functions](#321-functions)
-         -  [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
-         -  [3.2.3 Detailed Design](#323-detailed-design)
-   -  [4. User Interface Design](#4-user-interface-design)
-      -  [4.1 Structural Design](#41-structural-design)
-      -  [4.2 Visual Design](#42-visual-design)
+- [Software Design Document](#software-design-document)
+  - [Project Name: Comprehensive Food GUI](#project-name-comprehensive-food-gui)
+  - [Group Number: 023](#group-number-023)
+  - [Team Members](#team-members)
+- [Table of Contents](#table-of-contents)
+  - [1. System Vision](#1-system-vision)
+    - [1.1 Problem Background](#11-problem-background)
+        - [Data Input](#data-input)
+        - [Data Output](#data-output)
+        - [Target Users](#target-users)
+          - [Nutritionists and Dietitians](#nutritionists-and-dietitians)
+          - [Educational Institutions](#educational-institutions)
+          - [Health Conscious Individuals](#health-conscious-individuals)
+          - [Researchers](#researchers)
+          - [Food Manufacturers](#food-manufacturers)
+    - [1.2 System Capabilities/Overview](#12-system-capabilitiesoverview)
+      - [System Functionality](#system-functionality)
+      - [Features and Functionalities:](#features-and-functionalities)
+        - [GUI](#gui)
+        - [Food Search](#food-search)
+        - [Nutrition Breakdown](#nutrition-breakdown)
+        - [Nutrition Range Filter](#nutrition-range-filter)
+        - [Nutrition Level Filter](#nutrition-level-filter)
+        - [Food Wars](#food-wars)
+    - [1.3 Benefit Analysis](#13-benefit-analysis)
+        - [1. Informed Dietary Choices](#1-informed-dietary-choices)
+        - [2. Efficient Nutritional Research](#2-efficient-nutritional-research)
+        - [3. Enhances Dietitians and Nutritionists](#3-enhances-dietitians-and-nutritionists)
+        - [4. Educational Resource](#4-educational-resource)
+        - [5. Marketing](#5-marketing)
+        - [6. Time and Effort Savings](#6-time-and-effort-savings)
+        - [7. Weighing pros and cons of different foods based on nutritional criteria](#7-weighing-pros-and-cons-of-different-foods-based-on-nutritional-criteria)
+  - [2. Requirements (FURPS+)](#2-requirements-furps)
+    - [2.1 User Requirements](#21-user-requirements)
+      - [Fictional Users](#fictional-users)
+      - [User Narratives](#user-narratives)
+      - [User Needs](#user-needs)
+    - [2.2 Software Requirements](#22-software-requirements)
+      - [Functionality:](#functionality)
+      - [Usability:](#usability)
+      - [Reliability:](#reliability)
+      - [Performance:](#performance)
+      - [Supportability:](#supportability)
+      - [+ Additional:](#-additional)
+    - [2.3 Use Case Diagram](#23-use-case-diagram)
+    - [2.4 Use Cases](#24-use-cases)
+  - [3. Software Design and System Components](#3-software-design-and-system-components)
+    - [3.1 Software Design](#31-software-design)
+    - [3.2 System Components](#32-system-components)
+      - [3.2.1 Functions](#321-functions)
+      - [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
+      - [3.2.3 Detailed Design](#323-detailed-design)
+  - [4. User Interface Design](#4-user-interface-design)
+    - [4.1 Structural Design](#41-structural-design)
+    - [4.2 Visual Design](#42-visual-design)
 
 <div style="page-break-after: always;"></div>
 
@@ -359,23 +359,21 @@ The following project requirements are defined using the FURPS+ Framework and ex
 
 ### 2.3 Use Case Diagram
 
-Provide a system-level Use Case Diagram illustrating all required features.
+The following demonstrates the generalised use cases of the system:
+![UCD.png](UCD.png)
 
-Example:  
-![Use Case Diagram](./UCD.png)
-
-**FROM RUBRIC: Includes a complete and accurate system-level use case diagram that is well integrated with the text. MAKE SURE THIS IS SYSTEM LEVEL AND NOT SPECIFIC /1.0**
+**FROM RUBRIC: Includes a complete and accurate system-level use case diagram that is well integrated with the text. /1.0**
 
 ### 2.4 Use Cases
 
-| Use Case ID    | 01                                                                                                                                                                                                                                                                                                   | 02                                                                                                                                                                                              | 03                                                                                                                                                                                                                                                                         | 04                                                                                                                                                                                                                                                     | 05                                                                                                                                                                                                                                                                                                                                                                                                          |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Case Name  | Food Search By Name                                                                                                                                                                                                                                                                                  | Nutrition Breakdown                                                                                                                                                                             | Nutrition Range Filter                                                                                                                                                                                                                                                     | Nutrition Lever Filter                                                                                                                                                                                                                                 | Food Wars                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Actors         | User                                                                                                                                                                                                                                                                                                 | User                                                                                                                                                                                            | User                                                                                                                                                                                                                                                                       | User                                                                                                                                                                                                                                                   | User                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Description    | The user searches for a food item by typing its name into the search bar and pressing Enter or clicking the search button. The user then adds the food to the comparison table.                                                                                                                      | The user selects a single food by ticking it in the bottom table and clicking the Breakdown button. A new window shows the generated pie chart and bar chart for the chosen food.               | The user selects which nutrients they want to search for, providing min and max values in the input slots on the right-hand table before searching.                                                                                                                        | The user selects which nutrients they want to search for. They then choose what content levels (Low, Mid, High) of said nutrients they want present in their food before searching.                                                                    | The user selects/ticks five food items from the bottom table before clicking the Food Wars button. A new window allows the selection of a nutrient and a bar graph is generated in the window.                                                                                                                                                                                                              |
-| Preconditions  | No values are ticked or present in the Nutrient Selection table.                                                                                                                                                                                                                                     | User has already done a search and added a food item.                                                                                                                                           | No string value is in the search bar.                                                                                                                                                                                                                                      | No string value is in the search bar.                                                                                                                                                                                                                  | There are at least five items listed in the bottom table.                                                                                                                                                                                                                                                                                                                                                   |
-| Flow of Events | 1. The user types the name of the food into the search bar (e.g. "Apple")<br/>2. User clicks the search button or presses enter.<br/>3. The user scrolls to their desired food and clicks the Add button.<br/>4. Nutritional data is retrieved from database.<br/>4. Data is displayed in the table. | 1. User selects food from bottom table<br/>2. User clicks Breakdown button.<br/>3. Data for the selected food is grabbed from the database.<br/>4. A new frame appears with both graphs inside. | 1. User selects desired nutrient.<br/>2. User inputs min value or leaves it as zero.<br/>3. User inputs max value or leaves it as zero.<br/>4. User clicks search button<br/>5. Software compares ranges with the database.<br/>6. Results are output to the search space. | 1. User selects Protein on the right-hand-side.<br/>2. User selects Mid nutrition level.<br/>3. User clicks search button<br/>4. Software compares Mid Protein nutrition level with values in database.<br/>6. Results are output to the search space. | 1. User selects five food items using the tick boxes in the bottom table.<br/>2. User clicks Food Wars button.<br/>3. Program gathers data on the five items.<br/>4. New window is generated, listing the five items and a drop-down selection.<br/>5. User selects a nutrient in the drop-down.<br/>6. User clicks Produce Graph.<br/>7. Bar Graph is generated and presented in the bottom of the window. |
-| Alternate Flow | If the food does not exist in the dataset, the system shows a "Food not found" message.                                                                                                                                                                                                              | If the graphs cannot be generated then the program will produce an error message.                                                                                                               | A string value is in the search bar, showing results that relate to both the search term and the desired ranges.                                                                                                                                                           | A string value is in the search bar, showing results that relate to both the search term and the nutrition level selected.                                                                                                                             | Less than five items are initially selected, prompting an error message notifying the user.                                                                                                                                                                                                                                                                                                                 |
+| Use Case ID    | 01                                                                                                                                                                                                                                                                                                   | 02                                                                                                                                                                                              | 03                                                                                                                                                                                                                                                                          | 04                                                                                                                                                                                                                                                     | 05                                                                                                                                                                                                                                                                                                                                                                                                          |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Use Case Name  | Food Search By Name                                                                                                                                                                                                                                                                                  | Nutrition Breakdown                                                                                                                                                                             | Nutrition Range Filter                                                                                                                                                                                                                                                      | Nutrition Lever Filter                                                                                                                                                                                                                                 | Food Wars                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Actors         | User                                                                                                                                                                                                                                                                                                 | User                                                                                                                                                                                            | User                                                                                                                                                                                                                                                                        | User                                                                                                                                                                                                                                                   | User                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Description    | The user searches for a food item by typing its name into the search bar and pressing Enter or clicking the search button. The user then adds the food to the comparison table.                                                                                                                      | The user selects a single food by ticking it in the bottom table and clicking the Breakdown button. A new window shows the generated pie chart and bar chart for the chosen food.               | The user selects which nutrients they want to search for, providing min and max values in the input slots on the right-hand table before searching.                                                                                                                         | The user selects which nutrients they want to search for. They then choose what content levels (Low, Mid, High) of said nutrients they want present in their food before searching.                                                                    | The user selects/ticks five food items from the bottom table before clicking the Food Wars button. A new window allows the selection of a nutrient and a bar graph is generated in the window.                                                                                                                                                                                                              |
+| Preconditions  | No values are ticked or present in the Nutrient Selection table.                                                                                                                                                                                                                                     | User has already done a search and added a food item.                                                                                                                                           | No string value is in the search bar.                                                                                                                                                                                                                                       | No string value is in the search bar.                                                                                                                                                                                                                  | There are at least five items listed in the bottom table.                                                                                                                                                                                                                                                                                                                                                   |
+| Flow of Events | 1. The user types the name of the food into the search bar (e.g. "Apple")<br/>2. User clicks the search button or presses enter.<br/>3. The user scrolls to their desired food and clicks the Add button.<br/>4. Nutritional data is retrieved from database.<br/>4. Data is displayed in the table. | 1. User selects food from bottom table<br/>2. User clicks Breakdown button.<br/>3. Data for the selected food is grabbed from the database.<br/>4. A new frame appears with both graphs inside. | 1. User selects desired nutrients.<br/>2. User inputs min value or leaves it as zero.<br/>3. User inputs max value or leaves it as zero.<br/>4. User clicks search button<br/>5. Software compares ranges with the database.<br/>6. Results are output to the search space. | 1. User selects Protein on the right-hand-side.<br/>2. User selects Mid nutrition level.<br/>3. User clicks search button<br/>4. Software compares Mid Protein nutrition level with values in database.<br/>6. Results are output to the search space. | 1. User selects five food items using the tick boxes in the bottom table.<br/>2. User clicks Food Wars button.<br/>3. Program gathers data on the five items.<br/>4. New window is generated, listing the five items and a drop-down selection.<br/>5. User selects a nutrient in the drop-down.<br/>6. User clicks Produce Graph.<br/>7. Bar Graph is generated and presented in the bottom of the window. |
+| Alternate Flow | If the food does not exist in the dataset, the system shows a "Food not found" message.                                                                                                                                                                                                              | If the graphs cannot be generated then the program will produce an error message.                                                                                                               | A string value is in the search bar, showing results that relate to both the search term and the desired ranges.                                                                                                                                                            | A string value is in the search bar, showing results that relate to both the search term and the nutrition level selected.                                                                                                                             | Less than five items are initially selected, prompting an error message notifying the user.                                                                                                                                                                                                                                                                                                                 |
 
 ## 3. Software Design and System Components
 
@@ -658,30 +656,21 @@ Include all wireframes or mock-ups of the interface. Provide a discussion, expla
 <strong>Food comparison main:</strong>
 
 -  Design choice 1:
-
+    - We have designed the main screen in mind with what we originally visioned which is why we have done this layout where we have it broken into thirds with the food on the left, the nutrients on the right and a preview screen below.
 -  Explanation/justification:
-
+    - When working with the csv file it came to our attention that with nearly 2400 food items and 35 nutrtients that the expectation for someone to know exactly information in that table is near impossible and instead of waiting to see if it information you required came out correctly, the ability to see a small preview is great feature when combined with the ease of access to adjust the settings by accessing the food and nutrients. 
 -  Design choice 2:
-
+    - We wanted to have adesign that is fast, reactive and responsive and by channeling that and some clever thinkin we have been able to maximise the usage of the main page by having the option to slect minimum and maximum values or the level of a nutrient you want food to have to be displayed. 
 -  Explanation/justification:
-
--  Design choice 3:
-
--  Explanation/justification:
+    - By Having everything out right infront of you it is harder for people to miss it, instead trying to remeber which of the 17 drop downs your favourite tool was in, with this it s right in front of you. This mentality had brought many hardships like finding space for the functions of the program that use graphs which we decided get their own page but the ability to have instant access to the raw information is priceless
 
 <strong>Food Wars:</strong>
 
 -  Design choice 1:
+   -  The Food Wars page is a fun that has been created inspired by games like top trumps and who would win in a fight between x and y. Food Wars answers the questions people really want to know. Which food is a super food?
 
 -  Explanation/justification:
-
--  Design choice 2:
-
--  Explanation/justification:
-
--  Design choice 3:
-
--  Explanation/justification:
+   -  In all seriousness being able to select the 5 foods and compare them on a nutritional level against each other is very helpful in this cost of living crisis as by selecting 5 of your families staple food you can see what is really good for you as a common misconception in this cost of living crisis is that healthy food is expensive but knowing is half the battle which is having the quick access to the nutrient changer allows the users visually see changes between zinc levels in their food compared to the salt levels in the same foods.
 
 <strong>Nutrient Breakdown:</strong>
 
