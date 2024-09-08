@@ -362,8 +362,6 @@ The following project requirements are defined using the FURPS+ Framework and ex
 The following demonstrates the generalised use cases of the system:
 ![UCD.png](UCD.png)
 
-**FROM RUBRIC: Includes a complete and accurate system-level use case diagram that is well integrated with the text. /1.0**
-
 ### 2.4 Use Cases
 
 | Use Case ID    | 01                                                                                                                                                                                                                                                                                                   | 02                                                                                                                                                                                              | 03                                                                                                                                                                                                                                                                          | 04                                                                                                                                                                                                                                                     | 05                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -638,8 +636,8 @@ Food_Wars(list_food_dicts)
 ### 4.1 Structural Design
 
 -  Structure: The software will be structured so that all the features necessary to inform the user about nutrition is on the one page.
--  Information Grouping: You will have the search bar in the top left. The range and filter features that display you a new list will be on the right side of the page. The features that produce your graphs and charts will have buttons on the bottom of the page. These buttons will be above a table that show the foods you've added to potentially breakdown their nutrients, or compare them against each other. Beside the selected food will be a horizontal list of nutrients that it contains. You will be able to toggle the nutrients you wish to see in the right side of the page.
--  Navigation: To search for a food, the user types the name of the food into the search bar. They will click the Add button to display it in the table. To see the nutritional breakdown of the food, the user selects a food from the bottom table, and clicks the breakdown button. A new frame will appear with both graphs inside. To use the nutrition range feature, the user selects the desired nutrient from the right hand menu. They input min and/or max values using the boxes besides the nutrient, then the user clicks the search button. Results are then output to the search space. To use the nutrition level feature, the user selects a nutrient on the right-hand-side and selects the level drop down menu. They choose low, mid, or high, and then click the search button. Results are then output to the search space. To use the food wars feature, the user selects five food items or less, using the tick boxes in the bottom table. They click on the Food Wars button. A new window is generated, listing the five items and a drop-down selection. The user selects a nutrient in the drop-down. The user then clicks Produce Graph. A bar graph is generated and presented in the bottom of the window.
+-  Information Grouping: You will have the search bar in the top left. The range and filter features that display you a new list will be on the right side of the page. The features that produce your graphs and charts will have buttons on the bottom of the page. These buttons will be above a table that shows the currently added foods you potentially want to have broken down into their nutrients, or compare them against each other. Beside the selected food will be a horizontal list of nutrients that it contains. You will be able to toggle the nutrients you wish to see via the fields drop-down menu.
+-  Navigation: To search for a food, the user types the name of the food into the search bar and presses Enter or clicks the search button. From the produced list they will click the Add button to display the food item in the table. To see the nutritional breakdown of the food, the user selects a food item from the bottom table, and clicks the breakdown button. A new frame will appear with both graphs inside. To use the nutrition range feature, the user selects the desired nutrient from the right hand menu. They input min and/or max values using the boxes besides the nutrient, then the user clicks the search button. Results are then output to the search space. To use the nutrition level feature, the user selects a nutrient on the right-hand-side and selects the nutrition-level drop-down menu. They choose low, mid, or high, (which disables the min/max feature) and then click the search button. Results are then output to the search space. To use the food wars feature, the user selects between two and five food items, using the tick boxes in the bottom table. They then click on the Food Wars button. A new window is generated, listing the five items and a drop-down selection. The user selects a nutrient in the drop-down. The user then clicks Produce Graph. A bar graph is generated and presented in the bottom of the window.
 
 -  Design Choices: These design choices were made to keep the GUI compact and to allow users to have quick access to all the features they need, while still allowing them to have a good overview of the database.
 
@@ -652,28 +650,27 @@ Include all wireframes or mock-ups of the interface. Provide a discussion, expla
 -  Interface Components: Clearly label all components.
 -  Screens/Menus: Provide wireframes for different screens, menus, and options.
 -  Design Details: Focus on the layout and size of components; color and graphics are not required.
-
+<br/><br/>
 -  Design choice 1:
    -  We have designed the main screen in mind with what we originally visioned which is why we have done this layout where we have it broken into thirds with the food on the left, the nutrients on the right and a preview screen below.
 -  Explanation/justification:
-   -  When working with the csv file it came to our attention that with nearly 2400 food items and 35 nutrients that the expectation for someone to know exactly information in that table is near impossible and instead of waiting to see if it information you required came out correctly, the ability to see a small preview is great feature when combined with the ease of access to adjust the settings by accessing the food and nutrients.
+    - When working with the csv file it came to our attention that with nearly 2400 food item records and 35 nutrient fields that the expectation for someone to know the exact information in that table is near impossible, and instead of waiting to see if the information you required came out correctly, the ability to see a small preview is a great feature when combined with the ease of access to adjust the settings by accessing the food and nutrients. 
+<br/><br/>
 -  Design choice 2:
    -  We wanted to have a design that is fast, reactive and responsive and by channelling that and some clever thinking we have been able to maximise the usage of the main page by having the option to select minimum and maximum values or the level of a nutrient you want food to have to be displayed.
 -  Explanation/justification:
    -  By Having everything out right in front of you it is harder for people to miss it, instead trying to remember which of the 17 drop downs your favourite tool was in, with this it s right in front of you. This mentality had brought many hardships like finding space for the functions of the program that use graphs which we decided get their own page but the ability to have instant access to the raw information is priceless
-
+<br/><br/>
 -  Design choice 3:
-
    -  The Food Wars page is a fun that has been created inspired by games like top trumps and who would win in a fight between x and y. Food Wars answers the questions people really want to know. Which food is a super food?
-
 -  Explanation/justification:
    -  In all seriousness being able to select the 5 foods and compare them on a nutritional level against each other is very helpful in this cost of living crisis as by selecting 5 of your families staple food you can see what is really good for you as a common misconception in this cost of living crisis is that healthy food is expensive but knowing is half the battle which is having the quick access to the nutrient changer allows the users visually see changes between zinc levels in their food compared to the salt levels in the same foods.
 
 Main GUI
 ![Food Comparison GUI Main.jpg](Food%20Comparison%20GUI%20Main.jpg)
 
-Food Wars
+Food Wars:
 ![Food Wars.jpg](Food%20Wars.jpg)
 
-Nutrient Breakdown
+Nutrient Breakdown:
 ![Nutrient Breakdown.jpg](Nutrient%20Breakdown.jpg)
