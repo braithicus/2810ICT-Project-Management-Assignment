@@ -670,16 +670,10 @@ Include all wireframes or mock-ups of the interface. Provide a discussion, expla
 <strong>Food Wars:</strong>
 
 -  Design choice 1:
+   -  The Food Wars page is a fun that has been created inspired by games like top trumps and who would win in a fight between x and y. Food Wars answers the questions people really want to know. Which food is a super food?
 
 -  Explanation/justification:
-
--  Design choice 2:
-
--  Explanation/justification:
-
--  Design choice 3:
-
--  Explanation/justification:
+   -  In all seriousness being able to select the 5 foods and compare them on a nutritional level against each other is very helpful in this cost of living crisis as by selecting 5 of your families staple food you can see what is really good for you as a common misconception in this cost of living crisis is that healthy food is expensive but knowing is half the battle which is having the quick access to the nutrient changer allows the users visually see changes between zinc levels in their food compared to the salt levels in the same foods.
 
 <strong>Nutrient Breakown:</strong>
 
