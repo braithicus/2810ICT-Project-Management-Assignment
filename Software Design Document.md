@@ -268,8 +268,6 @@ By outlining the fictional users' tasks and their contexts, we gain the necessar
 
 ### 2.2 Software Requirements
 
-**FROM RUBRIC: Formally and clearly lists all necessary software functionalities using "shall" statements. /0.8**
-
 The following project requirements are defined using the FURPS+ Framework and expands upon the user requirements .
 
 #### Functionality:
@@ -316,12 +314,17 @@ The following project requirements are defined using the FURPS+ Framework and ex
 -  R3.1: The search field shall provide an optional autocomplete feature, allowing users to quickly locate food items based on partial inputs.
 -  R3.2: The program shall prioritize suggestions based on relevance and previous searches.
 
+4. Figure Exportation:
+
+- R4.1: The program shall offer an export option for visualizations, including clearly labeled export buttons and straightforward file format selection.
+- R4.2: The program shall show a confirmation or error message after an exportation attempt.
+
 #### Reliability:
 
-1. Error Handling:
-
--  R1.1: The program shall produce error messages when users enter invalid inputs or when the program encounters an error while retrieving data.
--  R1.2: The program shall inform the user if there is data missing from the database.
+1. Error Handling: 
+- R1.1: The program shall produce error messages when users enter invalid inputs or when the program encounters an error while retrieving data.
+- R1.2: The program shall inform the user if there is data missing from the database. 
+- R1.3: The program shall ensure that all interactions with the Nutritional_Food_Database.csv are read-only operations, preventing any modifications to the database.
 
 #### Performance:
 
@@ -333,12 +336,22 @@ The following project requirements are defined using the FURPS+ Framework and ex
 #### Supportability:
 
 1. Documentation:
-2. Help System: or FAQs
+
+- R1.1: The program shall include user documentation that details how to perform searches, use filters, and access visualizations.
+
+2. Help System:
+
+- R2.1: The program shall provide a help menu or FAQ section within the application that explains the common steps of use.
 
 #### + Additional:
 
-1. Security: Ensure interactions are secure.
+1. User Personalisation:
+
+- R1.1: The program shall allow users to customize their interface settings, such as graph or theme colors.
+
 2. Accessibility:
+
+- R2.1: The program shall be designed to be accessible for users with disabilities
 
 ### 2.3 Use Case Diagram
 
