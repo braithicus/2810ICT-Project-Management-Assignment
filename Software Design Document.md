@@ -370,13 +370,13 @@ Example:
 
 Include at least 5 use cases, each corresponding to a specific function.
 
-| Use Case ID    | 001 | xxx  |
-| -------------- | --- | ---- |
-| Use Case Name  | x   | xxxx |
-| Actors         | x   | xxxx |
-| Description    | x   | xxxx |
-| Flow of Events | x   | xxxx |
-| Alternate Flow | x   | xxxx |
+| Use Case ID    | 01                                                                                                                                                                                                          | 02                  | 03                     | 04                     | 05        |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|------------------------|------------------------|-----------|
+| Use Case Name  | Food Search By Name                                                                                                                                                                                         | Nutrition Breakdown | Nutrition Range Filter | Nutrition Lever Filter | Food Wars |
+| Actors         | User                                                                                                                                                                                                        | User                | User                   | User                   | User      |
+| Description    | The user searches for a food item by typing its name into the search bar and pressing Enter or clicking the search button. The system returns the nutritional data for the specified food.                  | The user            | xxxx                   | xxxx                   | xxxx      |
+| Flow of Events | 1. The user types the name of the food into the search bar (e.g. "Apple")<br/>2. User clicks the search button or presses enter<br/>3. Nutritional data is retrieved from database<br/>4. Data is displayed | xxxx                | xxxx                   | xxxx                   | xxxx      |
+| Alternate Flow | If the food does not exist in the dataset, the system shows a "Food not found" message.                                                                                                                     | xxxx                | xxxx                   | xxxx                   | xxxx      |
 
 **FROM RUBRIC: Includes at least 5 detailed use cases, each with comprehensive descriptions and flows. /1.0**
 
@@ -659,5 +659,13 @@ Include all wireframes or mock-ups of the interface. Provide a discussion, expla
 -  Screens/Menus: Provide wireframes for different screens, menus, and options.
 -  Design Details: Focus on the layout and size of components; color and graphics are not required.
 
+**FROM RUBRIC: Includes all well-labeled wireframes or mock-ups of the interface, with comprehensive discussions and justifications. /2.5pts**
+
 Example:  
 ![Visual Design](./visual_design.png)
+
+![Food Comparison GUI Main.jpg](Food%20Comparison%20GUI%20Main.jpg)
+
+![Food Wars.jpg](Food%20Wars.jpg)
+
+![Nutrient Breakdown.jpg](Nutrient%20Breakdown.jpg)
