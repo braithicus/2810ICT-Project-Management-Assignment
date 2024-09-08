@@ -49,7 +49,7 @@
         - [4. Educational Resource](#4-educational-resource)
         - [5. Marketing](#5-marketing)
         - [6. Time and Effort Savings](#6-time-and-effort-savings)
-        - [7. ADDITIONAL FEATURE BENEFIT (Weighing pros and cons of different foods based on  nutrional criteria)](#7-additional-feature-benefit-weighing-pros-and-cons-of-different-foods-based-on--nutrional-criteria)
+        - [7. Weighing pros and cons of different foods based on nutrional criteria](#7-weighing-pros-and-cons-of-different-foods-based-on-nutrional-criteria)
   - [2. Requirements (FURPS+)](#2-requirements-furps)
     - [2.1 User Requirements](#21-user-requirements)
     - [2.2 Software Requirements](#22-software-requirements)
@@ -217,7 +217,9 @@
 -  Benefit: Having a central, user-friendly source of information that contains a plethora of nutritional information saves time and effort compared to searching many sources for the same information.
 -  Example: Using the auto complete of the food search feature allows a user to quickly locate the necessary food item. They search for "chicken breast" and analyse its protein content. The user then uses the nutrition range filter to find food with comparable protein content. They can now make more informed dietary decisions quicker and with less effort.
 
-##### 7. ADDITIONAL FEATURE BENEFIT (Weighing pros and cons of different foods based on  nutrional criteria)
+##### 7. Weighing pros and cons of different foods based on nutrional criteria
+- Benefit: The tool allows the users to compare up to 5 foods based on one nutrient value. This provides the user a unique way of coordinating their foods and making substitutions in their daily lives based off doctor's reccommendation
+- Example: If the doctor says the users has a high colesterol and should cut out steaks for an alternative but the user would like something that would provide the same or similar protien from foods they already have such as chicken breast as an alternative to steak.
 
 ## 2. Requirements (FURPS+)
 
@@ -314,18 +316,18 @@ List all key functions within the software. For each function, provide:
 -  <h5 style="display: inline;"> Description: </h5> When creating functions of the software it is necessary to reflect on the purpose of the software. For this case we would want:
     
     - <h6 style="display: inline;"> Food Search Function: </h6> to create a system that allows the users to analyse all nutritional information for specific foods
-    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> breakdown the nutritional information for that specific food in the form of pie and bar graphs
+    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> breakdown the nutritional information for a specific food in the form of pie and bar graphs
     - <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6> allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges 
     - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> allow the user to select ranges of low, medium and high for nutritional information such as fats, protein carbohydrates, sugar and nutritional density to compare the foods that fall within the ranges visually 
     - <h6 style="display: inline;"> Food Wars Function: </h6> allow the user to select 5 chosen foods and compare them against each other visually with a bar graph based on a one selected nutritional information
 
 -  <h5 style="display: inline;"> Input Parameters: </h5> 
     
-    - <h6 style="display: inline;"> Food Search Function: </h6> The input type would be string and be used to input the foods the user is wanting to look up such as "pear"
-    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> The input type would be 2 different booleans as to allow the user to pick between having a bar graph or not and having a pie chart or not. "Bar Graph: Y/N " "Pie Chart: Y/N "
-    - <h6 style="display: inline;"> Nutrition Range Filter Function: </h6> The input would be a combination input of a string and float32 to allow the user to first input the nutritional information and then input the minimum and maximum values for that nutritional information such as "fats, minimum: 0.5000, maximum: 3.1240"
-    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> The input would be a string that allows the users to select the nutritional information to filter using such as "protein" then another string that only accepts three options of "low", "medium", "high"
-    - <h6 style="display: inline;"> Food Wars Function: </h6> The input would be a combination of a set 5 strings that allow the user to select 5 foods such as "cheese sticks" "pear" "apple" "hummus" "fried rice" then another string for the nutritional information such as "sugar".   
+    - <h6 style="display: inline;"> Food Search Function: </h6> The input type would be a search bar where an input string can be entered by the user to look up a certain food and it's nutritional information such as the nutritional information of a pear
+    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> The input type would be a search bar where an input string can be entered by the user to look up a certain food and then 2 different booleans as to allow the user to pick between having a bar graph or not and having a pie chart or not. "Bar Graph: Y/N " "Pie Chart: Y/N "
+    - <h6 style="display: inline;"> Nutrition Range Filter Function: </h6> The input would be a combination of 3 different input fields one to search the nutrient the user is looking to find a range for and 2 input fields where both take numbers with one taking the minimum value and the other taking the maximum value. The input of the first input field would be for a string while the following 2 input fields would be for a float32 integer to allow the user to input a request such as "fats, minimum: 0.5000, maximum: 3.1240"
+    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> The input type would be a search bar where an input string can be entered by the user to look up a nutrient then to have another input as a multiple choice to select the filter option for the foods for a nutrient using such as "protein" into the options of "low", "medium", "high". This is achieved by assigning low, medium and high a numerical value and asking the user for an input of the numerical value assigned to the filter options such as "1, 2 or 3"
+    - <h6 style="display: inline;"> Food Wars Function: </h6> he input would be a combination of 5 different search bars input fields that allow the user to input up to 5 foods as a string such as "cheese sticks" "pear" "apple" "hummus" "fried rice" then another search bar as an input field for a user to enter a string for the nutritional information such as "sugar".   
 
 -  <h5 style="display: inline;"> Return Value: </h5> Describe what the function returns.
 
@@ -333,7 +335,7 @@ List all key functions within the software. For each function, provide:
    -  <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> Would display all the information for the selected food's nutritional information as a bar or pie chart.
    -  <h6 style="display: inline;"> Nutrition Range Filter Function: </h6> Would display all the foods between the selected minimum and maximum of the selected nutrition as a dictionary going from the food closest to the maximum with its value to the food closest to the minimum.
    -  <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> Have the foods that fall within the chosen parameters of low, medium or high for the selected nutritional value as a dictionary which will display the foods from the highest nutritional values to the lowest with the names of the foods
-   -  <h6 style="display: inline;"> Food Wars Function: </h6> It would have the function return the 5 selected foods compared against the nutritional value selected in the form of a bar graph 
+   -  <h6 style="display: inline;"> Food Wars Function: </h6> It would have the function return up to the 5 selected foods compared against the nutritional value selected in the form of a bar graph 
 
 -  <h5 style="display: inline;"> Side Effects: </h5> Note any side effects, such as changes to global variables or data passed by reference.
 
@@ -357,6 +359,177 @@ List all data structures or sources used in the software. For each, provide:
 #### 3.2.3 Detailed Design **DO NOT FORGET**
 
 Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that operate on data structures. For instance, include pseudocode or a flowchart for a custom searching function. 
+
+- <h5 style="display: inline;"> Assumptions: </h5> Assumtptions for all pseudocode.
+
+  -  csv is converted into dictionaries
+  -  Dictionaries are structred like this:
+     -  <Strong>{Food: Food name, Nutrient 1: Nutrient 1 value, Nutrient 2: Nutrient 2 value, Nutrient 3: Nutrient 3 value}</strong>
+  - Dictionaries are stored in "list_food_dicts"
+  - No GUI calling to and just does the graph in it
+
+
+- <h5 style="display: inline;"> Food Search Function: </h5>
+function food_search(list_food_dicts): #Asking for user input
+food = input('Enter the name of a Food: ')
+
+
+    for food_dict in list_food_dicts:
+        if food_dict["Food"] == food:
+            return food_dict
+
+    return "Food not found in the list."
+
+result = food_search(list_food_dicts)
+print(result)
+
+- <h5 style="display: inline;"> Nutrition Breakdown Function: </h5>
+function food_search(list_food_dicts): 
+    food_name = input("Enter the food name: ")
+
+    # Iterate through each dictionary in the list
+    for food_dict in list_food_dicts:
+        # Check if the food name matches the 'Food' key in the dictionary
+        if food_dict["Food"] == food_name:
+            # If a match is found, return the dictionary
+            return food_dict
+
+    # If no match is found, return None
+    return None
+
+
+function nutrient_breakdown(list_food_dicts): 
+    # Run the food_search function to get the chosen food dictionary
+    chosen_food = food_search(list_food_dicts)
+    
+    # Check if the chosen food was found
+    if chosen_food is None:
+        print("Food not found in the list.")
+        return
+
+    # Extract nutrient values
+    nutrients = ["Nutrient 1", "Nutrient 2", "Nutrient 3"]
+    values = [chosen_food[nutrient] for nutrient in nutrients]
+
+    # Create a wxPython application
+    app = wx.App(False)
+    
+    # Create the main frame
+    frame = wx.Frame(None, title="Nutrient Breakdown", size=(800, 600))
+    
+    # Create a panel
+    panel = wx.Panel(frame)
+    
+    # Create a figure and canvas for matplotlib
+    figure = Figure()
+    canvas = FigureCanvas(panel, -1, figure)
+    
+    # Create bar chart
+    axes_bar = figure.add_subplot(121)
+    axes_bar.bar(nutrients, values)
+    axes_bar.set_title("Nutrient Bar Chart")
+    
+    axes_pie = figure.add_subplot(122)
+    axes_pie.pie(values, labels=nutrients, autopct='%1.1f%%')
+    axes_pie.set_title("Nutrient Pie Chart")
+    
+    sizer = wx.BoxSizer(wx.VERTICAL)
+    sizer.Add(canvas, 1, wx.EXPAND)
+    panel.SetSizer(sizer)
+    
+    frame.Show()
+    
+    app.MainLoop()
+
+ nutrient_breakdown(list_food_dicts)
+
+
+- <h5 style="display: inline;"> Nutrition Range Filter Function:  </h5>
+function Nutri_Ran_Fil(list_food_dicts):
+    while True:
+        Nutri_x = input("Enter the nutrient name (e.g., Nutri_x): ")
+
+        nutrient_exists = False
+        for food_dict in list_food_dicts:
+            if Nutri_x in food_dict:
+                nutrient_exists = True
+                break
+
+        if not nutrient_exists:
+            print(" Please try again.")
+            continue
+
+        Nutri_x_mini = float(input(f"Enter the minimum value for {Nutri_x}: "))
+        Nutri_x_max = float(input(f"Enter the maximum value for {Nutri_x}: "))
+
+        # Initialize a list to store the dictionaries that meet the requirements
+        matching_foods = []
+
+        for food_dict in list_food_dicts:
+            # Check if the nutrient value falls within the specified range
+            if Nutri_x in food_dict and Nutri_x_mini <= food_dict[Nutri_x] <= Nutri_x_max:
+                # Create a new dictionary with only the food and nutrient key-value pairs
+                filtered_dict = {"Food": food_dict["Food"], Nutri_x: food_dict[Nutri_x]}
+                matching_foods.append(filtered_dict)
+
+        if matching_foods:
+            print("Foods that meet the requirements:")
+            for food in matching_foods:
+                print(f"Food: {food['Food']}, {Nutri_x}: {food[Nutri_x]}")
+            break
+        else:
+            print(" Please try again.")
+
+Nutri_Ran_Fil(list_food_dicts)
+
+- <h5 style="display: inline;"> Nutrition Level Filter Function: </h5>
+
+function Nutri_Lev_Fil(list_food_dicts):
+    while True:
+        Nutri_x = input("Enter the nutrient name (e.g., Nutri_x): ")
+
+        nutrient_exists = False
+        for food_dict in list_food_dicts:
+            if Nutri_x in food_dict:
+                nutrient_exists = True
+                break
+
+        if not nutrient_exists:
+            print("Please try again.")
+            continue
+
+        level = int(input("Enter the level (low, mid, high): ")
+        lev_dict
+
+        max_value = max(food_dict[Nutri_x] for food_dict in list_food_dicts if Nutri_x in food_dict)
+
+        low_threshold = 0.33 * max_value
+        mid_threshold = 0.66 * max_value
+
+        matching_foods = []
+
+        for food_dict in list_food_dicts:
+            if Nutri_x in food_dict:
+                value = food_dict[Nutri_x]
+                if level == "low" and value < low_threshold:
+                    matching_foods.append({"Food": food_dict["Food"], Nutri_x: value})
+                elif level == "mid" and low_threshold <= value <= mid_threshold:
+                    matching_foods.append({"Food": food_dict["Food"], Nutri_x: value})
+                elif level == "high" and value > mid_threshold:
+                    matching_foods.append({"Food": food_dict["Food"], Nutri_x: value})
+
+        if matching_foods:
+            print(f"Foods with {Nutri_x} levels in the {level} range:")
+            for food in matching_foods:
+                print(f"Food: {food['Food']}, {Nutri_x}: {food[Nutri_x]}")
+            break
+        else:
+            print("Please try again.")
+
+Nutri_Lev_Fil(list_food_dicts)
+
+
+- <h5 style="display: inline;"> Food Wars Function: </h5>
 
 ## 4. User Interface Design
 
