@@ -667,10 +667,10 @@ Include all wireframes or mock-ups of the interface. Provide a discussion, expla
    -  In all seriousness being able to select the 5 foods and compare them on a nutritional level against each other is very helpful in this cost of living crisis as by selecting 5 of your families staple food you can see what is really good for you as a common misconception in this cost of living crisis is that healthy food is expensive but knowing is half the battle which is having the quick access to the nutrient changer allows the users visually see changes between zinc levels in their food compared to the salt levels in the same foods.
 
 Main GUI
-![Food Comparison GUI Main.jpg](Food%20Comparison%20GUI%20Main.png)
+![Food Comparison GUI Main.png](Food%20Comparison%20GUI%20Main.png)
 
 Food Wars:
-![Food Wars.jpg](Food%20Wars.png)
+![Food Wars.png](Food%20Wars.png)
 
 Nutrient Breakdown:
-![Nutrient Breakdown.jpg](Nutrient%20Breakdown.png)
+![Nutrient Breakdown.png](Nutrient%20Breakdown.png)

@@ -1,4 +1,11 @@
-* 15f195f 2024-09-08 by [braithicus] | md -> pdf for both attempt 2 (HEAD -> main, origin/main, origin/HEAD)
+* 4e22b55 2024-09-08 by [Ben] | PDF (HEAD -> main, origin/main, origin/HEAD)
+* 071c68d 2024-09-08 by [Ben] | FFS
+*   e675e2e 2024-09-08 by [Ben] | Merge branch 'main' of https://github.com/braithicus/2810ICT-Project-Management-Assignment
+|\  
+| * 64254cc 2024-09-08 by [braithicus] | git log
+* | 720a565 2024-09-08 by [Ben] | Images
+|/  
+* 15f195f 2024-09-08 by [braithicus] | md -> pdf for both attempt 2
 *   8544b14 2024-09-08 by [braithicus] | Merge remote-tracking branch 'origin/main'
 |\  
 | * ad11990 2024-09-08 by [William-JosephSimons] | Equality forever
