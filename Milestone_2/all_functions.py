@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 import matplotlib.pyplot as plt
+import numpy as np
 
 def load_data(filepath):
   try:
@@ -8,8 +9,8 @@ def load_data(filepath):
   except FileNotFoundError as e:
     print(f"Error: File Not Found. {e}")
     # can be our file error number
-    # if 69 do stuff etc 
-    return 69
+    # if 1 do stuff etc 
+    return 1
   
 def to_mg(frame):
   columns_in_g = [
@@ -31,7 +32,7 @@ def to_mg(frame):
 
 def search_function(keyword, dFrame):
     # returns boolean series of matches ignores casing
-    loc = [bool(re.search(keyword, name, re.IGNORECASE)) for name in dFrame["food"]]
+    loc = [bool(re.search(str(keyword), name, re.IGNORECASE)) for name in dFrame["food"]]
     # returns new dataframe with only matches, and the number of results
     return dFrame[loc], sum(loc)
 
@@ -54,8 +55,12 @@ def nutrition_breakdown(foodRow, type='Bar'):
 
 # we could pass this new dataframe back into the search feature with no keyword
 # to output to the search space. Once the search space is implemented ofc
-def nutrition_range_filter(dFrame, nutrientName, minVal, maxVal):
-  return dFrame[dFrame[nutrientName].between(minVal, maxVal)]
+def nutrition_range_filter(dFrame, nutrientName, minVal=0, maxVal=np.inf):
+  try:
+    return dFrame[dFrame[nutrientName].between(minVal, maxVal)]
+  except KeyError as e:
+    print(f"KeyError: {e} - The column does not exist")
+    return 2
 
 # same idea as range feature
 def nutrition_level_feature(dFrame, nutrientName, level):
