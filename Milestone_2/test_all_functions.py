@@ -1,5 +1,6 @@
 import all_functions as af
 import pandas as pd
+import pytest
 
 # calling the load data function on a csv with the same data as the test dataframe
 # this small test dataframe is used globally throughout most tests
@@ -18,9 +19,9 @@ def test_load_data_valid():
 
 
 def test_load_data_invalid():
-  # assert the fail returns 1
-  no_file = af.load_data('non-existent-file.csv')
-  assert no_file == 1
+  # assert the fail returns file not found error
+  with pytest.raises(FileNotFoundError):   
+    af.load_data('non-existent-file.csv')
 
 
 def test_search_function_valid():
@@ -57,10 +58,11 @@ def test_search_function_invalid():
   assert row_num3 == 0
 
 
-def test_num_of_row():
+def test_num_of_rows():
   assert af.num_of_rows(5) == "Number Of Results: 5"
   assert af.num_of_rows(0) == "Number Of Results: 0"
   assert af.num_of_rows(10) == "Number Of Results: 10"
+
 
 def test_nutrition_range_filter_valid():
   # test for range with extreme values. Returns entire dataframe
@@ -96,9 +98,10 @@ def test_nutrition_range_filter_valid():
 
 
 def test_nutrition_range_filter_invalid():
-  # test for invalid column name. Fail returns 2
-  result5 = af.nutrition_range_filter(df, 'Does Not Exist', 300, 600)
-  assert result5 == 2
+  # test for invalid column name. 
+  with pytest.raises(KeyError):
+    af.nutrition_range_filter(df, 'Does Not Exist', 300, 600)
+
 
 def test_nutrition_level_filter_valid():
   # test for low level
@@ -128,12 +131,16 @@ def test_nutrition_level_filter_valid():
   }, index=[1])
   pd.testing.assert_frame_equal(high, expected_high)
 
+
 def test_nutrition_level_filter_invalid():
   # test for no level input
-  assert af.nutrition_level_filter(df, 'Poison') == 3
+  with pytest.raises(TypeError):
+    af.nutrition_level_filter(df, 'Poison')
 
   # test for invalid column
-  assert af.nutrition_level_filter(df, 'Does Not Exist', 'Low') == 2
+  with pytest.raises(KeyError):
+    af.nutrition_level_filter(df, 'Does Not Exist', 'Low')
 
   # test for invalid level
-  assert af.nutrition_level_filter(df, 'Poison', 'Extreme') == 3
+  with pytest.raises(TypeError):
+    af.nutrition_level_filter(df, 'Poison', 'Extreme')
