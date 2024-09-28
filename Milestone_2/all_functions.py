@@ -7,10 +7,7 @@ def load_data(filepath):
   try:
     return pd.read_csv(filepath)
   except FileNotFoundError as e:
-    print(f"Error: File Not Found. {e}")
-    # can be our file error number
-    # if 1 do stuff etc 
-    return 1
+    raise FileNotFoundError(f"Error: File Not Found. {e}") from e
   
 def to_mg(frame):
   columns_in_g = [
@@ -53,8 +50,7 @@ def nutrition_breakdown(foodRow, type='Bar'):
     plt.axis('equal')
     plt.show()
   else:
-    print("Invalid Type Of Chart")
-    return 4
+    raise TypeError(f"Invalid Chart Type")
 
 # we could pass this new dataframe back into the search feature with no keyword
 # to output to the search space. Once the search space is implemented ofc
@@ -62,16 +58,14 @@ def nutrition_range_filter(dFrame, nutrientName, minVal=0, maxVal=np.inf):
   try:
     return dFrame[dFrame[nutrientName].between(minVal, maxVal)]
   except KeyError as e:
-    print(f"KeyError: {e} - The column does not exist")
-    return 2
+    raise KeyError(f"KeyError: {e} - The column does not exist") from e
 
 # same idea as range feature
 def nutrition_level_filter(dFrame, nutrientName, level=None):
   try:
     nutrientColumn = dFrame[nutrientName]
   except KeyError as e:
-    print(f"KeyError: {e} - The column does not exist")
-    return 2
+    raise KeyError(f"KeyError: {e} - The column does not exist") from e
   
   maxVal = nutrientColumn.max()
   lowPercent, highPercent = maxVal * (33 / 100), maxVal * (66 / 100)
@@ -82,5 +76,4 @@ def nutrition_level_filter(dFrame, nutrientName, level=None):
   elif level == 'High':
     return dFrame[nutrientColumn > highPercent]
   else:
-    print("Invalid Level")
-    return 3
+    raise TypeError("Invalid Level")
