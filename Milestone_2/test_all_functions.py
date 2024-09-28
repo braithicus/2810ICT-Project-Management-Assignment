@@ -1,7 +1,11 @@
 import all_functions as af
 import pandas as pd
 
-def test_load_data():
+# calling the load data function on a csv with the same data as the test dataframe
+# this small test dataframe is used globally throughout most tests
+df = af.load_data('sample_data.csv')
+
+def test_load_data_valid():
   # making a small dataframe for testing
   test_data = pd.DataFrame({
   'food': ["Peanut Butter", "Apple Pie", "Another Random Item", "Butter Scotch"],
@@ -9,21 +13,17 @@ def test_load_data():
   'Row Number': [1, 2, 3, 4]
   })
 
-  # calling the load data function on a csv with the same data as the test dataframe
-  loaded_data = af.load_data('sample_data.csv')
-
   # assert that the function returns the same result as the test dataframe
-  pd.testing.assert_frame_equal(loaded_data, test_data)
+  pd.testing.assert_frame_equal(df, test_data)
 
-  # assert the fail returns 69
+
+def test_load_data_invalid():
+  # assert the fail returns 1
   no_file = af.load_data('non-existent-file.csv')
   assert no_file == 1
 
 
-def test_search_function():
-  # same test dataframe as before
-  df = af.load_data('sample_data.csv')
-
+def test_search_function_valid():
   # search for butter (something with two results)
   result, row_num = af.search_function('Butter', df)
   expected_result = pd.DataFrame({
@@ -44,6 +44,8 @@ def test_search_function():
   pd.testing.assert_frame_equal(result2, expected_result2)
   assert row_num2 == 4
 
+
+def test_search_function_invalid():
   # search for something that does not exist (no results)
   result3, row_num3 = af.search_function('Does Not Exist', df)
   expected_result3 = pd.DataFrame({
@@ -61,8 +63,6 @@ def test_num_of_row():
   assert af.num_of_rows(10) == "Number Of Results: 10"
 
 def test_nutrition_range_filter():
-  df = af.load_data('sample_data.csv')
-
   result = af.nutrition_range_filter(df, 'Poison', minVal=-9999999, maxVal=9999999)
   expected_result = pd.DataFrame({
   'food': ["Peanut Butter", "Apple Pie", "Another Random Item", "Butter Scotch"],
