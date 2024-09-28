@@ -73,3 +73,6 @@ def nutrition_level_feature(dFrame, nutrientName, level):
     return dFrame[nutrientColumn.between(lowPercent, highPercent)]
   elif level == 'High':
     return dFrame[nutrientColumn > highPercent]
+  else:
+    print("Invalid Level")
+    return 3
