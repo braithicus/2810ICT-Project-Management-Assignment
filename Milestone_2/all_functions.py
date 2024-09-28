@@ -52,6 +52,9 @@ def nutrition_breakdown(foodRow, type='Bar'):
     plt.pie(foodRow.values, labels=foodRow.index, autopct='%1.1f%%', shadow=True)
     plt.axis('equal')
     plt.show()
+  else:
+    print("Invalid Type Of Chart")
+    return 4
 
 # we could pass this new dataframe back into the search feature with no keyword
 # to output to the search space. Once the search space is implemented ofc
@@ -63,8 +66,13 @@ def nutrition_range_filter(dFrame, nutrientName, minVal=0, maxVal=np.inf):
     return 2
 
 # same idea as range feature
-def nutrition_level_feature(dFrame, nutrientName, level):
-  nutrientColumn= dFrame[nutrientName]
+def nutrition_level_filter(dFrame, nutrientName, level=None):
+  try:
+    nutrientColumn = dFrame[nutrientName]
+  except KeyError as e:
+    print(f"KeyError: {e} - The column does not exist")
+    return 2
+  
   maxVal = nutrientColumn.max()
   lowPercent, highPercent = maxVal * (33 / 100), maxVal * (66 / 100)
   if level == 'Low':
