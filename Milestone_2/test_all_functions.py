@@ -62,7 +62,8 @@ def test_num_of_row():
   assert af.num_of_rows(0) == "Number Of Results: 0"
   assert af.num_of_rows(10) == "Number Of Results: 10"
 
-def test_nutrition_range_filter():
+def test_nutrition_range_filter_valid():
+  # test for range with extreme values. Returns entire dataframe
   result = af.nutrition_range_filter(df, 'Poison', minVal=-9999999, maxVal=9999999)
   expected_result = pd.DataFrame({
   'food': ["Peanut Butter", "Apple Pie", "Another Random Item", "Butter Scotch"],
@@ -71,9 +72,11 @@ def test_nutrition_range_filter():
   })
   pd.testing.assert_frame_equal(result, expected_result)
 
+  # test for unspecified range. Returns entire dataframe
   result2 = af.nutrition_range_filter(df, 'Poison')
   pd.testing.assert_frame_equal(result2, expected_result)
 
+  # test for valid range. Returns dataframe with values in range
   result3 = af.nutrition_range_filter(df, 'Poison', minVal=300, maxVal=9000)
   expected_result3 = pd.DataFrame({
   'food': ["Peanut Butter", "Another Random Item"],
@@ -82,6 +85,7 @@ def test_nutrition_range_filter():
   }, index=[0, 2])
   pd.testing.assert_frame_equal(result3, expected_result3)
 
+  # test for also searching other columns
   result4 = af.nutrition_range_filter(df, 'Row Number', minVal=2, maxVal=4)
   expected_result4 = pd.DataFrame({
   'food': ["Apple Pie", "Another Random Item", "Butter Scotch"],
@@ -90,5 +94,8 @@ def test_nutrition_range_filter():
   }, index=[1, 2, 3])
   pd.testing.assert_frame_equal(result4, expected_result4)
 
+
+def test_nutrition_range_filter_invalid():
+  # test for invalid column name. Fail returns 2
   result5 = af.nutrition_range_filter(df, 'Does Not Exist', minVal=300, maxVal=9000)
   assert result5 == 2
