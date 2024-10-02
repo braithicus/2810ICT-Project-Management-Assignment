@@ -119,7 +119,7 @@ class MyFrame1 ( wx.Frame ):
         self.table_page.SetSizer( bSizer7 )
         self.table_page.Layout()
         bSizer7.Fit( self.table_page )
-        self.m_notebook1.AddPage( self.table_page, _(u"le table"), True )
+        self.m_notebook1.AddPage( self.table_page, _(u"le table"), False )
         self.fw_page = wx.Panel( self.m_notebook1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
         bSizer71 = wx.BoxSizer( wx.VERTICAL )
 
@@ -236,13 +236,13 @@ class MyFrame1 ( wx.Frame ):
         bSizer71.Add( self.m_panel13, 1, wx.EXPAND |wx.ALL, 5 )
 
         self.fw_compare_button = wx.Button( self.fw_page, wx.ID_ANY, _(u"Compare"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        bSizer71.Add( self.fw_compare_button, 0, wx.ALL, 5 )
+        bSizer71.Add( self.fw_compare_button, 0, wx.ALIGN_CENTER|wx.ALIGN_CENTER_HORIZONTAL|wx.ALL, 5 )
 
 
         self.fw_page.SetSizer( bSizer71 )
         self.fw_page.Layout()
         bSizer71.Fit( self.fw_page )
-        self.m_notebook1.AddPage( self.fw_page, _(u"Food Wars"), False )
+        self.m_notebook1.AddPage( self.fw_page, _(u"Food Wars"), True )
 
         bSizer6.Add( self.m_notebook1, 1, wx.EXPAND |wx.ALL, 5 )
 
