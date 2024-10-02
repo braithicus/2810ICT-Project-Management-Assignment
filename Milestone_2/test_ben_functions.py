@@ -2,6 +2,7 @@ import all_functions_ben as af
 import pandas as pd
 import pytest
 import wx.grid
+import re
 import template_frame_ben
 from template_frame_ben import MyFrame1 as MyFrame
 import matplotlib
@@ -35,11 +36,16 @@ def test_load_data_invalid():
     af.load_data('non-existent-file.csv')
 
 
-## Testing Code
+## Works
 class MyMainFrame(MyFrame):
     def __init__(self, parent=None, *args, **kw):
         super(MyMainFrame, self).__init__(parent, *args, **kw)
-
+        self.df = pd.read_csv("sample_data.csv")
+        self.table = DataTable(self.df)
+        self.m_grid1.SetTable(self.table, takeOwnership = True)
+        self.m_grid1.AutoSize()
+        self.Show(True)
+        self.Layout()
 
     def onclickcompplot(self, event):
         # Get input values from the template frame
@@ -83,17 +89,25 @@ class MyMainFrame(MyFrame):
             plt.show()
         except Exception as e:
             wx.MessageBox(f"An error occurred while plotting: {str(e)}", "Error", wx.OK | wx.ICON_ERROR)
+            
+        # Overload your event function
+    def search_tabfood_input(self, event):
+      event.Skip()
+      keyword1 = self.searchfood_input.GetValue()
+      pattern = f".*{re.escape(keyword1)}.*"
+      ser_food = self.df["food"]
+      index = ser_food.str.contains(pattern, case=False, regex=True)
+      df_filtered = self.df[index]
+      self.m_grid1.ClearGrid()
+      self.table = DataTable(df_filtered)
+      self.m_grid1.SetTable(self.table, takeOwnership = True)
+      self.m_grid1.AutoSize()
+      text = f"The number of Results: {len(df_filtered)}"
+      self.m_staticText3.SetLabel(text)
 
-if __name__ == "__main__":
-    app = wx.App(False)
-    frame = MyMainFrame()
-    frame.Show()
-    app.MainLoop()
 
 
-## End Testing Code
-
-""" class DataTable(wx.grid.GridTableBase):
+class DataTable(wx.grid.GridTableBase):
     def __init__(self, data=None):
         wx.grid.GridTableBase.__init__(self)
         self.headerRows = 1
@@ -122,73 +136,10 @@ if __name__ == "__main__":
             attr.SetBackgroundColour(EVEN_ROW_COLOUR)
         return attr
 
-class MyMainFrame(MyFrame):
-    def __init__(self,parent=None):
-        super().__init__(parent)
-
-        self.Layout()
-        self.Show(True)
-
-    def onclickcompplot( self, event ):
-        event.Skip()
-        categories = ['Apples', 'Bananas', 'Cherries', 'Dates']
-        sizes = [10, 10, 10, 10]
-        colours = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue'] # must use these colours
-        fig = self.plot_data(categories, sizes, colours)
-        h, w = self.m_panel1.GetSize()
-        fig.set_size_inches(h / fig.get_dpi(), w / fig.get_dpi())
-        canvas = FigureCanvasWxAgg(self.m_panel1, -1, fig)
-        canvas.SetSize((h, w))
-        self.Layout()
-
-    def plot_data(self, categories, sizes, colours):
-        fig, axes = plt.subplots(1, 1, figsize=(12, 6)) # adding multiple subplots
-        ax1 = axes
-        ax1.pie(sizes, labels=categories, autopct = '%1.1f%%', colors=colours, shadow=True, explode=(0.1, 0, 0, 0))
-        ax1.set_title("Pie chart")
-        return fig
-
-#Search function
-#Change the Regex filter i.e. keyword1 and keyword2
-class CalcFrame(MyFrame):
-    def __init__(self,parent=None):
-        super().__init__(parent)
-        self.df = pd.read_csv("sample_data.csv")
-        self.table = DataTable(self.df)
-        self.m_grid1.SetTable(self.table, takeOwnership = True)
-        self.m_grid1.AutoSize()
-        self.Show(True)
-        self.Layout()
-        
-    # Overload your event function
-    def search_tabfood_input(self, event):
-        event.Skip()
-
-        keyword1 = self.m_textCtrl3.GetValue()
-        keyword2 = self.m_textCtrl4.GetValue()
-
-        
-        pattern = f"^({keyword1}|{keyword2}|([{keyword1[0]}-{keyword2[0]}][0-9]*(\\.[0-9]*)?))"
-
-        ser_price = self.df["price"]
-        index = []
-        for price in ser_price:
-            if re.search(pattern, str(price)):
-                index.append(True)
-            else:
-                index.append(False)
-
-        df_filtered = self.df[index]
-        self.m_grid1.ClearGrid()
-
-        self.table = DataTable(df_filtered)
-        self.m_grid1.SetTable(self.table, takeOwnership = True)
-        self.m_grid1.AutoSize()
-        text = f"The number of rows: {len(df_filtered)}"
-        self.m_staticText1.SetLabel(text)
 
 
 if __name__ == "__main__":
-    app = wx.App()
-    frame = CalcFrame()
-    app.MainLoop() """
+    app = wx.App(False)
+    frame = MyMainFrame()
+    frame.Show()
+    app.MainLoop()

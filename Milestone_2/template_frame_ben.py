@@ -43,8 +43,8 @@ class MyFrame1 ( wx.Frame ):
 
         bSizer9.Add( self.m_staticText19, 0, wx.ALL, 5 )
 
-        self.Searchfood_input = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_CENTER )
-        bSizer9.Add( self.Searchfood_input, 1, wx.ALL, 5 )
+        self.searchfood_input = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_CENTER )
+        bSizer9.Add( self.searchfood_input, 1, wx.ALL, 5 )
 
         self.search_butt = wx.Button( self.m_panel6, wx.ID_ANY, _(u"Search"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer9.Add( self.search_butt, 0, wx.ALL, 5 )
@@ -64,7 +64,7 @@ class MyFrame1 ( wx.Frame ):
 
         bSizer61.Add( self.search_input_text, 1, wx.ALL, 5 )
 
-        self.m_staticText3 = wx.StaticText( self.m_panel6, wx.ID_ANY, _(u"Number of Results"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText3 = wx.StaticText( self.m_panel6, wx.ID_ANY, _(u"Number of Results:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.m_staticText3.Wrap( -1 )
 
         bSizer61.Add( self.m_staticText3, 0, wx.ALL, 5 )
