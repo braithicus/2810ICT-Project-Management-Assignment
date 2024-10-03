@@ -38,7 +38,6 @@ def num_of_rows(num):
   return f"Number Of Results: {str(num)}"
 
 
-# TODO: Charts unreadable and hideous
 # USE: result.iloc[0, 1:] to get a foodRow series that retains column names 
 # (the above statement gets first foodRow from dataframe and skips the first column which is the food name)
 def nutrition_breakdown(foodRow, type='Bar'):
@@ -59,15 +58,14 @@ def nutrition_breakdown(foodRow, type='Bar'):
   else:
     raise TypeError(f"Invalid Chart Type")
 
-# we could pass this new dataframe back into the search feature with no keyword
-# to output to the search space. Once the search space is implemented ofc
+
 def nutrition_range_filter(dFrame, nutrientName, minVal=0, maxVal=np.inf):
   try:
     return dFrame[dFrame[nutrientName].between(minVal, maxVal)]
   except KeyError as e:
     raise KeyError(f"KeyError: {e} - The column does not exist") from e
 
-# same idea as range feature
+
 def nutrition_level_filter(dFrame, nutrientName, level=None):
   try:
     nutrientColumn = dFrame[nutrientName]
@@ -84,9 +82,3 @@ def nutrition_level_filter(dFrame, nutrientName, level=None):
     return dFrame[nutrientColumn > highPercent]
   else:
     raise TypeError("Invalid Level")
-  
-
-df = load_data("Food_Nutrition_Dataset.csv")
-to_mg(df)
-result = df.iloc[0, 1:]
-nutrition_breakdown(result, type='Bar')
