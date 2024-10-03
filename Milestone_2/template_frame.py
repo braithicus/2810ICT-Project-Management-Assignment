@@ -294,6 +294,7 @@ class MyFrame1 ( wx.Frame ):
         self.Centre( wx.BOTH )
 
         # Connect Events
+        self.search_button.Bind( wx.EVT_BUTTON, self.search_foods )
         self.fw_compare_button.Bind( wx.EVT_BUTTON, self.onclickcompplot )
 
     def __del__( self ):
@@ -301,6 +302,9 @@ class MyFrame1 ( wx.Frame ):
 
 
     # Virtual event handlers, override them in your derived class
+    def search_foods( self, event ):
+        event.Skip()
+
     def onclickcompplot( self, event ):
         event.Skip()
 

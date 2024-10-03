@@ -126,7 +126,7 @@
             <object class="notebookpage" expanded="true">
               <property name="bitmap"></property>
               <property name="label">GUI</property>
-              <property name="select">1</property>
+              <property name="select">0</property>
               <object class="wxPanel" expanded="true">
                 <property name="BottomDockable">1</property>
                 <property name="LeftDockable">1</property>
@@ -348,6 +348,7 @@
                               <property name="window_extra_style"></property>
                               <property name="window_name"></property>
                               <property name="window_style"></property>
+                              <event name="OnButtonClick">search_foods</event>
                             </object>
                           </object>
                         </object>
@@ -1211,7 +1212,7 @@
             <object class="notebookpage" expanded="true">
               <property name="bitmap"></property>
               <property name="label">Food Wars</property>
-              <property name="select">0</property>
+              <property name="select">1</property>
               <object class="wxPanel" expanded="true">
                 <property name="BottomDockable">1</property>
                 <property name="LeftDockable">1</property>
