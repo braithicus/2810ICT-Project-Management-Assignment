@@ -1,6 +1,8 @@
 import all_functions as af
 import pandas as pd
 import pytest
+import matplotlib.pyplot as plt
+from unittest.mock import patch
 
 # calling the load data function on a csv with the same data as the test dataframe
 # this small test dataframe is used globally throughout most tests
@@ -144,3 +146,40 @@ def test_nutrition_level_filter_invalid():
   # test for invalid level
   with pytest.raises(TypeError):
     af.nutrition_level_filter(df, 'Poison', 'Extreme')
+
+# mocking plt.show so it doesn't display the figure and break everything
+@patch('matplotlib.pyplot.show')
+def test_nutrition_breakdown_valid(mock_show):
+    foodRow = df.iloc[0, 1:]
+    figure = af.nutrition_breakdown(foodRow, 'Bar')
+    mock_show.assert_called_once()
+
+    # testing for all valid labels
+    axes = plt.gca()
+    assert axes.get_title() == 'Nutritional Breakdown'
+    assert axes.get_xlabel() == 'Nutrients'
+    assert axes.get_ylabel() == 'Amount (mg)'
+
+    # testing that the amount of bars is valid
+    assert len(axes.patches) == len(foodRow)
+
+    # testing all bar heights are valid
+    bar_heights = [patch.get_height() for patch in axes.patches]
+    assert bar_heights == list(foodRow.values)
+
+    # testing all column labels are valid
+    x_tick_labels = [label.get_text() for label in axes.get_xticklabels()]
+    assert x_tick_labels == list(foodRow.index)
+
+    # testing legend is valid
+    legend = axes.get_legend()
+    assert legend.get_title().get_text() == 'Nutrient Amounts'
+
+    plt.close(figure)
+
+def test_nutrition_breakdown_invalid():
+    foodRow = df.iloc[0, 1:]
+
+    # testing invalid chart type throws type error
+    with pytest.raises(TypeError):
+        af.nutrition_breakdown(foodRow, type='Does Not Exist')
