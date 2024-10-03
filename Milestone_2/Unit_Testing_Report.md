@@ -14,13 +14,14 @@ the five required features.</span> There is no need to test the GUI components. 
 list all tested functions related to the five required features and the corresponding test functions designed to test
 those functions, for example:
 
-| **Tested Functions**                                                    | **Test Functions**                                                                 |
-| ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `load_data(filepath)`                                                   | `test_load_data_valid()` <br> `test_load_data_invalid()`                           |
-| `search_function(keyword, dFrame)`                                      | `test_search_function_valid()` <br> `test_search_function_invalid()`               |
-| `num_of_rows(num)`                                                      | `test_num_of_rows()`                                                               |
-| `nutrition_range_filter(dFrame, nutrientName, minVal=0, maxVal=np.inf)` | `test_nutrition_range_filter_valid()` <br> `test_nutrition_range_filter_invalid()` |
-| `nutrition_level_filter(dFrame, nutrientName, level=None)`              | `test_nutrition_level_filter_valid()` <br> `test_nutrition_level_filter_invalid()` |
+| **Tested Functions**                                                    | **Test Functions**                                                                    |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `load_data(filepath)`                                                   | `test_load_data_valid()` <br> `test_load_data_invalid()`                              |
+| `search_function(keyword, dFrame)`                                      | `test_search_function_valid()` <br> `test_search_function_invalid()`                  |
+| `num_of_rows(num)`                                                      | `test_num_of_rows()`                                                                  |
+| `nutrition_range_filter(dFrame, nutrientName, minVal=0, maxVal=np.inf)` | `test_nutrition_range_filter_valid()` <br> `test_nutrition_range_filter_invalid()`    |
+| `nutrition_level_filter(dFrame, nutrientName, level=None)`              | `test_nutrition_level_filter_valid()` <br> `test_nutrition_level_filter_invalid()`    |
+| `nutrition_breakdown(foodRow, type='Bar'/'Pie')`                        | `test_nutrition_breakdown_valid(mock_show)` <br> `test_nutrition_breakdown_invalid()` |
 
 ---
 
@@ -306,7 +307,74 @@ def test_nutrition_level_filter_invalid():
 
 ### Test Case 6:
 
-add more test cases if necessary.
+-  **Test Function/Module**
+   -  `test_nutrition_breakdown_valid()`
+   -  `test_nutrition_breakdown_invalid()`
+-  **Tested Function/Module**
+   -  `nutrition_breakdown(foodRow, type='Bar'/'Pie')`
+-  **Description**
+   -  Brief description yada yada yada, cant be bothered to english right now
+-  **1) Valid Input and Expected Output**
+
+| **Valid Input**                                   | **Expected Output** |
+| ------------------------------------------------- | ------------------- |
+| `nutrition_breakdown(df.iloc[0, 1:], type='Bar')` | `plt.gcf()`         |
+| `nutrition_breakdown(df.iloc[0, 1:], type='Pie')` | `plt.gcf()`         |
+
+-  **1) Code for the Test Function**
+
+```python
+# mocking plt.show so it doesn't display the figure and break everything
+@patch('matplotlib.pyplot.show')
+def test_nutrition_breakdown_valid(mock_show):
+    foodRow = df.iloc[0, 1:]
+    figure = af.nutrition_breakdown(foodRow, 'Bar')
+    mock_show.assert_called_once()
+
+    # testing for all valid labels
+    axes = plt.gca()
+    assert axes.get_title() == 'Nutritional Breakdown'
+    assert axes.get_xlabel() == 'Nutrients'
+    assert axes.get_ylabel() == 'Amount (mg)'
+
+    # testing that the amount of bars is valid
+    assert len(axes.patches) == len(foodRow)
+
+    # testing all bar heights are valid
+    bar_heights = [patch.get_height() for patch in axes.patches]
+    assert bar_heights == list(foodRow.values)
+
+    # testing all column labels are valid
+    x_tick_labels = [label.get_text() for label in axes.get_xticklabels()]
+    assert x_tick_labels == list(foodRow.index)
+
+    # testing legend is valid
+    legend = axes.get_legend()
+    assert legend.get_title().get_text() == 'Nutrient Amounts'
+
+    plt.close(figure)
+```
+
+**Add Pie chart tests**
+
+-  **2) Invalid Input and Expected Output**
+
+| **Invalid Input**                                     | **Expected Output** |
+| ----------------------------------------------------- | ------------------- |
+| `nutrition_breakdown(foodRow, type='Does Not Exist')` | `TypeError`         |
+
+-  **2) Code for the Test Function**
+
+```python
+def test_nutrition_breakdown_invalid():
+    foodRow = df.iloc[0, 1:]
+
+    # testing invalid chart type throws type error
+    with pytest.raises(TypeError):
+        af.nutrition_breakdown(foodRow, type='Does Not Exist')
+```
+
+**Add Pie Chart Tests**
 
 ## 3. **Testing Report Summary**
 
