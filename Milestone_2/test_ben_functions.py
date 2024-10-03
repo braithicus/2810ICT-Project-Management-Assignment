@@ -106,6 +106,46 @@ class MyMainFrame(MyFrame):
       self.m_staticText3.SetLabel(text)
 
 
+    def onclicklvlfil(self, event):
+        event.Skip()
+        
+        # Get level and nutrient choices from the dropdown menus
+        level = self.m_choice2.GetStringSelection()
+        nutrient = self.m_choice3.GetStringSelection()
+        
+        # Verify if a valid nutrient is selected
+        if nutrient not in self.df.columns:
+            wx.MessageBox(f"Nutrient '{nutrient}' not found in data.", "Error", wx.OK | wx.ICON_ERROR)
+            return
+        
+        # Calculate thresholds for low, mid, and high levels
+        max_value = self.df[nutrient].max()
+        low_threshold = max_value * 0.33
+        mid_threshold = max_value * 0.66
+
+        # Apply the filter based on the selected level
+        if level == "Low":
+            df_filtered = self.df[self.df[nutrient] < low_threshold]
+        elif level == "Mid":
+            df_filtered = self.df[(self.df[nutrient] >= low_threshold) & (self.df[nutrient] <= mid_threshold)]
+        elif level == "High":
+            df_filtered = self.df[self.df[nutrient] > mid_threshold]
+        else:
+            wx.MessageBox(f"Invalid level '{level}' selected.", "Error", wx.OK | wx.ICON_ERROR)
+            return
+
+        # Sort the filtered data in descending order by the selected nutrient
+        df_filtered = df_filtered.sort_values(by=nutrient, ascending=False)
+
+        # Update the grid with the filtered data
+        self.m_grid1.ClearGrid()
+        self.table = DataTable(df_filtered)
+        self.m_grid1.SetTable(self.table, takeOwnership=True)
+        self.m_grid1.AutoSize()
+        
+        # Update the label to show the number of results
+        text = f"The number of Results: {len(df_filtered)}"
+        self.m_staticText3.SetLabel(text)
 
 class DataTable(wx.grid.GridTableBase):
     def __init__(self, data=None):
@@ -135,7 +175,6 @@ class DataTable(wx.grid.GridTableBase):
         if row % 2 == 1:
             attr.SetBackgroundColour(EVEN_ROW_COLOUR)
         return attr
-
 
 
 if __name__ == "__main__":

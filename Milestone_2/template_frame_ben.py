@@ -21,7 +21,7 @@ _ = gettext.gettext
 class MyFrame1 ( wx.Frame ):
 
     def __init__( self, parent ):
-        wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 800,800 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+        wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"ST Group"), pos = wx.DefaultPosition, size = wx.Size( 800,800 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
@@ -78,7 +78,36 @@ class MyFrame1 ( wx.Frame ):
         bSizer5.Add( bSizer61, 0, wx.EXPAND, 5 )
 
         self.m_panel71 = wx.Panel( self.m_panel6, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
-        bSizer5.Add( self.m_panel71, 1, wx.EXPAND |wx.ALL, 5 )
+        bSizer14 = wx.BoxSizer( wx.HORIZONTAL )
+
+        self.m_staticText14 = wx.StaticText( self.m_panel71, wx.ID_ANY, _(u"Level Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText14.Wrap( -1 )
+
+        bSizer14.Add( self.m_staticText14, 0, wx.ALL, 5 )
+
+        m_choice2Choices = [ _(u"Low"), _(u"Mid"), _(u"High") ]
+        self.m_choice2 = wx.Choice( self.m_panel71, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_choice2Choices, 0 )
+        self.m_choice2.SetSelection( 0 )
+        bSizer14.Add( self.m_choice2, 0, wx.ALL, 5 )
+
+        self.m_staticText15 = wx.StaticText( self.m_panel71, wx.ID_ANY, _(u"Nutrition"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText15.Wrap( -1 )
+
+        bSizer14.Add( self.m_staticText15, 0, wx.ALL, 5 )
+
+        m_choice3Choices = [ _(u"Poison"), _(u"Caloric Value"), _(u"Fat"), _(u"Saturated Fats"), _(u"Monounsaturated Fats"), _(u"Polyunsaturated Fats"), _(u"Carbohydrates"), _(u"Sugars"), _(u"Protein"), _(u"Dietary Fiber"), _(u"Cholesterol"), _(u"Sodium"), _(u"Water"), _(u"Vitamin A"), _(u"Vitamin B1"), _(u"Vitamin B11"), _(u"Vitamin B12"), _(u"Vitamin B2"), _(u"Vitamin B3"), _(u"Vitamin B5"), _(u"Vitamin B6"), _(u"Vitamin C"), _(u"Vitamin D"), _(u"Vitamin E"), _(u"Vitamin K"), _(u"Calcium"), _(u"Copper"), _(u"Iron"), _(u"Magnesium"), _(u"Manganese"), _(u"Phosphorus"), _(u"Potassium"), _(u"Selenium"), _(u"Zinc"), _(u"Nutrition Density") ]
+        self.m_choice3 = wx.Choice( self.m_panel71, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_choice3Choices, 0 )
+        self.m_choice3.SetSelection( 0 )
+        bSizer14.Add( self.m_choice3, 0, wx.ALL, 5 )
+
+        self.Level_Filter = wx.Button( self.m_panel71, wx.ID_ANY, _(u"Level Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer14.Add( self.Level_Filter, 0, wx.ALL, 5 )
+
+
+        self.m_panel71.SetSizer( bSizer14 )
+        self.m_panel71.Layout()
+        bSizer14.Fit( self.m_panel71 )
+        bSizer5.Add( self.m_panel71, 0, wx.EXPAND |wx.ALL, 5 )
 
         self.m_grid1 = wx.grid.Grid( self.m_panel6, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
@@ -119,7 +148,7 @@ class MyFrame1 ( wx.Frame ):
         self.table_page.SetSizer( bSizer7 )
         self.table_page.Layout()
         bSizer7.Fit( self.table_page )
-        self.m_notebook1.AddPage( self.table_page, _(u"le table"), False )
+        self.m_notebook1.AddPage( self.table_page, _(u"le table"), True )
         self.fw_page = wx.Panel( self.m_notebook1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
         bSizer71 = wx.BoxSizer( wx.VERTICAL )
 
@@ -242,7 +271,7 @@ class MyFrame1 ( wx.Frame ):
         self.fw_page.SetSizer( bSizer71 )
         self.fw_page.Layout()
         bSizer71.Fit( self.fw_page )
-        self.m_notebook1.AddPage( self.fw_page, _(u"Food Wars"), True )
+        self.m_notebook1.AddPage( self.fw_page, _(u"Food Wars"), False )
 
         bSizer6.Add( self.m_notebook1, 1, wx.EXPAND |wx.ALL, 5 )
 
@@ -254,6 +283,7 @@ class MyFrame1 ( wx.Frame ):
 
         # Connect Events
         self.search_butt.Bind( wx.EVT_BUTTON, self.search_tabfood_input )
+        self.Level_Filter.Bind( wx.EVT_BUTTON, self.onclicklvlfil )
         self.fw_compare_button.Bind( wx.EVT_BUTTON, self.onclickcompplot )
 
     def __del__( self ):
@@ -262,6 +292,9 @@ class MyFrame1 ( wx.Frame ):
 
     # Virtual event handlers, override them in your derived class
     def search_tabfood_input( self, event ):
+        event.Skip()
+
+    def onclicklvlfil( self, event ):
         event.Skip()
 
     def onclickcompplot( self, event ):

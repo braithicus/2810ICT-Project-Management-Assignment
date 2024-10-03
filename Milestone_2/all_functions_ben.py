@@ -17,7 +17,7 @@ def load_data(filepath):
     return pd.read_csv(filepath)
   except FileNotFoundError as e:
     raise FileNotFoundError(f"Error: File Not Found. {e}") from e
-
+""""
 EVEN_ROW_COLOUR = '#CCE6FF'
 GRID_LINE_COLOUR = '#ccc'
 
@@ -130,4 +130,4 @@ if __name__ == "__main__":
     app = wx.App(False)
     frame = MyMainFrame()
     frame.Show()
-    app.MainLoop()
+    app.MainLoop() """
