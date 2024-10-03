@@ -38,10 +38,11 @@ def num_of_rows(num):
   return f"Number Of Results: {str(num)}"
 
 
-# USE: result.iloc[0, 1:] to get a foodRow series that retains column names 
+# USE: df.iloc[0, 1:] to get a foodRow series that retains column names 
 # (the above statement gets first foodRow from dataframe and skips the first column which is the food name)
 def nutrition_breakdown(foodRow, type='Bar'):
   if type == 'Bar':
+    plt.figure()
     bar_graph = plt.bar(foodRow.index, foodRow.values)
     plt.xlabel('Nutrients')
     plt.ylabel('Amount (mg)')
@@ -51,10 +52,13 @@ def nutrition_breakdown(foodRow, type='Bar'):
     legend_labels = [f"{nutrient}: {value:.2f} mg" for nutrient, value in zip(foodRow.index, foodRow.values)]
     plt.legend(bar_graph, legend_labels, title='Nutrient Amounts', fontsize=5)
     plt.show()
+    return plt.gcf()
   elif type == 'Pie':
+    plt.figure()
     plt.pie(foodRow.values, labels=foodRow.index, autopct='%1.1f%%', shadow=True)
     plt.axis('equal')
     plt.show()
+    return plt.gcf()
   else:
     raise TypeError(f"Invalid Chart Type")
 
