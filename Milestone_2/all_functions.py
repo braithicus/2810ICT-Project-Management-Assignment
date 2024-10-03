@@ -43,7 +43,14 @@ def num_of_rows(num):
 # (the above statement gets first foodRow from dataframe and skips the first column which is the food name)
 def nutrition_breakdown(foodRow, type='Bar'):
   if type == 'Bar':
-    plt.bar(foodRow.index, foodRow.values)
+    bar_graph = plt.bar(foodRow.index, foodRow.values)
+    plt.xlabel('Nutrients')
+    plt.ylabel('Amount (mg)')
+    plt.xticks(rotation=45, ha='right', fontsize=7)
+    plt.tight_layout()
+    plt.title('Nutritional Breakdown')
+    legend_labels = [f"{nutrient}: {value:.2f} mg" for nutrient, value in zip(foodRow.index, foodRow.values)]
+    plt.legend(bar_graph, legend_labels, title='Nutrient Amounts', fontsize=5)
     plt.show()
   elif type == 'Pie':
     plt.pie(foodRow.values, labels=foodRow.index, autopct='%1.1f%%', shadow=True)
@@ -77,3 +84,9 @@ def nutrition_level_filter(dFrame, nutrientName, level=None):
     return dFrame[nutrientColumn > highPercent]
   else:
     raise TypeError("Invalid Level")
+  
+
+df = load_data("Food_Nutrition_Dataset.csv")
+to_mg(df)
+result = df.iloc[0, 1:]
+nutrition_breakdown(result, type='Bar')
