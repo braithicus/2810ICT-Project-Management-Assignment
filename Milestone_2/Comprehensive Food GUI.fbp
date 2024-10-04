@@ -126,7 +126,7 @@
             <object class="notebookpage" expanded="true">
               <property name="bitmap"></property>
               <property name="label">GUI</property>
-              <property name="select">0</property>
+              <property name="select">1</property>
               <object class="wxPanel" expanded="true">
                 <property name="BottomDockable">1</property>
                 <property name="LeftDockable">1</property>
@@ -506,8 +506,8 @@
                       <property name="permission">none</property>
                       <object class="sizeritem" expanded="false">
                         <property name="border">5</property>
-                        <property name="flag">wxALL</property>
-                        <property name="proportion">0</property>
+                        <property name="flag">wxALL|wxEXPAND</property>
+                        <property name="proportion">1</property>
                         <object class="wxGrid" expanded="false">
                           <property name="BottomDockable">1</property>
                           <property name="LeftDockable">1</property>
@@ -534,7 +534,7 @@
                           <property name="col_label_size"></property>
                           <property name="col_label_values"></property>
                           <property name="col_label_vert_alignment">wxALIGN_CENTER</property>
-                          <property name="cols">5</property>
+                          <property name="cols">4</property>
                           <property name="column_sizes"></property>
                           <property name="context_help"></property>
                           <property name="context_menu">1</property>
@@ -582,7 +582,7 @@
                           <property name="row_label_values"></property>
                           <property name="row_label_vert_alignment">wxALIGN_CENTER</property>
                           <property name="row_sizes"></property>
-                          <property name="rows">5</property>
+                          <property name="rows">0</property>
                           <property name="show">1</property>
                           <property name="size"></property>
                           <property name="subclass">; ; forward_declare</property>
@@ -591,6 +591,7 @@
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
+                          <event name="OnGridCellLeftClick">on_cell_click</event>
                         </object>
                       </object>
                     </object>
@@ -855,7 +856,7 @@
                               <property name="gripper">0</property>
                               <property name="hidden">0</property>
                               <property name="id">wxID_ANY</property>
-                              <property name="label">Breakdown</property>
+                              <property name="label">Update Breakdown</property>
                               <property name="margins"></property>
                               <property name="markup">0</property>
                               <property name="max_size"></property>
@@ -929,7 +930,7 @@
                               <property name="gripper">0</property>
                               <property name="hidden">0</property>
                               <property name="id">wxID_ANY</property>
-                              <property name="label">Food Wars</property>
+                              <property name="label">Fill Food Wars</property>
                               <property name="margins"></property>
                               <property name="markup">0</property>
                               <property name="max_size"></property>
@@ -1079,7 +1080,7 @@
                               <property name="col_label_size"></property>
                               <property name="col_label_values"></property>
                               <property name="col_label_vert_alignment">wxALIGN_CENTER</property>
-                              <property name="cols">5</property>
+                              <property name="cols">0</property>
                               <property name="column_sizes"></property>
                               <property name="context_help"></property>
                               <property name="context_menu">1</property>
@@ -1127,7 +1128,7 @@
                               <property name="row_label_values"></property>
                               <property name="row_label_vert_alignment">wxALIGN_CENTER</property>
                               <property name="row_sizes"></property>
-                              <property name="rows">5</property>
+                              <property name="rows">0</property>
                               <property name="show">1</property>
                               <property name="size"></property>
                               <property name="subclass">; ; forward_declare</property>
@@ -1212,7 +1213,7 @@
             <object class="notebookpage" expanded="true">
               <property name="bitmap"></property>
               <property name="label">Food Wars</property>
-              <property name="select">1</property>
+              <property name="select">0</property>
               <object class="wxPanel" expanded="true">
                 <property name="BottomDockable">1</property>
                 <property name="LeftDockable">1</property>
