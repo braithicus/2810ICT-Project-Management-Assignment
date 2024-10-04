@@ -295,7 +295,8 @@ class MyFrame1 ( wx.Frame ):
 
         # Connect Events
         self.search_button.Bind( wx.EVT_BUTTON, self.search_foods )
-        self.search_selection_grid.Bind( wx.grid.EVT_GRID_CELL_LEFT_CLICK, self.on_cell_click )
+        self.search_selection_grid.Bind( wx.grid.EVT_GRID_CELL_LEFT_CLICK, self.on_nut_select_cell_click )
+        self.food_wars_button.Bind( wx.EVT_BUTTON, self.fill_food_wars )
         self.fw_compare_button.Bind( wx.EVT_BUTTON, self.onclickcompplot )
 
     def __del__( self ):
@@ -306,7 +307,10 @@ class MyFrame1 ( wx.Frame ):
     def search_foods( self, event ):
         event.Skip()
 
-    def on_cell_click( self, event ):
+    def on_nut_select_cell_click( self, event ):
+        event.Skip()
+
+    def fill_food_wars( self, event ):
         event.Skip()
 
     def onclickcompplot( self, event ):
