@@ -8,7 +8,7 @@ matplotlib.use('WXAgg') # allows Matplotlib to render plots within wxPython.
 # to embed a Matplotlib figure into a wxPanel in a wxPython application.
 from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg
 import matplotlib.pyplot as plt
-import template_frame_ben
+import template_frame
 from template_frame import MyFrame1 as MyFrame
 
 
