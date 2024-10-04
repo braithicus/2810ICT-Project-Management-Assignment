@@ -69,7 +69,7 @@ class MyFrame1 ( wx.Frame ):
         self.search_selection_grid = wx.grid.Grid( self.gui_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
         # Grid
-        self.search_selection_grid.CreateGrid( 5, 5 )
+        self.search_selection_grid.CreateGrid( 0, 4 )
         self.search_selection_grid.EnableEditing( True )
         self.search_selection_grid.EnableGridLines( True )
         self.search_selection_grid.EnableDragGridSize( False )
@@ -90,7 +90,7 @@ class MyFrame1 ( wx.Frame ):
 
         # Cell Defaults
         self.search_selection_grid.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
-        bSizer13.Add( self.search_selection_grid, 0, wx.ALL, 5 )
+        bSizer13.Add( self.search_selection_grid, 1, wx.ALL|wx.EXPAND, 5 )
 
 
         gbSizer1.Add( bSizer13, wx.GBPosition( 0, 1 ), wx.GBSpan( 1, 1 ), wx.EXPAND, 5 )
@@ -111,7 +111,7 @@ class MyFrame1 ( wx.Frame ):
         self.export_table_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Export Table"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.export_table_button, 0, wx.ALL, 5 )
 
-        self.breakdown_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.breakdown_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Update Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.breakdown_button, 0, wx.ALL, 5 )
 
         self.food_wars_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Food Wars"), wx.DefaultPosition, wx.DefaultSize, 0 )
