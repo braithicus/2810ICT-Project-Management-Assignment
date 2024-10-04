@@ -28,22 +28,33 @@ class CurrFrame(MyFrame):
         for col, label in enumerate(col_labels):
             self.search_selection_grid.SetColLabelValue(col, label)
 
+        # Get number of rows in the dataframe
         rows = len(self.init_data)
         # Add rows to the grid based on the dataframe length
         self.search_selection_grid.AppendRows(rows)
+        columns = len(self.init_data.columns)  # Get the number of columns in the dataframe
 
+        # Set row labels using the first row of the dataframe (limited to the number of rows in the grid)
         for row in range(rows):
+            if row < len(self.init_data.columns):  # Ensure we don't exceed the number of columns
+                row_label = str(self.init_data.columns[row])  # Use the column titles as row labels
+                self.search_selection_grid.SetRowLabelValue(row, row_label)
+
             # Set checkbox in the first column
             self.search_selection_grid.SetCellRenderer(row, 0, wx.grid.GridCellBoolRenderer())  # Checkbox renderer
             self.search_selection_grid.SetCellEditor(row, 0, wx.grid.GridCellBoolEditor())  # Checkbox editor
             self.search_selection_grid.SetCellValue(row, 0, "0")  # Initially unchecked
-            # Center the checkboxes horizontally and vertically
-            self.search_selection_grid.SetCellAlignment(row, 0, wx.ALIGN_CENTER, wx.ALIGN_CENTER)
+            self.search_selection_grid.SetCellAlignment(row, 0, wx.ALIGN_CENTER, wx.ALIGN_CENTER)  # Center the checkbox
 
-            # Populate other columns with dataframe data
-            for col in range(1, self.search_selection_grid.GetNumberCols()):
-                value = str(self.init_data.iloc[row, col - 1])
-                self.search_selection_grid.SetCellValue(row, col, value)
+            # Set wxTextCtrl for columns 2 and 3 (Text inputs)
+            for col in [1, 2]:
+                self.search_selection_grid.SetCellEditor(row, col, wx.grid.GridCellTextEditor())  # Text editor
+                self.search_selection_grid.SetCellValue(row, col, "")  # Initial empty value
+
+            # Set dropdown (wx.Choice) in the 4th column
+            choice_editor = wx.grid.GridCellChoiceEditor(choices=["Low", "Medium", "High"])
+            self.search_selection_grid.SetCellEditor(row, 3, choice_editor)
+            self.search_selection_grid.SetCellValue(row, 3, "Medium")  # Default value
 
         # Auto resize columns to fit the contents
         self.search_selection_grid.AutoSizeColumns()
