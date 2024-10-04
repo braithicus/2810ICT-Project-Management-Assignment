@@ -111,7 +111,7 @@ class MyFrame1 ( wx.Frame ):
         self.export_table_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Export Table"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.export_table_button, 0, wx.ALL, 5 )
 
-        self.breakdown_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.breakdown_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Update Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.breakdown_button, 0, wx.ALL, 5 )
 
         self.food_wars_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Food Wars"), wx.DefaultPosition, wx.DefaultSize, 0 )
