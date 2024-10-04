@@ -114,7 +114,7 @@ class MyFrame1 ( wx.Frame ):
         self.breakdown_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Update Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.breakdown_button, 0, wx.ALL, 5 )
 
-        self.food_wars_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Food Wars"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.food_wars_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Fill Food Wars"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.food_wars_button, 0, wx.ALL, 5 )
 
         self.remove_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Remove Selected"), wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -128,7 +128,7 @@ class MyFrame1 ( wx.Frame ):
         self.selected_food_grid = wx.grid.Grid( self.gui_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
         # Grid
-        self.selected_food_grid.CreateGrid( 5, 5 )
+        self.selected_food_grid.CreateGrid( 0, 0 )
         self.selected_food_grid.EnableEditing( True )
         self.selected_food_grid.EnableGridLines( True )
         self.selected_food_grid.EnableDragGridSize( False )
@@ -295,6 +295,8 @@ class MyFrame1 ( wx.Frame ):
 
         # Connect Events
         self.search_button.Bind( wx.EVT_BUTTON, self.search_foods )
+        self.search_selection_grid.Bind( wx.grid.EVT_GRID_CELL_LEFT_CLICK, self.on_nut_select_cell_click )
+        self.food_wars_button.Bind( wx.EVT_BUTTON, self.fill_food_wars )
         self.fw_compare_button.Bind( wx.EVT_BUTTON, self.onclickcompplot )
 
     def __del__( self ):
@@ -303,6 +305,12 @@ class MyFrame1 ( wx.Frame ):
 
     # Virtual event handlers, override them in your derived class
     def search_foods( self, event ):
+        event.Skip()
+
+    def on_nut_select_cell_click( self, event ):
+        event.Skip()
+
+    def fill_food_wars( self, event ):
         event.Skip()
 
     def onclickcompplot( self, event ):

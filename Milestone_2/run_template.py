@@ -9,6 +9,7 @@ import numpy as np
 import all_functions as af
 import all_functions_ben as bf
 import winsound #helps me test whether the code reaches a point
+import Food_wars_test_code as fwtc
 
 # Should probably put Ben's functions into all_functions.py before they get imported.
 # I completely forget where or what nutin_input is used for.
@@ -19,6 +20,7 @@ class CurrFrame(MyFrame):
         self.init_data = af.load_data("Food_Nutrition_Dataset.csv")
         winsound.Beep(1000, 500) #testing noise
         self.pop_nut_select_grid()
+        self.Layout()
         self.Show()
 
     # Populating the Nutrition Selection Grid, should be called during frame initialization.
@@ -28,43 +30,85 @@ class CurrFrame(MyFrame):
         for col, label in enumerate(col_labels):
             self.search_selection_grid.SetColLabelValue(col, label)
 
+        # Get number of rows in the dataframe
         rows = len(self.init_data)
-        # Add rows to the grid based on the dataframe length
-        self.search_selection_grid.AppendRows(rows)
+        # Get the number of columns in the dataframe minus "food"
+        columns = len(self.init_data.columns) - 1
 
-        for row in range(rows):
+        # Add rows to the grid based on the number of columns in the dataframe
+        self.search_selection_grid.AppendRows(columns)
+
+        # Set row labels using the names of the columns from the dataframe
+        for row in range(columns):
+            # Set row label using the column name, skipping "food"
+            row_label = str(self.init_data.columns[row + 1])
+            self.search_selection_grid.SetRowLabelValue(row, row_label)
+
             # Set checkbox in the first column
             self.search_selection_grid.SetCellRenderer(row, 0, wx.grid.GridCellBoolRenderer())  # Checkbox renderer
             self.search_selection_grid.SetCellEditor(row, 0, wx.grid.GridCellBoolEditor())  # Checkbox editor
             self.search_selection_grid.SetCellValue(row, 0, "0")  # Initially unchecked
-            # Center the checkboxes horizontally and vertically
-            self.search_selection_grid.SetCellAlignment(row, 0, wx.ALIGN_CENTER, wx.ALIGN_CENTER)
+            self.search_selection_grid.SetCellAlignment(row, 0, wx.ALIGN_CENTER, wx.ALIGN_CENTER)  # Center the checkbox
 
-            # Populate other columns with dataframe data
-            for col in range(1, self.search_selection_grid.GetNumberCols()):
-                value = str(self.init_data.iloc[row, col - 1])
-                self.search_selection_grid.SetCellValue(row, col, value)
+            # Set wxTextCtrl for columns 2 and 3 (Text inputs)
+            for col in [1, 2]:
+                self.search_selection_grid.SetCellEditor(row, col, wx.grid.GridCellTextEditor())  # Text editor
+                if col == 1:
+                    # Set "Min" column (index 1) to have initial value "0"
+                    self.search_selection_grid.SetCellValue(row, col, "0")
+                else:
+                    # "Max" column will have an empty initial value
+                    self.search_selection_grid.SetCellValue(row, col, "")
+
+            # Set dropdown (wx.Choice) in the 4th column
+            choice_editor = wx.grid.GridCellChoiceEditor(choices=["Low", "Medium", "High"])
+            self.search_selection_grid.SetCellEditor(row, 3, choice_editor)
+            self.search_selection_grid.SetCellValue(row, 3, "Medium")  # Default value
 
         # Auto resize columns to fit the contents
         self.search_selection_grid.AutoSizeColumns()
+        # Set the row label size (width). Currently adjusted, change if needed.
+        self.search_selection_grid.SetRowLabelSize(150)
+
+    def on_nut_select_cell_click(self, event):
+        row = event.GetRow()
+        col = event.GetCol()
+
+        if col == 0:  # Checkbox column
+            current_value = self.search_selection_grid.GetCellValue(row, col)
+            # Toggle the checkbox value
+            new_value = "1" if current_value == "0" else "0"
+            self.search_selection_grid.SetCellValue(row, col, new_value)
+        elif col == 3: # If the clicked cell is in the "Level" column (index 3)
+            self.search_selection_grid.SetGridCursor(event.GetRow(), event.GetCol())
+            self.search_selection_grid.EnableCellEditControl()  # Immediately enable the cell editor
+        else:
+            # Allow normal behavior for other cells
+            event.Skip()
 
     # Searching will use search_function followed by nutrition_range_filter or nutrition_level_filter
     def search_foods(self, event):
-        winsound.Beep(1000, 500)
         search_term = self.search_bar.GetValue()
-        winsound.Beep(1000, 500)
         dataf, result_count = af.search_function(search_term, self.init_data)
         if search_term:
             print(f"Current DataFrame:\n {dataf}")
-        # if using range:
-        #     for item in dataf:
-        #         dataf = nutrition_range_filter(dataf, item, min_check_val, max_check_val)
+        # The following needs to occur before the search
+        # iterate through grid rows
+        #     if checkbox is ticked:
+        #         if (min cell == 0) and (max cell empty):
+        #             add necessary level information to search
+        #         else:
+        #             add necessary range information to search
 
-        # elif using level:
-        #     for item in dataf:
-        #         dataf = nutrition_level_filter(dataf, item, level)
+    # def fill_food_wars(self, event):
+    #     if len(selection_list) > 5:
+    #         "You can only select a maximum of 5 foods for Food Wars"
+    #     elif len(selection_list) < 2:
+    #         "You need to select at least 2 foods for Food Wars"
+    #     else:
+    #         iterate and fill fw_f1_in, fw_f2_in, fw_f3_in, etc with selection_list or dataframe or whatever
 
-    # def food_wars_plot(self, event):
+    # def onclickcompplot(self, event):
     #     food_wars = bf.onclickcompplot()
     #     return food_wars
     # Will use onclick event to plot using Ben's function.
