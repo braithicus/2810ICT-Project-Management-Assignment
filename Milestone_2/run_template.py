@@ -18,7 +18,35 @@ class CurrFrame(MyFrame):
         super().__init__(None)
         self.init_data = af.load_data("Food_Nutrition_Dataset.csv")
         winsound.Beep(1000, 500) #testing noise
+        self.pop_nut_select_grid()
         self.Show()
+
+    # Populating the Nutrition Selection Grid, should be called during frame initialization.
+    def pop_nut_select_grid(self):
+        # Define column labels
+        col_labels = ["Select", "Min", "Max", "Level"]
+        for col, label in enumerate(col_labels):
+            self.search_selection_grid.SetColLabelValue(col, label)
+
+        rows = len(self.init_data)
+        # Add rows to the grid based on the dataframe length
+        self.search_selection_grid.AppendRows(rows)
+
+        for row in range(rows):
+            # Set checkbox in the first column
+            self.search_selection_grid.SetCellRenderer(row, 0, wx.grid.GridCellBoolRenderer())  # Checkbox renderer
+            self.search_selection_grid.SetCellEditor(row, 0, wx.grid.GridCellBoolEditor())  # Checkbox editor
+            self.search_selection_grid.SetCellValue(row, 0, "0")  # Initially unchecked
+            # Center the checkboxes horizontally and vertically
+            self.search_selection_grid.SetCellAlignment(row, 0, wx.ALIGN_CENTER, wx.ALIGN_CENTER)
+
+            # Populate other columns with dataframe data
+            for col in range(1, self.search_selection_grid.GetNumberCols()):
+                value = str(self.init_data.iloc[row, col - 1])
+                self.search_selection_grid.SetCellValue(row, col, value)
+
+        # Auto resize columns to fit the contents
+        self.search_selection_grid.AutoSizeColumns()
 
     # Searching will use search_function followed by nutrition_range_filter or nutrition_level_filter
     def search_foods(self, event):
