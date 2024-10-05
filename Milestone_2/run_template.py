@@ -16,7 +16,7 @@ import Food_wars_test_code as fwtc
 # Should probably put Ben's functions into all_functions.py before they get imported.
 # I completely forget where or what nutin_input is used for.
 # nutin_input is the choice of nutrition in food wars
-
+df = pd.read_csv("Food_Nutrition_Dataset.csv")
 class CurrFrame(MyFrame):
     def __init__(self):
         super().__init__(None)
@@ -127,6 +127,7 @@ class CurrFrame(MyFrame):
     #         iterate and fill fw_f1_in, fw_f2_in, fw_f3_in, etc with selection_list or dataframe or whatever
 
     def onclickcompplot(self, event):
+        event.Skip()
         food_inputs = [
                 self.fw_f1_in.GetValue(),
                 self.fw_f2_in.GetValue(),
@@ -135,30 +136,7 @@ class CurrFrame(MyFrame):
                 self.fw_f5_in.GetValue()
             ]
         nutrient = self.nutin_input.GetStringSelection()
-        food_inputs = [food for food in food_inputs if food]
-        if len(food_inputs) < 2:
-            wx.MessageBox("Please enter at least two foods to compare.", "Error", wx.OK | wx.ICON_ERROR)
-            return
-        try:
-            df = pd.read_csv('Food_Nutrition_Dataset.csv')
-        except FileNotFoundError:
-            wx.MessageBox("The data file could not be found.", "Error", wx.OK | wx.ICON_ERROR)
-            return 
-        df_filtered = df[df['food'].isin(food_inputs)]
-        if nutrient not in df.columns:
-            wx.MessageBox(f"Nutrient '{nutrient}' not found in data.", "Error", wx.OK | wx.ICON_ERROR)
-
-        try:
-            plt.figure(figsize=(10, 6))
-            plt.bar(df_filtered['food'], df_filtered[nutrient], color='skyblue')
-            plt.xlabel('Food')
-            plt.ylabel(nutrient)
-            plt.title(f'Food Wars: The {nutrient} Battles')
-            plt.xticks(rotation=45)
-            plt.tight_layout()
-            plt.show()
-        except Exception as e:
-            wx.MessageBox(f"An error occurred while plotting: {str(e)}", "Error", wx.OK | wx.ICON_ERROR)
+        bf.food_wars(food_inputs, nutrient, df)
         return 
     # Will use onclick event to plot using Ben's function.
     
