@@ -36,7 +36,7 @@ def food_wars(food_inputs, nutrient, df):
     plt.figure(figsize=(10, 6))
     plt.bar(df_filtered['food'], df_filtered[nutrient], color='skyblue')
     plt.xlabel('Food')
-    plt.ylabel(nutrient)
+    plt.ylabel(f"{nutrient} (mg)")
     plt.title(f'Food Wars: The {nutrient} Battles')
     plt.xticks(rotation=45)
     plt.tight_layout()

@@ -22,6 +22,7 @@ those functions, for example:
 | `nutrition_range_filter(dFrame, nutrientName, minVal=0, maxVal=np.inf)` | `test_nutrition_range_filter_valid()` <br> `test_nutrition_range_filter_invalid()`    |
 | `nutrition_level_filter(dFrame, nutrientName, level=None)`              | `test_nutrition_level_filter_valid()` <br> `test_nutrition_level_filter_invalid()`    |
 | `nutrition_breakdown(foodRow, type='Bar'/'Pie')`                        | `test_nutrition_breakdown_valid(mock_show)` <br> `test_nutrition_breakdown_invalid()` |
+| `food_wars(food_inputs, nutrient, df)`                                  | `test_food_wars_valid(mock_show)` <br> `test_food_wars_invalid()`                     |
 
 ---
 
@@ -375,6 +376,83 @@ def test_nutrition_breakdown_invalid():
 ```
 
 **Add Pie Chart Tests**
+
+### Test Case 7:
+
+-  **Test Function/Module**
+   -  `test_food_wars_valid(mock_show)`
+   -  `test_food_wars_invalid()`
+-  **Tested Function/Module**
+   -  `food_wars(food_inputs, nutrient, df)`
+-  **Description**
+   -  Brief description yada yada yada, cant be bothered to english right now
+-  **1) Valid Input and Expected Output**
+
+| **Valid Input**                                                                  | **Expected Output**                                                                                                                  |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `food_wars(['Peanut Butter', 'Apple Pie', 'Another Random Item'], 'Poison', df)` | `pd.DataFrame({'food': ["Peanut Butter", "Apple Pie", "Another Random Item"], 'Poison': [345, 987, 531], 'Row Number': [1, 2, 3] })` |
+| `food_wars(['Peanut Butter', '', 'Apple Pie', ''], 'Poison', df)`                | `pd.DataFrame({'food': ["Peanut Butter", "Apple Pie"], 'Poison': [345, 987], 'Row Number': [1, 2] })`                                |
+
+-  **1) Code for the Test Function**
+
+```python
+@patch('matplotlib.pyplot.show')
+def test_food_wars_valid(mock_show):
+    food_inputs = ['Peanut Butter', 'Apple Pie', 'Another Random Item']
+
+    result = food_wars(food_inputs, 'Poison', df)
+    mock_show.assert_called_once()
+
+    # testing for all valid labels
+    fig = plt.gcf()
+    ax = fig.gca()
+    assert ax.get_title() == 'Food Wars: The Poison Battles'
+    assert ax.get_xlabel() == 'Food'
+    assert ax.get_ylabel() == 'Poison (mg)'
+
+    # test if result is correct
+    assert len(result) == 3
+    assert list(result['food']) == food_inputs
+
+    # testing that the amount of bars is valid
+    assert len(ax.patches) == len(food_inputs)
+
+    # testing all bar heights are valid
+    bar_heights = [patch.get_height() for patch in ax.patches]
+    assert bar_heights == [345, 987, 531]
+
+    # testing all column labels are valid
+    x_tick_labels = [label.get_text() for label in ax.get_xticklabels()]
+    assert x_tick_labels == food_inputs
+
+    plt.close(fig)
+
+    # testing with empty inputs
+    food_inputs_empty = ['Peanut Butter', '', 'Apple Pie', '']
+    emptyResult = food_wars(food_inputs_empty, 'Poison', df)
+    assert len(emptyResult) == 2
+    assert list(emptyResult['food']) == ['Peanut Butter', 'Apple Pie']
+```
+
+-  **2) Invalid Input and Expected Output**
+
+| **Invalid Input**                                                 | **Expected Output** |
+| ----------------------------------------------------------------- | ------------------- |
+| `food_wars(['Peanut Butter'], 'Poison', df)`                      | `ValueError`        |
+| `food_wars(['Peanut Butter', 'Apple Pie'], 'Does Not Exist', df)` | `ValueError`        |
+
+-  **2) Code for the Test Function**
+
+```python
+def test_food_wars_invalid():
+    # testing with less than two foods
+    with pytest.raises(ValueError):
+        food_wars(['Peanut Butter'], 'Poison', df)
+
+    # testing with invalid nutrient
+    with pytest.raises(ValueError):
+        food_wars(['Peanut Butter', 'Apple Pie'], 'Does Not Exist', df)
+```
 
 ## 3. **Testing Report Summary**
 
