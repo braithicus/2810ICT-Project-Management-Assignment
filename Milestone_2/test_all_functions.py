@@ -197,7 +197,7 @@ def test_food_wars_valid(mock_show):
     ax = fig.gca()
     assert ax.get_title() == 'Food Wars: The Poison Battles'
     assert ax.get_xlabel() == 'Food'
-    assert ax.get_ylabel() == 'Poison'
+    assert ax.get_ylabel() == 'Poison (mg)'
 
     # test if result is correct
     assert len(result) == 3
@@ -217,7 +217,8 @@ def test_food_wars_valid(mock_show):
     plt.close(fig)
 
     # testing with empty inputs
-    emptyResult = food_wars(['Peanut Butter', '', 'Apple Pie', ''], 'Poison', df)
+    food_inputs_empty = ['Peanut Butter', '', 'Apple Pie', '']
+    emptyResult = food_wars(food_inputs_empty, 'Poison', df)
     assert len(emptyResult) == 2
     assert list(emptyResult['food']) == ['Peanut Butter', 'Apple Pie']
 
