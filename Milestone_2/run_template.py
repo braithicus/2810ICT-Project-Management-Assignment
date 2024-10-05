@@ -15,6 +15,7 @@ import Food_wars_test_code as fwtc
 
 # Should probably put Ben's functions into all_functions.py before they get imported.
 # I completely forget where or what nutin_input is used for.
+# nutin_input is the choice of nutrition in food wars
 
 class CurrFrame(MyFrame):
     def __init__(self):
@@ -104,6 +105,28 @@ class CurrFrame(MyFrame):
 
 # I've written the fill_food_wars to store the values for the foods and the nutirients, this doesn not plot anything and just stores them, feel free to change it but this should work currently  
     def fill_food_wars(self, event):
+        #food_inputs = [
+                #self.fw_f1_in.GetValue(),
+                #self.fw_f2_in.GetValue(),
+                #self.fw_f3_in.GetValue(),
+                #self.fw_f4_in.GetValue(),
+                #self.fw_f5_in.GetValue()
+            #]
+        #nutrient = self.nutin_input.GetSelection()
+
+        # Filter out empty inputs and ensure at least two foods are provided
+        #selection_list = [food for food in food_inputs if food]
+        
+        #if len(selection_list) > 5:
+            "You can only select a maximum of 5 foods for Food Wars"
+        #elif len(selection_list) < 2:
+            "You need to select at least 2 foods for Food Wars"
+        #else:
+        #selection_list = bf.fill_food_wars()
+    #     else:
+    #         iterate and fill fw_f1_in, fw_f2_in, fw_f3_in, etc with selection_list or dataframe or whatever
+
+    def onclickcompplot(self, event):
         food_inputs = [
                 self.fw_f1_in.GetValue(),
                 self.fw_f2_in.GetValue(),
@@ -111,21 +134,32 @@ class CurrFrame(MyFrame):
                 self.fw_f4_in.GetValue(),
                 self.fw_f5_in.GetValue()
             ]
-        nutrient = self.nutin_input.GetSelection()
+        nutrient = self.nutin_input.GetStringSelection()
+        food_inputs = [food for food in food_inputs if food]
+        if len(food_inputs) < 2:
+            wx.MessageBox("Please enter at least two foods to compare.", "Error", wx.OK | wx.ICON_ERROR)
+            return
+        try:
+            df = pd.read_csv('Food_Nutrition_Dataset.csv')
+        except FileNotFoundError:
+            wx.MessageBox("The data file could not be found.", "Error", wx.OK | wx.ICON_ERROR)
+            return 
+        df_filtered = df[df['food'].isin(food_inputs)]
+        if nutrient not in df.columns:
+            wx.MessageBox(f"Nutrient '{nutrient}' not found in data.", "Error", wx.OK | wx.ICON_ERROR)
 
-        # Filter out empty inputs and ensure at least two foods are provided
-        selection_list = [food for food in food_inputs if food]
-        selection_list = bf.fill_food_wars()
-        if len(selection_list) > 5:
-            "You can only select a maximum of 5 foods for Food Wars"
-        elif len(selection_list) < 2:
-            "You need to select at least 2 foods for Food Wars"
-    #     else:
-    #         iterate and fill fw_f1_in, fw_f2_in, fw_f3_in, etc with selection_list or dataframe or whatever
-
-    def onclickcompplot(self, event):
-         food_wars = bf.onclickcompplot()
-         return food_wars
+        try:
+            plt.figure(figsize=(10, 6))
+            plt.bar(df_filtered['food'], df_filtered[nutrient], color='skyblue')
+            plt.xlabel('Food')
+            plt.ylabel(nutrient)
+            plt.title(f'Food Wars: The {nutrient} Battles')
+            plt.xticks(rotation=45)
+            plt.tight_layout()
+            plt.show()
+        except Exception as e:
+            wx.MessageBox(f"An error occurred while plotting: {str(e)}", "Error", wx.OK | wx.ICON_ERROR)
+        return 
     # Will use onclick event to plot using Ben's function.
     
 
