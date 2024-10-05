@@ -38,27 +38,60 @@ def num_of_rows(num):
   return f"Number Of Results: {str(num)}"
 
 
-# USE: df.iloc[0, 1:] to get a foodRow series that retains column names 
-# (the above statement gets first foodRow from dataframe and skips the first column which is the food name)
+# get a row from the dataframe
 def nutrition_breakdown(foodRow, type='Bar'):
+  food_name = foodRow['food']
+  nutrient_data = foodRow.drop(['food', 'Nutrition Density', 'Caloric Value'])
+  caloric_value = foodRow['Caloric Value']
+  nutrition_density = foodRow['Nutrition Density']
+  nutrient_data = nutrient_data[nutrient_data > 0]
+  colours = plt.cm.tab20(np.linspace(0, 1, len(nutrient_data)))
+
   if type == 'Bar':
-    plt.figure()
-    bar_graph = plt.bar(foodRow.index, foodRow.values)
-    plt.xlabel('Nutrients')
-    plt.ylabel('Amount (mg)')
+    fig, ax = plt.subplots(figsize=(12, 8))
+
+    bar_graph = ax.bar(nutrient_data.index, nutrient_data.values, color=colours)
+    ax.set_xlabel('Nutrients')
+    ax.set_ylabel('Amount (mg)')
+    ax.set_title(f'Nutritional Breakdown For {food_name}')
+    
     plt.xticks(rotation=45, ha='right', fontsize=7)
+    
+    legend_labels = [f"{nutrient}: {value:.2f} mg" for nutrient, value in zip(nutrient_data.index, nutrient_data.values)]
+    labels = legend_labels + [f"Caloric Value: {caloric_value:.2f} kcal",
+                              f"Nutrition Density: {nutrition_density:.2f}"]
+    
+    extra_patch1 = plt.Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
+    extra_patch2 = plt.Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
+    handles = list(bar_graph) + [extra_patch1, extra_patch2]
+    
+    ax.legend(handles, labels, title='Nutrient Amounts', fontsize=5, bbox_to_anchor=(1.05, 1), loc='upper left')
+    
     plt.tight_layout()
-    plt.title('Nutritional Breakdown')
-    legend_labels = [f"{nutrient}: {value:.2f} mg" for nutrient, value in zip(foodRow.index, foodRow.values)]
-    plt.legend(bar_graph, legend_labels, title='Nutrient Amounts', fontsize=5)
     plt.show()
-    return plt.gcf()
+    return fig
+
   elif type == 'Pie':
-    plt.figure()
-    plt.pie(foodRow.values, labels=foodRow.index, autopct='%1.1f%%', shadow=True)
-    plt.axis('equal')
+    fig, ax = plt.subplots(figsize=(12, 8))
+
+    ax.set_title(f'Nutritional Breakdown For {food_name}', fontsize=16, pad=20)
+
+    wedges, _ = ax.pie(nutrient_data.values, startangle=90, colors=colours, wedgeprops={'linewidth': 0.5, 'edgecolor': 'white', 'antialiased': True})
+    ax.axis('equal')
+
+    legend_labels = [f"{nutrient}: {value:.2f} mg" for nutrient, value in zip(nutrient_data.index, nutrient_data.values)]
+    labels = legend_labels + [f"Caloric Value: {caloric_value:.2f} kcal",
+                              f"Nutrition Density: {nutrition_density:.2f}"]
+    
+    extra_patch1 = plt.Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
+    extra_patch2 = plt.Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
+    handles = list(wedges) + [extra_patch1, extra_patch2]
+    
+    ax.legend(handles, labels, title='Nutrient Amounts', loc="center left", bbox_to_anchor=(1, 0, 0.5, 1), fontsize=8, title_fontsize=10)
+    
+    plt.tight_layout()
     plt.show()
-    return plt.gcf()
+    return fig
   else:
     raise TypeError(f"Invalid Chart Type")
 

@@ -9,6 +9,10 @@ from unittest.mock import patch
 # this small test dataframe is used globally throughout most tests
 df = af.load_data('sample_data.csv')
 
+# used for breakdown testing
+df_whole = af.load_data('Food_Nutrition_Dataset.csv')
+foodRow = df_whole.iloc[0]
+
 def test_load_data_valid():
   # making a small dataframe for testing
   test_data = pd.DataFrame({
@@ -151,36 +155,77 @@ def test_nutrition_level_filter_invalid():
 # mocking plt.show so it doesn't display the figure and break everything
 @patch('matplotlib.pyplot.show')
 def test_nutrition_breakdown_valid(mock_show):
-    foodRow = df.iloc[0, 1:]
     figure = af.nutrition_breakdown(foodRow, 'Bar')
     mock_show.assert_called_once()
 
+    nutrient_data = foodRow.drop(['food', 'Nutrition Density', 'Caloric Value'])
+    nutrient_data = nutrient_data[nutrient_data > 0]
+
     # testing for all valid labels
     axes = plt.gca()
-    assert axes.get_title() == 'Nutritional Breakdown'
+    assert axes.get_title() == f'Nutritional Breakdown For {foodRow["food"]}'
     assert axes.get_xlabel() == 'Nutrients'
     assert axes.get_ylabel() == 'Amount (mg)'
 
     # testing that the amount of bars is valid
-    assert len(axes.patches) == len(foodRow)
+    assert len(axes.patches) == len(nutrient_data)
 
     # testing all bar heights are valid
     bar_heights = [patch.get_height() for patch in axes.patches]
-    assert bar_heights == list(foodRow.values)
+    assert bar_heights == list(nutrient_data.values)
 
     # testing all column labels are valid
     x_tick_labels = [label.get_text() for label in axes.get_xticklabels()]
-    assert x_tick_labels == list(foodRow.index)
+    assert x_tick_labels == list(nutrient_data.index)
 
     # testing legend is valid
     legend = axes.get_legend()
     assert legend.get_title().get_text() == 'Nutrient Amounts'
 
+    caloric_value = foodRow['Caloric Value']
+    nutrition_density = foodRow['Nutrition Density']
+    legend_labels = [label.get_text() for label in legend.get_texts()]
+    expected_labels = (
+      [f"{nutrient}: {value:.2f} mg" 
+      for nutrient, value in zip(nutrient_data.index, nutrient_data.values)] 
+      + [f"Caloric Value: {caloric_value:.2f} kcal",
+        f"Nutrition Density: {nutrition_density:.2f}"]
+    )
+    
+    assert legend_labels == expected_labels
+
     plt.close(figure)
 
-def test_nutrition_breakdown_invalid():
-    foodRow = df.iloc[0, 1:]
 
+    mock_show.reset_mock()
+    figure2 = af.nutrition_breakdown(foodRow, 'Pie')
+    mock_show.assert_called_once()
+
+    # Testing for all valid labels
+    axes2 = plt.gca()
+    assert axes2.get_title() == f'Nutritional Breakdown For {foodRow["food"]}'
+
+    # Testing that the pie chart is created correctly
+    assert len(axes2.patches) == len(nutrient_data)
+
+    # Testing legend is valid
+    legend2 = axes2.get_legend()
+    assert legend2.get_title().get_text() == 'Nutrient Amounts'
+
+    legend_labels2 = [label.get_text() for label in legend2.get_texts()]
+    expected_labels2 = (
+      [f"{nutrient}: {value:.2f} mg" 
+      for nutrient, value in zip(nutrient_data.index, nutrient_data.values)] 
+      + [f"Caloric Value: {caloric_value:.2f} kcal",
+        f"Nutrition Density: {nutrition_density:.2f}"]
+    )
+    
+    assert legend_labels2 == expected_labels2
+
+    plt.close(figure2)
+
+
+def test_nutrition_breakdown_invalid():
     # testing invalid chart type throws type error
     with pytest.raises(TypeError):
         af.nutrition_breakdown(foodRow, type='Does Not Exist')
@@ -230,3 +275,43 @@ def test_food_wars_invalid():
     # testing with invalid nutrient
     with pytest.raises(ValueError):
         food_wars(['Peanut Butter', 'Apple Pie'], 'Does Not Exist', df)
+
+
+def test_to_mg():
+  # specific nutrients start in grams
+  data = pd.DataFrame({
+    'food': ['Berries', 'Banana', 'Mud'],
+    'Poison (mg)': [0, 5, 10], 
+    'Row Number': [1, 2, 3], 
+    'Fat': [23, 45, 67],
+    'Saturated Fats': [12, 34, 56],
+    'Monounsaturated Fats': [45, 12, 23],
+    'Polyunsaturated Fats': [67, 23, 45],
+    'Carbohydrates': [89, 67, 12],
+    'Sugars': [34, 45, 89],
+    'Protein': [56, 78, 90],
+    'Dietary Fiber': [23, 34, 45],
+    'Water': [78, 12, 34]
+})
+  
+  # convert specific foods to milligrams
+  data2 = pd.DataFrame({
+    'food': ['Berries', 'Banana', 'Mud'],
+    'Poison (mg)': [0, 5, 10],
+    'Row Number': [1, 2, 3],  
+    'Fat': [23000, 45000, 67000], 
+    'Saturated Fats': [12000, 34000, 56000], 
+    'Monounsaturated Fats': [45000, 12000, 23000], 
+    'Polyunsaturated Fats': [67000, 23000, 45000],  
+    'Carbohydrates': [89000, 67000, 12000],  
+    'Sugars': [34000, 45000, 89000],  
+    'Protein': [56000, 78000, 90000], 
+    'Dietary Fiber': [23000, 34000, 45000], 
+    'Water': [78000, 12000, 34000] 
+})
+
+  # call function on original gram data
+  af.to_mg(data)
+
+  # they are now equal
+  pd.testing.assert_frame_equal(data, data2)
