@@ -1,5 +1,4 @@
 import all_functions as af
-from all_functions_ben import food_wars
 import pandas as pd
 import pytest
 import matplotlib.pyplot as plt
@@ -234,7 +233,7 @@ def test_nutrition_breakdown_invalid():
 def test_food_wars_valid(mock_show):
     food_inputs = ['Peanut Butter', 'Apple Pie', 'Another Random Item']
     
-    result = food_wars(food_inputs, 'Poison', df)
+    result = af.food_wars(food_inputs, 'Poison', df)
     mock_show.assert_called_once()
 
     # testing for all valid labels
@@ -263,18 +262,18 @@ def test_food_wars_valid(mock_show):
 
     # testing with empty inputs
     food_inputs_empty = ['Peanut Butter', '', 'Apple Pie', '']
-    emptyResult = food_wars(food_inputs_empty, 'Poison', df)
+    emptyResult = af.food_wars(food_inputs_empty, 'Poison', df)
     assert len(emptyResult) == 2
     assert list(emptyResult['food']) == ['Peanut Butter', 'Apple Pie']
 
 def test_food_wars_invalid():
     # testing with less than two foods
     with pytest.raises(ValueError):
-        food_wars(['Peanut Butter'], 'Poison', df)
+        af.food_wars(['Peanut Butter'], 'Poison', df)
 
     # testing with invalid nutrient
     with pytest.raises(ValueError):
-        food_wars(['Peanut Butter', 'Apple Pie'], 'Does Not Exist', df)
+        af.food_wars(['Peanut Butter', 'Apple Pie'], 'Does Not Exist', df)
 
 
 def test_to_mg():

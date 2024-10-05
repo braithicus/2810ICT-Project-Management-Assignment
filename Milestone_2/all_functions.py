@@ -119,3 +119,27 @@ def nutrition_level_filter(dFrame, nutrientName, level=None):
     return dFrame[nutrientColumn > highPercent]
   else:
     raise TypeError("Invalid Level")
+  
+
+def food_wars(food_inputs, nutrient, df):
+    # Filter out empty inputs and ensure at least two foods are provided
+    food_inputs = [food for food in food_inputs if food]
+    if len(food_inputs) < 2:
+        raise ValueError("Please enter at least two foods to compare.")
+    
+    # Filter data for selected foods and nutrient
+    df_filtered = df[df['food'].isin(food_inputs)]
+    if nutrient not in df.columns:
+        raise ValueError(f"Nutrient '{nutrient}' not found in data.")
+
+    # Plotting the data
+    plt.figure(figsize=(10, 6))
+    plt.bar(df_filtered['food'], df_filtered[nutrient], color='skyblue')
+    plt.xlabel('Food')
+    plt.ylabel(f"{nutrient} (mg)")
+    plt.title(f'Food Wars: The {nutrient} Battles')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+
+    return df_filtered
