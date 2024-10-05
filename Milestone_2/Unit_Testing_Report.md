@@ -36,7 +36,9 @@ those functions, for example:
 -  **Tested Function/Module**
    -  `load_data_(filepath)`
 -  **Description**
-   -  This function provides the dataframe that allows us to operate on the data. It takes a filepath to a csv and returns a pandas dataframe that contains all the data in the csv. If the filepath is invalid, it prints an error and returns a 1. This allows us to know that the load data function failed.
+
+   -  This function provides the dataframe that allows us to operate on the data. It takes a filepath to a csv and returns a pandas dataframe that contains all the data in the csv. If the filepath is invalid, it raises a FileNotFoundError.
+
 -  **1) Valid Input and Expected Output**
 
 | **Valid Input**                | **Expected Output**                                                                                                                                        |
@@ -84,7 +86,9 @@ def test_load_data_invalid():
 -  **Tested Function/Module**
    -  `search_function(keyword, dFrame)`
 -  **Description**
-   -  A brief description of the tested function's usage, including its purpose, input, and output.
+
+   -  This function takes a string 'keyword' to search for that food within the food column of the second input to the function: the dataframe, and it returns a tuple that contains a dataframe with the matching rows, and the amount of results found. The search result is case insensitive. An empty string for keyword returns the entire dataframe, and if there is no results for keyword it returns an empty dataframe.
+
 -  **1) Valid Input and Expected Output**
 
 | **Valid Input**                 | **Expected Output**                                                                                                                                            |
@@ -145,7 +149,9 @@ def test_search_function_invalid():
 -  **Tested Function/Module**
    -  `num_of_rows(num)`
 -  **Description**
-   -  A brief description of the tested function's usage, including its purpose, input, and output.
+
+   -  This function takes a number and returns a string that displays the number in a nicer format. It is used when displaying the number of results returned from a feature in the gui.
+
 -  **1) Valid Input and Expected Output**
 
 | **Valid Input**   | **Expected Output**       |
@@ -171,7 +177,9 @@ def test_num_of_rows():
 -  **Tested Function/Module**
    -  `nutrition_range_filter(dFrame, nutrientName, minVal=0, maxVal=np.inf)`
 -  **Description**
-   -  A brief description of the tested function's usage, including its purpose, input, and output.
+
+   -  This function takes a dataframe and nutrient string which is a column in the dataframe, and optional float min and max values. If the min value isn't given, it defaults to 0 and if the max value isn't given, it defaults to positive infinity. This function returns a filtered dataframe that contains only the foods (the rows) that fall between the min and max values for that nutrient. If the column name does not exist, the function raises a KeyError.
+
 -  **1) Valid Input and Expected Output**
 
 | **Valid Input**                                           | **Expected Output**                                                                                                                                        |
@@ -240,7 +248,9 @@ def test_nutrition_range_filter_invalid():
 -  **Tested Function/Module**
    -  `nutrition_level_filter(dFrame, nutrientName, level=None)`
 -  **Description**
-   -  A brief description of the tested function's usage, including its purpose, input, and output.
+
+   -  This function takes a dataframe and a nutrient string which is a column in the dataframe, and a level for that nutrient (Low: Less than 33% of the highest value, Mid: Mid: Between 33% and 66% of the highest value, or High: Greater than 66% of the highest value). The function returns a filtered dataframe that contains only the foods (the rows) that fall into the level for that nutrient. If the column name does not exist, the function raises a KeyError. If no level is given, the function raises a TypeError. If an invalid level is given that is not Low, Mid, or High, the function raises a TypeError.
+
 -  **1) Valid Input and Expected Output**
 
 | **Valid Input**                                | **Expected Output**                                                                                                          |
@@ -314,7 +324,9 @@ def test_nutrition_level_filter_invalid():
 -  **Tested Function/Module**
    -  `nutrition_breakdown(foodRow, type='Bar'/'Pie')`
 -  **Description**
-   -  Brief description yada yada yada, cant be bothered to english right now
+
+   -  This function takes a series from the main dataframe which is a single row of food, and has the option between inputting Bar or Pie which chooses the chart type to be generated. The function uses matplotlib.pyplot to visualize the entire nutritional composition of the food row by generating the chosen chart type. The chart type by default is Bar, but if the chart type entered is invalid it raises a TypeError. A valid call of the function returns the figure of the chart being generated. If the type is Bar, the figure generated is a bar chart, where each bar represents a different nutrient. The chart title is 'Nutritional Breakdown', the x-axis tile is 'Nutrients' with the labels being the names of the nutrients, and the y-axis title is 'Amount (mg) which shows the integers of the amount in milligrams. Each bar's height represents the amount of the specific nutrient. A legend is also shown, titled 'Nutrient Amounts' that contains the data for every nutrient in text format.
+
 -  **1) Valid Input and Expected Output**
 
 | **Valid Input**                                   | **Expected Output** |
@@ -385,7 +397,9 @@ def test_nutrition_breakdown_invalid():
 -  **Tested Function/Module**
    -  `food_wars(food_inputs, nutrient, df)`
 -  **Description**
-   -  Brief description yada yada yada, cant be bothered to english right now
+
+   -  This function takes a list of string food names to compare, ignoring any empty strings, a string nutrient name, and the dataframe to be filtered. The function gets the specified foods (rows) from the dataframe and returns them while also showing and generating a bar chart using matplotlib.pyplot. The chart compares their differing values in the nutrient column. A bar is created for each food input, and the bar heights correspond to the nutrient levels.The chart title is "Food Wars: The [nutrient] Battles". The the x-axis title is "Food", with the labels being the names of the specific food, and the y-axis title is "[nutrient] (mg)", which shows the integers of the nutrient in mg. The chart requires at least two foods in the list to work and generates a ValueError if that's not the case. If the nutrient name is not found in the dataframe it also raises a ValueError.
+
 -  **1) Valid Input and Expected Output**
 
 | **Valid Input**                                                                  | **Expected Output**                                                                                                                  |
