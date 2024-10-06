@@ -1,18 +1,10 @@
 # Unit Testing Report
 
-Please provide your GitHub repository link.
-
 ### GitHub Repository URL: https://github.com/braithicus/2810ICT-Project-Management-Assignment
 
 ---
 
-The testing report should focus solely on <span style="color:red"> testing all the self-defined functions related to
-the five required features.</span> There is no need to test the GUI components. Therefore, it is essential to decouple your code and separate the logic from the GUI-related code.
-
 ## 1. **Test Summary**
-
-list all tested functions related to the five required features and the corresponding test functions designed to test
-those functions, for example:
 
 | **Tested Functions**                                                    | **Test Functions**                                                                    |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -23,6 +15,7 @@ those functions, for example:
 | `nutrition_level_filter(dFrame, nutrientName, level=None)`              | `test_nutrition_level_filter_valid()` <br> `test_nutrition_level_filter_invalid()`    |
 | `nutrition_breakdown(foodRow, type='Bar'/'Pie')`                        | `test_nutrition_breakdown_valid(mock_show)` <br> `test_nutrition_breakdown_invalid()` |
 | `food_wars(food_inputs, nutrient, df)`                                  | `test_food_wars_valid(mock_show)` <br> `test_food_wars_invalid()`                     |
+| `to_mg()`                                                               | `test_to_mg()`                                                                        |
 
 ---
 
@@ -325,50 +318,94 @@ def test_nutrition_level_filter_invalid():
    -  `nutrition_breakdown(foodRow, type='Bar'/'Pie')`
 -  **Description**
 
-   -  This function takes a series from the main dataframe which is a single row of food, and has the option between inputting Bar or Pie which chooses the chart type to be generated. The function uses matplotlib.pyplot to visualize the entire nutritional composition of the food row by generating the chosen chart type. The chart type by default is Bar, but if the chart type entered is invalid it raises a TypeError. A valid call of the function returns the figure of the chart being generated. If the type is Bar, the figure generated is a bar chart, where each bar represents a different nutrient. The chart title is 'Nutritional Breakdown', the x-axis tile is 'Nutrients' with the labels being the names of the nutrients, and the y-axis title is 'Amount (mg) which shows the integers of the amount in milligrams. Each bar's height represents the amount of the specific nutrient. A legend is also shown, titled 'Nutrient Amounts' that contains the data for every nutrient in text format.
+   -  This function takes a series from the main dataframe which is a single row of food, and has the option between inputting Bar or Pie which chooses the chart type to be generated. The function uses matplotlib.pyplot to visualize the entire nutritional composition of the food row by generating the chosen chart type. The chart type by default is Bar, but if the chart type entered is invalid it raises a TypeError. A valid call of the function returns the figure of the chart being generated. If the type is Bar, the figure generated is a bar chart, where each bar represents a different nutrient. The chart title is 'Nutritional Breakdown for {chosen food}', the x-axis title is 'Nutrients' with the labels being the names of the nutrients, and the y-axis title is 'Amount (mg) which shows the integers of the amount in milligrams. Each bar's height represents the amount of the specific nutrient. A legend is also shown, titled 'Nutrient Amounts' that contains the data for every nutrient in text format. Nutrients that have 0 values are excluded from both the pie and bar chart. If the type chosen is Pie, then a pie chart is displayed with the same title as the bar chart. This contains wedges of all the different nutrients that make up the food. There are no labels or percentages on the wedges, but a colour coded legend with all the data to analyse the pie chart.
 
 -  **1) Valid Input and Expected Output**
 
-| **Valid Input**                                   | **Expected Output** |
-| ------------------------------------------------- | ------------------- |
-| `nutrition_breakdown(df.iloc[0, 1:], type='Bar')` | `plt.gcf()`         |
-| `nutrition_breakdown(df.iloc[0, 1:], type='Pie')` | `plt.gcf()`         |
+| **Valid Input**                               | **Expected Output** |
+| --------------------------------------------- | ------------------- |
+| `nutrition_breakdown(df.iloc[0], type='Bar')` | `Figure Object`     |
+| `nutrition_breakdown(df.iloc[0], type='Pie')` | `Figure Object`     |
 
 -  **1) Code for the Test Function**
 
 ```python
+# used for breakdown testing
+df_whole = af.load_data('Food_Nutrition_Dataset.csv')
+foodRow = df_whole.iloc[0]
+
 # mocking plt.show so it doesn't display the figure and break everything
 @patch('matplotlib.pyplot.show')
 def test_nutrition_breakdown_valid(mock_show):
-    foodRow = df.iloc[0, 1:]
     figure = af.nutrition_breakdown(foodRow, 'Bar')
     mock_show.assert_called_once()
 
+    nutrient_data = foodRow.drop(['food', 'Nutrition Density', 'Caloric Value'])
+    nutrient_data = nutrient_data[nutrient_data > 0]
+
     # testing for all valid labels
     axes = plt.gca()
-    assert axes.get_title() == 'Nutritional Breakdown'
+    assert axes.get_title() == f'Nutritional Breakdown For {foodRow["food"]}'
     assert axes.get_xlabel() == 'Nutrients'
     assert axes.get_ylabel() == 'Amount (mg)'
 
     # testing that the amount of bars is valid
-    assert len(axes.patches) == len(foodRow)
+    assert len(axes.patches) == len(nutrient_data)
 
     # testing all bar heights are valid
     bar_heights = [patch.get_height() for patch in axes.patches]
-    assert bar_heights == list(foodRow.values)
+    assert bar_heights == list(nutrient_data.values)
 
     # testing all column labels are valid
     x_tick_labels = [label.get_text() for label in axes.get_xticklabels()]
-    assert x_tick_labels == list(foodRow.index)
+    assert x_tick_labels == list(nutrient_data.index)
 
     # testing legend is valid
     legend = axes.get_legend()
     assert legend.get_title().get_text() == 'Nutrient Amounts'
 
-    plt.close(figure)
-```
+    caloric_value = foodRow['Caloric Value']
+    nutrition_density = foodRow['Nutrition Density']
+    legend_labels = [label.get_text() for label in legend.get_texts()]
+    expected_labels = (
+      [f"{nutrient}: {value:.2f} mg"
+      for nutrient, value in zip(nutrient_data.index, nutrient_data.values)]
+      + [f"Caloric Value: {caloric_value:.2f} kcal",
+        f"Nutrition Density: {nutrition_density:.2f}"]
+    )
 
-**Add Pie chart tests**
+    assert legend_labels == expected_labels
+
+    plt.close(figure)
+
+
+    mock_show.reset_mock()
+    figure2 = af.nutrition_breakdown(foodRow, 'Pie')
+    mock_show.assert_called_once()
+
+    # Testing for all valid labels
+    axes2 = plt.gca()
+    assert axes2.get_title() == f'Nutritional Breakdown For {foodRow["food"]}'
+
+    # Testing that the pie chart is created correctly
+    assert len(axes2.patches) == len(nutrient_data)
+
+    # Testing legend is valid
+    legend2 = axes2.get_legend()
+    assert legend2.get_title().get_text() == 'Nutrient Amounts'
+
+    legend_labels2 = [label.get_text() for label in legend2.get_texts()]
+    expected_labels2 = (
+      [f"{nutrient}: {value:.2f} mg"
+      for nutrient, value in zip(nutrient_data.index, nutrient_data.values)]
+      + [f"Caloric Value: {caloric_value:.2f} kcal",
+        f"Nutrition Density: {nutrition_density:.2f}"]
+    )
+
+    assert legend_labels2 == expected_labels2
+
+    plt.close(figure2)
+```
 
 -  **2) Invalid Input and Expected Output**
 
@@ -386,8 +423,6 @@ def test_nutrition_breakdown_invalid():
     with pytest.raises(TypeError):
         af.nutrition_breakdown(foodRow, type='Does Not Exist')
 ```
-
-**Add Pie Chart Tests**
 
 ### Test Case 7:
 
@@ -468,17 +503,59 @@ def test_food_wars_invalid():
         food_wars(['Peanut Butter', 'Apple Pie'], 'Does Not Exist', df)
 ```
 
-## 3. **Testing Report Summary**
+### Test Case 8:
 
-Include a screenshot of unit_test.html showing the results of all the above tests.
+-  **Test Function/Module**
+   -  `test_to_mg()`
+-  **Tested Function/Module**
+   -  `to_mg()`
+-  **Description**
 
-You can use the following command to run the unit tests and generate the unit_test.html report.
+   -  This function takes no arguments. It identifies all the nutrients in the dataframe that are in grams, it then multiplies all the values in those columns by 1000, converting them to milligrams. This modifies the original dataframe so nothing is returned. After the function is called, all nutrient amounts in the dataframe are in milligrams.
 
-```commandline
-pytest test_all_functions.py --html=unit_test.html --self-contained-html
+-  **1) Code for the Test Function**
+
+```python
+def test_to_mg():
+  # specific nutrients start in grams
+  data = pd.DataFrame({
+    'food': ['Berries', 'Banana', 'Mud'],
+    'Poison (mg)': [0, 5, 10],
+    'Row Number': [1, 2, 3],
+    'Fat': [23, 45, 67],
+    'Saturated Fats': [12, 34, 56],
+    'Monounsaturated Fats': [45, 12, 23],
+    'Polyunsaturated Fats': [67, 23, 45],
+    'Carbohydrates': [89, 67, 12],
+    'Sugars': [34, 45, 89],
+    'Protein': [56, 78, 90],
+    'Dietary Fiber': [23, 34, 45],
+    'Water': [78, 12, 34]
+})
+
+  # convert specific foods to milligrams
+  data2 = pd.DataFrame({
+    'food': ['Berries', 'Banana', 'Mud'],
+    'Poison (mg)': [0, 5, 10],
+    'Row Number': [1, 2, 3],
+    'Fat': [23000, 45000, 67000],
+    'Saturated Fats': [12000, 34000, 56000],
+    'Monounsaturated Fats': [45000, 12000, 23000],
+    'Polyunsaturated Fats': [67000, 23000, 45000],
+    'Carbohydrates': [89000, 67000, 12000],
+    'Sugars': [34000, 45000, 89000],
+    'Protein': [56000, 78000, 90000],
+    'Dietary Fiber': [23000, 34000, 45000],
+    'Water': [78000, 12000, 34000]
+})
+
+  # call function on original gram data
+  af.to_mg(data)
+
+  # they are now equal
+  pd.testing.assert_frame_equal(data, data2)
 ```
 
-Note: test_all_functions.py should contain all the test functions designed to test the self-defined functions related
-to the five required features.
+## 3. **Testing Report Summary**
 
 ![unit_test_summary](./Unit_test.png)
