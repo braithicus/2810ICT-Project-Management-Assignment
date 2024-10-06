@@ -30,7 +30,7 @@ class CurrFrame(MyFrame):
         for col, label in enumerate(col_labels):
             self.search_selection_grid.SetColLabelValue(col, label)
 
-        # Get number of rows in the dataframe
+        # Get number of rows in the dataframe.
         rows = len(self.init_data)
         # Get the number of columns in the dataframe minus "food"
         columns = len(self.init_data.columns) - 1
