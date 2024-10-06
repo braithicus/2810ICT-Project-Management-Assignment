@@ -1,4 +1,158 @@
-* 4e22b55 2024-09-08 by [Ben] | PDF (HEAD -> main, origin/main, origin/HEAD)
+*   a9f86dd 2024-10-06 by [braithicus] | Merge remote-tracking branch 'origin/main' (HEAD -> main, origin/main, origin/HEAD)
+|\  
+| *   92c1a05 2024-10-06 by [s5265839-Griffith] | Merge pull request #19 from braithicus/Ben's_branch
+| |\  
+| | *   ae2bbf6 2024-10-06 by [s5265839-Griffith] | Merge pull request #18 from braithicus/main (origin/Ben's_branch)
+| | |\  
+| | |/  
+| |/|   
+| | *   ac0710c 2024-10-06 by [Ben] | Merge branch 'Ben's_branch' of https://github.com/braithicus/2810ICT-Project-Management-Assignment into Ben's_branch (Ben's_branch)
+| | |\  
+| | | *   3338ce2 2024-10-06 by [s5265839-Griffith] | Merge pull request #17 from braithicus/main
+| | | |\  
+| | * | | 7d57fb9 2024-10-06 by [Ben] | almost finished summary
+| | |/ /  
+| | * | ab72db2 2024-10-06 by [Ben] | Started Executive_Summary done features 1 and 2 with screenshots that work
+| | * |   f588c9a 2024-10-06 by [s5265839-Griffith] | Merge pull request #16 from braithicus/main
+| | |\ \  
+| | * \ \   a8bf130 2024-10-06 by [s5265839-Griffith] | Merge pull request #15 from braithicus/main
+| | |\ \ \  
+| | * \ \ \   fe26000 2024-10-06 by [s5265839-Griffith] | Merge pull request #14 from braithicus/main
+| | |\ \ \ \  
+* | | | | | | 8995521 2024-10-06 by [braithicus] | Braith's final attempt
+|/ / / / / /  
+* | | | | |   5617644 2024-10-06 by [braithicus] | Merge remote-tracking branch 'origin/main'
+|\ \ \ \ \ \  
+| | |_|_|_|/  
+| |/| | | |   
+| * | | | | 8ca2b7b 2024-10-06 by [William-JosephSimons] | little error in the test doc fixed
+* | | | | | 29a8001 2024-10-06 by [braithicus] | please fix
+* | | | | | aaf8bae 2024-10-06 by [braithicus] | breakdown buttons half-working
+|/ / / / /  
+* | | | / efbbb96 2024-10-06 by [braithicus] | fixed columns
+| |_|_|/  
+|/| | |   
+* | | | 90023ba 2024-10-06 by [braithicus] | nutrition range and level properly implemented with search bar and results
+* | | | 54091a4 2024-10-06 by [braithicus] | selected_food_grid column labels fixed, needs button event handling
+* | | | d5b247a 2024-10-06 by [braithicus] | selected_food_grid nearly finished, just needs column labels and event handling
+| |_|/  
+|/| |   
+* | | 202881a 2024-10-06 by [braithicus] | Before side-scroll fix
+* | | 7d8c234 2024-10-06 by [braithicus] | Search results now working in GUI as a wxGrid. Still need to make the "Add" work for adding data to the selected_food_grid.
+* | |   72e3c8e 2024-10-06 by [braithicus] | Merge remote-tracking branch 'origin/main'
+|\ \ \  
+| | |/  
+| |/|   
+| * | 6edeab2 2024-10-06 by [William-JosephSimons] | All testing docs complete
+| * | 2dd021c 2024-10-06 by [William-JosephSimons] | project plan marked red. (UPDATE CONTRIBUTIONS)
+| * | 164f7c2 2024-10-05 by [William-JosephSimons] | tried to start red marking text but im too tired
+| * | fadf800 2024-10-05 by [William-JosephSimons] | Gantt chart completely finished
+| * | 4b519ff 2024-10-05 by [William-JosephSimons] | added screenshots to testing docs
+| * | 977a3a2 2024-10-05 by [William-JosephSimons] | The unit test report is done
+| * | 268d874 2024-10-05 by [William-JosephSimons] | Finished testing everything Hooray!
+| * | 47e5186 2024-10-05 by [s5265839-Griffith] | Merge pull request #13 from braithicus/Ben's_branch
+| |\| 
+| | *   ac3fb94 2024-10-05 by [Ben] | Merge branch 'Ben's_branch' of https://github.com/braithicus/2810ICT-Project-Management-Assignment into Ben's_branch
+| | |\  
+| | * | 42117d0 2024-10-05 by [Ben] | Cleaned up the food wars code to make it call from all_functions_ben.py
+| * | |   c41021f 2024-10-05 by [s5265839-Griffith] | Merge pull request #12 from braithicus/Ben's_branch
+| |\ \ \  
+| | | |/  
+| | |/|   
+| | * |   4ba9571 2024-10-05 by [s5265839-Griffith] | Merge pull request #11 from braithicus/main
+| | |\ \  
+| | |/ /  
+| |/| /   
+| | |/    
+| * | d29db33 2024-10-05 by [William-JosephSimons] | finished testing descriptions
+| | * 6f1172b 2024-10-05 by [Ben] | Working Food wars and updated template frame to work better
+| | *   a5d022f 2024-10-05 by [s5265839-Griffith] | Merge pull request #10 from braithicus/main
+| | |\  
+| | |/  
+| |/|   
+| * | 11bf872 2024-10-05 by [William-JosephSimons] | put food wars into testing doc
+| * | 27bb4e1 2024-10-05 by [William-JosephSimons] | y label now says (mg)
+| * | 036e7e8 2024-10-05 by [William-JosephSimons] | testing for food wars complete
+| | * 7a5907b 2024-10-04 by [Ben] | Updated food wars function to store values and Selection Will finish later
+| | *   5e83977 2024-10-04 by [s5265839-Griffith] | Merge pull request #9 from braithicus/main
+| | |\  
+| | |/  
+| |/|   
+* / | 147c1e2 2024-10-06 by [braithicus] | trying to pull, pyc files stopping me
+|/ /  
+* | 995396d 2024-10-04 by [braithicus] | Changed some on click events
+* | 694961d 2024-10-04 by [braithicus] | Finished pop_nut_select_grid in run_template.py, all labels and default values are correct. May needs some functional changes to properly work with search engine.
+* | f57ba98 2024-10-04 by [braithicus] | Mostly correct nut select grid in run_template.py, except that the row labels shouldn't have "food" in it and the number of rows shouldn't be over 2000.
+* | a2bd2e2 2024-10-04 by [s5265839-Griffith] | Merge pull request #8 from braithicus/Ben's_branch
+|\| 
+| *   e495a9f 2024-10-04 by [s5265839-Griffith] | Merge pull request #7 from braithicus/main
+| |\  
+| |/  
+|/|   
+* | c232b3b 2024-10-04 by [braithicus] | Started populating the nut select grid in run_template.py, still need to replace data with actual widget input (TextCtrl & a dropdown) and populate nutrition label column.
+* | cd23bcf 2024-10-04 by [braithicus] | Testing if search_foods function collects correct data in run_template.py by using some windows noises and printing to console.
+| * 94267cf 2024-10-04 by [Ben] | Test code for food wars
+| *   bf7fba0 2024-10-04 by [s5265839-Griffith] | Merge pull request #6 from braithicus/main
+| |\  
+| |/  
+|/|   
+* |   8df0dce 2024-10-03 by [braithicus] | Merge remote-tracking branch 'origin/main'
+|\ \  
+| * | a04947f 2024-10-03 by [William-JosephSimons] | updated test report doc still no descriptions
+| * | 8780d2f 2024-10-03 by [William-JosephSimons] | tested chart in breakdown feature
+* | | 454d2af 2024-10-03 by [braithicus] | Added run_template.py prototyping jumble for food search and food wars plotting.
+|/ /  
+* | 7c5d4d5 2024-10-03 by [William-JosephSimons] | tiny fix ups
+* | 148d615 2024-10-03 by [William-JosephSimons] | made chart look pretty
+* | ef951cd 2024-10-03 by [braithicus] | Bare minimum run_template.py so that the GUI can be opened.
+* | df74e19 2024-10-03 by [braithicus] | Comprehensive Food GUI.fbp updated, template_frame.py changed to match that fbp file, run_template.py created.
+* | 960a7e3 2024-10-03 by [braithicus] | Comprehensive Food GUI.fbp changed to Braith's design
+* | cf70b44 2024-10-03 by [s5265839-Griffith] | Merge pull request #5 from braithicus/Ben's_branch
+|\| 
+| * bec002e 2024-10-03 by [Ben] | Level Filter done
+| * dc95c93 2024-10-03 by [Ben] | Finish my parts for now Why did i make it harder for absolutly no reason Why do I hate myself that much lol
+| * 8f67655 2024-10-03 by [Ben] | Fixed Error in the layout, still works Its just sexier now
+| * 2423c18 2024-10-03 by [Ben] | Added new files to test my stuff to not break everything else Tested only graph in test_ben_functions and it was successful
+| *   7892aef 2024-10-03 by [s5265839-Griffith] | Merge pull request #2 from braithicus/main defineitly not a merging a previous pull again
+| |\  
+| |/  
+|/|   
+* | 45f15c2 2024-10-02 by [William-JosephSimons] | updated gantt chart
+* | d12eea5 2024-10-02 by [William-JosephSimons] | done my functions
+|/  
+*   f9c8664 2024-09-28 by [William-JosephSimons] | Merge branch 'testing'
+|\  
+| * b52cd32 2024-09-28 by [William-JosephSimons] | Started Unit_Testing_Report
+| * 5560282 2024-09-28 by [William-JosephSimons] | better error handling
+* | 324fa65 2024-09-28 by [William-JosephSimons] | updated my contribution
+|/  
+* 4db6e6a 2024-09-28 by [William-JosephSimons] | added testing for level filter
+* 6e33106 2024-09-28 by [William-JosephSimons] | added some more error handling
+* c330394 2024-09-28 by [William-JosephSimons] | made the sample data more legit
+* 41b6a8f 2024-09-28 by [William-JosephSimons] | added more comments
+* 2a7202a 2024-09-28 by [William-JosephSimons] | fixing up testing
+* e80b3f7 2024-09-28 by [William-JosephSimons] | added error handling to level feature
+* fa13275 2024-09-27 by [William-JosephSimons] | began testing, sample_data for easy testing
+* b8df6b9 2024-09-27 by [William-JosephSimons] | fixed some errors and added error handling
+* 187421f 2024-09-24 by [William-JosephSimons] | Started GUI layout
+* 702a61f 2024-09-24 by [William-JosephSimons] | added range and filter feature as well as comments
+* 89566f5 2024-09-24 by [William-JosephSimons] | Added specific testing to gantt chart
+* 9359051 2024-09-20 by [William-JosephSimons] | updated gantt chart
+* b0c53fe 2024-09-20 by [William-JosephSimons] | added  g to mg conversion function
+* 8055637 2024-09-20 by [William-JosephSimons] | extended chart added more dates
+* 0f840dc 2024-09-20 by [William-JosephSimons] | filling out actual start dates as I go
+* 12a2084 2024-09-20 by [William-JosephSimons] | load file, search, show num rows
+* 62d4e7c 2024-09-20 by [William-JosephSimons] | Adding the dataset
+*   1137d48 2024-09-17 by [s5265839-Griffith] | Merge pull request #1 from braithicus/Ben's_branch
+|\  
+| * 79d2fb7 2024-09-17 by [Ben] | Braith, you pushed a blank project plan pdf just got an older version
+|/  
+*   b60aa35 2024-09-11 by [Ben] | Merge branch 'main' of https://github.com/braithicus/2810ICT-Project-Management-Assignment
+|\  
+| * 119f66c 2024-09-08 by [braithicus] | pdf fixes and final git log
+* | bc32455 2024-09-11 by [Ben] | Milestone 2 files and folder Let the fun begin *Hype music starts playing*
+|/  
+* 4e22b55 2024-09-08 by [Ben] | PDF
 * 071c68d 2024-09-08 by [Ben] | FFS
 *   e675e2e 2024-09-08 by [Ben] | Merge branch 'main' of https://github.com/braithicus/2810ICT-Project-Management-Assignment
 |\  

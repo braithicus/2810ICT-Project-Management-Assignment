@@ -19,9 +19,9 @@ Please Describe what you have accomplished in this group project.
 -  s5398289, William-Joseph Simons
    -  Project Plan Document, System Vision, Structural Design, <span style="color:red;">Implement Food Search Feature, Implement Nutrition Breakdown Feature, Implement Nutrition Range Filter Feature, Implement Nutrition Level Filter Feature, Unit Testing and Report, Coverage Testing and Report </span>
 -  s5265839, Ben Lange
-   -  Additional feature creator, Software Design Document, <span style="color:red;">Food Wars Feature & GUI, Executive Summary</span>
+   -  Additional feature creator, Software Design Document, <span style="color:red;">Food Wars Feature, Project Plan updates, Software Design Document updates & GUI, Executive Summary</span>
 -  s5264208, Braith Lee
-   -  Stakeholder Classifications and Additions, Requirements Section, Wireframes, General Fixes, <span style="color:red;">GUI: majority of template_frame and run_template</span>
+   -  Stakeholder Classifications and Additions, Requirements Section, Wireframes, General Fixes, <span style="color:red;">Project Plan updates, GUI: majority of template_frame and run_template</span>
 
 <div style="page-break-after: always;"></div>
 

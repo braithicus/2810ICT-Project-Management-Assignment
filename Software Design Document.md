@@ -391,18 +391,18 @@ List all key functions within the software. For each function, provide:
 -  <h5 style="display: inline;"> Description: </h5> When creating functions of the software it is necessary to reflect on the purpose of the software. For this case we would want:
     
     - <h6 style="display: inline;"> Food Search Function: </h6> to create a system that allows the users to analyse all nutritional information for specific foods
-    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> breakdown the nutritional information for a specific food in the form of pie and bar graphs
+    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> breakdown the nutritional information for a specific food in the form of pie <span style="color:red;">OR</span> bar graphs
     - <h6 style="display: inline;"> Nutrition Range Filter Function:  </h6> allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges 
-    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> allow the user to select ranges of low, medium and high for nutritional information such as fats, protein carbohydrates, sugar and nutritional density to compare the foods that fall within the ranges visually 
-    - <h6 style="display: inline;"> Food Wars Function: </h6> allow the user to select 5 chosen foods and compare them against each other visually with a bar graph based on a one selected nutritional information
+    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> allow the user to select ranges of low, medium and high for nutritional information such as fats, protein carbohydrates, sugar and nutritional density to compare the foods that fall within the ranges <span style="color:red;">in a list</span>
+    - <h6 style="display: inline;"> Food Wars Function: </h6> allow the user to select <span style="color:red;">Up to</span> 5 chosen foods and compare them against each other visually with a bar graph based on a one selected nutritional information
 
 -  <h5 style="display: inline;"> Input Parameters: </h5> 
     
     - <h6 style="display: inline;"> Food Search Function: </h6> The input type would be a search bar where an input string can be entered by the user to look up a certain food and it's nutritional information such as the nutritional information of a pear
-    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> The input type would be a search bar where an input string can be entered by the user to look up a certain food and then 2 different booleans as to allow the user to pick between having a bar graph or not and having a pie chart or not. "Bar Graph: Y/N " "Pie Chart: Y/N "
+    - <h6 style="display: inline;"> Nutrition Breakdown Function: </h6> The input type would be a search bar where an input string can be entered by the user to look up a certain food and then 2 different booleans as to allow the user to pick between having a bar graph or not and having a pie chart or not. "Bar Graph: Y/N " "Pie Chart: Y/N " <span style="color:red;">The design was changed to have either by selecting the food then corresponding button</span>
     - <h6 style="display: inline;"> Nutrition Range Filter Function: </h6> The input would be a combination of 3 different input fields one to search the nutrient the user is looking to find a range for and 2 input fields where both take numbers with one taking the minimum value and the other taking the maximum value. The input of the first input field would be for a string while the following 2 input fields would be for a float32 integer to allow the user to input a request such as "fats, minimum: 0.5000, maximum: 3.1240"
-    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> The input type would be a search bar where an input string can be entered by the user to look up a nutrient then to have another input as a multiple choice to select the filter option for the foods for a nutrient using such as "protein" into the options of "low", "medium", "high". This is achieved by assigning low, medium and high a numerical value and asking the user for an input of the numerical value assigned to the filter options such as "1, 2 or 3"
-    - <h6 style="display: inline;"> Food Wars Function: </h6> he input would be a combination of 5 different search bars input fields that allow the user to input up to 5 foods as a string such as "cheese sticks" "pear" "apple" "hummus" "fried rice" then another search bar as an input field for a user to enter a string for the nutritional information such as "sugar".
+    - <h6 style="display: inline;"> Nutrition Level Filter Function: </h6> The input type would be a search bar where an input string can be entered by the user to look up a nutrient then to have another input as a multiple choice to select the filter option for the foods for a nutrient using such as "protein" into the options of "low", "medium", "high". This is achieved by assigning low, medium and high a numerical value and asking the user for an input of the numerical value assigned to the filter options such as "1, 2 or 3" <span style="color:red;">it takes the highest percentage of foods in those categories so it will keep all the fodds with 0 in the bottom 3rd</span>
+    - <h6 style="display: inline;"> Food Wars Function: </h6> he input would be a combination of 5 different search bars input fields that allow the user to input up to 5 foods as a string such as "cheese sticks" "pear" "apple" "hummus" "fried rice" then another search bar as an input field for a user to enter a string for the nutritional information such as "sugar". <span style="color:red;">The nutrition was changed to a dropdown menu for the user to choose from</span>
 
 -  <h5 style="display: inline;"> Return Value: </h5> Describe what the function returns.
 
@@ -668,7 +668,7 @@ Include all wireframes or mock-ups of the interface. Provide a discussion, expla
 
 Main GUI
 ![Food Comparison GUI Main.png](Food%20Comparison%20GUI%20Main.png)
-
+<span style="color:red;">We decided to have the form styled in the note book setting fo the user to easily swap between food wars and the main hub instead of having so many buttons in the main page and breakdown was split in to pie and bar charts.</span>
 Food Wars:
 ![Food Wars.png](Food%20Wars.png)
 
