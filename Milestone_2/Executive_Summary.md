@@ -1,15 +1,32 @@
 # Executive Summary
 
 Please provide your GitHub repository link.
-### GitHub Repository URL: https://github.com/XXXX/XXXXX.git
+### GitHub Repository URL: https://github.com/braithicus/2810ICT-Project-Management-Assignment.git
 
 ---
 
 You should use your software to prepare an executive summary as outlined below for the five required features.
 
-## 1. [Feature 1 Name]
+## 1. Food Search
 ### Description  
-Briefly describe what this feature does.
+Allow the user to search for a food and have it output foods matching the input word with the ability to display the information
+
+### Steps
+1. Input the food/keyword you wish to search by
+2. Press the search button 
+3. Click the add button to add the food down to the table to display all the nutritional information about the food 
+
+### Screenshots
+Include screenshots for each step demonstrating the use of this feature.  
+![1](./FS_SS1.png)
+
+![2](./FS_SS2.png)
+
+---
+
+## 2. Nutritional Breakdown
+### Description  
+allows the user to breakdown the nutritional information for a specific food in the form of pie and bar graphs
 
 ### Steps
 1. Step-by-step instructions for using this feature.
@@ -23,69 +40,56 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ---
 
-## 2. [Feature 2 Name]
+## 3. Nutrion Range Filter
 ### Description  
-Briefly describe what this feature does.
+Allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
-
-### Screenshots
-Include screenshots for each step demonstrating the use of this feature.  
-![1](./visual_design.png)
-
-![2](./visual_design.png)
-
----
-
-## 3. [Feature 3 Name]
-### Description  
-Briefly describe what this feature does.
-
-### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. Select a rnutrition in the side table
+2. Enter a value in the min and max coloumn
+3. Press search to show the foods that fall within that category
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
-![1](./visual_design.png)
+![1](./FR_SS1.png)
 
-![2](./visual_design.png)
+![2](./FR_SS2.png)
 
 
 ---
 
-## 4. [Feature 4 Name]
+## 4. Nutrition Filter Function
 ### Description  
-Briefly describe what this feature does.
+allow the user to select ranges of low, medium and high for nutritional information such as fats, protein carbohydrates, sugar and nutritional density to compare the foods that fall within the ranges visually
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. Select a rnutrition in the side table
+2. Select low, mid, high from the frop down menu
+3. Press search to show the foods that fall within that category
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
-![1](./visual_design.png)
+![1](./FL_SS1.png)
 
-![2](./visual_design.png)
+![2](./FL_SS2.png)
 
 
 ---
 
-## 5. [Feature 5 Name]
+## 5. Food Wars
 ### Description  
-Briefly describe what this feature does.
+The feature of food wars allows the user to input up to 5 foods with a minimum of 2 and select a nutrition from the drop down menu and it will allow the user to compare the foods on a graph
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. Switch to the food wars page by selecting it at the top
+2. Input 2-5 foods into the input bars
+3. select a nutrition from the drop down menu
+4. click compare once you have finished and it will produce a graph
 
-### Screenshots
-Include screenshots for each step demonstrating the use of this feature.    
-![1](./visual_design.png)
+### Screenshots    
+![1](./FW_SS1.png)
 
-![2](./visual_design.png)
+![2](./FW_SS2.png)
 
 
 ---
