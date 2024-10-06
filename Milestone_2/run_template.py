@@ -11,10 +11,6 @@ import all_functions_ben as bf
 # import winsound #helps me test whether the code reaches a point
 
 
-# Should probably put Ben's functions into all_functions.py before they get imported.
-# I completely forget where or what nutin_input is used for.
-# nutin_input is the choice of nutrition in food wars
-df = pd.read_csv("Food_Nutrition_Dataset.csv")
 class CurrFrame(MyFrame):
     def __init__(self):
         super().__init__(None)
@@ -188,28 +184,29 @@ class CurrFrame(MyFrame):
 
         event.Skip()  # Skip the event to allow other default handling
 
-    # I've written the fill_food_wars to store the values for the foods and the nutirients, this does not plot anything and just stores them, feel free to change it but this should work currently
-    def fill_food_wars(self, event):
-        #food_inputs = [
-                #self.fw_f1_in.GetValue(),
-                #self.fw_f2_in.GetValue(),
-                #self.fw_f3_in.GetValue(),
-                #self.fw_f4_in.GetValue(),
-                #self.fw_f5_in.GetValue()
-            #]
-        #nutrient = self.nutin_input.GetSelection()
+    def bar_breakdown_plot(self, event):
+        checked_count = 0
+        for row in range(self.search_selection_grid.GetNumberRows()):
+            if self.search_selection_grid.GetCellValue(row, 0) == '1':  # '1' means checked:
+                selected_food = self.selected_food_grid.GetRowLabelValue(row)
+                checked_count += 1
 
-        # Filter out empty inputs and ensure at least two foods are provided
-        #selection_list = [food for food in food_inputs if food]
-        
-        #if len(selection_list) > 5:
-            "You can only select a maximum of 5 foods for Food Wars"
-        #elif len(selection_list) < 2:
-            "You need to select at least 2 foods for Food Wars"
-        #else:
-        #selection_list = bf.fill_food_wars()
-    #     else:
-    #         iterate and fill fw_f1_in, fw_f2_in, fw_f3_in, etc with selection_list or dataframe or whatever
+        # Ensure exactly one checkbox is ticked
+        if checked_count != 1:
+            wx.MessageBox("Please check exactly one checkbox.", "Warning", wx.OK | wx.ICON_WARNING)
+            return None  # Return None if the condition is not met
+
+        # Locate the corresponding row in the DataFrame
+        food_data = self.init_data[self.init_data['food'] == selected_food]
+
+        if not food_data.empty:
+            food_row = food_data.iloc[0]  # Get the first matching row
+            af.nutrition_breakdown(CurrFrame.check_selected_foods(), 'Bar')
+
+
+    # def pie_breakdown_plot(self, event):
+    #     af.nutrition_breakdown(, 'Pie')
+
 
     def onclickcompplot(self, event):
         event.Skip()
@@ -221,18 +218,9 @@ class CurrFrame(MyFrame):
                 self.fw_f5_in.GetValue()
             ]
         nutrient = self.nutin_input.GetStringSelection()
-        bf.food_wars(food_inputs, nutrient, df)
+        af.food_wars(food_inputs, nutrient, self.init_data)
         return 
     # Will use onclick event to plot using Ben's function.
-
-    # def update_breakdown(self, event):
-    #     grab selected values from grid
-    #     if one value is selected:
-    #         af.nutrition_breakdown(foodRow=)
-    #     elif > one value is selected:
-    #         popup saying "You can only select one food for Nutrition Breakdown"
-    #     else: # no value
-    #         popup saying "You need to select at least one food for Nutrition Breakdown"
 
 
 if __name__ == "__main__":
