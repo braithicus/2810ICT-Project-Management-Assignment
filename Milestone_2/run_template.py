@@ -8,9 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import all_functions as af
 import all_functions_ben as bf
-import winsound #helps me test whether the code reaches a point
-import Food_wars_test_code as fwtc
-#food_wars_test_code.py is just used to test the food wars code for billy you dont need to import it.
+# import winsound #helps me test whether the code reaches a point
 
 
 # Should probably put Ben's functions into all_functions.py before they get imported.
@@ -21,7 +19,7 @@ class CurrFrame(MyFrame):
     def __init__(self):
         super().__init__(None)
         self.init_data = af.load_data("Food_Nutrition_Dataset.csv")
-        winsound.Beep(1000, 500) #testing noise
+        # winsound.Beep(1000, 500) #testing noise
         self.pop_nut_select_grid()
         self.Layout()
         self.Show()
@@ -33,7 +31,7 @@ class CurrFrame(MyFrame):
         for col, label in enumerate(col_labels):
             self.search_selection_grid.SetColLabelValue(col, label)
 
-        # Get number of rows in the dataframe
+        # Get number of rows in the dataframe.
         rows = len(self.init_data)
         # Get the number of columns in the dataframe minus "food"
         columns = len(self.init_data.columns) - 1
@@ -91,10 +89,9 @@ class CurrFrame(MyFrame):
 
     # Searching will use search_function followed by nutrition_range_filter or nutrition_level_filter
     def search_foods(self, event):
+        # clear currently printed search results
         search_term = self.search_bar.GetValue()
         dataf, result_count = af.search_function(search_term, self.init_data)
-        if search_term:
-            print(f"Current DataFrame:\n {dataf}")
         # The following needs to occur before the search
         # iterate through grid rows
         #     if checkbox is ticked:
@@ -102,8 +99,63 @@ class CurrFrame(MyFrame):
         #             add necessary level information to search
         #         else:
         #             add necessary range information to search
+        # result_count -= 1
 
-# I've written the fill_food_wars to store the values for the foods and the nutirients, this doesn not plot anything and just stores them, feel free to change it but this should work currently  
+        # Clear existing results in the grid
+        self.search_results_list.ClearGrid()
+
+        # Ensure the grid has enough rows to display all search results
+        current_rows = self.search_results_list.GetNumberRows()
+        if current_rows < result_count:
+            self.search_results_list.AppendRows(result_count - current_rows)
+        elif current_rows > result_count:
+            self.search_results_list.DeleteRows(0, current_rows - result_count)
+
+        # Populate the grid with search results
+        for row in range(result_count):
+            food_name = dataf.iloc[row, 0]  # Get the food name from the dataframe
+            self.search_results_list.SetCellValue(row, 0, food_name)
+
+            # Set the second column with the label "Add" (acting as a button)
+            self.search_results_list.SetCellValue(row, 1, "Add")
+
+        # Auto-resize the columns
+        self.search_results_list.AutoSizeColumns()
+
+    def add_food_to_grid(self, food_name):
+        # Get the row corresponding to the selected food in init_data
+        food_row = self.init_data[self.init_data['food'] == food_name]
+
+        if not food_row.empty:
+            # Get the number of rows in the target grid (selected food grid)
+            current_row_count = self.selected_food_grid.GetNumberRows()
+
+            # Add a new row for the selected food
+            self.selected_food_grid.AppendRows(1)
+
+            # Populate the new row with nutrient data from the dataframe
+            for col in range(1, len(self.init_data.columns)):  # Start from 1 to skip the "food" column
+                value = str(food_row.iloc[0, col])
+                # Set value in the row index that was just added (current_row_count)
+                self.selected_food_grid.SetCellValue(current_row_count, col - 1, value)
+
+            # Add a checkbox in the first column for the newly added row
+            self.selected_food_grid.SetCellRenderer(current_row_count, 0, wx.grid.GridCellBoolRenderer())
+            self.selected_food_grid.SetCellEditor(current_row_count, 0, wx.grid.GridCellBoolEditor())
+            self.selected_food_grid.SetCellValue(current_row_count, 0, "0")  # Initially unchecked
+
+    def on_result_select_cell_click(self, event):
+        row = event.GetRow()
+        col = event.GetCol()
+
+        # If "Add" button (second column) is clicked
+        if col == 1 and self.search_results_list.GetCellValue(row, col) == "Add":
+            selected_food = self.search_results_list.GetCellValue(row, 0)  # Get the food name
+            self.add_food_to_grid(selected_food)
+
+        event.Skip()  # Skip the event to allow other default handling
+
+    # I've written the fill_food_wars to store the values for the foods and the nutirients, this does not plot anything and just stores them, feel free to change it but this should work currently
     def fill_food_wars(self, event):
         #food_inputs = [
                 #self.fw_f1_in.GetValue(),
@@ -139,7 +191,16 @@ class CurrFrame(MyFrame):
         bf.food_wars(food_inputs, nutrient, df)
         return 
     # Will use onclick event to plot using Ben's function.
-    
+
+    # def update_breakdown(self, event):
+    #     grab selected values from grid
+    #     if one value is selected:
+    #         af.nutrition_breakdown(foodRow=)
+    #     elif > one value is selected:
+    #         popup saying "You can only select one food for Nutrition Breakdown"
+    #     else: # no value
+    #         popup saying "You need to select at least one food for Nutrition Breakdown"
+
 
 if __name__ == "__main__":
     # Create a wx App instance
