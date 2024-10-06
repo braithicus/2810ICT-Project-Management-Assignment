@@ -119,51 +119,44 @@ class MyFrame1 ( wx.Frame ):
 
         gbSizer1.Add( bSizer13, wx.GBPosition( 0, 1 ), wx.GBSpan( 1, 1 ), wx.EXPAND, 5 )
 
-        bSizer14 = wx.BoxSizer( wx.VERTICAL )
+        sbSizer2 = wx.StaticBoxSizer( wx.StaticBox( self.gui_panel, wx.ID_ANY, _(u"Selected Foods") ), wx.VERTICAL )
 
         bSizer18 = wx.BoxSizer( wx.HORIZONTAL )
 
-        self.selected_foods_text = wx.StaticText( self.gui_panel, wx.ID_ANY, _(u"Selected Foods"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.selected_foods_text.Wrap( -1 )
-
-        bSizer18.Add( self.selected_foods_text, 0, wx.ALL, 5 )
-
-        fields_checkbox_listChoices = []
-        self.fields_checkbox_list = wx.ListBox( self.gui_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, fields_checkbox_listChoices, 0 )
-        bSizer18.Add( self.fields_checkbox_list, 0, wx.ALL, 5 )
-
-        self.export_table_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Export Table"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.export_table_button = wx.Button( sbSizer2.GetStaticBox(), wx.ID_ANY, _(u"Export Table"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.export_table_button, 0, wx.ALL, 5 )
 
-        self.breakdown_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Update Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.breakdown_button = wx.Button( sbSizer2.GetStaticBox(), wx.ID_ANY, _(u"Update Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.breakdown_button, 0, wx.ALL, 5 )
 
-        self.food_wars_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Fill Food Wars"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.food_wars_button = wx.Button( sbSizer2.GetStaticBox(), wx.ID_ANY, _(u"Fill Food Wars"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.food_wars_button, 0, wx.ALL, 5 )
 
-        self.remove_button = wx.Button( self.gui_panel, wx.ID_ANY, _(u"Remove Selected"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.remove_button = wx.Button( sbSizer2.GetStaticBox(), wx.ID_ANY, _(u"Remove Selected"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.remove_button, 0, wx.ALL, 5 )
 
 
-        bSizer14.Add( bSizer18, 0, wx.EXPAND, 5 )
+        sbSizer2.Add( bSizer18, 0, wx.EXPAND, 5 )
 
         bSizer19 = wx.BoxSizer( wx.VERTICAL )
 
-        self.selected_food_grid = wx.grid.Grid( self.gui_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.selected_food_grid = wx.grid.Grid( sbSizer2.GetStaticBox(), wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
         # Grid
-        self.selected_food_grid.CreateGrid( 1, 1 )
+        self.selected_food_grid.CreateGrid( 1, 36 )
         self.selected_food_grid.EnableEditing( True )
         self.selected_food_grid.EnableGridLines( True )
         self.selected_food_grid.EnableDragGridSize( False )
         self.selected_food_grid.SetMargins( 0, 0 )
 
         # Columns
+        self.selected_food_grid.AutoSizeColumns()
         self.selected_food_grid.EnableDragColMove( False )
         self.selected_food_grid.EnableDragColSize( True )
         self.selected_food_grid.SetColLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
 
         # Rows
+        self.selected_food_grid.AutoSizeRows()
         self.selected_food_grid.EnableDragRowSize( True )
         self.selected_food_grid.SetRowLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
 
@@ -174,10 +167,10 @@ class MyFrame1 ( wx.Frame ):
         bSizer19.Add( self.selected_food_grid, 1, wx.ALL|wx.EXPAND, 5 )
 
 
-        bSizer14.Add( bSizer19, 1, wx.EXPAND, 5 )
+        sbSizer2.Add( bSizer19, 1, wx.EXPAND, 5 )
 
 
-        gbSizer1.Add( bSizer14, wx.GBPosition( 1, 0 ), wx.GBSpan( 2, 2 ), wx.EXPAND, 5 )
+        gbSizer1.Add( sbSizer2, wx.GBPosition( 1, 0 ), wx.GBSpan( 1, 2 ), wx.EXPAND, 5 )
 
 
         gbSizer1.AddGrowableCol( 0 )
