@@ -113,11 +113,12 @@ class CurrFrame(MyFrame):
         # Populate search_results_list grid
         for idx, (index, row) in enumerate(search_results.iterrows()):
             if idx >= self.search_results_list.GetNumberRows():
-                self.search_results_list.AppendRows(1)  # Append a new row if necessary
+                # Appends a new row if it needs it
+                self.search_results_list.AppendRows(1)
 
             # Set the food name and other nutrient values
             self.search_results_list.SetCellValue(idx, 0, row['food'])
-            self.search_results_list.SetCellValue(idx, 1, "Add")  # Column for "Add" action
+            self.search_results_list.SetCellValue(idx, 1, "Add")
 
         # Auto-size columns
         for col in range(0, self.search_results_list.GetNumberCols()):
@@ -130,7 +131,7 @@ class CurrFrame(MyFrame):
         for row in range(self.selected_food_grid.GetNumberRows()):
             label = self.selected_food_grid.GetRowLabelValue(row)
             # Measure the size of the label
-            width = wx.ClientDC(self).GetTextExtent(label)[0] + 40  # Get the width of the label text plus spacer
+            width = wx.ClientDC(self).GetTextExtent(label)[0] + 40  # Needed a buffer
             max_width = max(max_width, width)
 
         # Set the row label size to fit the longest label
@@ -141,7 +142,6 @@ class CurrFrame(MyFrame):
         food_row = self.init_data[self.init_data['food'] == food_name]
 
         if not food_row.empty:
-            # Get the number of rows in the target grid (selected food grid)
             current_row_count = self.selected_food_grid.GetNumberRows()
 
             # Add a new row for the selected food
@@ -164,11 +164,11 @@ class CurrFrame(MyFrame):
             # Set the row label with the food name
             self.selected_food_grid.SetRowLabelValue(current_row_count, food_name)
 
-            # Set column labels: first column is "Select", then dataframe column names
+            # Sets column labels. First column is "Select", then dataframe column names
             self.selected_food_grid.SetColLabelValue(0, "Select")  # Checkbox column label
             for col in range(1, len(self.init_data.columns)):  # Start from 1 to skip the checkbox column
-                self.selected_food_grid.SetColLabelValue(col,
-                                                         self.init_data.columns[col])  # Column names from dataframe
+                # Column names from dataframe
+                self.selected_food_grid.SetColLabelValue(col, self.init_data.columns[col])
 
             # Auto-size rows and columns after setting column labels
             for row in range(self.selected_food_grid.GetNumberRows()):
@@ -190,7 +190,7 @@ class CurrFrame(MyFrame):
             selected_food = self.search_results_list.GetCellValue(row, 0)  # Get the food name
             self.add_food_to_grid(selected_food)
 
-        event.Skip()  # Skip the event to allow other default handling
+        event.Skip()  # Skip the event if nothing happened
 
     def bar_breakdown_plot(self, event):
         checked_count = 0
@@ -199,7 +199,7 @@ class CurrFrame(MyFrame):
                 selected_food = self.selected_food_grid.GetRowLabelValue(row)
                 checked_count += 1
 
-        # Ensure exactly one checkbox is ticked
+        # Ensures exactly one checkbox is ticked
         if checked_count != 1:
             wx.MessageBox("Please check exactly one checkbox.", "Warning", wx.OK | wx.ICON_WARNING)
             return None  # Return None if the condition is not met
