@@ -184,34 +184,25 @@ class CurrFrame(MyFrame):
 
         event.Skip()  # Skip the event to allow other default handling
 
-    def on_food_selection(self, event):
-        # Get the selected row
-        row = event.GetRow()
-        selected_food = self.selected_food_grid.GetRowLabelValue(row)  # Get the food name from the row label
+    def bar_breakdown_plot(self, event):
+        checked_count = 0
+        for row in range(self.search_selection_grid.GetNumberRows()):
+            if self.search_selection_grid.GetCellValue(row, 0) == '1':  # '1' means checked:
+                selected_food = self.selected_food_grid.GetRowLabelValue(row)
+                checked_count += 1
+
+        # Ensure exactly one checkbox is ticked
+        if checked_count != 1:
+            wx.MessageBox("Please check exactly one checkbox.", "Warning", wx.OK | wx.ICON_WARNING)
+            return None  # Return None if the condition is not met
 
         # Locate the corresponding row in the DataFrame
         food_data = self.init_data[self.init_data['food'] == selected_food]
 
         if not food_data.empty:
-            global food_row
             food_row = food_data.iloc[0]  # Get the first matching row
+            af.nutrition_breakdown(CurrFrame.check_selected_foods(), 'Bar')
 
-            # Count the number of checkboxes checked
-            checked_count = 0
-
-            for i in range(self.selected_food_grid.GetNumberRows()):
-                if self.selected_food_grid.IsCellChecked(i, 0):  # Assuming this is the checkbox column
-                    checked_count += 1
-
-            # Ensure exactly one checkbox is ticked
-            if checked_count != 1:
-                wx.MessageBox("Please check exactly one checkbox.", "Warning", wx.OK | wx.ICON_WARNING)
-                food_row = None
-                return
-
-
-    def bar_breakdown_plot(self, event):
-        nut_break = af.nutrition_breakdown(food_row, 'Bar')
 
     # def pie_breakdown_plot(self, event):
     #     af.nutrition_breakdown(, 'Pie')
