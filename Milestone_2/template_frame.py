@@ -123,9 +123,6 @@ class MyFrame1 ( wx.Frame ):
 
         bSizer18 = wx.BoxSizer( wx.HORIZONTAL )
 
-        self.export_table_button = wx.Button( sbSizer2.GetStaticBox(), wx.ID_ANY, _(u"Export Table"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        bSizer18.Add( self.export_table_button, 0, wx.ALL, 5 )
-
         self.bar_breakdown_button = wx.Button( sbSizer2.GetStaticBox(), wx.ID_ANY, _(u"Bar Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.bar_breakdown_button, 0, wx.ALL, 5 )
 
@@ -308,7 +305,6 @@ class MyFrame1 ( wx.Frame ):
         self.search_button.Bind( wx.EVT_BUTTON, self.search_foods )
         self.search_results_list.Bind( wx.grid.EVT_GRID_CELL_LEFT_CLICK, self.on_result_select_cell_click )
         self.search_selection_grid.Bind( wx.grid.EVT_GRID_CELL_LEFT_CLICK, self.on_nut_select_cell_click )
-        self.export_table_button.Bind( wx.EVT_BUTTON, self.export_table )
         self.bar_breakdown_button.Bind( wx.EVT_BUTTON, self.bar_breakdown_plot )
         self.pie_breakdown_button.Bind( wx.EVT_BUTTON, self.pie_breakdown_plot )
         self.remove_button.Bind( wx.EVT_BUTTON, self.remove_selected_food )
@@ -326,9 +322,6 @@ class MyFrame1 ( wx.Frame ):
         event.Skip()
 
     def on_nut_select_cell_click( self, event ):
-        event.Skip()
-
-    def export_table( self, event ):
         event.Skip()
 
     def bar_breakdown_plot( self, event ):

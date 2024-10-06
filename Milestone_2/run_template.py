@@ -184,10 +184,10 @@ class CurrFrame(MyFrame):
 
         event.Skip()  # Skip the event to allow other default handling
 
-    def bar_breakdown_plot(self, event):
+    def bar_breakdown_plot(self, event): #not working
         checked_count = 0
-        for row in range(self.search_selection_grid.GetNumberRows()):
-            if self.search_selection_grid.GetCellValue(row, 0) == '1':  # '1' means checked:
+        for row in range(self.selected_food_grid.GetNumberRows()):
+            if self.selected_food_grid.GetCellValue(row, 0) == '1':  # '1' means checked:
                 selected_food = self.selected_food_grid.GetRowLabelValue(row)
                 checked_count += 1
 
@@ -201,12 +201,32 @@ class CurrFrame(MyFrame):
 
         if not food_data.empty:
             food_row = food_data.iloc[0]  # Get the first matching row
-            af.nutrition_breakdown(CurrFrame.check_selected_foods(), 'Bar')
+            af.nutrition_breakdown(food_row, 'Bar')
 
 
-    # def pie_breakdown_plot(self, event):
+    # def pie_breakdown_plot(self, event): #not working
     #     af.nutrition_breakdown(, 'Pie')
 
+
+    def remove_selected_food(self, event): #not working
+        def remove_selected_rows(self, event):
+            # List to store the indices of rows to be removed
+            rows_to_remove = []
+
+            # Iterate through the rows of the selected_food_grid
+            for row in range(self.selected_food_grid.GetNumberRows()):
+                if self.selected_food_grid.GetCellValue(row, 0) == '1':  # Check if the checkbox is checked
+                    rows_to_remove.append(row)
+
+            # Remove rows in reverse order to maintain index integrity
+            for row in reversed(rows_to_remove):
+                self.selected_food_grid.DeleteRows(row, 1)  # Delete the row
+
+            # Optionally, you can display a message about the removal
+            if rows_to_remove:
+                wx.MessageBox(f"Removed {len(rows_to_remove)} row(s).", "Info", wx.OK | wx.ICON_INFORMATION)
+            else:
+                wx.MessageBox("No rows selected for removal.", "Info", wx.OK | wx.ICON_INFORMATION)
 
     def onclickcompplot(self, event):
         event.Skip()
