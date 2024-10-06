@@ -1,7 +1,7 @@
 # Executive Summary
 
 Please provide your GitHub repository link.
-### GitHub Repository URL: https://github.com/XXXX/XXXXX.git
+### GitHub Repository URL: https://github.com/braithicus/2810ICT-Project-Management-Assignment.git
 
 ---
 
@@ -24,9 +24,9 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ---
 
-## 2. [Feature 2 Name]
+## 2. Nutritional Breakdown
 ### Description  
-Briefly describe what this feature does.
+allows the user to breakdown the nutritional information for a specific food in the form of pie and bar graphs
 
 ### Steps
 1. Step-by-step instructions for using this feature.
@@ -40,36 +40,38 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ---
 
-## 3. [Feature 3 Name]
+## 3. Nutrion Range Filter
 ### Description  
-Briefly describe what this feature does.
+Allow the user to select one nutrition and input minimum & maximum values, and the tools will display a list of foods that fall into those ranges
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. Select a rnutrition in the side table
+2. Enter a value in the min and max coloumn
+3. Press search to show the foods that fall within that category
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
-![1](./visual_design.png)
+![1](./FR_SS1.png)
 
-![2](./visual_design.png)
+![2](./FR_SS2.png)
 
 
 ---
 
-## 4. [Feature 4 Name]
+## 4. Nutrition Filter Function
 ### Description  
-Briefly describe what this feature does.
+allow the user to select ranges of low, medium and high for nutritional information such as fats, protein carbohydrates, sugar and nutritional density to compare the foods that fall within the ranges visually
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. Select a rnutrition in the side table
+2. Select low, mid, high from the frop down menu
+3. Press search to show the foods that fall within that category
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
-![1](./visual_design.png)
+![1](./FL_SS1.png)
 
-![2](./visual_design.png)
+![2](./FL_SS2.png)
 
 
 ---
