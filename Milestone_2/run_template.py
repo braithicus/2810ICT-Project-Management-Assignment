@@ -2,13 +2,7 @@
 
 import wx
 from template_frame import MyFrame1 as MyFrame
-import pandas as pd
-import re
-import matplotlib.pyplot as plt
-import numpy as np
 import all_functions as af
-import all_functions_ben as bf
-# import winsound #helps me test whether the code reaches a point
 
 
 class CurrFrame(MyFrame):
@@ -64,7 +58,7 @@ class CurrFrame(MyFrame):
 
         # Auto resize columns to fit the contents
         self.search_selection_grid.AutoSizeColumns()
-        # Set the row label size (width). Currently adjusted, change if needed.
+        # Set the row label size (width). Currently adjusted/fixed, change if needed.
         self.search_selection_grid.SetRowLabelSize(150)
 
     def on_nut_select_cell_click(self, event):
@@ -131,6 +125,17 @@ class CurrFrame(MyFrame):
 
         self.search_text.SetLabel(f"Results: {len(search_results)}")
 
+    def row_label_size_update(self):
+        max_width = 0
+        for row in range(self.selected_food_grid.GetNumberRows()):
+            label = self.selected_food_grid.GetRowLabelValue(row)
+            # Measure the size of the label
+            width = wx.ClientDC(self).GetTextExtent(label)[0] + 40  # Get the width of the label text plus spacer
+            max_width = max(max_width, width)
+
+        # Set the row label size to fit the longest label
+        self.selected_food_grid.SetRowLabelSize(max_width)
+
     def add_food_to_grid(self, food_name):
         # Get the row corresponding to the selected food in init_data
         food_row = self.init_data[self.init_data['food'] == food_name]
@@ -170,8 +175,11 @@ class CurrFrame(MyFrame):
                 self.selected_food_grid.AutoSizeRow(row)
 
             # Auto-size columns
-            for col in range(0, self.selected_food_grid.GetNumberCols()):
+            for col in range(self.selected_food_grid.GetNumberCols()):
                 self.selected_food_grid.AutoSizeColumn(col)
+
+            self.row_label_size_update()
+
 
     def on_result_select_cell_click(self, event):
         row = event.GetRow()
@@ -184,10 +192,10 @@ class CurrFrame(MyFrame):
 
         event.Skip()  # Skip the event to allow other default handling
 
-    def bar_breakdown_plot(self, event): #not working
+    def bar_breakdown_plot(self, event):
         checked_count = 0
         for row in range(self.selected_food_grid.GetNumberRows()):
-            if self.selected_food_grid.GetCellValue(row, 0) == '1':  # '1' means checked:
+            if self.selected_food_grid.GetCellValue(row, 0) == '1':
                 selected_food = self.selected_food_grid.GetRowLabelValue(row)
                 checked_count += 1
 
@@ -204,29 +212,45 @@ class CurrFrame(MyFrame):
             af.nutrition_breakdown(food_row, 'Bar')
 
 
-    # def pie_breakdown_plot(self, event): #not working
-    #     af.nutrition_breakdown(, 'Pie')
+    def pie_breakdown_plot(self, event):
+        checked_count = 0
+        for row in range(self.selected_food_grid.GetNumberRows()):
+            if self.selected_food_grid.GetCellValue(row, 0) == '1':
+                selected_food = self.selected_food_grid.GetRowLabelValue(row)
+                checked_count += 1
+
+        # Ensure exactly one checkbox is ticked
+        if checked_count != 1:
+            wx.MessageBox("Please check exactly one checkbox.", "Warning", wx.OK | wx.ICON_WARNING)
+            return None  # Return None if the condition is not met
+
+        # Locate the corresponding row in the DataFrame
+        food_data = self.init_data[self.init_data['food'] == selected_food]
+
+        if not food_data.empty:
+            food_row = food_data.iloc[0]  # Get the first matching row
+            af.nutrition_breakdown(food_row, 'Pie')
 
 
-    def remove_selected_food(self, event): #not working
-        def remove_selected_rows(self, event):
-            # List to store the indices of rows to be removed
-            rows_to_remove = []
+    def remove_selected_food(self, event):
+        # List to store the indices of rows to be removed
+        rows_to_remove = []
 
-            # Iterate through the rows of the selected_food_grid
-            for row in range(self.selected_food_grid.GetNumberRows()):
-                if self.selected_food_grid.GetCellValue(row, 0) == '1':  # Check if the checkbox is checked
-                    rows_to_remove.append(row)
+        # Iterate through the rows of the selected_food_grid
+        for row in range(self.selected_food_grid.GetNumberRows()):
+            if self.selected_food_grid.GetCellValue(row, 0) == '1':  # Check if the checkbox is checked
+                rows_to_remove.append(row)
 
-            # Remove rows in reverse order to maintain index integrity
-            for row in reversed(rows_to_remove):
-                self.selected_food_grid.DeleteRows(row, 1)  # Delete the row
+        # Remove rows in reverse order to maintain index integrity
+        for row in reversed(rows_to_remove):
+            self.selected_food_grid.DeleteRows(row, 1)  # Delete the row
 
-            # Optionally, you can display a message about the removal
-            if rows_to_remove:
-                wx.MessageBox(f"Removed {len(rows_to_remove)} row(s).", "Info", wx.OK | wx.ICON_INFORMATION)
-            else:
-                wx.MessageBox("No rows selected for removal.", "Info", wx.OK | wx.ICON_INFORMATION)
+        # Optionally, you can display a message about the removal
+        if rows_to_remove:
+            wx.MessageBox(f"Removed {len(rows_to_remove)} row(s).", "Info", wx.OK | wx.ICON_INFORMATION)
+            self.row_label_size_update()
+        else:
+            wx.MessageBox("No rows selected for removal.", "Info", wx.OK | wx.ICON_INFORMATION)
 
     def onclickcompplot(self, event):
         event.Skip()

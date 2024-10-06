@@ -155,6 +155,7 @@ class MyFrame1 ( wx.Frame ):
         # Rows
         self.selected_food_grid.AutoSizeRows()
         self.selected_food_grid.EnableDragRowSize( True )
+        self.selected_food_grid.SetRowLabelSize( wx.grid.GRID_AUTOSIZE )
         self.selected_food_grid.SetRowLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
 
         # Label Appearance
