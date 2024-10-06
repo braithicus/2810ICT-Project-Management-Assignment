@@ -1,18 +1,10 @@
 # Unit Testing Report
 
-Please provide your GitHub repository link.
-
 ### GitHub Repository URL: https://github.com/braithicus/2810ICT-Project-Management-Assignment
 
 ---
 
-The testing report should focus solely on <span style="color:red"> testing all the self-defined functions related to
-the five required features.</span> There is no need to test the GUI components. Therefore, it is essential to decouple your code and separate the logic from the GUI-related code.
-
 ## 1. **Test Summary**
-
-list all tested functions related to the five required features and the corresponding test functions designed to test
-those functions, for example:
 
 | **Tested Functions**                                                    | **Test Functions**                                                                    |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -565,16 +557,5 @@ def test_to_mg():
 ```
 
 ## 3. **Testing Report Summary**
-
-Include a screenshot of unit_test.html showing the results of all the above tests.
-
-You can use the following command to run the unit tests and generate the unit_test.html report.
-
-```commandline
-pytest test_all_functions.py --html=unit_test.html --self-contained-html
-```
-
-Note: test_all_functions.py should contain all the test functions designed to test the self-defined functions related
-to the five required features.
 
 ![unit_test_summary](./Unit_test.png)
