@@ -129,6 +129,9 @@ class CurrFrame(MyFrame):
             self.search_results_list.SetCellValue(idx, 0, row['food'])
             self.search_results_list.SetCellValue(idx, 1, "Add")  # Column for "Add" action
 
+        # Auto-size columns
+        for col in range(0, self.search_results_list.GetNumberCols()):
+            self.search_results_list.AutoSizeColumn(col)
 
         self.search_text.SetLabel(f"Results: {len(search_results)}")
 
@@ -170,11 +173,8 @@ class CurrFrame(MyFrame):
             for row in range(self.selected_food_grid.GetNumberRows()):
                 self.selected_food_grid.AutoSizeRow(row)
 
-            # Auto-size the row label column to fit the food name
-            self.selected_food_grid.AutoSizeColumn(0)  # Auto-size the row label column
-
-            # Then auto-size other columns
-            for col in range(1, self.selected_food_grid.GetNumberCols()):
+            # Auto-size columns
+            for col in range(0, self.selected_food_grid.GetNumberCols()):
                 self.selected_food_grid.AutoSizeColumn(col)
 
     def on_result_select_cell_click(self, event):
