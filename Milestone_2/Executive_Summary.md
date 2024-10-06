@@ -7,19 +7,20 @@ Please provide your GitHub repository link.
 
 You should use your software to prepare an executive summary as outlined below for the five required features.
 
-## 1. [Feature 1 Name]
+## 1. Food Search
 ### Description  
-Briefly describe what this feature does.
+Allow the user to search for a food and have it output foods matching the input word with the ability to display the information
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. Input the food/keyword you wish to search by
+2. Press the search button 
+3. Click the add button to add the food down to the table to display all the nutritional information about the food 
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.  
-![1](./visual_design.png)
+![1](./FS_SS1.png)
 
-![2](./visual_design.png)
+![2](./FS_SS2.png)
 
 ---
 
@@ -73,19 +74,20 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ---
 
-## 5. [Feature 5 Name]
+## 5. Food Wars
 ### Description  
-Briefly describe what this feature does.
+The feature of food wars allows the user to input up to 5 foods with a minimum of 2 and select a nutrition from the drop down menu and it will allow the user to compare the foods on a graph
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. Switch to the food wars page by selecting it at the top
+2. Input 2-5 foods into the input bars
+3. select a nutrition from the drop down menu
+4. click compare once you have finished and it will produce a graph
 
-### Screenshots
-Include screenshots for each step demonstrating the use of this feature.    
-![1](./visual_design.png)
+### Screenshots    
+![1](./FW_SS1.png)
 
-![2](./visual_design.png)
+![2](./FW_SS2.png)
 
 
 ---
