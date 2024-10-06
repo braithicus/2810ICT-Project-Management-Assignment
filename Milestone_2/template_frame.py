@@ -54,9 +54,33 @@ class MyFrame1 ( wx.Frame ):
 
         bSizer17.Add( self.search_text, 0, wx.ALIGN_CENTER|wx.ALL, 5 )
 
-        search_results_listChoices = []
-        self.search_results_list = wx.ListBox( self.gui_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, search_results_listChoices, 0 )
-        bSizer17.Add( self.search_results_list, 0, wx.ALL|wx.EXPAND, 5 )
+        self.search_results_list = wx.grid.Grid( self.gui_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+
+        # Grid
+        self.search_results_list.CreateGrid( 0, 2 )
+        self.search_results_list.EnableEditing( True )
+        self.search_results_list.EnableGridLines( True )
+        self.search_results_list.EnableDragGridSize( False )
+        self.search_results_list.SetMargins( 0, 0 )
+
+        # Columns
+        self.search_results_list.SetColSize( 0, 20 )
+        self.search_results_list.SetColSize( 1, 18 )
+        self.search_results_list.AutoSizeColumns()
+        self.search_results_list.EnableDragColMove( False )
+        self.search_results_list.EnableDragColSize( True )
+        self.search_results_list.SetColLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
+
+        # Rows
+        self.search_results_list.AutoSizeRows()
+        self.search_results_list.EnableDragRowSize( True )
+        self.search_results_list.SetRowLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
+
+        # Label Appearance
+
+        # Cell Defaults
+        self.search_results_list.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
+        bSizer17.Add( self.search_results_list, 1, wx.ALL|wx.EXPAND, 5 )
 
 
         bSizer12.Add( bSizer17, 1, wx.EXPAND, 5 )
@@ -128,7 +152,7 @@ class MyFrame1 ( wx.Frame ):
         self.selected_food_grid = wx.grid.Grid( self.gui_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
         # Grid
-        self.selected_food_grid.CreateGrid( 0, 0 )
+        self.selected_food_grid.CreateGrid( 1, 1 )
         self.selected_food_grid.EnableEditing( True )
         self.selected_food_grid.EnableGridLines( True )
         self.selected_food_grid.EnableDragGridSize( False )
@@ -147,7 +171,7 @@ class MyFrame1 ( wx.Frame ):
 
         # Cell Defaults
         self.selected_food_grid.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
-        bSizer19.Add( self.selected_food_grid, 0, wx.ALL, 5 )
+        bSizer19.Add( self.selected_food_grid, 1, wx.ALL|wx.EXPAND, 5 )
 
 
         bSizer14.Add( bSizer19, 1, wx.EXPAND, 5 )
@@ -295,8 +319,11 @@ class MyFrame1 ( wx.Frame ):
 
         # Connect Events
         self.search_button.Bind( wx.EVT_BUTTON, self.search_foods )
+        self.search_results_list.Bind( wx.grid.EVT_GRID_CELL_LEFT_CLICK, self.on_result_select_cell_click )
         self.search_selection_grid.Bind( wx.grid.EVT_GRID_CELL_LEFT_CLICK, self.on_nut_select_cell_click )
+        self.breakdown_button.Bind( wx.EVT_BUTTON, self.update_breakdown )
         self.food_wars_button.Bind( wx.EVT_BUTTON, self.fill_food_wars )
+        self.remove_button.Bind( wx.EVT_BUTTON, self.remove_selected_food )
         self.fw_compare_button.Bind( wx.EVT_BUTTON, self.onclickcompplot )
 
     def __del__( self ):
@@ -307,10 +334,19 @@ class MyFrame1 ( wx.Frame ):
     def search_foods( self, event ):
         event.Skip()
 
+    def on_result_select_cell_click( self, event ):
+        event.Skip()
+
     def on_nut_select_cell_click( self, event ):
         event.Skip()
 
+    def update_breakdown( self, event ):
+        event.Skip()
+
     def fill_food_wars( self, event ):
+        event.Skip()
+
+    def remove_selected_food( self, event ):
         event.Skip()
 
     def onclickcompplot( self, event ):
