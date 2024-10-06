@@ -8,7 +8,7 @@ matplotlib.use('WXAgg') # allows Matplotlib to render plots within wxPython.
 # to embed a Matplotlib figure into a wxPanel in a wxPython application.
 from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg
 import matplotlib.pyplot as plt
-import template_frame_ben
+import template_frame
 from template_frame import MyFrame1 as MyFrame
 
 
@@ -36,7 +36,7 @@ def food_wars(food_inputs, nutrient, df):
     plt.figure(figsize=(10, 6))
     plt.bar(df_filtered['food'], df_filtered[nutrient], color='skyblue')
     plt.xlabel('Food')
-    plt.ylabel(nutrient)
+    plt.ylabel(f"{nutrient} (mg)")
     plt.title(f'Food Wars: The {nutrient} Battles')
     plt.xticks(rotation=45)
     plt.tight_layout()

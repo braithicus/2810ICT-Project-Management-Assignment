@@ -1396,20 +1396,20 @@
                       <property name="wrap">-1</property>
                     </object>
                   </object>
-                  <object class="sizeritem" expanded="false">
+                  <object class="sizeritem" expanded="true">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND</property>
                     <property name="proportion">1</property>
-                    <object class="wxBoxSizer" expanded="false">
+                    <object class="wxBoxSizer" expanded="true">
                       <property name="minimum_size"></property>
                       <property name="name">bSizer121</property>
                       <property name="orient">wxVERTICAL</property>
                       <property name="permission">none</property>
-                      <object class="sizeritem" expanded="false">
+                      <object class="sizeritem" expanded="true">
                         <property name="border">5</property>
                         <property name="flag">wxEXPAND</property>
                         <property name="proportion">1</property>
-                        <object class="wxBoxSizer" expanded="false">
+                        <object class="wxBoxSizer" expanded="true">
                           <property name="minimum_size"></property>
                           <property name="name">bSizer131</property>
                           <property name="orient">wxHORIZONTAL</property>
@@ -2184,7 +2184,7 @@
                               <property name="caption"></property>
                               <property name="caption_visible">1</property>
                               <property name="center_pane">0</property>
-                              <property name="choices">&quot;Nutrition Selection&quot; &quot;Caloric Value&quot; &quot;Fat&quot; &quot;Saturated Fats&quot; &quot;Monounsaturated Fats&quot; &quot;Polyunsaturated Fats&quot; &quot;Carbohydrates&quot; &quot;Sugars&quot; &quot;Protein&quot; &quot;Dietary Fiber&quot; &quot;Cholesterol&quot; &quot;Sodium&quot; &quot;Water&quot; &quot;Vitamin A&quot; &quot;Vitamin B1&quot; &quot;Vitamin B11&quot; &quot;Vitamin B12&quot; &quot;Vitamin B2&quot; &quot;Vitamin B3&quot; &quot;Vitamin B5&quot; &quot;Vitamin B6&quot; &quot;Vitamin C&quot; &quot;Vitamin D&quot; &quot;Vitamin E&quot; &quot;Vitamin K&quot; &quot;Calcium&quot; &quot;Copper&quot; &quot;Iron&quot; &quot;Magnesium&quot; &quot;Manganese&quot; &quot;Phosphorus&quot; &quot;Potassium&quot; &quot;Selenium&quot; &quot;Zinc&quot; &quot;Nutrition Density&quot;</property>
+                              <property name="choices">&quot;Caloric Value&quot; &quot;Fat&quot; &quot;Saturated Fats&quot; &quot;Monounsaturated Fats&quot; &quot;Polyunsaturated Fats&quot; &quot;Carbohydrates&quot; &quot;Sugars&quot; &quot;Protein&quot; &quot;Dietary Fiber&quot; &quot;Cholesterol&quot; &quot;Sodium&quot; &quot;Water&quot; &quot;Vitamin A&quot; &quot;Vitamin B1&quot; &quot;Vitamin B11&quot; &quot;Vitamin B12&quot; &quot;Vitamin B2&quot; &quot;Vitamin B3&quot; &quot;Vitamin B5&quot; &quot;Vitamin B6&quot; &quot;Vitamin C&quot; &quot;Vitamin D&quot; &quot;Vitamin E&quot; &quot;Vitamin K&quot; &quot;Calcium&quot; &quot;Copper&quot; &quot;Iron&quot; &quot;Magnesium&quot; &quot;Manganese&quot; &quot;Phosphorus&quot; &quot;Potassium&quot; &quot;Selenium&quot; &quot;Zinc&quot; &quot;Nutrition Density&quot;</property>
                               <property name="close_button">1</property>
                               <property name="context_help"></property>
                               <property name="context_menu">1</property>
