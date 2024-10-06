@@ -15,7 +15,7 @@
 | `nutrition_level_filter(dFrame, nutrientName, level=None)`              | `test_nutrition_level_filter_valid()` <br> `test_nutrition_level_filter_invalid()`    |
 | `nutrition_breakdown(foodRow, type='Bar'/'Pie')`                        | `test_nutrition_breakdown_valid(mock_show)` <br> `test_nutrition_breakdown_invalid()` |
 | `food_wars(food_inputs, nutrient, df)`                                  | `test_food_wars_valid(mock_show)` <br> `test_food_wars_invalid()`                     |
-| `to_mg()`                                                               | `test_to_mg()`                                                                        |
+| `to_mg(frame)`                                                          | `test_to_mg()`                                                                        |
 
 ---
 
@@ -508,10 +508,10 @@ def test_food_wars_invalid():
 -  **Test Function/Module**
    -  `test_to_mg()`
 -  **Tested Function/Module**
-   -  `to_mg()`
+   -  `to_mg(frame)`
 -  **Description**
 
-   -  This function takes no arguments. It identifies all the nutrients in the dataframe that are in grams, it then multiplies all the values in those columns by 1000, converting them to milligrams. This modifies the original dataframe so nothing is returned. After the function is called, all nutrient amounts in the dataframe are in milligrams.
+   -  This function takes a dataframe as an argument. It identifies all the nutrients in the dataframe that are in grams, it then multiplies all the values in those columns by 1000, converting them to milligrams. This modifies the original dataframe so nothing is returned. After the function is called, all nutrient amounts in the dataframe are in milligrams.
 
 -  **1) Code for the Test Function**
 

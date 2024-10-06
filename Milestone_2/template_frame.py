@@ -129,9 +129,6 @@ class MyFrame1 ( wx.Frame ):
         self.breakdown_button = wx.Button( sbSizer2.GetStaticBox(), wx.ID_ANY, _(u"Update Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.breakdown_button, 0, wx.ALL, 5 )
 
-        self.food_wars_button = wx.Button( sbSizer2.GetStaticBox(), wx.ID_ANY, _(u"Fill Food Wars"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        bSizer18.Add( self.food_wars_button, 0, wx.ALL, 5 )
-
         self.remove_button = wx.Button( sbSizer2.GetStaticBox(), wx.ID_ANY, _(u"Remove Selected"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer18.Add( self.remove_button, 0, wx.ALL, 5 )
 
@@ -316,8 +313,8 @@ class MyFrame1 ( wx.Frame ):
         self.search_button.Bind( wx.EVT_BUTTON, self.search_foods )
         self.search_results_list.Bind( wx.grid.EVT_GRID_CELL_LEFT_CLICK, self.on_result_select_cell_click )
         self.search_selection_grid.Bind( wx.grid.EVT_GRID_CELL_LEFT_CLICK, self.on_nut_select_cell_click )
+        self.export_table_button.Bind( wx.EVT_BUTTON, self.export_table )
         self.breakdown_button.Bind( wx.EVT_BUTTON, self.update_breakdown )
-        self.food_wars_button.Bind( wx.EVT_BUTTON, self.fill_food_wars )
         self.remove_button.Bind( wx.EVT_BUTTON, self.remove_selected_food )
         self.fw_compare_button.Bind( wx.EVT_BUTTON, self.onclickcompplot )
 
@@ -335,10 +332,10 @@ class MyFrame1 ( wx.Frame ):
     def on_nut_select_cell_click( self, event ):
         event.Skip()
 
-    def update_breakdown( self, event ):
+    def export_table( self, event ):
         event.Skip()
 
-    def fill_food_wars( self, event ):
+    def update_breakdown( self, event ):
         event.Skip()
 
     def remove_selected_food( self, event ):
