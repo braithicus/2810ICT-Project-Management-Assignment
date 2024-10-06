@@ -62,9 +62,9 @@ class CurrFrame(MyFrame):
                     self.search_selection_grid.SetCellValue(row, col, "")
 
             # Set dropdown (wx.Choice) in the 4th column
-            choice_editor = wx.grid.GridCellChoiceEditor(choices=["Low", "Medium", "High"])
+            choice_editor = wx.grid.GridCellChoiceEditor(choices=["Low", "Mid", "High"])
             self.search_selection_grid.SetCellEditor(row, 3, choice_editor)
-            self.search_selection_grid.SetCellValue(row, 3, "Medium")  # Default value
+            self.search_selection_grid.SetCellValue(row, 3, "Mid")  # Default value
 
         # Auto resize columns to fit the contents
         self.search_selection_grid.AutoSizeColumns()
@@ -80,47 +80,57 @@ class CurrFrame(MyFrame):
             # Toggle the checkbox value
             new_value = "1" if current_value == "0" else "0"
             self.search_selection_grid.SetCellValue(row, col, new_value)
-        elif col == 3: # If the clicked cell is in the "Level" column (index 3)
+        elif col == 3:  # If the clicked cell is in the "Level" column (index 3)
             self.search_selection_grid.SetGridCursor(event.GetRow(), event.GetCol())
             self.search_selection_grid.EnableCellEditControl()  # Immediately enable the cell editor
         else:
-            # Allow normal behavior for other cells
             event.Skip()
 
     # Searching will use search_function followed by nutrition_range_filter or nutrition_level_filter
     def search_foods(self, event):
-        # clear currently printed search results
-        search_term = self.search_bar.GetValue()
-        dataf, result_count = af.search_function(search_term, self.init_data)
-        # The following needs to occur before the search
-        # iterate through grid rows
-        #     if checkbox is ticked:
-        #         if (min cell == 0) and (max cell empty):
-        #             add necessary level information to search
-        #         else:
-        #             add necessary range information to search
-        # result_count -= 1
+        # Get search term
+        search_term = self.search_bar.GetValue().strip()
+        # Perform initial search
+        search_results, result_count = af.search_function(search_term, self.init_data)
 
-        # Clear existing results in the grid
+        selected_nutrients = []
+
+        for row in range(self.search_selection_grid.GetNumberRows()):
+            nutrient = self.search_selection_grid.GetRowLabelValue(row)
+
+            # Use the checkbox value to determine if the nutrient should be included
+            if self.search_selection_grid.GetCellValue(row, 0) == '1':  # '1' means checked
+                min_value = self.search_selection_grid.GetCellValue(row, 1)
+                max_value = self.search_selection_grid.GetCellValue(row, 2)
+                level = self.search_selection_grid.GetCellValue(row, 3)
+
+                if min_value and max_value:
+                    selected_nutrients.append({'nutrient': nutrient, 'min': float(min_value), 'max': float(max_value)})
+                else: #level
+                    selected_nutrients.append({'nutrient': nutrient, 'level': level})
+
+        # Filtering results
+        for filter in selected_nutrients:
+            nutrient = filter['nutrient']
+            if 'min' in filter and 'max' in filter:
+                search_results = af.nutrition_range_filter(search_results, nutrient, filter['min'], filter['max'])
+            elif 'level' in filter:
+                search_results = af.nutrition_level_filter(search_results, nutrient, filter['level'])
+
+        # Clear previous results
         self.search_results_list.ClearGrid()
 
-        # Ensure the grid has enough rows to display all search results
-        current_rows = self.search_results_list.GetNumberRows()
-        if current_rows < result_count:
-            self.search_results_list.AppendRows(result_count - current_rows)
-        elif current_rows > result_count:
-            self.search_results_list.DeleteRows(0, current_rows - result_count)
+        # Populate search_results_list grid
+        for idx, (index, row) in enumerate(search_results.iterrows()):
+            if idx >= self.search_results_list.GetNumberRows():
+                self.search_results_list.AppendRows(1)  # Append a new row if necessary
 
-        # Populate the grid with search results
-        for row in range(result_count):
-            food_name = dataf.iloc[row, 0]  # Get the food name from the dataframe
-            self.search_results_list.SetCellValue(row, 0, food_name)
+            # Set the food name and other nutrient values
+            self.search_results_list.SetCellValue(idx, 0, row['food'])
+            self.search_results_list.SetCellValue(idx, 1, "Add")  # Column for "Add" action
 
-            # Set the second column with the label "Add" (acting as a button)
-            self.search_results_list.SetCellValue(row, 1, "Add")
 
-        # Auto-resize the columns
-        self.search_results_list.AutoSizeColumns()
+        self.search_text.SetLabel(f"Results: {len(search_results)}")
 
     def add_food_to_grid(self, food_name):
         # Get the row corresponding to the selected food in init_data
