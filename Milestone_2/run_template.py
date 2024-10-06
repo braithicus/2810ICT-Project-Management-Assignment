@@ -133,16 +133,33 @@ class CurrFrame(MyFrame):
             # Add a new row for the selected food
             self.selected_food_grid.AppendRows(1)
 
-            # Populate the new row with nutrient data from the dataframe
-            for col in range(1, len(self.init_data.columns)):  # Start from 1 to skip the "food" column
-                value = str(food_row.iloc[0, col])
-                # Set value in the row index that was just added (current_row_count)
-                self.selected_food_grid.SetCellValue(current_row_count, col - 1, value)
-
-            # Add a checkbox in the first column for the newly added row
+            # Set the checkbox in the first column for the newly added row
             self.selected_food_grid.SetCellRenderer(current_row_count, 0, wx.grid.GridCellBoolRenderer())
             self.selected_food_grid.SetCellEditor(current_row_count, 0, wx.grid.GridCellBoolEditor())
             self.selected_food_grid.SetCellValue(current_row_count, 0, "0")  # Initially unchecked
+
+            # Center the checkbox in the first column
+            self.selected_food_grid.SetCellAlignment(current_row_count, 0, wx.ALIGN_CENTER, wx.ALIGN_CENTER)
+
+            # Populate the new row with nutrient data from the dataframe
+            for col in range(1, len(self.init_data.columns)):  # Start from 1 to skip the "food" column
+                value = str(food_row.iloc[0, col])  # Get the nutrient value from the dataframe
+                # Set value in the row index that was just added (current_row_count)
+                self.selected_food_grid.SetCellValue(current_row_count, col, value)
+
+            # Set the row label with the food name
+            self.selected_food_grid.SetRowLabelValue(current_row_count, food_name)
+
+            # Auto-size rows first
+            for row in range(self.selected_food_grid.GetNumberRows()):
+                self.selected_food_grid.AutoSizeRow(row)
+
+            # Auto-size the row label column to fit the food name
+            self.selected_food_grid.AutoSizeColumn(0)  # Auto-size the row label column
+
+            # Then auto-size other columns
+            for col in range(1, self.selected_food_grid.GetNumberCols()):
+                self.selected_food_grid.AutoSizeColumn(col)
 
     def on_result_select_cell_click(self, event):
         row = event.GetRow()

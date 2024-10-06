@@ -30,7 +30,7 @@ class MyFrame1 ( wx.Frame ):
         self.m_notebook1 = wx.Notebook( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
         self.gui_panel = wx.Panel( self.m_notebook1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
         gbSizer1 = wx.GridBagSizer( 0, 0 )
-        gbSizer1.SetFlexibleDirection( wx.VERTICAL )
+        gbSizer1.SetFlexibleDirection( wx.HORIZONTAL )
         gbSizer1.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
         gbSizer1.SetMinSize( wx.Size( 1,1 ) )
@@ -45,7 +45,7 @@ class MyFrame1 ( wx.Frame ):
         bSizer16.Add( self.search_button, 1, wx.ALIGN_CENTER|wx.ALL|wx.SHAPED, 5 )
 
 
-        bSizer12.Add( bSizer16, 0, wx.EXPAND, 5 )
+        bSizer12.Add( bSizer16, 0, wx.ALL|wx.EXPAND, 5 )
 
         bSizer17 = wx.BoxSizer( wx.VERTICAL )
 
@@ -143,7 +143,7 @@ class MyFrame1 ( wx.Frame ):
         self.selected_food_grid = wx.grid.Grid( sbSizer2.GetStaticBox(), wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
         # Grid
-        self.selected_food_grid.CreateGrid( 1, 36 )
+        self.selected_food_grid.CreateGrid( 0, 36 )
         self.selected_food_grid.EnableEditing( True )
         self.selected_food_grid.EnableGridLines( True )
         self.selected_food_grid.EnableDragGridSize( False )
@@ -164,6 +164,8 @@ class MyFrame1 ( wx.Frame ):
 
         # Cell Defaults
         self.selected_food_grid.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
+        self.selected_food_grid.SetMinSize( wx.Size( 800,-1 ) )
+
         bSizer19.Add( self.selected_food_grid, 1, wx.ALL|wx.EXPAND, 5 )
 
 
