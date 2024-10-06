@@ -150,7 +150,13 @@ class CurrFrame(MyFrame):
             # Set the row label with the food name
             self.selected_food_grid.SetRowLabelValue(current_row_count, food_name)
 
-            # Auto-size rows first
+            # Set column labels: first column is "Select", then dataframe column names
+            self.selected_food_grid.SetColLabelValue(0, "Select")  # Checkbox column label
+            for col in range(1, len(self.init_data.columns)):  # Start from 1 to skip the checkbox column
+                self.selected_food_grid.SetColLabelValue(col,
+                                                         self.init_data.columns[col])  # Column names from dataframe
+
+            # Auto-size rows and columns after setting column labels
             for row in range(self.selected_food_grid.GetNumberRows()):
                 self.selected_food_grid.AutoSizeRow(row)
 

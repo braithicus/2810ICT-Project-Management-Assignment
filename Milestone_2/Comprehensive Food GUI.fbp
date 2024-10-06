@@ -986,7 +986,7 @@
                               <property name="col_label_size"></property>
                               <property name="col_label_values"></property>
                               <property name="col_label_vert_alignment">wxALIGN_CENTER</property>
-                              <property name="cols">36</property>
+                              <property name="cols">35</property>
                               <property name="column_sizes"></property>
                               <property name="context_help"></property>
                               <property name="context_menu">1</property>

@@ -143,7 +143,7 @@ class MyFrame1 ( wx.Frame ):
         self.selected_food_grid = wx.grid.Grid( sbSizer2.GetStaticBox(), wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
         # Grid
-        self.selected_food_grid.CreateGrid( 0, 36 )
+        self.selected_food_grid.CreateGrid( 0, 35 )
         self.selected_food_grid.EnableEditing( True )
         self.selected_food_grid.EnableGridLines( True )
         self.selected_food_grid.EnableDragGridSize( False )
